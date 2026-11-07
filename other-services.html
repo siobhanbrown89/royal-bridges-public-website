@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Other Services | Royal Bridges</title>
-<meta name="description" content="Royal Bridges cleaning, moving and packing, PRO services, legal consultancy and business setup support in the UAE.">
+<title>Other Services | Royal Bridges Real Estate</title>
+<meta name="description" content="Royal Bridges additional services in Abu Dhabi including cleaning, snagging, moving and packing, PRO services, legal consultancy, business setup and property management.">
 
 <style>
 :root{--navy:#10243b;--gold:#c5a46d;--cream:#f8f6f1;--ink:#283646;--muted:#697582}
@@ -13,15 +13,23 @@ html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
 a{text-decoration:none;color:inherit}
 .container{width:min(1160px,92%);margin:auto}
-.topbar{background:var(--navy);color:white;padding:9px 0;font-size:12px}
-.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar{background:var(--navy);color:white;padding:8px 0;font-size:12px}
+.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .topbar a{color:#e6c995}
+.topbar-contact{display:flex;gap:15px;flex-wrap:wrap}
 .brandbar{background:#f2eadb;padding:10px 0;border-bottom:1px solid #e1d4bd}
-.brandbar img{width:210px;max-height:90px;object-fit:contain;display:block}
-.navbar{background:var(--navy);color:white}
-.navbar .container{display:flex;justify-content:center;gap:23px;flex-wrap:wrap}
-.navbar a{font-size:12px;padding:15px 0;display:block}
-.navbar a:hover{color:#e5c58f}
+.brandbar img{width:220px;max-height:95px;object-fit:contain;display:block}
+.navbar{background:var(--navy);color:white;position:sticky;top:0;z-index:50}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:52px}
+.nav-links{display:flex;align-items:center;gap:20px;list-style:none}
+.nav-links>li>a,.nav-links>li>button{display:block;padding:15px 0;color:white;background:none;border:0;font-size:11px;cursor:pointer}
+.nav-links a:hover,.nav-links button:hover{color:#e5c58f}
+.dropdown{position:relative}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:245px;max-height:75vh;overflow-y:auto;background:white;color:var(--navy);box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);padding:7px 0}
+.dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:9px 15px;font-size:12px;color:var(--navy)}
+.dropdown-menu a:hover{background:var(--cream)}
+.mobile-toggle{display:none;background:none;color:white;border:1px solid #718096;padding:7px 10px;cursor:pointer}
 .hero{background:linear-gradient(90deg,rgba(9,26,44,.9),rgba(9,26,44,.48)),url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:330px;display:flex;align-items:center;color:white}
 .hero-content{padding:55px 0;max-width:760px}
 .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#d8b77f;font-weight:bold}
@@ -35,13 +43,13 @@ section{padding:55px 0}
 .heading h2{font-size:32px;color:var(--navy);margin:6px 0}
 .heading p{font-size:14px;color:var(--muted);max-width:750px;margin:auto}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service-card{background:white;border:1px solid #e8e2d8;padding:25px;scroll-margin-top:20px}
+.service-card{background:white;border:1px solid #e8e2d8;padding:25px;scroll-margin-top:85px}
 .service-card h3{font-size:23px;color:var(--navy);margin-bottom:9px}
 .service-card p{font-size:13px;color:var(--muted);margin-bottom:13px}
 .service-card ul{padding-left:18px;font-size:13px;color:var(--muted)}
 .service-card li{margin:5px 0}
 .service-card a{display:inline-block;margin-top:15px;color:#987544;font-size:11px;font-weight:bold}
-.service-section{scroll-margin-top:20px}
+.service-section{scroll-margin-top:75px}
 .service-section h2{font-size:32px;color:var(--navy);margin:7px 0 12px}
 .service-section>div>p{font-size:14px;color:var(--muted);max-width:850px;margin-bottom:23px}
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
@@ -56,12 +64,21 @@ section{padding:55px 0}
 footer{background:#091827;color:#cbd2d9;padding:24px 0;font-size:11px}
 footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:#e3c18b}
-@media(max-width:800px){.service-grid,.details-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){
+ .mobile-toggle{display:block}
+ .nav-inner{padding:8px 0}
+ .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:10px 5%;flex-direction:column;align-items:flex-start;gap:0;max-height:80vh;overflow-y:auto}
+ .nav-links.open{display:flex}
+ .nav-links li{width:100%}
+ .nav-links>li>a,.nav-links>li>button{display:block;padding:11px 0}
+ .dropdown-menu{position:static;box-shadow:none;border-top:1px solid var(--gold);background:#18334d;max-height:none}
+ .dropdown-menu a{color:white}
+ .service-grid,.details-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:550px){
  .topbar .container{justify-content:center;text-align:center}
- .brandbar img{width:185px}
- .navbar .container{gap:15px}
- .navbar a{padding:10px 0}
+ .topbar-contact{justify-content:center}
+ .brandbar img{width:190px}
  section{padding:42px 0}
  .service-grid,.details-grid{grid-template-columns:1fr}
  .service-section h2{font-size:28px}
@@ -73,14 +90,12 @@ footer a{color:#e3c18b}
 
 <div class="topbar">
  <div class="container">
-  <span>Royal Bridges | Abu Dhabi, UAE</span>
-  <span>
-   English: <a href="https://wa.me/971568611311">+971 56 861 1311</a>
-   &nbsp; | &nbsp;
-   العربية: <a href="https://wa.me/971506082608">+971 50 608 2608</a>
-   &nbsp; | &nbsp;
-   <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
-  </span>
+  <span>Royal Bridges Real Estate | Abu Dhabi, UAE</span>
+  <div class="topbar-contact">
+   <span>English: <a href="https://wa.me/971568611311">+971 56 861 1311</a></span>
+   <span>العربية: <a href="https://wa.me/971506082608">+971 50 608 2608</a></span>
+   <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></span>
+  </div>
  </div>
 </div>
 
@@ -91,15 +106,54 @@ footer a{color:#e3c18b}
 </header>
 
 <nav class="navbar">
- <div class="container">
-  <a href="index.html">HOME</a>
-  <a href="properties.html">PROPERTIES</a>
-  <a href="communities.html">COMMUNITIES</a>
-  <a href="relocation.html">RELOCATION</a>
-  <a href="blog.html">BLOG</a>
-  <a href="index.html#about">ABOUT</a>
-  <a href="other-services.html">OTHER SERVICES</a>
-  <a href="index.html#contact">CONTACT</a>
+ <div class="container nav-inner">
+  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰ MENU</button>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="index.html">HOME</a></li>
+   <li class="dropdown">
+    <button type="button">PROPERTIES ▾</button>
+    <div class="dropdown-menu">
+     <a href="properties.html#types-of-properties">Types of Properties</a>
+     <a href="properties.html#for-sale-residential">For Sale (Residential)</a>
+     <a href="properties.html#for-rent-residential">For Rent (Residential)</a>
+     <a href="properties.html#off-plan-primary-upcoming">Off Plan (Primary and Upcoming)</a>
+     <a href="properties.html#off-plan-secondary-resale">Off Plan (Secondary Resale)</a>
+     <a href="properties.html#for-sale-commercial">For Sale (Commercial)</a>
+     <a href="properties.html#for-rent-commercial">For Rent (Commercial)</a>
+     <a href="properties.html#residential-lands-plots">Residential Lands &amp; Plots</a>
+     <a href="properties.html#commercial-lands-plots">Commercial or Mixed-Use Lands &amp; Plots</a>
+    </div>
+   </li>
+   <li class="dropdown">
+    <button type="button">COMMUNITIES ▾</button>
+    <div class="dropdown-menu">
+     <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
+     <a href="communities.html#dubai">Communities in Dubai</a>
+     <a href="communities.html#rak">Communities in RAK</a>
+    </div>
+   </li>
+   <li><a href="short-stay.html">SHORT STAY</a></li>
+   <li><a href="relocation.html">RELOCATION</a></li>
+   <li class="dropdown">
+    <button type="button">ABOUT ▾</button>
+    <div class="dropdown-menu">
+     <a href="about.html">About Royal Bridges</a>
+     <a href="careers.html">Careers</a>
+     <a href="external-agencies.html">External Agencies</a>
+     <a href="index.html#partners">Our Partners</a>
+     <a href="blog.html">Blog &amp; Articles</a>
+     <a href="other-services.html">Other Services</a>
+     <a href="other-services.html#cleaning">— Cleaning</a>
+     <a href="other-services.html#snagging">— Snagging</a>
+     <a href="other-services.html#moving-packing">— Moving &amp; Packing</a>
+     <a href="other-services.html#pro-services">— PRO Services</a>
+     <a href="other-services.html#legal-consultancy">— Legal Consultancy</a>
+     <a href="other-services.html#business-set-up">— Business Set Up</a>
+     <a href="other-services.html#property-management">— Property Management</a>
+    </div>
+   </li>
+   <li><a href="index.html#contact">CONTACT</a></li>
+  </ul>
  </div>
 </nav>
 
@@ -120,75 +174,54 @@ footer a{color:#e3c18b}
   </div>
 
   <div class="service-grid">
-
    <article class="service-card">
     <h3>Cleaning Services</h3>
     <p>Residential, holiday-home and commercial cleaning support.</p>
-    <ul>
-     <li>Regular cleaning</li>
-     <li>Deep cleaning</li>
-     <li>Move-in and move-out cleaning</li>
-     <li>Post-construction cleaning</li>
-     <li>Holiday-home turnovers</li>
-     <li>Snagging support</li>
-     <li>Office and commercial cleaning</li>
-    </ul>
+    <ul><li>Regular and deep cleaning</li><li>Move-in and move-out cleaning</li><li>Post-construction cleaning</li><li>Holiday-home turnovers</li><li>Office and commercial cleaning</li></ul>
     <a href="#cleaning">EXPLORE CLEANING →</a>
+   </article>
+
+   <article class="service-card">
+    <h3>Property Snagging</h3>
+    <p>Detailed property inspections and snagging support before handover or occupation.</p>
+    <ul><li>Pre-handover inspections</li><li>Defect identification</li><li>Photographic records</li><li>Snag reports</li><li>Re-inspection enquiries</li></ul>
+    <a href="#snagging">EXPLORE SNAGGING →</a>
    </article>
 
    <article class="service-card">
     <h3>Moving &amp; Packing</h3>
     <p>Support with preparing, packing and coordinating your move.</p>
-    <ul>
-     <li>Home moving coordination</li>
-     <li>Packing and unpacking</li>
-     <li>Furniture coordination</li>
-     <li>Relocation planning</li>
-     <li>Move-in preparation</li>
-     <li>Moving and storage enquiries</li>
-    </ul>
+    <ul><li>Home moving coordination</li><li>Packing and unpacking</li><li>Furniture coordination</li><li>Relocation planning</li><li>Moving and storage enquiries</li></ul>
     <a href="#moving-packing">EXPLORE MOVING →</a>
    </article>
 
    <article class="service-card">
     <h3>PRO Services</h3>
     <p>Administrative and government-process support for individuals and businesses.</p>
-    <ul>
-     <li>Document processing assistance</li>
-     <li>Visa application coordination</li>
-     <li>Emirates ID process assistance</li>
-     <li>Licence and renewal coordination</li>
-     <li>Government liaison support</li>
-    </ul>
+    <ul><li>Document processing assistance</li><li>Visa application coordination</li><li>Emirates ID process assistance</li><li>Licence and renewal coordination</li></ul>
     <a href="#pro-services">EXPLORE PRO SERVICES →</a>
    </article>
 
    <article class="service-card">
     <h3>Legal Consultancy</h3>
     <p>Enquiries and coordination for legal and document-related support.</p>
-    <ul>
-     <li>Property-related legal enquiries</li>
-     <li>Contract review enquiries</li>
-     <li>Tenancy-related matters</li>
-     <li>Business documentation</li>
-     <li>Referral to appropriate legal professionals</li>
-    </ul>
+    <ul><li>Property-related legal enquiries</li><li>Contract review enquiries</li><li>Tenancy-related matters</li><li>Business documentation</li></ul>
     <a href="#legal-consultancy">EXPLORE LEGAL SUPPORT →</a>
    </article>
 
    <article class="service-card">
     <h3>Business Set Up</h3>
     <p>Support for entrepreneurs and businesses looking to establish or expand in the UAE.</p>
-    <ul>
-     <li>Business activity enquiries</li>
-     <li>Company formation coordination</li>
-     <li>Licence options</li>
-     <li>Free zone and mainland enquiries</li>
-     <li>Business administration support</li>
-    </ul>
+    <ul><li>Business activity enquiries</li><li>Company formation coordination</li><li>Licence options</li><li>Free zone and mainland enquiries</li></ul>
     <a href="#business-set-up">EXPLORE BUSINESS SET UP →</a>
    </article>
 
+   <article class="service-card">
+    <h3>Property Management</h3>
+    <p>Practical property support for landlords, investors and owners who want assistance looking after their assets.</p>
+    <ul><li>Tenant and tenancy coordination</li><li>Property inspections</li><li>Maintenance coordination</li><li>Rental and occupancy support</li><li>Owner reporting enquiries</li></ul>
+    <a href="#property-management">EXPLORE PROPERTY MANAGEMENT →</a>
+   </article>
   </div>
  </div>
 </section>
@@ -197,211 +230,131 @@ footer a{color:#e3c18b}
  <div class="container">
   <div class="eyebrow">Royal Bridges Cleaning Services</div>
   <h2>Cleaning Services</h2>
-  <p>Professional cleaning support for homes, holiday properties, landlords, tenants, property managers and commercial clients. We focus on reliable service, clear scheduling and practical cleaning solutions.</p>
-
+  <p>Cleaning support for homes, holiday properties, landlords, tenants, property managers and commercial clients. We focus on reliable service, clear scheduling and practical cleaning solutions.</p>
   <div class="details-grid">
-   <div class="detail">
-    <h3>Residential Cleaning</h3>
-    <p>Routine and scheduled cleaning for apartments, villas, townhouses and duplexes.</p>
-   </div>
-   <div class="detail">
-    <h3>Deep Cleaning</h3>
-    <p>Detailed cleaning for properties requiring a more thorough clean.</p>
-   </div>
-   <div class="detail">
-    <h3>Move-In / Move-Out</h3>
-    <p>Cleaning before moving into a property or after vacating a home.</p>
-   </div>
-   <div class="detail">
-    <h3>Post-Construction</h3>
-    <p>Cleaning following construction, renovation and refurbishment works.</p>
-   </div>
-   <div class="detail">
-    <h3>Holiday Homes</h3>
-    <p>Guest checkout cleaning, changeovers and preparation for incoming guests.</p>
-   </div>
-   <div class="detail">
-    <h3>Commercial Cleaning</h3>
-    <p>Cleaning support for offices, managed properties and commercial premises.</p>
-   </div>
-   <div class="detail">
-    <h3>Snagging Support</h3>
-    <p>Cleaning coordination and presentation support during property handover and inspection.</p>
-   </div>
-   <div class="detail">
-    <h3>Maintenance Coordination</h3>
-    <p>Enquiries for property maintenance and associated services.</p>
-   </div>
-   <div class="detail">
-    <h3>Property Preparation</h3>
-    <p>Cleaning and preparation for property photography, viewings and new occupants.</p>
-   </div>
+   <div class="detail"><h3>Residential Cleaning</h3><p>Routine and scheduled cleaning for apartments, villas, townhouses and duplexes.</p></div>
+   <div class="detail"><h3>Deep Cleaning</h3><p>Detailed cleaning for properties requiring a more thorough clean.</p></div>
+   <div class="detail"><h3>Move-In / Move-Out</h3><p>Cleaning before moving into a property or after vacating a home.</p></div>
+   <div class="detail"><h3>Post-Construction</h3><p>Cleaning following construction, renovation and refurbishment works.</p></div>
+   <div class="detail"><h3>Holiday Homes</h3><p>Guest checkout cleaning, changeovers and preparation for incoming guests.</p></div>
+   <div class="detail"><h3>Commercial Cleaning</h3><p>Cleaning support for offices, managed properties and commercial premises.</p></div>
+   <div class="detail"><h3>Property Preparation</h3><p>Cleaning and preparation for photography, viewings and new occupants.</p></div>
+   <div class="detail"><h3>Maintenance Coordination</h3><p>Enquiries for property maintenance and associated services.</p></div>
+   <div class="detail"><h3>Snagging Support</h3><p>Cleaning coordination and presentation support during property handover.</p></div>
   </div>
-
-  <div class="notice">
-   Cleaning services are subject to location, property size, access, scope of work and availability. Request a quotation for your specific requirements.
-  </div>
+  <div class="notice">Cleaning services are subject to location, property size, access, scope of work and availability. Request a quotation for your specific requirements.</div>
   <p style="margin-top:20px"><a class="btn" href="https://wa.me/971568611311?text=Hello%20Royal%20Bridges%2C%20I%20would%20like%20a%20cleaning%20quotation.">REQUEST A CLEANING QUOTATION</a></p>
  </div>
 </section>
 
-<section class="service-section" id="moving-packing">
+<section class="service-section" id="snagging">
+ <div class="container">
+  <div class="eyebrow">Property Inspection</div>
+  <h2>Property Snagging</h2>
+  <p>A property may look perfect during a viewing, but defects can be easier to identify through a systematic inspection. Snagging helps buyers and owners document visible issues and outstanding finishing works before accepting a property or completing a handover.</p>
+  <div class="details-grid">
+   <div class="detail"><h3>Pre-Handover Inspections</h3><p>Inspection enquiries before accepting a newly built or recently completed property.</p></div>
+   <div class="detail"><h3>Detailed Snag Reports</h3><p>Organized reporting of observed defects, incomplete works and finishing concerns.</p></div>
+   <div class="detail"><h3>Photographic Evidence</h3><p>Photographs to help identify and communicate the location of reported issues.</p></div>
+   <div class="detail"><h3>Interior Checks</h3><p>Visual checks of doors, windows, flooring, walls, ceilings, fixtures and finishes.</p></div>
+   <div class="detail"><h3>Services &amp; Fixtures</h3><p>Visual observations of accessible fittings and fixtures, subject to inspection scope.</p></div>
+   <div class="detail"><h3>Follow-Up Inspections</h3><p>Enquiries about re-inspection after reported items have been addressed.</p></div>
+  </div>
+  <div class="notice">A snagging inspection is a visual inspection within an agreed scope. It is not a substitute for specialist structural, engineering, electrical or mechanical testing where those services are required.</div>
+  <p style="margin-top:20px"><a class="btn" href="mailto:info@royalbridges.ae?subject=Property%20Snagging%20Enquiry">REQUEST A SNAGGING ENQUIRY</a></p>
+ </div>
+</section>
+
+<section class="alt service-section" id="moving-packing">
  <div class="container">
   <div class="eyebrow">Moving &amp; Relocation</div>
   <h2>Moving &amp; Packing Services</h2>
   <p>Moving home can be complicated, especially when relocating to a new emirate or country. We help coordinate the practical details so you can plan your move with greater confidence.</p>
-
   <div class="details-grid">
-   <div class="detail">
-    <h3>Home Moving</h3>
-    <p>Enquiries and coordination for moving between apartments, villas and other residential properties.</p>
-   </div>
-   <div class="detail">
-    <h3>Packing Services</h3>
-    <p>Assistance with organising packing requirements and preparing belongings for transport.</p>
-   </div>
-   <div class="detail">
-    <h3>Unpacking</h3>
-    <p>Support with unpacking and organising your new home after arrival.</p>
-   </div>
-   <div class="detail">
-    <h3>Furniture Coordination</h3>
-    <p>Help planning furniture transport, delivery and installation requirements.</p>
-   </div>
-   <div class="detail">
-    <h3>International Relocation</h3>
-    <p>Enquiries about international moving arrangements and shipment coordination.</p>
-   </div>
-   <div class="detail">
-    <h3>Move-In Preparation</h3>
-    <p>Coordinate cleaning and other property services before your belongings arrive.</p>
-   </div>
+   <div class="detail"><h3>Home Moving</h3><p>Enquiries and coordination for moving between apartments, villas and residential properties.</p></div>
+   <div class="detail"><h3>Packing Services</h3><p>Assistance with organizing packing requirements and preparing belongings for transport.</p></div>
+   <div class="detail"><h3>Unpacking</h3><p>Support with unpacking and organizing your new home after arrival.</p></div>
+   <div class="detail"><h3>Furniture Coordination</h3><p>Help planning furniture transport, delivery and installation requirements.</p></div>
+   <div class="detail"><h3>International Relocation</h3><p>Enquiries about international moving arrangements and shipment coordination.</p></div>
+   <div class="detail"><h3>Move-In Preparation</h3><p>Coordinate cleaning and other property services before your belongings arrive.</p></div>
   </div>
-
-  <div class="notice">
-   Shipping, transportation, customs and storage are subject to the terms and availability of the relevant specialist providers.
-  </div>
+  <div class="notice">Shipping, transportation, customs and storage are subject to the terms and availability of the relevant specialist providers.</div>
   <p style="margin-top:20px"><a class="btn" href="relocation.html">COMPLETE OUR RELOCATION ENQUIRY</a></p>
  </div>
 </section>
 
-<section class="alt service-section" id="pro-services">
+<section class="service-section" id="pro-services">
  <div class="container">
   <div class="eyebrow">UAE Administrative Support</div>
   <h2>PRO Services</h2>
   <p>Practical coordination and administrative assistance for individuals, families and businesses dealing with UAE documentation and government processes.</p>
-
   <div class="details-grid">
-   <div class="detail">
-    <h3>Visa Assistance</h3>
-    <p>Enquiries and coordination relating to residence visa applications and renewals.</p>
-   </div>
-   <div class="detail">
-    <h3>Emirates ID</h3>
-    <p>Assistance with understanding and coordinating the relevant application process.</p>
-   </div>
-   <div class="detail">
-    <h3>Document Processing</h3>
-    <p>Administrative coordination for required documents, submissions and follow-ups.</p>
-   </div>
-   <div class="detail">
-    <h3>Licence Renewals</h3>
-    <p>Coordination enquiries for business licence renewal procedures.</p>
-   </div>
-   <div class="detail">
-    <h3>Government Liaison</h3>
-    <p>Support with identifying relevant authorities and administrative requirements.</p>
-   </div>
-   <div class="detail">
-    <h3>Corporate Administration</h3>
-    <p>General administrative support for business documentation and related processes.</p>
-   </div>
+   <div class="detail"><h3>Visa Assistance</h3><p>Enquiries and coordination relating to residence visa applications and renewals.</p></div>
+   <div class="detail"><h3>Emirates ID</h3><p>Assistance with understanding and coordinating the relevant application process.</p></div>
+   <div class="detail"><h3>Document Processing</h3><p>Administrative coordination for required documents, submissions and follow-ups.</p></div>
+   <div class="detail"><h3>Licence Renewals</h3><p>Coordination enquiries for business licence renewal procedures.</p></div>
+   <div class="detail"><h3>Government Liaison</h3><p>Support with identifying relevant authorities and administrative requirements.</p></div>
+   <div class="detail"><h3>Corporate Administration</h3><p>General administrative support for business documentation and related processes.</p></div>
   </div>
-
-  <div class="notice">
-   Government approvals, application decisions and processing times are determined by the relevant UAE authorities. Services are subject to applicable licensing and authorisation requirements.
-  </div>
+  <div class="notice">Government approvals, application decisions and processing times are determined by the relevant UAE authorities. Services are subject to applicable licensing and authorization requirements.</div>
   <p style="margin-top:20px"><a class="btn" href="mailto:info@royalbridges.ae?subject=PRO%20Services%20Enquiry">MAKE A PRO SERVICES ENQUIRY</a></p>
  </div>
 </section>
 
-<section class="service-section" id="legal-consultancy">
+<section class="alt service-section" id="legal-consultancy">
  <div class="container">
   <div class="eyebrow">Legal Support &amp; Referrals</div>
   <h2>Legal Consultancy</h2>
   <p>Access to appropriate legal support can make a significant difference when dealing with property, tenancy and business matters. Contact us with your enquiry so that we can discuss the appropriate route for assistance.</p>
-
   <div class="details-grid">
-   <div class="detail">
-    <h3>Property Matters</h3>
-    <p>Enquiries relating to property transactions, documentation and associated legal issues.</p>
-   </div>
-   <div class="detail">
-    <h3>Tenancy Matters</h3>
-    <p>Enquiries concerning tenancy agreements, notices and landlord or tenant matters.</p>
-   </div>
-   <div class="detail">
-    <h3>Contract Enquiries</h3>
-    <p>Coordination of enquiries relating to agreements and contractual documentation.</p>
-   </div>
-   <div class="detail">
-    <h3>Business Matters</h3>
-    <p>Enquiries relating to business agreements and corporate documentation.</p>
-   </div>
-   <div class="detail">
-    <h3>Document Assistance</h3>
-    <p>General coordination of document-related enquiries and referrals.</p>
-   </div>
-   <div class="detail">
-    <h3>Professional Referrals</h3>
-    <p>Where appropriate, enquiries can be directed to suitably qualified and authorised legal professionals.</p>
-   </div>
+   <div class="detail"><h3>Property Matters</h3><p>Enquiries relating to property transactions, documentation and associated legal issues.</p></div>
+   <div class="detail"><h3>Tenancy Matters</h3><p>Enquiries concerning tenancy agreements, notices and landlord or tenant matters.</p></div>
+   <div class="detail"><h3>Contract Enquiries</h3><p>Coordination of enquiries relating to agreements and contractual documentation.</p></div>
+   <div class="detail"><h3>Business Matters</h3><p>Enquiries relating to business agreements and corporate documentation.</p></div>
+   <div class="detail"><h3>Document Assistance</h3><p>General coordination of document-related enquiries and referrals.</p></div>
+   <div class="detail"><h3>Professional Referrals</h3><p>Where appropriate, enquiries can be directed to suitably qualified and authorized legal professionals.</p></div>
   </div>
-
-  <div class="notice">
-   Legal advice, representation and reserved legal services are provided only by appropriately qualified and authorised professionals. Submitting an enquiry does not create a lawyer-client relationship.
-  </div>
+  <div class="notice">Legal advice, representation and reserved legal services are provided only by appropriately qualified and authorized professionals. Submitting an enquiry does not create a lawyer-client relationship.</div>
   <p style="margin-top:20px"><a class="btn" href="mailto:info@royalbridges.ae?subject=Legal%20Consultancy%20Enquiry">MAKE A LEGAL ENQUIRY</a></p>
  </div>
 </section>
 
-<section class="alt service-section" id="business-set-up">
+<section class="service-section" id="business-set-up">
  <div class="container">
   <div class="eyebrow">Entrepreneurship &amp; Business</div>
   <h2>Business Set Up in the UAE</h2>
-  <p>Thinking of starting a business in Abu Dhabi or elsewhere in the UAE? We can help you explore the initial requirements and coordinate enquiries with relevant business setup specialists.</p>
-
+  <p>Thinking of starting a business in Abu Dhabi or elsewhere in the UAE? We can help you explore initial requirements and coordinate enquiries with relevant business setup specialists.</p>
   <div class="details-grid">
-   <div class="detail">
-    <h3>Mainland Company Setup</h3>
-    <p>Enquiries about mainland company formation, activities and applicable licensing routes.</p>
-   </div>
-   <div class="detail">
-    <h3>Free Zone Company Setup</h3>
-    <p>Explore free zone options and the requirements relevant to your proposed business.</p>
-   </div>
-   <div class="detail">
-    <h3>Business Activities</h3>
-    <p>Discuss the activities you intend to carry out and the corresponding licence requirements.</p>
-   </div>
-   <div class="detail">
-    <h3>Trade Licences</h3>
-    <p>Enquiries concerning new licences, renewals and amendments.</p>
-   </div>
-   <div class="detail">
-    <h3>Business Expansion</h3>
-    <p>Explore options for expanding an existing business into the UAE market.</p>
-   </div>
-   <div class="detail">
-    <h3>Corporate Administration</h3>
-    <p>Coordination enquiries for related company documentation and administrative requirements.</p>
-   </div>
+   <div class="detail"><h3>Mainland Company Setup</h3><p>Enquiries about mainland company formation, activities and applicable licensing routes.</p></div>
+   <div class="detail"><h3>Free Zone Company Setup</h3><p>Explore free zone options and the requirements relevant to your proposed business.</p></div>
+   <div class="detail"><h3>Business Activities</h3><p>Discuss the activities you intend to carry out and the corresponding licence requirements.</p></div>
+   <div class="detail"><h3>Trade Licences</h3><p>Enquiries concerning new licences, renewals and amendments.</p></div>
+   <div class="detail"><h3>Business Expansion</h3><p>Explore options for expanding an existing business into the UAE market.</p></div>
+   <div class="detail"><h3>Corporate Administration</h3><p>Coordination enquiries for related company documentation and administrative requirements.</p></div>
   </div>
-
-  <div class="notice">
-   Company formation, permitted activities, approvals, ownership requirements and licence costs depend on the selected jurisdiction, activity and applicable regulations.
-  </div>
+  <div class="notice">Company formation, permitted activities, approvals, ownership requirements and licence costs depend on the selected jurisdiction, activity and applicable regulations.</div>
   <p style="margin-top:20px"><a class="btn" href="mailto:info@royalbridges.ae?subject=Business%20Set%20Up%20Enquiry">DISCUSS YOUR BUSINESS IDEA</a></p>
+ </div>
+</section>
+
+<section class="alt service-section" id="property-management">
+ <div class="container">
+  <div class="eyebrow">Looking After Your Investment</div>
+  <h2>Property Management</h2>
+  <p>Owning a property should be an investment you can manage with confidence. Royal Bridges can assist owners with property-related coordination and enquiries, helping connect the different elements involved in looking after a home or investment property.</p>
+  <div class="details-grid">
+   <div class="detail"><h3>Tenant Coordination</h3><p>Enquiries and coordination relating to tenant communication and tenancy arrangements.</p></div>
+   <div class="detail"><h3>Property Inspections</h3><p>Arrange property visits and inspection enquiries, subject to access and agreed scope.</p></div>
+   <div class="detail"><h3>Maintenance Coordination</h3><p>Coordinate maintenance enquiries and connect owners with relevant service providers.</p></div>
+   <div class="detail"><h3>Cleaning &amp; Preparation</h3><p>Arrange cleaning and property preparation for new tenants or property viewings.</p></div>
+   <div class="detail"><h3>Rental Support</h3><p>Enquiries relating to rental readiness, marketing coordination and tenancy processes.</p></div>
+   <div class="detail"><h3>Owner Communication</h3><p>Discuss reporting and communication arrangements to keep owners informed.</p></div>
+   <div class="detail"><h3>Holiday Home Coordination</h3><p>Enquiries relating to cleaning, guest changeovers and property preparation.</p></div>
+   <div class="detail"><h3>Investment Property Support</h3><p>Practical assistance for owners with properties held for rental or investment purposes.</p></div>
+   <div class="detail"><h3>Handover &amp; Snagging</h3><p>Coordinate inspection and snagging enquiries when taking possession of a property.</p></div>
+  </div>
+  <div class="notice">The scope of property management, leasing, holiday-home operations and any regulated activities is subject to the relevant agreements, permits and applicable UAE requirements.</div>
+  <p style="margin-top:20px"><a class="btn" href="mailto:info@royalbridges.ae?subject=Property%20Management%20Enquiry">DISCUSS PROPERTY MANAGEMENT</a></p>
  </div>
 </section>
 
@@ -417,13 +370,16 @@ footer a{color:#e3c18b}
 
 <footer>
  <div class="container">
-  <span>© <span id="year"></span> Royal Bridges. All rights reserved.</span>
+  <span>© <span id="year"></span> Royal Bridges Real Estate. All rights reserved.</span>
   <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> | Abu Dhabi, UAE</span>
-  <span><a href="index.html">Home</a> | <a href="properties.html">Properties</a> | <a href="communities.html">Communities</a></span>
+  <span><a href="short-stay.html">Short Stay</a> | <a href="relocation.html">Relocation</a> | <a href="blog.html">Blog</a></span>
  </div>
 </footer>
 
 <script>
+function toggleMenu(){
+ document.getElementById('navLinks').classList.toggle('open');
+}
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 
