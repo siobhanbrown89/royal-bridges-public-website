@@ -1,536 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Royal Bridges Real Estate - Abu Dhabi property sales, rentals, investment and relocation services.">
-<title>Royal Bridges Real Estate | Abu Dhabi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Articles | Royal Bridges Real Estate</title>
+  <meta name="description" content="Property advice, relocation guidance, snagging tips and UAE lifestyle articles from Royal Bridges Real Estate.">
+  <style>
+    :root {
+      --navy: #142b45;
+      --gold: #b69a62;
+      --cream: #f6f1e7;
+      --light: #fbf9f4;
+      --ink: #263444;
+      --muted: #697584;
+      --white: #fff;
+    }
 
-<style>
-:root{
- --navy:#10243b;--navy2:#1c3852;--gold:#c5a46d;
- --cream:#f8f6f1;--ink:#283646;--muted:#697582;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-.topbar{background:var(--navy);color:white;padding:8px 0;font-size:12px}
-.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.topbar a{color:#e6c995}
-.topbar-contact{display:flex;gap:18px;flex-wrap:wrap}
-.brandbar{background:#f2eadb;border-bottom:1px solid #e1d4bd;padding:10px 0}
-.brand-inner{display:flex;align-items:center;justify-content:space-between}
-.brand img{width:220px;height:auto;max-height:100px;object-fit:contain;display:block}
-.navbar{background:var(--navy);color:white;position:sticky;top:0;z-index:50}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:52px}
-.nav-links{display:flex;align-items:center;gap:20px;list-style:none}
-.nav-links>li>a,.nav-links>li>button{display:block;padding:15px 0;color:white;background:none;border:0;font-size:11px;cursor:pointer}
-.nav-links a:hover,.nav-links button:hover{color:#e5c58f}
-.dropdown{position:relative}
-.dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:245px;background:white;color:var(--navy);box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);padding:7px 0}
-.dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{display:block}
-.dropdown-menu a{display:block;padding:9px 15px;font-size:12px;color:var(--navy)}
-.dropdown-menu a:hover{background:var(--cream)}
-.mobile-toggle{display:none;background:none;color:white;border:1px solid #718096;padding:7px 10px;cursor:pointer}
-.hero{min-height:480px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(9,26,44,.85),rgba(9,26,44,.22)),url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85') center/cover;color:white}
-.hero-content{padding:70px 0;max-width:680px}
-.eyebrow{color:#e2c18b;text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:bold}
-.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:normal;line-height:1.12;margin:15px 0}
-.hero p{font-size:16px;max-width:570px;color:#f0f1f2;margin-bottom:25px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;border:1px solid var(--gold);padding:10px 17px;border-radius:2px;font-size:11px;font-weight:bold;letter-spacing:.5px;cursor:pointer}
-.btn-gold{background:var(--gold);color:white}
-.btn-outline{background:transparent;color:white}
-.btn-dark-outline{background:white;color:var(--navy)}
-section{padding:64px 0}
-.alt{background:var(--cream)}
-.section-heading{text-align:center;margin-bottom:30px}
-.section-heading .eyebrow{color:#9b7b4b}
-.section-heading h2{font-family:Georgia,serif;font-size:34px;font-weight:normal;color:var(--navy);margin:5px 0}
-.section-heading p{color:var(--muted);max-width:690px;margin:auto;font-size:14px}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--light);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
 
-/* AUTOMATIC HORIZONTAL SLIDERS */
-.slider-window{overflow:hidden;width:100%;padding:5px 0 15px}
-.slider-track{display:flex;gap:18px;width:max-content;animation:slide-left 48s linear infinite}
-.slider-window:hover .slider-track{animation-play-state:paused}
-@keyframes slide-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.listing-card{width:290px;flex-shrink:0;background:white;border:1px solid #e7e1d7;overflow:hidden}
-.listing-photo{height:175px;background:linear-gradient(135deg,#d8d0c0,#8d9ba3);display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:20px;font-size:13px}
-.listing-photo span{background:#10243bcc;padding:8px 12px}
-.listing-info{padding:17px}
-.listing-info h3{font-family:Georgia,serif;color:var(--navy);font-size:21px}
-.listing-info p{font-size:12px;color:var(--muted);margin:5px 0}
-.listing-price{color:#987544;font-weight:bold;font-size:13px;margin-top:8px}
-.service-slide{width:230px;min-height:145px;flex-shrink:0;background:var(--navy);color:white;padding:23px;display:flex;flex-direction:column;justify-content:center;border-bottom:3px solid var(--gold)}
-.service-slide h3{font-family:Georgia,serif;font-size:23px;font-weight:normal;margin-bottom:7px}
-.service-slide p{font-size:12px;color:#e0e5e9}
-.service-slide a{color:#e6c995;font-size:11px;font-weight:bold;margin-top:12px}
+    .topbar {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 13px;
+    }
+    .topbar a { color: #e7d6b2; margin: 0 8px; }
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;border:1px solid #eae7e0;overflow:hidden}
-.card-image{height:210px;background-size:cover;background-position:center}
-.yas-image{background-image:url('https://images.pexels.com/photos/36329344/pexels-photo-36329344.jpeg?auto=compress&cs=tinysrgb&w=1200')}
-.saadiyat-image{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saadyat_Marine_National_Park_from_Above.jpg?width=1400')}
-.hudayriyat-image{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Hudayriyat_Island.jpg?width=1400')}
-.card-body{padding:20px}
-.card-body h3{font-family:Georgia,serif;color:var(--navy);font-size:22px;margin-bottom:7px}
-.card-body p{font-size:13px;color:var(--muted)}
-.card-body a{display:inline-block;margin-top:13px;color:#987544;font-size:12px;font-weight:bold}
-.more-link{text-align:center;margin-top:27px}
-.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.feature{padding:32px;background:var(--navy);color:white;min-height:215px}
-.feature.light{background:#eee8dc;color:var(--navy)}
-.feature h3{font-family:Georgia,serif;font-size:27px;font-weight:normal;margin-bottom:10px}
-.feature p{font-size:14px;margin-bottom:18px}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.blog-card{padding:22px;border:1px solid #e8e4dc;background:white;min-height:175px}
-.blog-card small{color:#a17e49;text-transform:uppercase;letter-spacing:1px;font-size:10px}
-.blog-card h3{font-family:Georgia,serif;color:var(--navy);font-size:21px;line-height:1.3;margin:9px 0}
-.blog-card p{font-size:12px;color:var(--muted)}
-.blog-card a{display:inline-block;margin-top:12px;color:#987544;font-size:12px;font-weight:bold}
-.partner-window{overflow:hidden}
-.partner-track{display:flex;gap:14px;width:max-content;animation:partners 42s linear infinite}
-.partner-track:hover{animation-play-state:paused}
-.partner-card{width:185px;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #e7e1d7;background:white;padding:16px;text-align:center}
-.partner-card strong{font-family:Georgia,serif;font-size:21px;color:var(--navy)}
-.partner-card span{font-size:10px;color:#9b7845;text-transform:uppercase;letter-spacing:1px;margin-top:5px}
-@keyframes partners{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.resources{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.resource{padding:20px;border:1px solid #e5e1d8;background:white}
-.resource strong{display:block;color:var(--navy);font-size:15px}
-.resource span{display:block;color:var(--muted);font-size:12px;margin:5px 0 10px}
-.resource a{font-size:12px;color:#987544;font-weight:bold}
-.about-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
-.about-layout h2{font-family:Georgia,serif;color:var(--navy);font-size:34px;font-weight:normal;margin:8px 0 15px}
-.about-layout p{color:var(--muted);font-size:14px;margin-bottom:12px}
-.about-panel{background:var(--navy);color:white;padding:30px}
-.about-panel h3{font-family:Georgia,serif;font-size:25px;font-weight:normal;margin-bottom:10px}
-.contact-section{background:var(--navy);color:white}
-.contact-section h2{font-family:Georgia,serif;font-size:34px;font-weight:normal}
-.contact-section>div>p{color:#d5dce3;font-size:14px;margin:8px 0 20px}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.contact-item{border:1px solid #526477;padding:20px}
-.contact-item strong{display:block;color:#e3c18b;margin-bottom:7px}
-.contact-item a{color:white;font-size:14px;overflow-wrap:anywhere}
-footer{background:#091827;color:#cbd2d9;padding:24px 0;font-size:11px}
-footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-footer a{color:#e3c18b}
+    header {
+      background: var(--cream);
+      border-bottom: 1px solid #e5ddcf;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      max-width: 1250px;
+      margin: auto;
+      min-height: 86px;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .logo img {
+      display: block;
+      width: 190px;
+      max-height: 68px;
+      object-fit: contain;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 17px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    nav a, .dropbtn { padding: 9px 0; }
+    nav a:hover, .dropdown:hover .dropbtn { color: var(--gold); }
+    .dropdown { position: relative; display: inline-block; }
+    .dropbtn {
+      border: 0;
+      background: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 235px;
+      max-height: 75vh;
+      overflow-y: auto;
+      background: white;
+      box-shadow: 0 8px 22px #142b4520;
+      border-top: 3px solid var(--gold);
+      padding: 8px 0;
+      z-index: 1001;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { display: block; }
+    .dropdown-content a {
+      display: block;
+      padding: 9px 16px;
+      white-space: normal;
+    }
+    .dropdown-content a:hover { background: var(--cream); }
+    .sub-label {
+      padding: 9px 16px 4px;
+      color: var(--gold);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .register-link {
+      background: var(--navy);
+      color: white !important;
+      padding: 10px 15px;
+      border-radius: 3px;
+    }
 
-@media(max-width:850px){
- .mobile-toggle{display:block}
- .nav-inner{padding:8px 0}
- .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:10px 5%;flex-direction:column;align-items:flex-start;gap:0;max-height:80vh;overflow-y:auto}
- .nav-links.open{display:flex}
- .nav-links li{width:100%}
- .nav-links>li>a,.nav-links>li>button{display:block;padding:11px 0}
- .dropdown-menu{position:static;box-shadow:none;border-top:1px solid var(--gold);background:#18334d}
- .dropdown-menu a{color:white}
- .cards{grid-template-columns:repeat(2,1fr)}
- .resources{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
- .topbar .container{justify-content:center;text-align:center}
- .topbar-contact{justify-content:center;gap:5px 15px}
- .brand img{width:190px;max-height:80px}
- .hero{min-height:410px}
- .hero-content{padding:55px 0}
- section{padding:48px 0}
- .cards,.blog-grid,.feature-grid,.resources,.contact-grid,.about-layout{grid-template-columns:1fr}
- .section-heading h2,.about-layout h2,.contact-section h2{font-size:29px}
- .card-image{height:185px}
-}
-</style>
+    .hero {
+      background: linear-gradient(90deg, rgba(20,43,69,.88), rgba(20,43,69,.48)),
+        url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=85") center/cover;
+      color: white;
+      padding: 95px 22px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      margin: 0 0 12px;
+    }
+    .hero p { max-width: 700px; margin: auto; font-size: 17px; }
+
+    .container { max-width: 1150px; margin: auto; padding: 65px 22px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h2, h3 { color: var(--navy); }
+    h2 { font-family: Georgia, serif; font-weight: 400; font-size: 34px; }
+    .intro { max-width: 760px; color: var(--muted); }
+
+    .article {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      background: white;
+      margin: 35px 0;
+      border: 1px solid #e9e3d9;
+      box-shadow: 0 8px 25px #142b4509;
+      overflow: hidden;
+    }
+    .article img {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+    }
+    .article-content { padding: 32px; }
+    .article-content h3 {
+      font-family: Georgia, serif;
+      font-size: 27px;
+      line-height: 1.3;
+      font-weight: 400;
+      margin: 8px 0 15px;
+    }
+    .article-content p { color: #586575; }
+    .article-content h4 { color: var(--navy); margin-bottom: 5px; }
+    .article-content ul { padding-left: 20px; color: #586575; }
+    .article-tag {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .divider { height: 1px; background: #e8e1d6; margin: 22px 0; }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 55px 22px;
+    }
+    .cta h2 { color: white; }
+    .cta p { max-width: 680px; margin: 0 auto 22px; color: #e1e5ea; }
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 12px 23px;
+      margin: 5px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    .button.outline {
+      background: transparent;
+      border: 1px solid var(--gold);
+    }
+
+    footer {
+      background: #0e2034;
+      color: #e8e8e8;
+      padding: 38px 22px;
+      text-align: center;
+      font-size: 13px;
+    }
+    footer a { color: #e1c995; margin: 0 8px; }
+    footer p { margin: 8px 0; }
+
+    @media (max-width: 850px) {
+      .header-inner { flex-direction: column; gap: 8px; }
+      nav { justify-content: center; gap: 12px; }
+      .article { grid-template-columns: 1fr; }
+      .article img { min-height: 230px; max-height: 300px; }
+    }
+    @media (max-width: 520px) {
+      nav { font-size: 12px; gap: 10px; }
+      .logo img { width: 165px; }
+      .container { padding: 45px 17px; }
+      .article-content { padding: 22px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="topbar">
- <div class="container">
-  <span>Royal Bridges Real Estate | Abu Dhabi, UAE</span>
-  <div class="topbar-contact">
-   <span>English: <a href="https://wa.me/971568611311">+971 56 861 1311</a></span>
-   <span>العربية: <a href="https://wa.me/971506082608">+971 50 608 2608</a></span>
-   <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></span>
+  <div class="topbar">
+    Royal Bridges Real Estate |
+    <a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a> |
+    <a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a> |
+    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
   </div>
- </div>
-</div>
 
-<header class="brandbar">
- <div class="container brand-inner">
-  <a class="brand" href="index.html">
-   <img src="logo.png" alt="Royal Bridges Real Estate logo">
-  </a>
- </div>
-</header>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="logo.png" alt="Royal Bridges Real Estate">
+      </a>
 
-<nav class="navbar">
- <div class="container nav-inner">
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰ MENU</button>
-  <ul class="nav-links" id="navLinks">
-   <li><a href="index.html">HOME</a></li>
+      <nav>
+        <a href="index.html">Home</a>
 
-   <li class="dropdown">
-    <button type="button">PROPERTIES ▾</button>
-    <div class="dropdown-menu">
-     <a href="properties.html#types-of-properties">Types of Properties</a>
-     <a href="properties.html#for-sale-residential">For Sale (Residential)</a>
-     <a href="properties.html#for-rent-residential">For Rent (Residential)</a>
-     <a href="properties.html#off-plan-primary-upcoming">Off Plan (Primary and Upcoming)</a>
-     <a href="properties.html#off-plan-secondary-resale">Off Plan (Secondary Resale)</a>
-     <a href="properties.html#for-sale-commercial">For Sale (Commercial)</a>
-     <a href="properties.html#for-rent-commercial">For Rent (Commercial)</a>
-     <a href="properties.html#residential-lands-plots">Residential Lands &amp; Plots</a>
-     <a href="properties.html#commercial-lands-plots">Commercial or Mixed-Use Lands &amp; Plots</a>
+        <div class="dropdown">
+          <button class="dropbtn">Properties ▾</button>
+          <div class="dropdown-content">
+            <a href="properties.html#property-types">Types of Properties</a>
+            <a href="properties.html#residential-sale">For Sale (Residential)</a>
+            <a href="properties.html#residential-rent">For Rent (Residential)</a>
+            <a href="properties.html#off-plan-primary">Off Plan (Primary & Upcoming)</a>
+            <a href="properties.html#off-plan-resale">Off Plan (Secondary Resale)</a>
+            <a href="properties.html#commercial-sale">For Sale (Commercial)</a>
+            <a href="properties.html#commercial-rent">For Rent (Commercial)</a>
+            <a href="properties.html#residential-land">Residential Lands & Plots</a>
+            <a href="properties.html#commercial-land">Commercial / Mixed-Use Lands & Plots</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Communities ▾</button>
+          <div class="dropdown-content">
+            <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
+            <a href="communities.html#dubai">Communities in Dubai</a>
+            <a href="communities.html#rak">Communities in RAK</a>
+          </div>
+        </div>
+
+        <a href="short-stay.html">Short Stay</a>
+        <a href="relocation.html">Relocation</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">About ▾</button>
+          <div class="dropdown-content">
+            <a href="about.html">About Royal Bridges</a>
+            <a href="careers.html">Careers</a>
+            <a href="external-agencies.html">External Agencies</a>
+            <a href="partners.html">Our Partners</a>
+            <a href="blog.html">Blog & Articles</a>
+            <div class="sub-label">Other Services</div>
+            <a href="other-services.html#cleaning">Cleaning</a>
+            <a href="other-services.html#snagging">Snagging</a>
+            <a href="other-services.html#moving-packing">Moving & Packing</a>
+            <a href="other-services.html#pro-services">PRO Services</a>
+            <a href="other-services.html#legal-consultancy">Legal Consultancy</a>
+            <a href="other-services.html#business-set-up">Business Set Up</a>
+            <a href="other-services.html#property-management">Property Management</a>
+          </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+        <a class="register-link" href="contact.html">Register Your Property</a>
+      </nav>
     </div>
-   </li>
+  </header>
 
-   <li class="dropdown">
-    <button type="button">COMMUNITIES ▾</button>
-    <div class="dropdown-menu">
-     <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
-     <a href="communities.html#dubai">Communities in Dubai</a>
-     <a href="communities.html#rak">Communities in RAK</a>
-    </div>
-   </li>
+  <section class="hero">
+    <span class="eyebrow">Royal Bridges Insights</span>
+    <h1>Blog & Articles</h1>
+    <p>Practical property advice, relocation guidance and useful insights to help you make informed decisions in the UAE.</p>
+  </section>
 
-   <li><a href="short-stay.html">SHORT STAY</a></li>
-   <li><a href="relocation.html">RELOCATION</a></li>
+  <main class="container">
+    <span class="eyebrow">Knowledge. Guidance. Confidence.</span>
+    <h2>Explore Our Latest Articles</h2>
+    <p class="intro">
+      Whether you are buying your first UAE property, preparing to move home,
+      investing, or settling into Abu Dhabi, our articles are designed to make
+      the process clearer and easier to navigate.
+    </p>
 
-   <li class="dropdown">
-    <button type="button">ABOUT ▾</button>
-    <div class="dropdown-menu">
-     <a href="about.html">About Royal Bridges</a>
-     <a href="careers.html">Careers</a>
-     <a href="external-agencies.html">External Agencies</a>
-     <a href="index.html#partners">Our Partners</a>
-     <a href="blog.html">Blog &amp; Articles</a>
-     <a href="other-services.html">Other Services</a>
-     <a href="other-services.html#cleaning">— Cleaning</a>
-     <a href="other-services.html#snagging">— Snagging</a>
-     <a href="other-services.html#moving-packing">— Moving &amp; Packing</a>
-     <a href="other-services.html#pro-services">— PRO Services</a>
-     <a href="other-services.html#legal-consultancy">— Legal Consultancy</a>
-     <a href="other-services.html#business-set-up">— Business Set Up</a>
-     <a href="other-services.html#property-management">— Property Management</a>
-    </div>
-   </li>
+    <article class="article" id="property-snagging">
+      <img
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+        alt="Modern residential interior"
+        loading="lazy">
+      <div class="article-content">
+        <span class="article-tag">Property Advice · Buying a Home</span>
+        <h3>Why Is Property Snagging SO Important?</h3>
+        <p>
+          Buying a property is a major investment. Whether you are purchasing
+          a brand-new home, an off-plan property at handover, or a resale
+          property, it is important to understand exactly what you are receiving.
+        </p>
+        <p>
+          Property snagging is a detailed inspection designed to identify
+          visible defects, incomplete works and areas that may require
+          attention before you accept the property or move in.
+        </p>
 
-   <li><a href="index.html#contact">CONTACT</a></li>
-  </ul>
- </div>
-</nav>
+        <h4>What does a snagging inspection look for?</h4>
+        <ul>
+          <li>Cracks, paintwork, plastering and wall finishes.</li>
+          <li>Doors, windows, locks, handles and alignment.</li>
+          <li>Flooring, tiles, grouting and skirting.</li>
+          <li>Kitchen cupboards, worktops and fitted appliances.</li>
+          <li>Bathrooms, sanitaryware, taps and visible plumbing issues.</li>
+          <li>Electrical fittings, switches, sockets and lighting.</li>
+          <li>Air conditioning operation and visible ventilation concerns.</li>
+          <li>External areas, balconies, terraces and visible finishing defects.</li>
+        </ul>
 
-<main>
+        <h4>Why should you arrange snagging before handover?</h4>
+        <p>
+          A professional inspection can help you document defects and
+          incomplete items clearly, giving you a structured list to raise
+          with the developer or relevant contractor. It can also help reduce
+          the risk of overlooking issues when you are excited to receive your
+          keys and move into your new home.
+        </p>
 
-<section class="hero">
- <div class="container hero-content">
-  <div class="eyebrow">Royal Bridges Real Estate</div>
-  <h1>Discover Your Place in Abu Dhabi</h1>
-  <p>Property sales, rentals, investment opportunities and relocation support — bringing people and property together across Abu Dhabi.</p>
-  <div class="hero-actions">
-   <a class="btn btn-gold" href="properties.html">EXPLORE PROPERTIES</a>
-   <a class="btn btn-outline" href="relocation.html">RELOCATING TO THE UAE?</a>
-  </div>
- </div>
-</section>
+        <h4>Is snagging only for new-build properties?</h4>
+        <p>
+          No. A resale property can also benefit from a thorough inspection.
+          Understanding the visible condition of a property before completion
+          can help you make better-informed decisions and identify matters
+          that may need further investigation.
+        </p>
 
-<!-- PROPERTY LISTINGS SLIDER -->
-<section class="alt" id="featured-listings">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">Find Your Next Property</div>
-   <h2>Our Property Listings</h2>
-   <p>Explore a selection of properties available through Royal Bridges. Listing photographs, details and confirmed prices will be added as properties are uploaded.</p>
-  </div>
-
-  <div class="slider-window">
-   <div class="slider-track">
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Abu Dhabi · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Yas Island · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Saadiyat Island · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Al Raha · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Abu Dhabi · Investment</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
+        <div class="divider"></div>
+        <p>
+          At Royal Bridges, we understand that a property is more than an
+          address. It is your home and your investment. Our snagging support
+          helps you approach handover with greater clarity and confidence.
+        </p>
+        <a class="button" href="other-services.html#snagging">Explore Snagging Services</a>
+      </div>
     </article>
 
-    <!-- Duplicate cards create a continuous loop -->
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Abu Dhabi · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
+    <article class="article" id="ship-or-buy">
+      <img
+        src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1100&q=85"
+        alt="Comfortable furnished living room"
+        loading="lazy">
+      <div class="article-content">
+        <span class="article-tag">Relocation · Moving to the UAE</span>
+        <h3>Ship My Furniture or Buy New After Relocation?</h3>
+        <p>
+          Moving to the UAE is an exciting new chapter, but one question often
+          comes up before the move: should you bring your existing furniture
+          with you, or start again and buy new once you arrive?
+        </p>
+        <p>
+          There is no single answer. The best decision depends on the size
+          and quality of your furniture, shipping costs, your accommodation,
+          how long you intend to stay and what matters most to your family.
+        </p>
+
+        <h4>When shipping your furniture may make sense</h4>
+        <ul>
+          <li>You have quality furniture that would be expensive to replace.</li>
+          <li>You have sentimental or personal items you want to keep.</li>
+          <li>You are relocating long-term or permanently.</li>
+          <li>Your new property has a suitable layout and enough space.</li>
+          <li>You have compared the full shipping and customs costs.</li>
+        </ul>
+
+        <h4>When buying new in the UAE may be better</h4>
+        <ul>
+          <li>You are moving into a furnished or partially furnished home.</li>
+          <li>Your relocation is temporary or you are unsure how long you will stay.</li>
+          <li>Your existing furniture is costly to ship relative to its replacement value.</li>
+          <li>You would prefer furniture that fits your new property and lifestyle.</li>
+          <li>You want to avoid the time and administration involved in international shipping.</li>
+        </ul>
+
+        <h4>Remember to calculate the full cost</h4>
+        <p>
+          Shipping is not just the price of transporting a container. Ask for
+          a complete quotation that explains packing, collection, transport,
+          insurance, customs procedures, delivery and any additional charges.
+          For buying new, consider delivery, assembly, warranties and the cost
+          of furnishing the entire property.
+        </p>
+
+        <h4>Our advice</h4>
+        <p>
+          Before making a decision, obtain your shipping quotation and compare
+          it with a realistic replacement budget in the UAE. It can also help
+          to view your new property or confirm its floor plan before deciding
+          what to bring.
+        </p>
+
+        <div class="divider"></div>
+        <p>
+          Royal Bridges can help you consider your relocation requirements,
+          accommodation options and moving support so that you can plan your
+          arrival with fewer surprises.
+        </p>
+        <a class="button" href="relocation.html">Start Your Relocation Enquiry</a>
+        <a class="button outline" href="other-services.html#moving-packing">Moving & Packing</a>
+      </div>
     </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Yas Island · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Saadiyat Island · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Al Raha · Residential</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-    <article class="listing-card">
-     <div class="listing-photo"><span>Property photograph to be added</span></div>
-     <div class="listing-info"><h3>Featured Property</h3><p>Abu Dhabi · Investment</p><p>Details and availability to be confirmed.</p><div class="listing-price">Price on enquiry</div></div>
-    </article>
-   </div>
-  </div>
-  <div class="more-link"><a class="btn btn-gold" href="properties.html">VIEW ALL PROPERTIES</a></div>
- </div>
-</section>
+  </main>
 
-<!-- COMMUNITIES -->
-<section id="communities">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">Live Abu Dhabi</div>
-   <h2>Explore Our Communities</h2>
-   <p>Discover some of Abu Dhabi's most sought-after destinations, from waterfront living to vibrant family communities.</p>
-  </div>
+  <section class="cta">
+    <span class="eyebrow">Your Next Chapter Starts Here</span>
+    <h2>Need a Little More Guidance?</h2>
+    <p>
+      From finding the right property to snagging, relocation and settling
+      into the UAE, Royal Bridges is here to help you explore your next steps.
+    </p>
+    <a class="button" href="contact.html">Speak to Our Team</a>
+    <a class="button outline" href="index.html">Explore Royal Bridges</a>
+  </section>
 
-  <div class="cards">
-   <article class="card">
-    <div class="card-image yas-image"></div>
-    <div class="card-body">
-     <h3>Yas Island</h3>
-     <p>Entertainment, waterfront residences, family communities and investment opportunities.</p>
-     <a href="communities.html#yas-island">EXPLORE YAS ISLAND →</a>
-    </div>
-   </article>
-
-   <article class="card">
-    <div class="card-image saadiyat-image"></div>
-    <div class="card-body">
-     <h3>Saadiyat Island</h3>
-     <p>Beachside living, culture, luxury residences and exceptional lifestyle destinations.</p>
-     <a href="communities.html#saadiyat-island">EXPLORE SAADIYAT →</a>
-    </div>
-   </article>
-
-   <article class="card">
-    <div class="card-image hudayriyat-image"></div>
-    <div class="card-body">
-     <h3>Hudayriyat Island</h3>
-     <p>A growing island destination offering coastal living, leisure, sport and lifestyle experiences.</p>
-     <a href="communities.html#hudayriyat-island">EXPLORE HUDAYRIYAT →</a>
-    </div>
-   </article>
-  </div>
-
-  <div class="more-link"><a class="btn btn-gold" href="communities.html">CLICK TO SEE MORE COMMUNITIES</a></div>
- </div>
-</section>
-
-<!-- PROPERTY SERVICES -->
-<section class="alt">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">How We Can Help</div>
-   <h2>Property Services</h2>
-   <p>Whether you are selling, letting, buying or investing, our team can help you take the next step.</p>
-  </div>
-
-  <div class="feature-grid">
-   <div class="feature">
-    <h3>Register Your Property</h3>
-    <p>Thinking of selling or renting your property in Abu Dhabi? Register your details and our team can discuss the next steps.</p>
-    <a class="btn btn-gold" href="register.html">REGISTER YOUR PROPERTY</a>
-   </div>
-   <div class="feature light">
-    <h3>Looking to Buy or Rent?</h3>
-    <p>Share your requirements and let us help you identify suitable properties and opportunities.</p>
-    <a class="btn btn-dark-outline" href="properties.html">EXPLORE PROPERTIES</a>
-   </div>
-   <div class="feature light">
-    <h3>Off-Plan Opportunities</h3>
-    <p>Discover new developments, upcoming projects and resale opportunities across Abu Dhabi.</p>
-    <a class="btn btn-dark-outline" href="properties.html#off-plan-primary-upcoming">EXPLORE OFF-PLAN</a>
-   </div>
-   <div class="feature">
-    <h3>Relocating to Abu Dhabi?</h3>
-    <p>Moving to the UAE involves more than finding a home. Tell us about your move and the support you need.</p>
-    <a class="btn btn-gold" href="relocation.html">RELOCATION SUPPORT</a>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- OTHER SERVICES SLIDER, ABOVE BLOG -->
-<section id="our-services">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">More Than Property</div>
-   <h2>Our Other Services</h2>
-   <p>Practical support for your home, move, business and life in the UAE.</p>
-  </div>
-
-  <div class="slider-window">
-   <div class="slider-track">
-    <article class="service-slide"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
-
-    <article class="service-slide"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
-    <article class="service-slide"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- BLOG PREVIEW -->
-<section class="alt" id="blog">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">Knowledge &amp; Guidance</div>
-   <h2>From Our Blog</h2>
-   <p>Useful information and practical guidance to help you make informed property decisions in Abu Dhabi.</p>
-  </div>
-
-  <div class="blog-grid">
-   <article class="blog-card">
-    <small>Property Inspections</small>
-    <h3>Why Is Property Snagging SO Important?</h3>
-    <p>Understand why a thorough inspection matters before accepting your new property.</p>
-    <a href="blog.html#property-snagging">READ ARTICLE →</a>
-   </article>
-   <article class="blog-card">
-    <small>Relocation</small>
-    <h3>Ship My Furniture or Buy New After Relocation?</h3>
-    <p>Things to consider when deciding whether to bring your furniture to the UAE.</p>
-    <a href="blog.html#ship-or-buy-furniture">READ ARTICLE →</a>
-   </article>
-   <article class="blog-card">
-    <small>Property Guidance</small>
-    <h3>What Should I Know Before Renting in Abu Dhabi?</h3>
-    <p>A practical introduction to the rental process and preparing for your move.</p>
-    <a href="blog.html#renting-in-abu-dhabi">READ ARTICLE →</a>
-   </article>
-  </div>
-  <div class="more-link"><a class="btn btn-gold" href="blog.html">VISIT BLOG &amp; ARTICLES</a></div>
- </div>
-</section>
-
-<!-- PARTNERS -->
-<section id="partners">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">Working Together</div>
-   <h2>Our Partners</h2>
-   <p>Explore some of the master developers shaping Abu Dhabi's property landscape.</p>
-  </div>
-  <div class="partner-window">
-   <div class="partner-track">
-    <a class="partner-card" href="https://www.aldar.com/" target="_blank" rel="noopener"><strong>ALDAR</strong><span>Master Developer</span></a>
-    <a class="partner-card" href="https://www.modon.com/" target="_blank" rel="noopener"><strong>MODON</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://ohana.ae/" target="_blank" rel="noopener"><strong>OHANA</strong><span>Property Developer</span></a>
-    <a class="partner-card" href="https://bloomholding.com/" target="_blank" rel="noopener"><strong>BLOOM</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://www.imkan.ae/" target="_blank" rel="noopener"><strong>IMKAN</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://eaglehills.com/" target="_blank" rel="noopener"><strong>EAGLE HILLS</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://reportageuae.com/" target="_blank" rel="noopener"><strong>REPORTAGE</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://sobharealty.com/" target="_blank" rel="noopener"><strong>SOBHA</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://www.aldar.com/" target="_blank" rel="noopener"><strong>ALDAR</strong><span>Master Developer</span></a>
-    <a class="partner-card" href="https://www.modon.com/" target="_blank" rel="noopener"><strong>MODON</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://ohana.ae/" target="_blank" rel="noopener"><strong>OHANA</strong><span>Property Developer</span></a>
-    <a class="partner-card" href="https://bloomholding.com/" target="_blank" rel="noopener"><strong>BLOOM</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://www.imkan.ae/" target="_blank" rel="noopener"><strong>IMKAN</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://eaglehills.com/" target="_blank" rel="noopener"><strong>EAGLE HILLS</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://reportageuae.com/" target="_blank" rel="noopener"><strong>REPORTAGE</strong><span>Developer</span></a>
-    <a class="partner-card" href="https://sobharealty.com/" target="_blank" rel="noopener"><strong>SOBHA</strong><span>Developer</span></a>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- GOVERNMENT RESOURCES -->
-<section class="alt" id="resources">
- <div class="container">
-  <div class="section-heading">
-   <div class="eyebrow">Useful Information</div>
-   <h2>Helpful Government Resources</h2>
-   <p>Official Abu Dhabi resources for property owners, tenants and residents.</p>
-  </div>
-  <div class="resources">
-   <div class="resource"><strong>Department of Municipalities and Transport (DMT)</strong><span>Municipal, planning and transport services and information.</span><a href="https://www.dmt.gov.ae/" target="_blank" rel="noopener">VISIT DMT →</a></div>
-   <div class="resource"><strong>TAMM</strong><span>Abu Dhabi Government services and official information.</span><a href="https://www.tamm.abudhabi/" target="_blank" rel="noopener">VISIT TAMM →</a></div>
-   <div class="resource"><strong>Abu Dhabi Real Estate Centre (ADREC)</strong><span>Abu Dhabi real estate sector information and services.</span><a href="https://adrec.gov.ae/" target="_blank" rel="noopener">VISIT ADREC →</a></div>
-  </div>
- </div>
-</section>
-
-<!-- ABOUT PREVIEW -->
-<section id="about">
- <div class="container about-layout">
-  <div>
-   <div class="eyebrow" style="color:#9b7948">Welcome to Royal Bridges</div>
-   <h2>Connecting People, Property and Possibility</h2>
-   <p>Royal Bridges Real Estate supports clients navigating Abu Dhabi's property market, whether they are buying, selling, renting or exploring investment opportunities.</p>
-   <p>We understand that property decisions are about more than bricks and mortar. They are about lifestyle, family, opportunity and making the right move.</p>
-   <p>Our focus is Abu Dhabi, with a commitment to clear communication, professional service and practical guidance throughout the property journey.</p>
-   <a class="btn btn-gold" href="about.html">ABOUT ROYAL BRIDGES</a>
-  </div>
-  <div class="about-panel">
-   <h3>Your Abu Dhabi Property Journey</h3>
-   <p>From the first enquiry to finding the right property, arranging viewings and understanding the next steps, Royal Bridges is here to help you navigate the process.</p>
-   <p>Buying · Selling · Renting · Investment · Relocation</p>
-  </div>
- </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
- <div class="container">
-  <h2>Let's Talk Property</h2>
-  <p>Whether you are looking to buy, sell, rent, invest or relocate, we would be pleased to hear from you.</p>
-  <div class="contact-grid">
-   <div class="contact-item"><strong>English Enquiries / WhatsApp</strong><a href="https://wa.me/971568611311">+971 56 861 1311</a></div>
-   <div class="contact-item"><strong>Arabic Enquiries / WhatsApp</strong><a href="https://wa.me/971506082608">+971 50 608 2608</a></div>
-   <div class="contact-item"><strong>Company Email</strong><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></div>
-  </div>
-  <p style="margin-top:22px"><a class="btn btn-gold" href="mailto:info@royalbridges.ae">EMAIL ROYAL BRIDGES</a></p>
- </div>
-</section>
-
-</main>
-
-<footer>
- <div class="container">
-  <span>© <span id="year"></span> Royal Bridges Real Estate. All rights reserved.</span>
-  <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> | Abu Dhabi, UAE</span>
-  <span><a href="short-stay.html">Short Stay</a> | <a href="relocation.html">Relocation</a> | <a href="blog.html">Blog</a></span>
- </div>
-</footer>
-
-<script>
-function toggleMenu(){
- document.getElementById('navLinks').classList.toggle('open');
-}
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+  <footer>
+    <p><strong>Royal Bridges Real Estate</strong></p>
+    <p>Abu Dhabi, United Arab Emirates</p>
+    <p>
+      <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+      <a href="https://wa.me/971568611311">English WhatsApp</a>
+      <a href="https://wa.me/971506082608">Arabic WhatsApp</a>
+    </p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="properties.html">Properties</a> |
+      <a href="relocation.html">Relocation</a> |
+      <a href="other-services.html">Other Services</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
