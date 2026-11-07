@@ -2,279 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Careers | Royal Bridges</title>
-<meta name="description" content="Explore career opportunities and register your interest in joining Royal Bridges in the UAE.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | Royal Bridges Real Estate</title>
 <style>
-:root{--navy:#10243b;--gold:#c5a46d;--cream:#f8f6f1;--ink:#283646;--muted:#697582}
-*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#142b45;--gold:#b69a62;--cream:#f6f1e7;--light:#fbf9f4;--ink:#263444;--muted:#697584}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-.topbar{background:var(--navy);color:white;padding:9px 0;font-size:12px}
-.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.topbar a{color:#e6c995}
-.brandbar{background:#f2eadb;padding:10px 0;border-bottom:1px solid #e1d4bd}
-.brandbar img{width:210px;max-height:90px;object-fit:contain;display:block}
-.navbar{background:var(--navy);color:white}
-.navbar .container{display:flex;justify-content:center;gap:23px;flex-wrap:wrap}
-.navbar a{font-size:12px;padding:15px 0;display:block}
-.navbar a:hover{color:#e5c58f}
-.hero{background:linear-gradient(90deg,rgba(9,26,44,.9),rgba(9,26,44,.45)),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:340px;display:flex;align-items:center;color:white}
-.hero-content{padding:55px 0;max-width:760px}
-.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#d8b77f;font-weight:bold}
-h1,h2,h3{font-family:Georgia,serif;font-weight:normal}
-h1{font-size:clamp(36px,5vw,54px);line-height:1.15;margin:12px 0}
-.hero p{font-size:15px;color:#f0f1f2;max-width:680px}
-section{padding:55px 0}
-.alt{background:var(--cream)}
-.heading{text-align:center;margin-bottom:30px}
-.heading .eyebrow{color:#987544}
-.heading h2{font-size:32px;color:var(--navy);margin:6px 0}
-.heading p{font-size:14px;color:var(--muted);max-width:760px;margin:auto}
-.intro{max-width:850px;margin:auto;text-align:center;color:var(--muted);font-size:14px}
-.role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.role{background:white;border:1px solid #e8e2d8;padding:24px}
-.role h3{font-size:22px;color:var(--navy);margin-bottom:8px}
-.role p{font-size:13px;color:var(--muted)}
-.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.process article{padding:22px;background:white;border:1px solid #e8e2d8}
-.process h3{color:var(--navy);font-size:20px;margin-bottom:7px}
-.process p{font-size:13px;color:var(--muted)}
-.form-wrap{max-width:760px;margin:auto;background:white;border:1px solid #e8e2d8;padding:30px}
-.form-wrap p{font-size:13px;color:var(--muted);margin-bottom:20px}
-label{display:block;font-size:12px;font-weight:bold;color:var(--navy);margin:13px 0 6px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #d8dce0;background:#fff;font:14px Arial;color:var(--ink);border-radius:0}
-textarea{min-height:110px;resize:vertical}
-.btn{display:inline-block;background:var(--gold);color:white;padding:12px 20px;font-size:11px;font-weight:bold;letter-spacing:.5px;border:0;cursor:pointer}
-.form-wrap button{margin-top:18px}
-.notice{background:#eee8dc;border-left:4px solid var(--gold);padding:16px 18px;margin-top:20px;font-size:12px;color:#555}
-.cta{background:var(--navy);color:white;text-align:center}
-.cta h2{font-size:32px;margin-bottom:10px}
-.cta p{font-size:14px;color:#d5dce3;margin-bottom:20px}
-footer{background:#091827;color:#cbd2d9;padding:24px 0;font-size:11px}
-footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-footer a{color:#e3c18b}
-@media(max-width:800px){.role-grid,.process{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:550px){
-.topbar .container{justify-content:center;text-align:center}
-.brandbar img{width:185px}
-.navbar .container{gap:15px}
-.navbar a{padding:10px 0}
-section{padding:42px 0}
-.role-grid,.process{grid-template-columns:1fr}
-.form-wrap{padding:20px}
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--light);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--navy);color:white;text-align:center;padding:8px 15px;font-size:13px}
+.topbar a{color:#e7d6b2;margin:0 8px}
+header{background:var(--cream);border-bottom:1px solid #e5ddcf;position:sticky;top:0;z-index:1000}
+.header-inner{max-width:1250px;margin:auto;min-height:86px;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo img{display:block;width:190px;max-height:68px;object-fit:contain}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:17px;font-size:13px;font-weight:600;color:var(--navy)}
+nav a,.dropbtn{padding:9px 0}
+nav a:hover,.dropdown:hover .dropbtn{color:var(--gold)}
+.dropdown{position:relative;display:inline-block}
+.dropbtn{border:0;background:none;color:inherit;font:inherit;cursor:pointer}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:235px;max-height:75vh;overflow-y:auto;background:white;box-shadow:0 8px 22px #142b4520;border-top:3px solid var(--gold);padding:8px 0;z-index:1001}
+.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
+.dropdown-content a{display:block;padding:9px 16px;white-space:normal}
+.dropdown-content a:hover{background:var(--cream)}
+.sub-label{padding:9px 16px 4px;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.register-link{background:var(--navy);color:white!important;padding:10px 15px;border-radius:3px}
+.hero{background:linear-gradient(90deg,rgba(20,43,69,.88),rgba(20,43,69,.48)),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85") center/cover;color:white;text-align:center;padding:100px 22px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
+.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(38px,5vw,60px);margin:12px 0}
+.hero p{max-width:740px;margin:auto;font-size:18px}
+.container{max-width:1150px;margin:auto;padding:65px 22px}
+h2{color:var(--navy);font-family:Georgia,serif;font-size:35px;font-weight:400;margin:8px 0 15px}
+h3{color:var(--navy)}
+.intro{max-width:800px;color:var(--muted)}
+.cream-section{background:var(--cream)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.card{background:white;border:1px solid #e9e3d9;padding:25px}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:22px;margin-top:0}
+.card p{color:var(--muted);font-size:14px}
+.two-column{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.two-column img{width:100%;max-height:420px;object-fit:cover}
+.list{padding-left:20px;color:var(--muted)}
+.list li{margin:9px 0}
+.button{display:inline-block;background:var(--gold);color:white;padding:12px 23px;margin:6px 5px 6px 0;border-radius:3px;font-weight:bold;border:0;cursor:pointer;font:inherit}
+.button.dark{background:var(--navy)}
+.form-box{max-width:800px;margin:30px auto 0;padding:32px;background:white;border:1px solid #e9e3d9}
+label{display:block;color:var(--navy);font-weight:bold;font-size:13px;margin:15px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d8d2c8;background:white;font:inherit;border-radius:2px}
+textarea{min-height:120px;resize:vertical}
+.form-note{font-size:12px;color:var(--muted)}
+.cta{background:var(--navy);color:white;text-align:center;padding:55px 22px}
+.cta h2{color:white}
+.cta p{max-width:700px;margin:0 auto 20px;color:#e1e5ea}
+footer{background:#0e2034;color:#e8e8e8;padding:38px 22px;text-align:center;font-size:13px}
+footer a{color:#e1c995;margin:0 8px}
+footer p{margin:8px 0}
+@media(max-width:850px){.header-inner{flex-direction:column;gap:8px}nav{justify-content:center;gap:12px}.grid{grid-template-columns:repeat(2,1fr)}.two-column{grid-template-columns:1fr}}
+@media(max-width:520px){nav{font-size:12px;gap:10px}.logo img{width:165px}.grid{grid-template-columns:1fr}.container{padding:45px 17px}.form-box{padding:22px}}
 </style>
 </head>
 <body>
 
 <div class="topbar">
- <div class="container">
-  <span>Royal Bridges | Abu Dhabi, UAE</span>
-  <span>
-   English: <a href="https://wa.me/971568611311">+971 56 861 1311</a>
-   &nbsp; | &nbsp;
-   العربية: <a href="https://wa.me/971506082608">+971 50 608 2608</a>
-   &nbsp; | &nbsp;
-   <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
-  </span>
- </div>
+Royal Bridges Real Estate |
+<a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a> |
+<a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a> |
+<a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
 </div>
 
-<header class="brandbar">
- <div class="container">
-  <a href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate"></a>
- </div>
-</header>
-
-<nav class="navbar">
- <div class="container">
-  <a href="index.html">HOME</a>
-  <a href="properties.html">PROPERTIES</a>
-  <a href="communities.html">COMMUNITIES</a>
-  <a href="relocation.html">RELOCATION</a>
-  <a href="blog.html">BLOG</a>
-  <a href="index.html#about">ABOUT</a>
-  <a href="other-services.html">OTHER SERVICES</a>
-  <a href="index.html#contact">CONTACT</a>
- </div>
+<header>
+<div class="header-inner">
+<a class="logo" href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate"></a>
+<nav>
+<a href="index.html">Home</a>
+<div class="dropdown">
+<button class="dropbtn">Properties ▾</button>
+<div class="dropdown-content">
+<a href="properties.html#property-types">Types of Properties</a>
+<a href="properties.html#residential-sale">For Sale (Residential)</a>
+<a href="properties.html#residential-rent">For Rent (Residential)</a>
+<a href="properties.html#off-plan-primary">Off Plan (Primary & Upcoming)</a>
+<a href="properties.html#off-plan-resale">Off Plan (Secondary Resale)</a>
+<a href="properties.html#commercial-sale">For Sale (Commercial)</a>
+<a href="properties.html#commercial-rent">For Rent (Commercial)</a>
+<a href="properties.html#residential-land">Residential Lands & Plots</a>
+<a href="properties.html#commercial-land">Commercial / Mixed-Use Lands & Plots</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Communities ▾</button>
+<div class="dropdown-content">
+<a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
+<a href="communities.html#dubai">Communities in Dubai</a>
+<a href="communities.html#rak">Communities in RAK</a>
+</div>
+</div>
+<a href="short-stay.html">Short Stay</a>
+<a href="relocation.html">Relocation</a>
+<div class="dropdown">
+<button class="dropbtn">About ▾</button>
+<div class="dropdown-content">
+<a href="about.html">About Royal Bridges</a>
+<a href="careers.html">Careers</a>
+<a href="external-agencies.html">External Agencies</a>
+<a href="partners.html">Our Partners</a>
+<a href="blog.html">Blog & Articles</a>
+<div class="sub-label">Other Services</div>
+<a href="other-services.html#cleaning">Cleaning</a>
+<a href="other-services.html#snagging">Snagging</a>
+<a href="other-services.html#moving-packing">Moving & Packing</a>
+<a href="other-services.html#pro-services">PRO Services</a>
+<a href="other-services.html#legal-consultancy">Legal Consultancy</a>
+<a href="other-services.html#business-set-up">Business Set Up</a>
+<a href="other-services.html#property-management">Property Management</a>
+</div>
+</div>
+<a href="contact.html">Contact</a>
+<a class="register-link" href="contact.html">Register Your Property</a>
 </nav>
-
-<header class="hero">
- <div class="container hero-content">
-  <div class="eyebrow">Build Your Future With Us</div>
-  <h1>Careers at Royal Bridges</h1>
-  <p>We welcome motivated, professional and service-focused people who want to grow with a business connecting property, relocation and lifestyle services across the UAE.</p>
- </div>
+</div>
 </header>
 
-<section>
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow">Join Our Network</div>
-   <h2>Opportunities to Grow</h2>
-   <p>We are interested in hearing from people with experience, initiative and a commitment to delivering excellent client service.</p>
-  </div>
-  <div class="intro">
-   <p>Royal Bridges welcomes expressions of interest from professionals across real estate and our wider service divisions. Whether you are experienced in property, customer service, operations or administration, we would like to hear from you.</p>
-  </div>
-
-  <div class="role-grid">
-   <article class="role">
-    <h3>Real Estate Professionals</h3>
-    <p>Sales and leasing professionals, property consultants and agents with knowledge of the UAE property market.</p>
-   </article>
-   <article class="role">
-    <h3>Property Management</h3>
-    <p>People with experience in property coordination, inspections, client relations and property administration.</p>
-   </article>
-   <article class="role">
-    <h3>Cleaning Operations</h3>
-    <p>Cleaning professionals, team leaders, supervisors and operations coordinators.</p>
-   </article>
-   <article class="role">
-    <h3>Relocation &amp; Client Services</h3>
-    <p>People who enjoy helping individuals and families settle into a new home and community.</p>
-   </article>
-   <article class="role">
-    <h3>Administration &amp; Support</h3>
-    <p>Organised administrators and coordinators with strong communication and organisational skills.</p>
-   </article>
-   <article class="role">
-    <h3>Business Development</h3>
-    <p>Relationship builders interested in partnerships, client development and growing service networks.</p>
-   </article>
-  </div>
- </div>
+<section class="hero">
+<span class="eyebrow">Careers at Royal Bridges</span>
+<h1>Build Your Future With Us</h1>
+<p>We welcome motivated, professional people who want to contribute to property, relocation and connected services across the UAE.</p>
 </section>
 
-<section class="alt">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow">Our Approach</div>
-   <h2>What We Value</h2>
-   <p>We believe strong relationships and professional standards are at the heart of good service.</p>
-  </div>
-  <div class="process">
-   <article>
-    <h3>Professionalism</h3>
-    <p>Integrity, accountability and respect in every client and business relationship.</p>
-   </article>
-   <article>
-    <h3>Initiative</h3>
-    <p>A practical, positive approach to solving problems and getting things done.</p>
-   </article>
-   <article>
-    <h3>Client Focus</h3>
-    <p>Clear communication and a genuine commitment to understanding client needs.</p>
-   </article>
-  </div>
- </div>
+<main>
+<section class="container">
+<span class="eyebrow">Join Our Network</span>
+<h2>Opportunities to Grow Together</h2>
+<p class="intro">
+At Royal Bridges, we recognise that people are at the heart of every successful
+business. We are interested in hearing from individuals who bring initiative,
+professionalism, good communication and a genuine commitment to client service.
+</p>
+<p class="intro">
+Whether your experience is in real estate, administration, customer service,
+property operations or one of our connected service areas, you are welcome to
+introduce yourself and tell us how you could contribute.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Real Estate Professionals</h3>
+<p>Connect with us if you have experience in residential sales, leasing, property investment, commercial property or client advisory.</p>
+</div>
+<div class="card">
+<h3>Operations & Administration</h3>
+<p>We welcome interest from organised people with experience in coordination, customer service, administration and business support.</p>
+</div>
+<div class="card">
+<h3>Property & Service Teams</h3>
+<p>Introduce yourself if your background includes property inspections, snagging, cleaning, moving, maintenance coordination or related operations.</p>
+</div>
+</div>
 </section>
 
-<section id="apply">
- <div class="container">
-  <div class="heading">
-   <div class="eyebrow">Register Your Interest</div>
-   <h2>Tell Us About Yourself</h2>
-   <p>Complete the details below to prepare an email application for our team.</p>
-  </div>
-
-  <div class="form-wrap">
-   <p>Please include your preferred area of work and a short introduction. You can attach your CV to the email after it opens.</p>
-
-   <form id="careerForm">
-    <label for="fullName">Full Name *</label>
-    <input id="fullName" name="fullName" required>
-
-    <label for="email">Email Address *</label>
-    <input id="email" name="email" type="email" required>
-
-    <label for="phone">Contact Number</label>
-    <input id="phone" name="phone" type="tel">
-
-    <label for="location">Current Location</label>
-    <input id="location" name="location" placeholder="For example, Abu Dhabi, UAE">
-
-    <label for="role">Area of Interest *</label>
-    <select id="role" name="role" required>
-     <option value="">Please select</option>
-     <option>Real Estate Sales</option>
-     <option>Real Estate Leasing</option>
-     <option>Property Management</option>
-     <option>Cleaning Operations</option>
-     <option>Relocation &amp; Client Services</option>
-     <option>Administration &amp; Support</option>
-     <option>Business Development</option>
-     <option>Other</option>
-    </select>
-
-    <label for="experience">Relevant Experience</label>
-    <select id="experience" name="experience">
-     <option value="">Please select</option>
-     <option>No previous experience</option>
-     <option>Less than 1 year</option>
-     <option>1–3 years</option>
-     <option>3–5 years</option>
-     <option>5+ years</option>
-    </select>
-
-    <label for="message">A Short Introduction *</label>
-    <textarea id="message" name="message" required placeholder="Tell us about your experience, skills and why you would like to work with Royal Bridges."></textarea>
-
-    <button class="btn" type="submit">PREPARE MY APPLICATION</button>
-   </form>
-
-   <div class="notice">
-    Selecting the button will open your email application with your details prepared. Please attach your CV before sending. This form does not submit or store information on the website.
-   </div>
-  </div>
- </div>
+<section class="cream-section">
+<div class="container">
+<div class="two-column">
+<div>
+<span class="eyebrow">What We Value</span>
+<h2>Professionalism With Purpose</h2>
+<p>We value people who take pride in their work, communicate clearly and understand the importance of treating clients, colleagues and partners with respect.</p>
+<ul class="list">
+<li>Strong communication and interpersonal skills.</li>
+<li>Reliability, organisation and attention to detail.</li>
+<li>A responsible and client-focused approach.</li>
+<li>Relevant qualifications, experience or specialist skills.</li>
+<li>Understanding of the UAE market where relevant to the role.</li>
+<li>Willingness to learn and work collaboratively.</li>
+</ul>
+</div>
+<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=85" alt="Colleagues working together" loading="lazy">
+</div>
+</div>
 </section>
+
+<section class="container">
+<span class="eyebrow">Application Process</span>
+<h2>How to Express Your Interest</h2>
+<div class="grid">
+<div class="card">
+<h3>01. Introduce Yourself</h3>
+<p>Tell us about your background, experience and the type of opportunity you are interested in.</p>
+</div>
+<div class="card">
+<h3>02. Share Your CV</h3>
+<p>Provide your latest CV and any relevant qualifications, licences or professional portfolio.</p>
+</div>
+<div class="card">
+<h3>03. Initial Discussion</h3>
+<p>If there is a suitable opportunity, our team may contact you to discuss the next steps.</p>
+</div>
+</div>
+</section>
+
+<section class="cream-section" id="apply">
+<div class="container">
+<div style="text-align:center">
+<span class="eyebrow">Submit Your Interest</span>
+<h2>Introduce Yourself to Royal Bridges</h2>
+<p class="intro" style="margin:0 auto">Use the form below to prepare an application email for our team.</p>
+</div>
+
+<form class="form-box" action="mailto:info@royalbridges.ae" method="post" enctype="text/plain">
+<label for="name">Full Name</label>
+<input id="name" name="Full Name" type="text" required placeholder="Your full name">
+
+<label for="email">Email Address</label>
+<input id="email" name="Email Address" type="email" required placeholder="Your email address">
+
+<label for="phone">Contact Number</label>
+<input id="phone" name="Contact Number" type="tel" required placeholder="+971...">
+
+<label for="role">Area of Interest</label>
+<select id="role" name="Area of Interest" required>
+<option value="">Please select</option>
+<option>Real Estate Sales</option>
+<option>Leasing</option>
+<option>Property Management</option>
+<option>Administration</option>
+<option>Customer Service</option>
+<option>Cleaning & Property Operations</option>
+<option>Snagging & Inspections</option>
+<option>Moving & Relocation</option>
+<option>Other / General Interest</option>
+</select>
+
+<label for="experience">Brief Summary of Your Experience</label>
+<textarea id="experience" name="Experience" placeholder="Tell us about your experience, skills and qualifications." required></textarea>
+
+<label for="cv">CV or Portfolio Link (if available)</label>
+<input id="cv" name="CV or Portfolio Link" type="url" placeholder="Paste a link to your CV or portfolio">
+
+<label for="availability">Availability</label>
+<input id="availability" name="Availability" type="text" placeholder="When could you potentially start?">
+
+<button class="button dark" type="submit">Submit Career Enquiry</button>
+<p class="form-note">Your email application will open on your device. Attach your CV before sending. This form does not upload or store CV files on the website. Submitting an enquiry does not guarantee employment or an interview.</p>
+</form>
+</div>
+</section>
+</main>
 
 <section class="cta">
- <div class="container">
-  <h2>We Would Like to Hear From You</h2>
-  <p>Have a question about working with Royal Bridges?</p>
-  <a class="btn" href="mailto:info@royalbridges.ae?subject=Careers%20Enquiry">EMAIL OUR TEAM</a>
-  &nbsp;
-  <a class="btn" href="https://wa.me/971568611311">CONTACT US ON WHATSAPP</a>
- </div>
+<span class="eyebrow">Let's Connect</span>
+<h2>Interested in Working Together?</h2>
+<p>We would be pleased to hear from you and learn more about what you could bring to Royal Bridges.</p>
+<a class="button" href="#apply">Express Your Interest</a>
+<a class="button" href="mailto:info@royalbridges.ae">Email Our Team</a>
 </section>
 
 <footer>
- <div class="container">
-  <span>© <span id="year"></span> Royal Bridges. All rights reserved.</span>
-  <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> | Abu Dhabi, UAE</span>
-  <span><a href="index.html">Home</a> | <a href="properties.html">Properties</a> | <a href="communities.html">Communities</a></span>
- </div>
+<p><strong>Royal Bridges Real Estate</strong></p>
+<p>Abu Dhabi, United Arab Emirates</p>
+<p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+<a href="https://wa.me/971568611311">English WhatsApp</a>
+<a href="https://wa.me/971506082608">Arabic WhatsApp</a></p>
+<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="properties.html">Properties</a> | <a href="blog.html">Blog</a> | <a href="contact.html">Contact</a></p>
+<p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
 </footer>
-
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-
-document.getElementById('careerForm').addEventListener('submit',function(event){
- event.preventDefault();
-
- const data=new FormData(this);
- const subject=encodeURIComponent('Careers Enquiry - '+data.get('fullName'));
- const body=encodeURIComponent(
-  'CAREERS ENQUIRY\n\n'+
-  'Name: '+data.get('fullName')+'\n'+
-  'Email: '+data.get('email')+'\n'+
-  'Contact Number: '+data.get('phone')+'\n'+
-  'Current Location: '+data.get('location')+'\n'+
-  'Area of Interest: '+data.get('role')+'\n'+
-  'Experience: '+data.get('experience')+'\n\n'+
-  'Introduction:\n'+data.get('message')+
-  '\n\nI have attached my CV.'
- );
-
- window.location.href='mailto:info@royalbridges.ae?subject='+subject+'&body='+body;
-});
-</script>
 
 </body>
 </html>
