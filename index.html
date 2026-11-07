@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover exceptional homes and property investment opportunities across Abu Dhabi with Royal Bridges Real Estate.">
+
+  <meta name="description" content="Discover exceptional homes, property investments and new developments across Abu Dhabi with Royal Bridges Real Estate.">
+
+  <meta name="theme-color" content="#092744">
+
   <title>Royal Bridges Real Estate | Abu Dhabi</title>
+
   <style>
     :root {
       --navy: #092744;
@@ -19,8 +24,15 @@
       --shadow: 0 12px 32px rgba(6, 29, 51, .12);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       color: var(--ink);
@@ -29,11 +41,15 @@
       line-height: 1.6;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
+
+    /* HEADER */
 
     .brandbar {
-      min-height: 82px;
-      padding: 8px clamp(18px, 5vw, 76px);
+      min-height: 76px;
+      padding: 7px clamp(18px, 5vw, 76px);
       background: var(--ivory);
       display: flex;
       align-items: center;
@@ -41,11 +57,17 @@
       gap: 20px;
     }
 
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
     .brand img {
       display: block;
       width: auto;
-      height: 66px;
-      max-width: min(270px, 48vw);
+      height: 62px;
+      max-width: min(270px, 45vw);
       object-fit: contain;
     }
 
@@ -62,14 +84,14 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      padding: 11px 18px;
+      gap: 8px;
+      padding: 9px 17px;
       background: var(--navy);
       border: 1px solid var(--gold);
       color: var(--gold-light);
       text-decoration: none;
       font-family: Georgia, serif;
-      font-size: 14px;
+      font-size: 13px;
       white-space: nowrap;
       box-shadow: 0 4px 12px rgba(6,29,51,.14);
       transition: .2s ease;
@@ -80,8 +102,10 @@
       color: var(--navy-deep);
     }
 
+    /* NAVIGATION */
+
     .mainnav {
-      min-height: 50px;
+      min-height: 48px;
       padding: 0 clamp(18px, 5vw, 76px);
       background: var(--navy);
       color: var(--ivory);
@@ -90,12 +114,13 @@
       justify-content: center;
       gap: clamp(20px, 4vw, 58px);
       position: relative;
-      z-index: 5;
+      z-index: 20;
     }
 
-    .mainnav a, .dropbtn {
+    .mainnav a,
+    .dropbtn {
       display: block;
-      padding: 13px 0 11px;
+      padding: 12px 0 10px;
       border: 0;
       border-bottom: 2px solid transparent;
       background: transparent;
@@ -106,12 +131,17 @@
       cursor: pointer;
     }
 
-    .mainnav a:hover, .dropdown:hover .dropbtn, .dropdown:focus-within .dropbtn {
+    .mainnav a:hover,
+    .dropdown:hover .dropbtn,
+    .dropdown:focus-within .dropbtn,
+    .dropdown.open .dropbtn {
       color: var(--gold-light);
       border-bottom-color: var(--gold);
     }
 
-    .dropdown { position: relative; }
+    .dropdown {
+      position: relative;
+    }
 
     .dropbtn::after {
       content: " ▾";
@@ -128,10 +158,12 @@
       background: var(--white);
       border-top: 2px solid var(--gold);
       box-shadow: var(--shadow);
+      z-index: 30;
     }
 
     .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown.open .dropdown-menu {
       display: block;
     }
 
@@ -149,20 +181,28 @@
       color: var(--navy);
     }
 
+    /* HERO */
+
     .hero {
-      min-height: 490px;
-      padding: 76px clamp(22px, 9vw, 140px) 92px;
+      min-height: 510px;
+      padding: 78px clamp(22px, 9vw, 140px) 95px;
       display: flex;
       align-items: center;
       position: relative;
       color: white;
       background:
-        linear-gradient(90deg, rgba(5, 26, 47, .88) 0%, rgba(5, 26, 47, .52) 43%, rgba(5, 26, 47, .06) 100%),
-        url("https://live.staticflickr.com/686/31630353701_4d48860aaf_o.jpg") center 48% / cover no-repeat;
+        linear-gradient(
+          90deg,
+          rgba(5, 26, 47, .88) 0%,
+          rgba(5, 26, 47, .58) 42%,
+          rgba(5, 26, 47, .12) 100%
+        ),
+        url("https://images.pexels.com/photos/38130142/pexels-photo-38130142.jpeg?auto=compress&cs=tinysrgb&w=2000")
+        center 48% / cover no-repeat;
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 660px;
       position: relative;
       z-index: 1;
     }
@@ -182,15 +222,15 @@
 
     h1 {
       max-width: 650px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       font-size: clamp(40px, 5.2vw, 66px);
       line-height: 1.08;
       text-shadow: 0 2px 14px rgba(0,0,0,.18);
     }
 
     .hero p {
-      max-width: 520px;
-      margin-bottom: 27px;
+      max-width: 530px;
+      margin-bottom: 28px;
       font-size: 17px;
     }
 
@@ -212,12 +252,14 @@
       border-color: var(--white);
     }
 
+    /* PROPERTY SEARCH */
+
     .searchbar {
-      width: min(850px, calc(100% - 36px));
+      width: min(900px, calc(100% - 36px));
       margin: -34px auto 0;
       padding: 10px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
       display: grid;
       grid-template-columns: repeat(3, 1fr) auto;
       gap: 8px;
@@ -254,7 +296,14 @@
       color: var(--navy-deep);
       font-weight: bold;
       cursor: pointer;
+      transition: .2s ease;
     }
+
+    .searchbar button:hover {
+      background: var(--gold-light);
+    }
+
+    /* GENERAL SECTIONS */
 
     section {
       padding: 68px clamp(20px, 6vw, 88px);
@@ -281,6 +330,8 @@
       margin: 12px auto 0;
       color: var(--muted);
     }
+
+    /* PROPERTY REGISTRATION CARDS */
 
     .service-grid {
       display: grid;
@@ -326,11 +377,17 @@
       letter-spacing: .5px;
     }
 
-    .small-link:hover { text-decoration: underline; }
+    .small-link:hover {
+      text-decoration: underline;
+    }
 
-    .properties { background: var(--white); }
+    /* PROPERTY TYPES */
 
-    .property-grid, .community-grid {
+    .properties {
+      background: var(--white);
+    }
+
+    .property-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
@@ -345,10 +402,22 @@
       text-align: center;
       font-family: Georgia, serif;
       font-size: 19px;
+      text-decoration: none;
+      transition: .2s ease;
     }
 
+    .property-type:hover {
+      background: var(--navy);
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* COMMUNITIES */
+
     .community-grid {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
     .community {
@@ -369,13 +438,17 @@
       font-size: 13px;
     }
 
+    /* OFF PLAN */
+
     .offplan {
       background: var(--navy);
       color: var(--ivory);
       text-align: center;
     }
 
-    .offplan h2 { color: var(--ivory); }
+    .offplan h2 {
+      color: var(--ivory);
+    }
 
     .offplan p {
       max-width: 690px;
@@ -383,13 +456,19 @@
       color: #e4e9ed;
     }
 
-    .about { text-align: center; }
+    /* ABOUT */
+
+    .about {
+      text-align: center;
+    }
 
     .about p {
       max-width: 780px;
       margin: 15px auto 0;
       color: var(--muted);
     }
+
+    /* CONTACT */
 
     .contact {
       background: #efe6d6;
@@ -401,8 +480,10 @@
       color: var(--muted);
     }
 
+    /* FOOTER */
+
     footer {
-      padding: 28px 20px;
+      padding: 30px 20px;
       background: var(--navy-deep);
       color: var(--ivory);
       text-align: center;
@@ -415,78 +496,119 @@
       letter-spacing: 1px;
     }
 
-    footer p { margin: 5px 0; }
-
-    .image-credit {
-      opacity: .75;
-      font-size: 10px;
+    footer p {
+      margin: 5px 0;
     }
 
-    @media (max-width: 800px) {
+    footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
       .brandbar {
-        min-height: 76px;
         flex-wrap: wrap;
       }
 
-      .brand-tagline { display: none; }
+      .brand-tagline {
+        display: none;
+      }
 
       .mainnav {
         flex-wrap: wrap;
         gap: 0 22px;
-        padding: 0 14px;
       }
 
-      .mainnav a, .dropbtn { font-size: 13px; }
+      .community-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-      .community-grid { grid-template-columns: repeat(2, 1fr); }
-
-      .service-grid { grid-template-columns: 1fr; }
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
     }
+
+    /* MOBILE */
 
     @media (max-width: 560px) {
       .brandbar {
         justify-content: center;
         gap: 10px;
+        min-height: 72px;
       }
 
       .brand img {
-        height: 58px;
-        max-width: 220px;
+        height: 55px;
+        max-width: 210px;
       }
 
       .register-top {
-        padding: 9px 12px;
-        font-size: 12px;
+        padding: 8px 11px;
+        font-size: 11px;
       }
 
-      .mainnav { gap: 0 15px; }
+      .mainnav {
+        gap: 0 15px;
+        padding: 0 12px;
+      }
 
-      .mainnav a, .dropbtn {
+      .mainnav a,
+      .dropbtn {
         padding: 10px 0;
         font-size: 12px;
       }
 
       .hero {
-        min-height: 430px;
+        min-height: 440px;
         padding: 62px 22px 76px;
         background-position: 58% center;
       }
 
-      .hero p { font-size: 15px; }
+      .hero p {
+        font-size: 15px;
+      }
 
-      .searchbar { grid-template-columns: 1fr 1fr; }
+      .searchbar {
+        grid-template-columns: 1fr 1fr;
+      }
 
-      .searchbar button { min-height: 42px; }
+      .searchbar button {
+        min-height: 42px;
+      }
 
-      section { padding: 52px 20px; }
+      section {
+        padding: 52px 20px;
+      }
 
-      .community-grid { grid-template-columns: 1fr; }
+      .community-grid {
+        grid-template-columns: 1fr;
+      }
 
-      .service-card { padding: 20px 14px; }
+      .service-card {
+        padding: 20px 14px;
+      }
 
       .dropdown-menu {
         left: -8px;
         min-width: 190px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -494,56 +616,90 @@
 
 <body>
 
+  <!-- BRAND HEADER -->
+
   <header class="brandbar">
-    <a class="brand" href="#home" aria-label="Royal Bridges Real Estate home">
+
+    <a class="brand" href="index.html" aria-label="Royal Bridges Real Estate home">
       <img src="logo.png" alt="Royal Bridges Real Estate">
     </a>
 
     <p class="brand-tagline">
-      Your Trusted Partner in Abu Dhabi Real Estate
+      Bridging the Pathway between you and your new home.
     </p>
 
-    <a class="register-top" href="#register">
+    <a class="register-top" href="register.html">
       ⌂ &nbsp; REGISTER YOUR PROPERTY
     </a>
+
   </header>
 
+
+  <!-- MAIN NAVIGATION -->
+
   <nav class="mainnav" aria-label="Main navigation">
-    <a href="#home">Home &amp; Communities</a>
+
+    <a href="index.html">Home</a>
 
     <div class="dropdown">
-      <button class="dropbtn" type="button" aria-haspopup="true">
+
+      <button class="dropbtn" type="button"
+        aria-haspopup="true" aria-expanded="false">
         Properties
       </button>
 
       <div class="dropdown-menu">
-        <a href="#sale">Properties for Sale</a>
-        <a href="#rent">Properties for Rent</a>
-        <a href="#resale">Off-Plan Resales</a>
-        <a href="#register">List Your Property</a>
+        <a href="for-sale.html">Properties for Sale</a>
+        <a href="for-rent.html">Properties for Rent</a>
+        <a href="property-types.html">Property Types</a>
+        <a href="register.html">Register Your Property</a>
       </div>
+
     </div>
 
-    <a href="#off-plan">Off Plan</a>
-    <a href="#about">About Us</a>
 
     <div class="dropdown">
-      <button class="dropbtn" type="button" aria-haspopup="true">
-        Contact Us
+
+      <button class="dropbtn" type="button"
+        aria-haspopup="true" aria-expanded="false">
+        Off Plan
       </button>
 
       <div class="dropdown-menu">
-        <a href="#contact">General Enquiries</a>
-        <a href="mailto:careers@royalbridges.ae?subject=Careers%20Enquiry">
-          Careers
-        </a>
+        <a href="primary-sale.html">Primary Sale</a>
+        <a href="secondary-resale.html">Secondary Resale</a>
       </div>
+
     </div>
+
+
+    <div class="dropdown">
+
+      <button class="dropbtn" type="button"
+        aria-haspopup="true" aria-expanded="false">
+        About Us
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="about.html">About Royal Bridges</a>
+        <a href="blog.html">Property Blog</a>
+        <a href="services.html">Other Services</a>
+      </div>
+
+    </div>
+
+
+    <a href="contact.html">Contact</a>
+
   </nav>
+
 
   <main>
 
+    <!-- HOMEPAGE HERO -->
+
     <section class="hero" id="home">
+
       <div class="hero-content">
 
         <div class="eyebrow">
@@ -558,99 +714,144 @@
           brought to you by Royal Bridges Real Estate.
         </p>
 
-        <a class="button" href="#properties">
-          EXPLORE PROPERTIES&nbsp; →
+        <a class="button" href="properties.html">
+          EXPLORE PROPERTIES &nbsp; →
         </a>
 
       </div>
+
     </section>
 
-    <form class="searchbar" action="#properties">
 
-      <label>Property Type
-        <select aria-label="Property type">
+    <!-- PROPERTY SEARCH -->
+
+    <form class="searchbar" action="properties.html" method="get">
+
+      <label>
+        Property Type
+
+        <select name="type" aria-label="Property type">
           <option value="">Any property</option>
-          <option>Apartment</option>
-          <option>Villa</option>
-          <option>Townhouse</option>
-          <option>Duplex</option>
-          <option>Penthouse</option>
-          <option>Land &amp; Plot</option>
+          <option value="apartment">Apartment</option>
+          <option value="villa">Villa</option>
+          <option value="townhouse">Townhouse</option>
+          <option value="duplex">Duplex</option>
+          <option value="penthouse">Penthouse</option>
+          <option value="land">Land &amp; Plot</option>
+          <option value="commercial">Commercial</option>
         </select>
+
       </label>
 
-      <label>Location
-        <select aria-label="Location">
+
+      <label>
+        Location
+
+        <select name="location" aria-label="Location">
           <option value="">All Abu Dhabi</option>
-          <option>Yas Island</option>
-          <option>Saadiyat Island</option>
-          <option>Al Reem Island</option>
-          <option>Al Raha Beach</option>
+          <option value="yas-island">Yas Island</option>
+          <option value="saadiyat-island">Saadiyat Island</option>
+          <option value="al-reem-island">Al Reem Island</option>
+          <option value="al-raha-beach">Al Raha Beach</option>
+          <option value="other">Other Abu Dhabi locations</option>
         </select>
+
       </label>
 
-      <label>Price Range
-        <select aria-label="Price range">
+
+      <label>
+        Price Range
+
+        <select name="price" aria-label="Price range">
           <option value="">Any budget</option>
-          <option>Under AED 1 million</option>
-          <option>AED 1m–2m</option>
-          <option>AED 2m–5m</option>
-          <option>AED 5m+</option>
+          <option value="under-1m">Under AED 1 million</option>
+          <option value="1m-2m">AED 1m–2m</option>
+          <option value="2m-5m">AED 2m–5m</option>
+          <option value="5m-plus">AED 5m+</option>
         </select>
+
       </label>
 
-      <button type="submit">⌕ &nbsp; SEARCH</button>
+
+      <button type="submit">
+        ⌕ &nbsp; SEARCH
+      </button>
 
     </form>
+
+
+    <!-- REGISTER YOUR PROPERTY -->
 
     <section id="register">
 
       <div class="service-grid">
 
-        <article class="service-card" id="sale">
+        <article class="service-card">
+
           <div class="service-icon">⌂</div>
 
           <div>
             <h3>Sell Your Property</h3>
-            <p>Reach buyers looking for their next home or investment.</p>
+
+            <p>
+              Reach buyers looking for their next home
+              or investment.
+            </p>
 
             <a class="small-link"
               href="https://wa.me/971568611311?text=I%20would%20like%20to%20register%20a%20property%20for%20sale">
               REGISTER NOW →
             </a>
           </div>
+
         </article>
 
-        <article class="service-card" id="rent">
+
+        <article class="service-card">
+
           <div class="service-icon">⚿</div>
 
           <div>
             <h3>Rent Your Property</h3>
-            <p>Connect with tenants for your Abu Dhabi property.</p>
+
+            <p>
+              Connect with tenants for your Abu Dhabi property.
+            </p>
 
             <a class="small-link"
               href="https://wa.me/971568611311?text=I%20would%20like%20to%20register%20a%20property%20for%20rent">
               REGISTER NOW →
             </a>
           </div>
+
         </article>
 
-        <article class="service-card" id="resale">
+
+        <article class="service-card">
+
           <div class="service-icon">▥</div>
 
           <div>
             <h3>Off-Plan Resale</h3>
-            <p>Register your off-plan unit with Royal Bridges.</p>
+
+            <p>
+              Register your off-plan unit with Royal Bridges.
+            </p>
 
             <a class="small-link"
               href="https://wa.me/971568611311?text=I%20would%20like%20to%20register%20an%20off-plan%20resale">
               REGISTER NOW →
             </a>
           </div>
+
         </article>
 
       </div>
+
     </section>
+
+
+    <!-- PROPERTY TYPES -->
 
     <section class="properties" id="properties">
 
@@ -668,20 +869,51 @@
 
       </div>
 
+
       <div class="property-grid">
 
-        <div class="property-type">Apartments</div>
-        <div class="property-type">Villas</div>
-        <div class="property-type">Townhouses</div>
-        <div class="property-type">Duplexes</div>
-        <div class="property-type">Penthouses</div>
-        <div class="property-type">Land &amp; Plots</div>
-        <div class="property-type">Commercial</div>
-        <div class="property-type">Off-Plan</div>
-        <div class="property-type">Holiday Homes</div>
+        <a class="property-type" href="property-types.html?type=apartments">
+          Apartments
+        </a>
+
+        <a class="property-type" href="property-types.html?type=villas">
+          Villas
+        </a>
+
+        <a class="property-type" href="property-types.html?type=townhouses">
+          Townhouses
+        </a>
+
+        <a class="property-type" href="property-types.html?type=duplexes">
+          Duplexes
+        </a>
+
+        <a class="property-type" href="property-types.html?type=penthouses">
+          Penthouses
+        </a>
+
+        <a class="property-type" href="property-types.html?type=land">
+          Land &amp; Plots
+        </a>
+
+        <a class="property-type" href="property-types.html?type=commercial">
+          Commercial
+        </a>
+
+        <a class="property-type" href="primary-sale.html">
+          Off-Plan
+        </a>
+
+        <a class="property-type" href="property-types.html?type=holiday-homes">
+          Holiday Homes
+        </a>
 
       </div>
+
     </section>
+
+
+    <!-- ABU DHABI COMMUNITIES -->
 
     <section id="communities">
 
@@ -694,34 +926,68 @@
         <p class="intro">
           Explore some of Abu Dhabi's most sought-after
           residential and investment destinations.
+          Royal Bridges brings property opportunities
+          across these exceptional communities.
         </p>
 
       </div>
 
+
       <div class="community-grid">
 
         <article class="community">
+
           <h3>Yas Island</h3>
-          <p>Yas Acres, Mayan, Water's Edge, Ansam, West Yas and Noya.</p>
+
+          <p>
+            Yas Acres, Mayan, Water's Edge, Ansam,
+            West Yas and Noya.
+          </p>
+
         </article>
 
+
         <article class="community">
+
           <h3>Saadiyat Island</h3>
-          <p>Saadiyat Beach, Cultural District and Mamsha.</p>
+
+          <p>
+            Saadiyat Beach, Cultural District,
+            Mamsha and surrounding developments.
+          </p>
+
         </article>
 
+
         <article class="community">
+
           <h3>Al Reem Island</h3>
-          <p>Reem Hills, Shams, Marina Square and City of Lights.</p>
+
+          <p>
+            Reem Hills, Shams, Marina Square
+            and City of Lights.
+          </p>
+
         </article>
 
+
         <article class="community">
+
           <h3>Al Raha Beach</h3>
-          <p>Al Muneera, Al Bandar and Al Zeina.</p>
+
+          <p>
+            Al Muneera, Al Bandar
+            and Al Zeina.
+          </p>
+
         </article>
 
       </div>
+
     </section>
+
+
+    <!-- OFF PLAN -->
 
     <section class="offplan" id="off-plan">
 
@@ -732,34 +998,60 @@
       <p>
         Explore new residential developments and off-plan
         investment opportunities across Abu Dhabi.
-        Each featured development will have its own
-        dedicated landing page with project details
-        and available properties.
+
+        Discover primary sales and secondary resales,
+        with dedicated landing pages for featured
+        developments and available properties.
       </p>
 
-      <a class="button"
-        href="https://wa.me/971568611311?text=I%20would%20like%20to%20receive%20information%20about%20Abu%20Dhabi%20off-plan%20developments">
-        REGISTER YOUR INTEREST
+      <a class="button" href="primary-sale.html">
+        EXPLORE PRIMARY SALES
+      </a>
+
+      &nbsp;
+
+      <a class="button" href="secondary-resale.html">
+        EXPLORE RESALES
       </a>
 
     </section>
 
+
+    <!-- ABOUT ROYAL BRIDGES -->
+
     <section class="about" id="about">
 
       <div class="section-heading">
+
         <div class="eyebrow">Our Approach</div>
+
         <h2>Welcome to Royal Bridges</h2>
+
       </div>
 
       <p>
         Royal Bridges Real Estate is focused on connecting
         people with exceptional property opportunities.
+
         Whether you are buying, selling, renting or investing,
         our aim is to make your property journey informed,
         straightforward and personal.
       </p>
 
+      <p>
+        Bridging the Pathway between you and your new home.
+      </p>
+
+      <br>
+
+      <a class="small-link" href="about.html">
+        DISCOVER ROYAL BRIDGES →
+      </a>
+
     </section>
+
+
+    <!-- CONTACT -->
 
     <section class="contact" id="contact">
 
@@ -775,7 +1067,7 @@
       <a class="button"
         href="https://wa.me/971568611311"
         target="_blank"
-        rel="noopener">
+        rel="noopener noreferrer">
         CONTACT US ON WHATSAPP
       </a>
 
@@ -783,22 +1075,91 @@
 
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
 
-    <p><strong>ROYAL BRIDGES REAL ESTATE</strong></p>
+    <p>
+      <strong>ROYAL BRIDGES REAL ESTATE</strong>
+    </p>
 
     <p>Abu Dhabi, United Arab Emirates</p>
 
-    <p>WhatsApp: +971 56 861 1311</p>
+    <p>
+      WhatsApp:
+      <a href="https://wa.me/971568611311">
+        +971 56 861 1311
+      </a>
+    </p>
 
-    <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+    <p>
+      <a href="about.html">About Us</a>
+      &nbsp; | &nbsp;
+      <a href="services.html">Other Services</a>
+      &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </p>
 
-    <p class="image-credit">
-      Hero image: Robert Haandrikman,
-      “Skyline of Abu Dhabi at sunset”, CC BY 2.0.
+    <p>
+      © 2026 Royal Bridges Real Estate. All rights reserved.
     </p>
 
   </footer>
+
+
+  <!-- MOBILE DROPDOWN SUPPORT -->
+
+  <script>
+    document.querySelectorAll(".dropbtn").forEach(function(button) {
+
+      button.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        const dropdown = button.parentElement;
+        const isOpen = dropdown.classList.contains("open");
+
+        document.querySelectorAll(".dropdown").forEach(function(item) {
+          item.classList.remove("open");
+
+          const itemButton = item.querySelector(".dropbtn");
+
+          if (itemButton) {
+            itemButton.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        if (!isOpen) {
+          dropdown.classList.add("open");
+          button.setAttribute("aria-expanded", "true");
+        }
+
+      });
+
+    });
+
+
+    document.addEventListener("click", function(event) {
+
+      if (!event.target.closest(".dropdown")) {
+
+        document.querySelectorAll(".dropdown").forEach(function(item) {
+
+          item.classList.remove("open");
+
+          const button = item.querySelector(".dropbtn");
+
+          if (button) {
+            button.setAttribute("aria-expanded", "false");
+          }
+
+        });
+
+      }
+
+    });
+  </script>
 
 </body>
 </html>
