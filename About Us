@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Learn about Royal Bridges Real Estate and our approach to property in Abu Dhabi."><title>About Us | Royal Bridges Real Estate</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="brandbar">
+  <a class="brand" href="index.html" aria-label="Royal Bridges Real Estate home"><img src="Logo.PNG.png" alt="Royal Bridges Real Estate logo"></a>
+  <p class="brand-tagline">A Royal Bridge to Your New Home</p>
+  <a class="register-top" href="contact.html">⌂ &nbsp; REGISTER YOUR PROPERTY</a>
+</header>
+<nav class="mainnav" aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true">Properties</button><div class="dropdown-menu"><a href="properties-for-sale.html">Properties for Sale</a><a href="properties-for-rent.html">Properties for Rent</a><a href="off-plan-resales.html">Off-Plan Resales</a></div></div>
+<a href="off-plan.html">Off Plan</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a>
+</nav>
+<main>
+<section class="page-hero"><div class="eyebrow">Our Approach</div><h1>Welcome to Royal Bridges</h1><p>A personal, informed approach to property in Abu Dhabi.</p></section><section class="about"><div class="content-narrow"><div class="section-heading"><div class="eyebrow">Our Promise</div><h2>A Royal Bridge to Your New Home</h2></div><p>Royal Bridges Real Estate is focused on connecting people with exceptional property opportunities. Whether you are buying, selling, renting or investing, our aim is to make your property journey informed, straightforward and personal.</p><p>We believe finding a property is about more than a transaction. It is about discovering the right place, making confident decisions and having a trusted point of contact along the way.</p><div class="callout"><h2>Start a Conversation</h2><p>We would be delighted to hear what you are looking for and how we can help.</p><a class="button" href="contact.html">GET IN TOUCH</a></div></div></section>
+</main>
+<footer><p><strong>ROYAL BRIDGES REAL ESTATE</strong></p><p>Abu Dhabi, United Arab Emirates</p><p>WhatsApp: <a href="https://wa.me/971568611311">+971 56 861 1311</a></p><p>© 2026 Royal Bridges Real Estate. All rights reserved.</p><p class="image-credit">Hero photograph: Vandan Patel, “Sunset at Dubai Creek Harbor”, Unsplash Licence. <a href="https://unsplash.com/photos/a-view-of-a-city-skyline-from-across-a-body-of-water-cjijfGQqQlQ" target="_blank" rel="noopener">View photograph</a>.</p></footer>
+</body></html>
