@@ -2,528 +2,265 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Relocation to Abu Dhabi | Royal Bridges Real Estate</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Blog | Royal Bridges Real Estate</title>
 <style>
-:root {
-  --navy: #101d32;
-  --gold: #c5a66a;
-  --ivory: #f8f6f0;
-  --white: #ffffff;
-  --text: #263247;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--ivory);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-header {
-  background: var(--navy);
-  color: white;
-  padding: 22px 20px;
-  text-align: center;
-  border-bottom: 4px solid var(--gold);
-}
-
-header img {
-  max-width: 180px;
-  max-height: 75px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-header a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-nav {
-  background: #172740;
-  padding: 12px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-size: 14px;
-}
-
-.hero {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 55px 20px;
-}
-
-.hero h1 {
-  color: var(--gold);
-  font-size: 34px;
-  margin: 0 0 12px;
-}
-
-.hero p {
-  max-width: 720px;
-  margin: auto;
-  font-size: 16px;
-}
-
-.container {
-  max-width: 850px;
-  margin: 35px auto;
-  padding: 0 18px;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.intro h2 {
-  color: var(--navy);
-}
-
-.form-section {
-  background: white;
-  padding: 28px;
-  margin-bottom: 22px;
-  border-radius: 8px;
-  box-shadow: 0 3px 14px rgba(0,0,0,0.05);
-  border-top: 3px solid var(--gold);
-}
-
-.form-section h2 {
-  color: var(--navy);
-  font-size: 21px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.field {
-  margin-bottom: 19px;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 7px;
-  color: var(--navy);
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #d6d9df;
-  border-radius: 5px;
-  font-size: 15px;
-  background: white;
-  color: var(--text);
-}
-
-input:focus, select:focus, textarea:focus {
-  outline: 2px solid var(--gold);
-  border-color: var(--gold);
-}
-
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.required {
-  color: #a33b32;
-}
-
-.note {
-  font-size: 13px;
-  color: #687386;
-  margin-top: 5px;
-}
-
-.submit-area {
-  text-align: center;
-  padding: 20px 0 45px;
-}
-
-button {
-  background: var(--navy);
-  color: white;
-  border: 2px solid var(--gold);
-  padding: 16px 35px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #243b5b;
-}
-
-.privacy {
-  font-size: 12px;
-  color: #687386;
-  max-width: 650px;
-  margin: 18px auto;
-}
-
-footer {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 28px 15px;
-  border-top: 4px solid var(--gold);
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-@media(max-width:600px) {
-  .hero h1 {
-    font-size: 27px;
-  }
-
-  .form-section {
-    padding: 20px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 5px 8px;
-  }
-}
+:root{--navy:#10243b;--gold:#c5a46d;--cream:#f8f6f1;--ink:#283646;--muted:#697582}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(950px,92%);margin:auto}
+header{background:var(--navy);color:white;padding:17px 0}
+header .container{display:flex;justify-content:space-between;align-items:center;gap:15px}
+header strong{letter-spacing:2px}
+header a{font-size:12px;color:#e7c995}
+.hero{background:var(--cream);padding:55px 0;text-align:center}
+.hero small{color:#987544;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font:normal 42px Georgia,serif;color:var(--navy);margin:8px 0}
+.hero p{color:var(--muted);max-width:700px;margin:auto}
+.contents{padding:28px 0;background:white;border-bottom:1px solid #eee}
+.contents h2{font:normal 22px Georgia,serif;color:var(--navy)}
+.contents ul{columns:2;padding-left:20px}
+.contents li{margin:5px 0;font-size:13px}
+.contents a{color:#987544}
+article{padding:42px 0;border-bottom:1px solid #e8e3da;scroll-margin-top:20px}
+article h2{font:normal 29px Georgia,serif;color:var(--navy);line-height:1.25;margin:5px 0 15px}
+article h3{font:normal 20px Georgia,serif;color:var(--navy);margin:22px 0 7px}
+article p,article li{font-size:14px;color:#4c5864}
+article ul,article ol{padding-left:22px}
+.tag{color:#9b7948;text-transform:uppercase;letter-spacing:2px;font-size:10px;font-weight:bold}
+.note{background:var(--cream);border-left:3px solid var(--gold);padding:15px 18px;margin:18px 0;font-size:13px}
+footer{background:var(--navy);color:white;padding:25px 0;margin-top:30px;font-size:12px}
+footer a{color:#e7c995}
+@media(max-width:600px){.hero h1{font-size:33px}.contents ul{columns:1}article h2{font-size:25px}}
 </style>
 </head>
-
 <body>
+<header><div class="container"><strong>ROYAL BRIDGES REAL ESTATE</strong><a href="index.html">← BACK TO HOME</a></div></header>
 
-<header>
-  <a href="index.html">
-    <img src="logo.png" alt="Royal Bridges Real Estate">
-  </a>
-  <div>ROYAL BRIDGES REAL ESTATE</div>
-  <small>Abu Dhabi • Property • Relocation</small>
-</header>
+<div class="hero">
+ <div class="container">
+  <small>Royal Bridges Insights</small>
+  <h1>The Property & Relocation Blog</h1>
+  <p>Practical guidance for buyers, sellers, landlords, tenants, investors and families making Abu Dhabi their home.</p>
+ </div>
+</div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="for-sale.html">Buy</a>
-  <a href="for-rent.html">Rent</a>
-  <a href="primary-sale.html">Off Plan</a>
-  <a href="relocation.html">Relocation</a>
-  <a href="contact.html">Contact</a>
+<nav class="contents">
+ <div class="container">
+  <h2>Explore our articles</h2>
+  <ul>
+   <li><a href="#why-invest-uae">Why Invest in the UAE?</a></li>
+   <li><a href="#abudhabi-or-dubai">Abu Dhabi or Dubai?</a></li>
+   <li><a href="#renting-process">What Happens After Choosing a Rental?</a></li>
+   <li><a href="#legitimate-agent">How to Check Your Agent Is Legitimate</a></li>
+   <li><a href="#sale-without-agent">Selling Without an Agent</a></li>
+   <li><a href="#best-mortgage-bank">Choosing a Mortgage Bank</a></li>
+   <li><a href="#mortgage-eligibility">Am I Eligible for a Mortgage?</a></li>
+   <li><a href="#move-inspection">Move-In and Move-Out Inspections</a></li>
+   <li><a href="#ship-or-buy">Ship My Furniture or Buy New?</a></li>
+  </ul>
+ </div>
 </nav>
-
-<section class="hero">
-  <h1>Relocation, Relocation, Relocation</h1>
-  <p>
-    Your move to Abu Dhabi should be an exciting experience.
-    Let Royal Bridges help you find the right home, understand
-    your options and make your relocation as seamless as possible.
-  </p>
-</section>
 
 <main class="container">
 
-  <div class="intro">
-    <h2>Let's Plan Your Move</h2>
-    <p>
-      Tell us a little about yourself and what you are looking for.
-      Our team will use your answers to understand your requirements
-      and help you plan your move to Abu Dhabi.
-    </p>
-  </div>
+<article id="why-invest-uae">
+ <div class="tag">Property Investment</div>
+ <h2>1. Why Invest in the UAE?</h2>
+ <p>The UAE has become an attractive destination for people looking to invest in property, relocate, establish businesses or enjoy a different lifestyle. Its international connectivity, infrastructure, growing communities and range of residential developments have helped make it a market of interest to investors from around the world.</p>
+ <h3>What attracts property investors?</h3>
+ <ul>
+  <li>A choice of established and emerging residential communities.</li>
+  <li>Modern infrastructure, transport links and lifestyle amenities.</li>
+  <li>Opportunities to purchase completed or off-plan properties.</li>
+  <li>Potential rental income, depending on location, purchase price and market conditions.</li>
+  <li>A range of property types, from apartments to large family villas.</li>
+ </ul>
+ <h3>Why consider Abu Dhabi?</h3>
+ <p>Abu Dhabi offers a varied property market, including waterfront destinations, established family communities, cultural districts and new master-planned developments. Buyers can explore areas such as Yas Island, Saadiyat Island, Al Reem Island, Al Raha and other emerging destinations.</p>
+ <h3>Do your research first</h3>
+ <p>Property investment is never risk-free. Before committing, consider the purchase price, service charges, maintenance, financing costs, expected rental demand, vacancy periods, resale prospects and the terms of any off-plan payment plan.</p>
+ <p>Foreign ownership eligibility and property rights depend on the location and applicable regulations. Always verify the details of the specific property and transaction before paying a deposit or signing an agreement.</p>
+ <div class="note">A good investment begins with understanding your objectives, budget, time horizon and tolerance for risk — not simply choosing the most attractive building.</div>
+ <p>Royal Bridges can help you explore Abu Dhabi communities and discuss property opportunities in line with your requirements.</p>
+</article>
 
-  <form id="relocationForm">
+<article id="abudhabi-or-dubai">
+ <div class="tag">Location Guide</div>
+ <h2>2. Abu Dhabi or Dubai? Which Is Right for You?</h2>
+ <p>One of the first questions people ask when considering a move to the UAE is whether they should live in Abu Dhabi or Dubai. Both cities offer excellent amenities, international communities and a wide range of properties, but the experience of living in each can be quite different.</p>
+ <h3>Abu Dhabi</h3>
+ <p>Abu Dhabi may appeal to people looking for a balance between city convenience, family-oriented neighbourhoods, waterfront living and a somewhat different pace of life. It offers a wide variety of residential communities, from central apartments to island villas and newer master-planned developments.</p>
+ <h3>Dubai</h3>
+ <p>Dubai is known for its extensive choice of neighbourhoods, international business environment, entertainment, shopping and varied property market. It may suit people whose work, lifestyle or family arrangements are centred there.</p>
+ <h3>What should you compare?</h3>
+ <ul>
+  <li>Your workplace and daily commute.</li>
+  <li>Rent or purchase budget and additional housing costs.</li>
+  <li>School locations and family requirements.</li>
+  <li>Access to healthcare, transport and everyday amenities.</li>
+  <li>Your preferred lifestyle and community atmosphere.</li>
+ </ul>
+ <p>Neither city is automatically better. The right choice depends on where you will work, how you want to live and what matters most to your family.</p>
+</article>
 
-    <section class="form-section">
-      <h2>1. Your Contact Details</h2>
+<article id="renting-process">
+ <div class="tag">Renting in Abu Dhabi</div>
+ <h2>3. What Happens After You Choose a Property With Your Agent?</h2>
+ <p>Once you have found a property you would like to rent, there are several steps that commonly take place before you receive the keys. The exact process can vary depending on the landlord, building, property manager and applicable registration requirements.</p>
+ <h3>A typical rental process</h3>
+ <ol>
+  <li><strong>Documents:</strong> The agent will usually request your Emirates ID and other relevant documents. The landlord or their authorised representative may also need to provide ownership or authority documents.</li>
+  <li><strong>Offer and terms:</strong> The agency prepares an offer or tenancy proposal setting out the agreed rent, payment schedule, deposit, commission and other terms for both parties to review.</li>
+  <li><strong>Deposit and agency commission:</strong> Once the terms are agreed, the tenant pays the required security deposit and agency commission in accordance with the agreed arrangements. Always obtain receipts.</li>
+  <li><strong>Tenancy contract:</strong> The tenancy agreement is prepared and signed by the landlord and tenant. Read the full contract before signing.</li>
+  <li><strong>Smart Hub and registration:</strong> The tenant or authorised representative follows the applicable Abu Dhabi tenancy registration process. Requirements may vary according to the property and current procedures.</li>
+  <li><strong>Utilities:</strong> The tenant arranges electricity and water services with the relevant provider. In Abu Dhabi this may involve TAQA Distribution or another provider, depending on the property and building.</li>
+  <li><strong>Confirmation:</strong> Where requested, provide the agent or landlord with confirmation of relevant registrations or utility arrangements.</li>
+  <li><strong>Payments and handover:</strong> Agreed rent payments, including any post-dated cheques where applicable, are provided in accordance with the contract and agreed handover arrangements.</li>
+  <li><strong>Move-in inspection:</strong> The property condition, keys, access cards, meters and any existing defects should be recorded at handover.</li>
+ </ol>
+ <div class="note">Tawtheeq is Abu Dhabi's tenancy registration system. The precise registration and utility steps can differ, so confirm the current process for your property rather than assuming every building follows the same procedure.</div>
+ <h3>Before accepting the keys</h3>
+ <p>Keep copies of your signed tenancy contract, payment receipts, inspection report, photographs, meter readings and any agreed maintenance commitments. These records can be very useful during your tenancy and when you move out.</p>
+</article>
 
-      <div class="field">
-        <label for="fullName">Full Name <span class="required">*</span></label>
-        <input id="fullName" name="Full Name" type="text" required>
-      </div>
+<article id="legitimate-agent">
+ <div class="tag">Buyer Protection</div>
+ <h2>4. How Do I Ensure My Agent Is Legitimate and Transactions Are Safe?</h2>
+ <p>Whether you are buying, selling or renting, it is important to know who you are dealing with. A professional property transaction should be transparent, documented and handled through appropriate channels.</p>
+ <h3>Checks worth making</h3>
+ <ul>
+  <li>Ask for the agent's full name, agency details and relevant professional registration or licence information.</li>
+  <li>Check the agency's trade licence and verify the details through the relevant official channels.</li>
+  <li>Ask for written confirmation of the agent's authority to market or represent the property.</li>
+  <li>Check that the property details match the documentation provided.</li>
+  <li>Make sure the agreed terms, fees and commission are recorded in writing.</li>
+  <li>Request official receipts for deposits, commissions and other payments.</li>
+  <li>Be cautious if you are pressured to transfer money urgently or to an unrelated personal account.</li>
+ </ul>
+ <h3>Keep the transaction documented</h3>
+ <p>Offers, agreements, payment records, correspondence and handover documents should be retained. For a purchase, make sure the relevant ownership, authority, mortgage and transfer procedures are verified through the appropriate channels.</p>
+ <div class="note">Never rely solely on a social media profile, business card or verbal promise. Independently verify important details before transferring funds or signing documents.</div>
+ <p>If you are uncertain about a legal obligation or a transaction, obtain independent professional advice.</p>
+</article>
 
-      <div class="field">
-        <label for="email">Email Address <span class="required">*</span></label>
-        <input id="email" name="Email Address" type="email" required>
-      </div>
+<article id="sale-without-agent">
+ <div class="tag">Selling Property</div>
+ <h2>5. I Know the Buyer and Can Sell Without an Agent — But I Need Help With the MOU and Mortgage Procedures</h2>
+ <p>It is possible for a buyer and seller to find each other privately. However, agreeing a price is only one part of a property sale. The paperwork, mortgage arrangements, clearances and transfer process still need careful attention.</p>
+ <h3>What may need to be arranged?</h3>
+ <ul>
+  <li>Verification of the seller's ownership and authority to sell.</li>
+  <li>Confirmation of the buyer's identity and funding arrangements.</li>
+  <li>Agreement on the purchase price, deposit, completion date and conditions.</li>
+  <li>Preparation and review of the memorandum of understanding or relevant sale agreement.</li>
+  <li>Mortgage pre-approval, valuation and final bank approval where finance is involved.</li>
+  <li>Liability and settlement of any existing mortgage, service charges or other outstanding amounts.</li>
+  <li>Required clearances, approvals and transfer appointment arrangements.</li>
+ </ul>
+ <h3>Why professional support matters</h3>
+ <p>The MOU or sale agreement should clearly set out the obligations of both parties, deadlines, deposit arrangements and what happens if either party cannot complete. Mortgage-funded transactions can involve additional conditions and timing requirements.</p>
+ <p>Even when there is no traditional buyer or seller agent involved, you may choose to obtain transaction coordination or independent legal support. Make sure everyone understands exactly what service is being provided and what it costs.</p>
+ <div class="note">The correct documents and transfer process depend on the property, the parties and current Abu Dhabi procedures. Have the agreement checked before signing or transferring a deposit.</div>
+</article>
 
-      <div class="field">
-        <label for="phone">Contact Number <span class="required">*</span></label>
-        <input id="phone" name="Contact Number" type="tel"
-          placeholder="Include country code, e.g. +44" required>
-      </div>
+<article id="best-mortgage-bank">
+ <div class="tag">Mortgage Guidance</div>
+ <h2>6. Which Is the Best Bank to Secure a Mortgage With?</h2>
+ <p>There is no single bank that is best for every buyer. The right mortgage depends on your income, employment, residency status, deposit, property, credit profile and the type of finance you need.</p>
+ <h3>Compare more than the advertised rate</h3>
+ <ul>
+  <li>Interest or profit rate and whether it is fixed, variable or a combination.</li>
+  <li>Arrangement, valuation and other bank fees.</li>
+  <li>Early settlement and partial repayment charges.</li>
+  <li>Required salary transfer and minimum income.</li>
+  <li>Loan-to-value limits and deposit requirements.</li>
+  <li>Insurance and other conditions attached to the offer.</li>
+  <li>How long the bank expects approval and completion to take.</li>
+ </ul>
+ <h3>Get more than one quotation</h3>
+ <p>Speak with more than one bank or a suitably authorised mortgage adviser. Ask for a written illustration showing the monthly instalment and the total costs over the relevant period.</p>
+ <p>Do not choose solely on the basis of the lowest initial rate. Consider what happens when any introductory or fixed-rate period ends.</p>
+</article>
 
-      <div class="field">
-        <label for="whatsapp">WhatsApp Contact Number</label>
-        <input id="whatsapp" name="WhatsApp Number" type="tel"
-          placeholder="Include country code">
-        <div class="note">Leave blank if this is the same as your contact number.</div>
-      </div>
-    </section>
+<article id="mortgage-eligibility">
+ <div class="tag">Mortgage Guidance</div>
+ <h2>7. Am I Eligible for a Mortgage in the UAE?</h2>
+ <p>Mortgage eligibility is assessed individually by each lender. Being employed or having a particular salary does not automatically guarantee approval.</p>
+ <h3>What will a bank usually consider?</h3>
+ <ul>
+  <li>Your residency and employment status.</li>
+  <li>Your monthly income and how consistently it is received.</li>
+  <li>Existing loans, credit cards and other financial commitments.</li>
+  <li>Your credit history and credit bureau information.</li>
+  <li>The property value and whether the property meets the bank's criteria.</li>
+  <li>Your available deposit and associated purchase costs.</li>
+  <li>Your age and the proposed mortgage term.</li>
+ </ul>
+ <h3>What can you do before looking for a property?</h3>
+ <p>Gather your identification, salary and bank statements, employment documents and details of existing liabilities. Ask a lender for an initial eligibility assessment or pre-approval before committing to a purchase.</p>
+ <div class="note">Mortgage limits, minimum deposits and lending criteria can change and differ by borrower and property. Obtain a current written assessment from a UAE lender.</div>
+</article>
 
-    <section class="form-section">
-      <h2>2. Your Relocation Plans</h2>
+<article id="move-inspection">
+ <div class="tag">Property Management</div>
+ <h2>8. Why Is a Move-In and Move-Out Inspection Important?</h2>
+ <p>A proper property inspection protects both the tenant and the landlord. It creates a record of the property's condition at the beginning and end of a tenancy and can help avoid disagreements about damage, maintenance and deposit deductions.</p>
+ <h3>Why it matters</h3>
+ <ul>
+  <li>It records existing damage and defects before the tenant moves in.</li>
+  <li>It provides a reference point when the tenant moves out.</li>
+  <li>It helps distinguish pre-existing issues from damage that occurred during the tenancy.</li>
+  <li>It records fixtures, appliances, keys, access cards and meter readings.</li>
+  <li>It can help resolve disputes about cleaning, repairs and security deposit deductions.</li>
+ </ul>
+ <h3>Who should carry out the inspection?</h3>
+ <p>Some landlords or property management companies arrange their own inspection teams or maintenance contractors. This can be convenient, but tenants and landlords should understand the scope of the work, the rates being charged and how any costs will be accounted for.</p>
+ <p>You may also wish to obtain quotes from independent professional inspection or maintenance providers. Comparing two or three quotes can help you understand the market rate. The cheapest option is not necessarily the best: check experience, reviews, scope and whether the report includes photographs.</p>
+ <h3>What about the security deposit?</h3>
+ <p>Do not assume that every deduction from a deposit is automatically justified. Ask for an itemised explanation, supporting photographs and invoices or quotations where appropriate. Refer to your tenancy agreement and the applicable law when assessing any proposed deduction.</p>
+ <div class="note">UAE tenancy deposit arrangements and dispute procedures are not identical to deposit-protection schemes used in some other countries. Keep your own evidence, photographs, inspection reports and payment records.</div>
+ <p>A thorough inspection at both ends of a tenancy is one of the simplest ways to reduce uncertainty and protect everyone's interests.</p>
+</article>
 
-      <div class="field">
-        <label for="relocating">Are you thinking about relocating to the UAE?</label>
-        <select id="relocating" name="Relocation Plans" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>Already Decided</option>
-          <option>Undecided but actively exploring</option>
-        </select>
-      </div>
+<article id="ship-or-buy">
+ <div class="tag">Relocation & Moving</div>
+ <h2>9. Ship My Furniture or Buy New After Relocating to the UAE?</h2>
+ <p>One of the biggest practical decisions when moving to the UAE is what to do with your existing furniture. Should you ship everything from home, sell it before you move, or arrive and furnish your new property locally?</p>
+ <p>There is no universal answer. The right decision depends on the value and condition of your furniture, the size of your shipment, your new home's layout, shipping costs and how long you intend to stay in the UAE.</p>
+ <h3>Option 1: Ship your existing furniture</h3>
+ <p>Shipping may make sense if you own good-quality furniture that fits your new home, has sentimental value or would be expensive to replace. It can also help a family feel settled more quickly because familiar belongings arrive with them.</p>
+ <p>However, international shipping involves more than the freight quotation. Consider packing, collection, transport, insurance, customs requirements, delivery, storage and the time before your belongings arrive. Ask for a full written quotation and clarify what is and is not included.</p>
+ <h3>Option 2: Buy new furniture in the UAE</h3>
+ <p>Buying locally may be more convenient if you are moving into a furnished property, renting for a shorter period or bringing only a small amount of personal belongings. You can choose furniture to suit the actual dimensions and style of your new home.</p>
+ <p>There are many furniture retailers and delivery options in the UAE, with choices across different budgets. Remember to include delivery, assembly, curtains, appliances and other household essentials when comparing costs.</p>
+ <h3>Option 3: Combine shipping and buying</h3>
+ <p>For many families, a combination is the most practical solution. Ship the items that are valuable, difficult to replace or especially meaningful, then purchase bulky or less expensive items after you arrive.</p>
+ <h3>Questions to ask yourself before deciding</h3>
+ <ul>
+  <li>Are you moving into a furnished, semi-furnished or unfurnished property?</li>
+  <li>How long do you expect to stay in the UAE?</li>
+  <li>Will your current furniture fit the layout and dimensions of your new home?</li>
+  <li>What is the complete door-to-door shipping cost?</li>
+  <li>Will you need temporary accommodation while waiting for your shipment?</li>
+  <li>Would it cost less to sell some items at home and replace them locally?</li>
+  <li>Are there customs, documentation or import requirements you need to check?</li>
+ </ul>
+ <h3>Our practical advice</h3>
+ <p>Do not automatically ship everything simply because you already own it. Equally, do not sell good-quality furniture without first comparing the real replacement cost. Prepare an inventory, obtain a shipping quotation and compare it with the cost of buying equivalent items in the UAE.</p>
+ <div class="note">The best decision is the one that works for your budget, your new property and your family's plans — not necessarily the one that involves the least effort.</div>
+ <p>Planning a move to Abu Dhabi? Royal Bridges can help you explore suitable accommodation and discuss the practical considerations of settling into your new home.</p>
+ <p><a href="relocation.html" style="color:#987544;font-weight:bold">COMPLETE OUR RELOCATION QUESTIONNAIRE →</a></p>
+</article>
 
-      <div class="field">
-        <label for="visited">Have you visited the UAE in the last six months?</label>
-        <select id="visited" name="Visited UAE" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="employment">Have you secured an employment offer?</label>
-        <select id="employment" name="Employment Offer" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Currently interviewing</option>
-          <option>Relocating without employment</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="startDate">When does your job start?</label>
-        <input id="startDate" name="Job Start Date" type="text"
-          placeholder="Enter date or expected timeframe">
-      </div>
-    </section>
-
-    <section class="form-section">
-      <h2>3. Accommodation & Budget</h2>
-
-      <div class="field">
-        <label for="accommodation">
-          Will you find somewhere short term, or will your company provide accommodation?
-        </label>
-        <select id="accommodation" name="Initial Accommodation" required>
-          <option value="">Please select</option>
-          <option>I will arrange short-term accommodation</option>
-          <option>My company will provide accommodation</option>
-          <option>I will arrange permanent accommodation immediately</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="rentContribution">
-          Will your company provide a contribution towards your rent?
-        </label>
-        <select id="rentContribution" name="Company Rent Contribution" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="rentValue">If so, what is the contribution value?</label>
-        <input id="rentValue" name="Rent Contribution Value" type="text"
-          placeholder="e.g. AED 80,000 per year">
-      </div>
-
-      <div class="field">
-        <label for="bedrooms">How many bedrooms will you require?</label>
-        <select id="bedrooms" name="Bedrooms Required" required>
-          <option value="">Please select</option>
-          <option>Studio</option>
-          <option>1 Bedroom</option>
-          <option>2 Bedrooms</option>
-          <option>3 Bedrooms</option>
-          <option>4 Bedrooms</option>
-          <option>5 Bedrooms</option>
-          <option>6+ Bedrooms</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="maidRoom">Would you require an additional maid's room?</label>
-        <select id="maidRoom" name="Maid Room Required" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Not sure</option>
-        </select>
-      </div>
-    </section>
-
-    <section class="form-section">
-      <h2>4. Family, Schools & Pets</h2>
-
-      <div class="field">
-        <label for="family">Will your family relocate with you or join later?</label>
-        <select id="family" name="Family Relocation" required>
-          <option value="">Please select</option>
-          <option>My family will relocate with me</option>
-          <option>My family will join me later</option>
-          <option>I will relocate alone</option>
-          <option>Not decided yet</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="schools">Are there any schools you are interested in?</label>
-        <select id="schools" name="School Requirements" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No, still looking</option>
-          <option>No children</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="schoolNames">If you have particular schools in mind, please list them.</label>
-        <input id="schoolNames" name="Schools Interested In" type="text">
-      </div>
-
-      <div class="field">
-        <label for="pets">Will you be relocating with pets?</label>
-        <select id="pets" name="Pets" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </div>
-    </section>
-
-    <section class="form-section">
-      <h2>5. Your Property Back Home</h2>
-
-      <div class="field">
-        <label for="homeProperty">
-          What will you do with your property in your home country?
-        </label>
-        <select id="homeProperty" name="Home Country Property" required>
-          <option value="">Please select</option>
-          <option>Vacate, it is a rental</option>
-          <option>Sell it</option>
-          <option>Put it on the market for rent</option>
-          <option>Put it on the market for sale</option>
-          <option>Leave it vacant for visits</option>
-          <option>I do not own or rent a property</option>
-        </select>
-      </div>
-    </section>
-
-    <section class="form-section">
-      <h2>6. Getting to Know Abu Dhabi</h2>
-
-      <div class="field">
-        <label for="tour">
-          Would you like assistance with an Abu Dhabi tour before choosing where to live?
-        </label>
-        <select id="tour" name="Abu Dhabi Orientation Tour" required>
-          <option value="">Please select</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Maybe, I would like more information</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="additional">
-          Is there anything else you would like us to know about your relocation?
-        </label>
-        <textarea id="additional" name="Additional Information"
-          placeholder="Tell us about your preferences, requirements or any questions..."></textarea>
-      </div>
-    </section>
-
-    <div class="submit-area">
-      <button type="submit">SUBMIT RELOCATION ENQUIRY</button>
-
-      <p class="privacy">
-        By submitting this enquiry, you agree that Royal Bridges Real Estate
-        may use the information provided to respond to your relocation enquiry.
-        Please do not include passwords, payment details or other sensitive
-        personal information.
-      </p>
-    </div>
-
-  </form>
 </main>
 
-<footer>
-  <strong>ROYAL BRIDGES REAL ESTATE</strong>
-  <p>Making your move to Abu Dhabi easier.</p>
-
-  <p>
-    English WhatsApp:
-    <a href="https://wa.me/971568611311">+971 56 861 1311</a>
-  </p>
-
-  <p>
-    Arabic WhatsApp:
-    <a href="https://wa.me/971506082608">+971 50 608 2608</a>
-  </p>
-
-  <p>
-    Email:
-    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
-  </p>
-
-  <small>© Royal Bridges Real Estate. All rights reserved.</small>
-</footer>
-
-<script>
-document.getElementById("relocationForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  if (!this.reportValidity()) {
-    return;
-  }
-
-  const formData = new FormData(this);
-  let body = "NEW ROYAL BRIDGES RELOCATION ENQUIRY\n";
-  body += "====================================\n\n";
-
-  for (const [question, answer] of formData.entries()) {
-    body += question + ":\n" + (answer.trim() || "Not provided") + "\n\n";
-  }
-
-  body += "====================================\n";
-  body += "Submitted through the Royal Bridges relocation website.";
-
-  const subject = "New Relocation Enquiry - " +
-    (formData.get("Full Name") || "Website Enquiry");
-
-  const mailto =
-    "mailto:info@royalbridges.ae" +
-    "?cc=siobhanpbrown%40outlook.com" +
-    "&subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-  window.location.href = mailto;
-});
-</script>
-
+<footer><div class="container">
+ <strong>ROYAL BRIDGES REAL ESTATE</strong>
+ <p>Abu Dhabi, UAE | <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> | <a href="https://wa.me/971568611311">WhatsApp +971 56 861 1311</a></p>
+ <p><a href="index.html">Return to homepage</a></p>
+</div></footer>
 </body>
 </html>
