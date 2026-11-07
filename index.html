@@ -1,4 +1,4 @@
-F<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -41,20 +41,32 @@ F<!DOCTYPE html>
     }
 
     .brand {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 25px;
-      letter-spacing: 2px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  text-align: center;
+}
 
-    .brand small {
-      display: block;
-      color: white;
-      font-family: Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-align: center;
-    }
+.brand img {
+  display: block;
+  max-height: 48px;
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.brand span {
+  display: none;
+}
+
+.brand small {
+  display: none;
+}
 
     nav {
       display: flex;
@@ -278,15 +290,13 @@ F<!DOCTYPE html>
     }
   </style>
 </head>
-
 <body>
 
-<div class="brand">
-  <img src="Logo.PNG.png" alt="Royal Bridges Logo">
-  <span>ROYAL BRIDGES</span>
-  <small>REAL ESTATE</small>
-</div>
-  
+<header>
+  <div class="brand">
+    <img src="Logo.PNG.png" alt="Royal Bridges Logo">
+  </div>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#properties">Properties</a>
