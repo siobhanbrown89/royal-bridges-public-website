@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residential Properties | Royal Bridges Real Estate</title>
+<style>
+:root {
+  --navy:#142b43;
+  --cream:#f5f0e6;
+  --gold:#b69a65;
+  --text:#333;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:var(--text);line-height:1.7}
+header{background:var(--cream);padding:10px 4%;border-bottom:1px solid #e5ddcf}
+.header-inner{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.logo{width:170px;height:58px;object-fit:contain}
+nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:13px}
+nav a,.dropbtn{color:var(--navy);text-decoration:none;font-size:13px;font-weight:bold;background:none;border:0;cursor:pointer;padding:7px 3px}
+nav a:hover,.dropbtn:hover{color:var(--gold)}
+.dropdown{position:relative;display:inline-block}
+.dropdown-content{display:none;position:absolute;background:white;min-width:215px;box-shadow:0 5px 15px #0002;z-index:10;border-top:3px solid var(--gold)}
+.dropdown-content a{display:block;padding:10px 14px;font-weight:normal}
+.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
+.register-link{color:white;background:var(--navy);padding:8px 13px;border-radius:3px}
+.hero{background:var(--navy);color:white;text-align:center;padding:65px 20px}
+.hero h1{font-size:36px;font-weight:500;margin:0 0 12px}
+.hero p{max-width:750px;margin:auto;color:#eee8dc}
+main{max-width:1150px;margin:auto;padding:45px 22px 70px}
+.intro{text-align:center;max-width:800px;margin:0 auto 40px}
+h2{color:var(--navy);font-weight:500}
+.property-section{margin:45px 0}
+.section-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:12px}
+.section-heading h2{margin:0;font-size:27px}
+.listing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:25px}
+.listing-card{border:1px solid #e7e0d4;background:white;overflow:hidden}
+.photo-placeholder{height:190px;background:var(--cream);display:flex;align-items:center;justify-content:center;color:#8a795b;font-size:14px;text-align:center;padding:15px}
+.listing-content{padding:20px}
+.listing-content h3{color:var(--navy);margin:0 0 8px;font-size:19px}
+.listing-content p{font-size:14px;color:#666;margin:7px 0}
+.status{display:inline-block;background:var(--cream);color:var(--navy);padding:5px 10px;font-size:11px;font-weight:bold;letter-spacing:.5px}
+.contact-link{display:inline-block;margin-top:12px;background:var(--navy);color:white;text-decoration:none;padding:9px 16px;font-size:13px}
+.note{background:var(--cream);padding:22px;margin-top:35px;text-align:center}
+.note a{color:var(--navy);font-weight:bold}
+footer{background:var(--navy);color:white;text-align:center;padding:28px 15px;font-size:13px}
+footer a{color:#e5d5b5;text-decoration:none}
+@media(max-width:800px){.listing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.header-inner{justify-content:center}nav{gap:8px}nav a,.dropbtn{font-size:12px}.listing-grid{grid-template-columns:1fr}.hero h1{font-size:29px}.dropdown-content{left:0}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-inner">
+<a href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate" class="logo"></a>
+<nav>
+<a href="index.html">Home</a>
+<div class="dropdown">
+<button class="dropbtn">Properties ▾</button>
+<div class="dropdown-content">
+<a href="residential.html">Residential – Sale &amp; Rent</a>
+<a href="commercial.html">Commercial – Sale &amp; Rent</a>
+<a href="residential-plots.html">Residential Plots &amp; Lands</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Communities ▾</button>
+<div class="dropdown-content">
+<a href="communities.html#abudhabi">Abu Dhabi</a>
+<a href="communities.html#dubai">Dubai</a>
+<a href="communities.html#rak">Ras Al Khaimah</a>
+</div>
+</div>
+<a href="short-stay.html">Short Stay</a>
+<a href="relocation.html">Relocation</a>
+<div class="dropdown">
+<button class="dropbtn register-link">REGISTER ▾</button>
+<div class="dropdown-content">
+<a href="register.html#seminars">Seminars &amp; Online Webinars</a>
+<a href="register.html#newsletter">Monthly Market Newsletter</a>
+<a href="register.html#email-updates">Email Updates</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">About ▾</button>
+<div class="dropdown-content">
+<a href="about.html">About Royal Bridges</a>
+<a href="careers.html">Careers</a>
+<a href="external-agencies.html">External Agencies</a>
+<a href="partners.html">Our Partners</a>
+<a href="blog.html">Blog &amp; Articles</a>
+<a href="reviews.html">Client Reviews</a>
+<a href="other-services.html">Other Services</a>
+</div>
+</div>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<h1>Residential Properties</h1>
+<p>Discover residential property opportunities across Abu Dhabi, Dubai and the wider UAE, whether you are buying your next home or looking for the right rental.</p>
+</section>
+
+<main>
+<section class="intro">
+<h2>Find Your Place in the UAE</h2>
+<p>Explore our residential property opportunities. From apartments and townhouses to villas and family homes, Royal Bridges can help you navigate the buying and renting process.</p>
+<p>Contact us with your requirements if you would like assistance finding a suitable property.</p>
+</section>
+
+<section class="property-section" id="sale">
+<div class="section-heading">
+<h2>Residential Properties for Sale</h2>
+<span class="status">FOR SALE</span>
+</div>
+<div class="listing-grid">
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Property Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and asking price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Buying</a>
+</div>
+</article>
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Property Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and asking price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Buying</a>
+</div>
+</article>
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Property Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and asking price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Buying</a>
+</div>
+</article>
+</div>
+</section>
+
+<section class="property-section" id="rent">
+<div class="section-heading">
+<h2>Residential Properties for Rent</h2>
+<span class="status">FOR RENT</span>
+</div>
+<div class="listing-grid">
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Rental Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and rental price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Renting</a>
+</div>
+</article>
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Rental Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and rental price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Renting</a>
+</div>
+</article>
+<article class="listing-card">
+<div class="photo-placeholder">Property photograph to be added</div>
+<div class="listing-content">
+<h3>Residential Rental Listing</h3>
+<p>Location: Abu Dhabi / UAE</p>
+<p>Property details and rental price to be added.</p>
+<a class="contact-link" href="contact.html">Enquire About Renting</a>
+</div>
+</article>
+</div>
+</section>
+
+<div class="note">
+<strong>Looking for a particular community?</strong>
+<p>Explore our <a href="communities.html">UAE Communities Guide</a> to learn more about different locations before choosing your next home.</p>
+</div>
+</main>
+
+<footer>
+<p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+<p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> &nbsp; | &nbsp; <a href="https://wa.me/971568611311">WhatsApp</a></p>
+</footer>
+
+</body>
+</html>
