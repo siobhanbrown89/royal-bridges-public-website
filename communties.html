@@ -1,1 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAE Communities | Royal Bridges Real Estate</title>
+<meta name="description" content="Explore Abu Dhabi, Dubai and Ras Al Khaimah communities with Royal Bridges Real Estate.">
 
+<style>
+:root{
+ --navy:#10243b;
+ --gold:#c5a46d;
+ --cream:#f8f6f1;
+ --ink:#283646;
+ --muted:#697582;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+.topbar{background:var(--navy);color:white;padding:9px 0;font-size:12px}
+.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar a{color:#e6c995}
+.brandbar{background:#f2eadb;padding:10px 0;border-bottom:1px solid #e1d4bd}
+.brandbar img{width:210px;max-height:90px;object-fit:contain;display:block}
+.navbar{background:var(--navy);color:white}
+.navbar .container{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}
+.navbar a{font-size:12px;padding:15px 0;display:block}
+.navbar a:hover{color:#e5c58f}
+
+.hero{
+ background:linear-gradient(90deg,rgba(9,26,44,.9),rgba(9,26,44,.45)),
+ url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85') center/cover;
+ min-height:330px;display:flex;align-items:center;color:white
+}
+.hero-content{padding:55px 0;max-width:760px}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#d8b77f;font-weight:bold}
+h1,h2,h3{font-family:Georgia,serif;font-weight:normal}
+h1{font-size:clamp(36px,5vw,54px);line-height:1.15;margin:12px 0}
+.hero p{font-size:15px;color:#f0f1f2;max-width:650px}
+
+section{padding:55px 0}
+.alt{background:var(--cream)}
+.heading{text-align:center;margin-bottom:30px}
+.heading .eyebrow{color:#987544}
+.heading h2{font-size:32px;color:var(--navy);margin:6px 0}
+.heading p{font-size:14px;color:var(--muted);max-width:750px;margin:auto}
+
+.region-nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.region-nav a{border:1px solid var(--gold);padding:10px 17px;color:var(--navy);font-size:12px;font-weight:bold}
+.region-nav a:hover{background:var(--navy);color:white}
+
+.region{scroll-margin-top:20px}
+.region-heading{border-bottom:1px solid #ddd5c8;padding-bottom:18px;margin-bottom:25px}
+.region-heading .eyebrow{color:#987544}
+.region-heading h2{font-size:34px;color:var(--navy);margin:5px 0}
+.region-heading p{font-size:14px;color:var(--muted);max-width:850px}
+
+.community-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.community-card{background:white;border:1px solid #e7e1d7;padding:23px;scroll-margin-top:20px}
+.community-card h3{font-size:22px;color:var(--navy);margin-bottom:8px}
+.community-card p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.community-card .features{font-size:12px;color:#56616d}
+.community-card a{display:inline-block;margin-top:14px;color:#987544;font-size:11px;font-weight:bold}
+.community-card:hover{border-color:var(--gold)}
+
+.highlight{background:#eee8dc;padding:22px;margin-top:25px;border-left:4px solid var(--gold)}
+.highlight h3{font-size:21px;color:var(--navy);margin-bottom:5px}
+.highlight p{font-size:13px;color:var(--muted)}
+
+.cta{background:var(--navy);color:white;text-align:center}
+.cta h2{font-size:32px;margin-bottom:10px}
+.cta p{font-size:14px;color:#d5dce3;margin-bottom:20px}
+.btn{display:inline-block;background:var(--gold);color:white;padding:11px 19px;font-size:11px;font-weight:bold;letter-spacing:.5px}
+
+footer{background:#091827;color:#cbd2d9;padding:24px 0;font-size:11px}
+footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:#e3c18b}
+
+@media(max-width:800px){
+ .community-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:550px){
+ .topbar .container{justify-content:center;text-align:center}
+ .brandbar img{width:185px}
+ .navbar .container{gap:15px}
+ .navbar a{padding:10px 0}
+ section{padding:42px 0}
+ .community-grid{grid-template-columns:1fr}
+ .region-heading h2{font-size:29px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+ <div class="container">
+  <span>Royal Bridges Real Estate | UAE</span>
+  <span>
+   English: <a href="https://wa.me/971568611311">+971 56 861 1311</a>
+   &nbsp; | &nbsp;
+   العربية: <a href="https://wa.me/971506082608">+971 50 608 2608</a>
+   &nbsp; | &nbsp;
+   <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+  </span>
+ </div>
+</div>
+
+<header class="brandbar">
+ <div class="container">
+  <a href="index.html">
+   <img src="logo.png" alt="Royal Bridges Real Estate">
+  </a>
+ </div>
+</header>
+
+<nav class="navbar">
+ <div class="container">
+  <a href="index.html">HOME</a>
+  <a href="properties.html">PROPERTIES</a>
+  <a href="communities.html">COMMUNITIES</a>
+  <a href="relocation.html">RELOCATION</a>
+  <a href="blog.html">BLOG</a>
+  <a href="index.html#about">ABOUT</a>
+  <a href="other-services.html">OTHER SERVICES</a>
+  <a href="index.html#contact">CONTACT</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="container hero-content">
+  <div class="eyebrow">Discover Where You Belong</div>
+  <h1>Explore UAE Communities</h1>
+  <p>From Abu Dhabi's waterfront islands and cultural destinations to Dubai's iconic neighbourhoods and Ras Al Khaimah's coastal developments, discover the communities that could become your next home or investment.</p>
+  <div class="region-nav">
+   <a href="#abu-dhabi">ABU DHABI</a>
+   <a href="#dubai">DUBAI</a>
+   <a href="#rak">RAS AL KHAIMAH</a>
+  </div>
+ </div>
+</header>
+
+<section id="abu-dhabi" class="region">
+ <div class="container">
+  <div class="region-heading">
+   <div class="eyebrow">Our Primary Market</div>
+   <h2>Communities in Abu Dhabi</h2>
+   <p>Discover Abu Dhabi's residential islands, established neighbourhoods, new master-planned developments and investment destinations. Our current property focus is Abu Dhabi.</p>
+  </div>
+
+  <div class="community-grid">
+
+   <article class="community-card" id="yas-island">
+    <h3>Yas Island</h3>
+    <p>A vibrant destination combining residential living, leisure, entertainment, retail and waterfront experiences.</p>
+    <div class="features">Ferrari World · Yas Mall · Yas Marina Circuit · Yas Bay · Yas Beach</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card" id="saadiyat-island">
+    <h3>Saadiyat Island</h3>
+    <p>A prestigious island destination known for its beaches, luxury residences and cultural district.</p>
+    <div class="features">Louvre Abu Dhabi · Saadiyat Cultural District · Natural beaches · Luxury resorts</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card" id="al-reem-island">
+    <h3>Al Reem Island</h3>
+    <p>A popular waterfront residential and investment location close to central Abu Dhabi.</p>
+    <div class="features">Residential towers · Waterfront promenades · Reem Mall · Schools · Parks</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Maryah Island</h3>
+    <p>A major business, financial, retail and hospitality destination in the heart of Abu Dhabi.</p>
+    <div class="features">ADGM · The Galleria · Cleveland Clinic Abu Dhabi · Luxury hotels</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Raha Beach</h3>
+    <p>A waterfront community offering apartments, townhouses and villas with convenient city and airport access.</p>
+    <div class="features">Al Bandar · Al Muneera · Al Zeina · Waterfront living</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Yas Acres</h3>
+    <p>A master-planned residential community on Yas Island with family homes and leisure facilities.</p>
+    <div class="features">Villas · Townhouses · Golf course · Community facilities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Reef</h3>
+    <p>An established residential community with a range of apartments, villas and townhouses.</p>
+    <div class="features">Al Reef Downtown · Al Reef Villas · Community amenities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Masdar City</h3>
+    <p>A sustainability-focused urban development with residential, commercial and mixed-use opportunities.</p>
+    <div class="features">Sustainable design · Apartments · Business district · Airport access</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Jubail Island</h3>
+    <p>A natural island setting with premium residential communities surrounded by mangroves and waterways.</p>
+    <div class="features">Luxury villas · Nature · Waterfront living · Private community environment</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Hudayriyat Island</h3>
+    <p>A major leisure and residential destination with an expanding range of lifestyle and development opportunities.</p>
+    <div class="features">Beaches · Sports facilities · Residential developments · Leisure attractions</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Shamkha</h3>
+    <p>A growing residential area with family housing and land opportunities in the wider Abu Dhabi region.</p>
+    <div class="features">Villas · Residential plots · Family communities · Road connections</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Bloom Living</h3>
+    <p>A planned residential community offering a neighbourhood lifestyle with a variety of home types.</p>
+    <div class="features">Villas · Townhouses · Apartments · Community amenities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Reem Hills</h3>
+    <p>A residential development on Al Reem Island offering a range of homes and planned community facilities.</p>
+    <div class="features">Villas · Townhouses · Apartments · Landscaped surroundings</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Fahid Island</h3>
+    <p>An emerging island destination planned around residential living, nature and waterfront experiences.</p>
+    <div class="features">Island living · Residential developments · Coastal environment</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Ghadeer</h3>
+    <p>A residential community located between Abu Dhabi and Dubai, with homes suited to different household needs.</p>
+    <div class="features">Apartments · Townhouses · Villas · Community facilities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+  </div>
+
+  <div class="highlight">
+   <h3>Looking for a Particular Abu Dhabi Community?</h3>
+   <p>Contact Royal Bridges with your preferred location, property type and budget. We can help you explore suitable areas and available opportunities.</p>
+  </div>
+ </div>
+</section>
+
+<section class="alt region" id="dubai">
+ <div class="container">
+  <div class="region-heading">
+   <div class="eyebrow">Explore Beyond Abu Dhabi</div>
+   <h2>Communities in Dubai</h2>
+   <p>Explore some of Dubai's best-known residential, waterfront, family and investment destinations.</p>
+  </div>
+
+  <div class="community-grid">
+
+   <article class="community-card">
+    <h3>Downtown Dubai</h3>
+    <p>A central destination known for landmark architecture, premium residences, retail and hospitality.</p>
+    <div class="features">Burj Khalifa · Dubai Mall · Dubai Fountain · Boulevard</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Dubai Marina</h3>
+    <p>A waterfront community popular for apartment living, dining, leisure and marina views.</p>
+    <div class="features">Marina Walk · Waterfront towers · Beach access · Dining</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Palm Jumeirah</h3>
+    <p>An iconic island destination with luxury residences, villas, apartments and resorts.</p>
+    <div class="features">Luxury villas · Apartments · Beachfront living · Hotels</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Business Bay</h3>
+    <p>A central mixed-use district offering residential towers, commercial space and canal-side living.</p>
+    <div class="features">Apartments · Offices · Dubai Canal · Business district</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Jumeirah Village Circle</h3>
+    <p>A residential neighbourhood offering apartments, townhouses and villas.</p>
+    <div class="features">Family homes · Parks · Apartments · Community facilities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Dubai Hills Estate</h3>
+    <p>A master-planned residential destination with green spaces, golf and family amenities.</p>
+    <div class="features">Villas · Apartments · Golf · Dubai Hills Mall</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Arabian Ranches</h3>
+    <p>An established villa community offering suburban family living and landscaped surroundings.</p>
+    <div class="features">Villas · Townhouses · Golf · Family amenities</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Jumeirah Lakes Towers</h3>
+    <p>A mixed-use community with residential towers, offices, restaurants and lakeside walkways.</p>
+    <div class="features">Apartments · Offices · Lakes · Metro connections</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Dubai Creek Harbour</h3>
+    <p>A waterfront master development with residential properties and views across the creek and skyline.</p>
+    <div class="features">Waterfront apartments · Promenades · Retail · Parks</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section class="region" id="rak">
+ <div class="container">
+  <div class="region-heading">
+   <div class="eyebrow">Coastal & Lifestyle Destinations</div>
+   <h2>Communities in Ras Al Khaimah</h2>
+   <p>Explore Ras Al Khaimah's growing residential, resort and investment destinations, including coastal communities and emerging developments.</p>
+  </div>
+
+  <div class="community-grid">
+
+   <article class="community-card">
+    <h3>Al Marjan Island</h3>
+    <p>A waterfront destination with resort, hospitality and residential developments.</p>
+    <div class="features">Beachfront residences · Resorts · Apartments · Hospitality</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Mina Al Arab</h3>
+    <p>A coastal residential destination with waterfront homes, landscaped areas and leisure facilities.</p>
+    <div class="features">Waterfront villas · Apartments · Beaches · Nature</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Hamra Village</h3>
+    <p>An established lifestyle destination with residential homes, a marina, golf and resort facilities.</p>
+    <div class="features">Villas · Apartments · Golf · Marina · Resorts</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>RAK Central</h3>
+    <p>An emerging mixed-use destination planned around business, residential and lifestyle uses.</p>
+    <div class="features">Commercial opportunities · Residential developments · Urban destination</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Al Seer</h3>
+    <p>An established area of Ras Al Khaimah with residential and commercial surroundings.</p>
+    <div class="features">Residential properties · Local amenities · City access</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+   <article class="community-card">
+    <h3>Jebel Jais Area</h3>
+    <p>A distinctive mountain destination known for its natural scenery and outdoor lifestyle.</p>
+    <div class="features">Mountain scenery · Leisure · Tourism · Nature</div>
+    <a href="properties.html">EXPLORE PROPERTIES →</a>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container">
+  <h2>Not Sure Which Community Is Right for You?</h2>
+  <p>Tell us about your lifestyle, investment goals, budget and preferred location. We can help you narrow down the options.</p>
+  <a class="btn" href="https://wa.me/971568611311">SPEAK TO OUR TEAM</a>
+  &nbsp;
+  <a class="btn" href="relocation.html">RELOCATION ENQUIRY</a>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <span>© <span id="year"></span> Royal Bridges Real Estate. All rights reserved.</span>
+  <span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> | Abu Dhabi, UAE</span>
+  <span><a href="index.html">Home</a> | <a href="properties.html">Properties</a> | <a href="blog.html">Blog</a></span>
+ </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
