@@ -1,227 +1,529 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Relocation, Relocation, Relocation | Royal Bridges</title>
+<title>Relocation to Abu Dhabi | Royal Bridges Real Estate</title>
 
 <style>
+:root {
+  --navy: #101d32;
+  --gold: #c5a66a;
+  --ivory: #f8f6f0;
+  --white: #ffffff;
+  --text: #263247;
+}
 
-:root{--navy:#092744;--deep:#061d33;--gold:#c99b4b;--lightgold:#e5c27e;--ivory:#f8f3e9;--white:#fffdf9;--ink:#172b40;--muted:#687582;--line:#dfc99f}
+* {
+  box-sizing: border-box;
+}
 
-*{box-sizing:border-box}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 22px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
 
-header{padding:12px 5%;background:var(--navy);display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header img {
+  max-width: 180px;
+  max-height: 75px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
 
-header img{width:190px;height:75px;object-fit:contain}
+header a {
+  color: var(--gold);
+  text-decoration: none;
+}
 
-header a{color:var(--lightgold);text-decoration:none;font-size:13px}
+nav {
+  background: #172740;
+  padding: 12px;
+  text-align: center;
+}
 
-main{max-width:950px;margin:35px auto;padding:0 18px 55px}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 14px;
+}
 
-.intro{text-align:center;margin-bottom:28px}
+.hero {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
 
-.eyebrow{color:#9a6c27;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.hero h1 {
+  color: var(--gold);
+  font-size: 34px;
+  margin: 0 0 12px;
+}
 
-h1,h2{font-family:Georgia,serif;font-weight:normal;color:var(--navy)}
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 16px;
+}
 
-h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0}
+.container {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
 
-.intro p{max-width:720px;margin:12px auto;color:var(--muted)}
+.intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
 
-form{padding:30px;background:var(--white);border:1px solid var(--line);box-shadow:0 10px 28px rgba(6,29,51,.08)}
+.intro h2 {
+  color: var(--navy);
+}
 
-fieldset{border:0;border-bottom:1px solid #e8dfd0;padding:0 0 24px;margin:0 0 24px}
+.form-section {
+  background: white;
+  padding: 28px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--gold);
+}
 
-legend{width:100%;padding:0 0 14px;color:var(--navy);font:normal 24px Georgia,serif}
+.form-section h2 {
+  color: var(--navy);
+  font-size: 21px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px 20px}
+.field {
+  margin-bottom: 19px;
+}
 
-.field{display:flex;flex-direction:column;gap:6px}
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: var(--navy);
+}
 
-.field.full{grid-column:1/-1}
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d6d9df;
+  border-radius: 5px;
+  font-size: 15px;
+  background: white;
+  color: var(--text);
+}
 
-label{font-size:13px;font-weight:bold;color:var(--navy)}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
 
-input,select,textarea{width:100%;padding:12px;border:1px solid #d8c9ad;background:#fff;color:var(--ink);font:14px Arial,sans-serif;border-radius:2px}
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
 
-textarea{min-height:85px;resize:vertical}
+.required {
+  color: #a33b32;
+}
 
-.hint{font-size:11px;color:var(--muted);font-weight:normal}
+.note {
+  font-size: 13px;
+  color: #687386;
+  margin-top: 5px;
+}
 
-.submit{padding:14px 25px;background:var(--navy);border:1px solid var(--gold);color:var(--lightgold);font-weight:bold;letter-spacing:1px;cursor:pointer}
+.submit-area {
+  text-align: center;
+  padding: 20px 0 45px;
+}
 
-.submit:hover{background:var(--gold);color:var(--deep)}
+button {
+  background: var(--navy);
+  color: white;
+  border: 2px solid var(--gold);
+  padding: 16px 35px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-.note{margin-top:16px;color:var(--muted);font-size:12px}
+button:hover {
+  background: #243b5b;
+}
 
-footer{padding:24px;background:var(--deep);color:var(--ivory);text-align:center;font-size:12px}
+.privacy {
+  font-size: 12px;
+  color: #687386;
+  max-width: 650px;
+  margin: 18px auto;
+}
 
-footer a{color:var(--lightgold);text-decoration:none}
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  border-top: 4px solid var(--gold);
+}
 
-@media(max-width:600px){form{padding:20px 15px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}header{justify-content:center;text-align:center}}
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
 
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
 <header>
-
- <a href="index.html"><img src="./logo.png" alt="Royal Bridges Real Estate"></a>
-
- <a href="index.html">← Return to Royal Bridges Home</a>
-
+  <a href="index.html">
+    <img src="logo.png" alt="Royal Bridges Real Estate">
+  </a>
+  <div>ROYAL BRIDGES REAL ESTATE</div>
+  <small>Abu Dhabi • Property • Relocation</small>
 </header>
 
-<main>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="for-sale.html">Buy</a>
+  <a href="for-rent.html">Rent</a>
+  <a href="primary-sale.html">Off Plan</a>
+  <a href="relocation.html">Relocation</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<div class="intro">
+<section class="hero">
+  <h1>Relocation, Relocation, Relocation</h1>
+  <p>
+    Your move to Abu Dhabi should be an exciting experience.
+    Let Royal Bridges help you find the right home, understand
+    your options and make your relocation as seamless as possible.
+  </p>
+</section>
 
- <div class="eyebrow">Your Move to Abu Dhabi</div>
+<main class="container">
 
- <h1>Relocation, Relocation, Relocation</h1>
+  <div class="intro">
+    <h2>Let's Plan Your Move</h2>
+    <p>
+      Tell us a little about yourself and what you are looking for.
+      Our team will use your answers to understand your requirements
+      and help you plan your move to Abu Dhabi.
+    </p>
+  </div>
 
- <p>Considering a move to Abu Dhabi? Tell us a little about your plans and requirements. Royal Bridges can help you explore suitable areas, accommodation and property options, and arrange a familiarisation tour of the city.</p>
+  <form id="relocationForm">
 
-</div>
+    <section class="form-section">
+      <h2>1. Your Contact Details</h2>
 
-<form id="relocationForm">
+      <div class="field">
+        <label for="fullName">Full Name <span class="required">*</span></label>
+        <input id="fullName" name="Full Name" type="text" required>
+      </div>
 
-<fieldset>
+      <div class="field">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input id="email" name="Email Address" type="email" required>
+      </div>
 
-<legend>1. Your relocation plans</legend>
+      <div class="field">
+        <label for="phone">Contact Number <span class="required">*</span></label>
+        <input id="phone" name="Contact Number" type="tel"
+          placeholder="Include country code, e.g. +44" required>
+      </div>
 
-<div class="grid">
+      <div class="field">
+        <label for="whatsapp">WhatsApp Contact Number</label>
+        <input id="whatsapp" name="WhatsApp Number" type="tel"
+          placeholder="Include country code">
+        <div class="note">Leave blank if this is the same as your contact number.</div>
+      </div>
+    </section>
 
- <div class="field"><label for="relocating">Are you thinking about relocating?</label><select id="relocating" name="Relocation plans" required><option value="">Please select</option><option>Yes</option><option>Already Decided</option><option>Undecided but actively exploring</option></select></div>
+    <section class="form-section">
+      <h2>2. Your Relocation Plans</h2>
 
- <div class="field"><label for="visited">Have you visited the UAE in the last six months?</label><select id="visited" name="Visited UAE in last six months" required><option value="">Please select</option><option>Yes</option><option>No</option></select></div>
+      <div class="field">
+        <label for="relocating">Are you thinking about relocating to the UAE?</label>
+        <select id="relocating" name="Relocation Plans" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>Already Decided</option>
+          <option>Undecided but actively exploring</option>
+        </select>
+      </div>
 
- <div class="field"><label for="offer">Have you secured an employment offer?</label><select id="offer" name="Employment offer" required><option value="">Please select</option><option>Yes</option><option>No</option><option>Currently interviewing</option><option>Actively looking</option><option>Relocating for other reasons</option></select></div>
+      <div class="field">
+        <label for="visited">Have you visited the UAE in the last six months?</label>
+        <select id="visited" name="Visited UAE" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
 
- <div class="field"><label for="start">When does your job start?</label><input id="start" name="Job start date" type="date"></div>
+      <div class="field">
+        <label for="employment">Have you secured an employment offer?</label>
+        <select id="employment" name="Employment Offer" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Currently interviewing</option>
+          <option>Relocating without employment</option>
+        </select>
+      </div>
 
-</div>
+      <div class="field">
+        <label for="startDate">When does your job start?</label>
+        <input id="startDate" name="Job Start Date" type="text"
+          placeholder="Enter date or expected timeframe">
+      </div>
+    </section>
 
-</fieldset>
+    <section class="form-section">
+      <h2>3. Accommodation & Budget</h2>
 
-<fieldset>
+      <div class="field">
+        <label for="accommodation">
+          Will you find somewhere short term, or will your company provide accommodation?
+        </label>
+        <select id="accommodation" name="Initial Accommodation" required>
+          <option value="">Please select</option>
+          <option>I will arrange short-term accommodation</option>
+          <option>My company will provide accommodation</option>
+          <option>I will arrange permanent accommodation immediately</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
 
-<legend>2. Accommodation and budget</legend>
+      <div class="field">
+        <label for="rentContribution">
+          Will your company provide a contribution towards your rent?
+        </label>
+        <select id="rentContribution" name="Company Rent Contribution" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
 
-<div class="grid">
+      <div class="field">
+        <label for="rentValue">If so, what is the contribution value?</label>
+        <input id="rentValue" name="Rent Contribution Value" type="text"
+          placeholder="e.g. AED 80,000 per year">
+      </div>
 
- <div class="field"><label for="accommodation">Will you find somewhere short term, or does the company provide accommodation?</label><select id="accommodation" name="Accommodation arrangements"><option value="">Please select</option><option>I will need short-term accommodation initially</option><option>I will find my own long-term accommodation</option><option>My company will provide accommodation</option><option>Not yet decided</option></select></div>
+      <div class="field">
+        <label for="bedrooms">How many bedrooms will you require?</label>
+        <select id="bedrooms" name="Bedrooms Required" required>
+          <option value="">Please select</option>
+          <option>Studio</option>
+          <option>1 Bedroom</option>
+          <option>2 Bedrooms</option>
+          <option>3 Bedrooms</option>
+          <option>4 Bedrooms</option>
+          <option>5 Bedrooms</option>
+          <option>6+ Bedrooms</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
 
- <div class="field"><label for="allowance">Will the company contribute towards your rent?</label><select id="allowance" name="Company rent contribution"><option value="">Please select</option><option>Yes</option><option>No</option><option>Not yet confirmed</option></select></div>
+      <div class="field">
+        <label for="maidRoom">Would you require an additional maid's room?</label>
+        <select id="maidRoom" name="Maid Room Required" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+    </section>
 
- <div class="field"><label for="rentvalue">If so, what value will the contribution be? <span class="hint">(AED, if known)</span></label><input id="rentvalue" name="Rent contribution value" type="text" placeholder="e.g. AED 80,000 per year"></div>
+    <section class="form-section">
+      <h2>4. Family, Schools & Pets</h2>
 
- <div class="field"><label for="bedrooms">How many bedrooms do you require?</label><select id="bedrooms" name="Bedrooms required"><option value="">Please select</option><option>Studio</option><option>1 bedroom</option><option>2 bedrooms</option><option>3 bedrooms</option><option>4 bedrooms</option><option>5 bedrooms</option><option>6+ bedrooms</option><option>Not yet decided</option></select></div>
+      <div class="field">
+        <label for="family">Will your family relocate with you or join later?</label>
+        <select id="family" name="Family Relocation" required>
+          <option value="">Please select</option>
+          <option>My family will relocate with me</option>
+          <option>My family will join me later</option>
+          <option>I will relocate alone</option>
+          <option>Not decided yet</option>
+        </select>
+      </div>
 
- <div class="field"><label for="maids">Will you require an additional maid's room?</label><select id="maids" name="Maids room required"><option value="">Please select</option><option>Yes</option><option>No</option><option>Would prefer one</option></select></div>
+      <div class="field">
+        <label for="schools">Are there any schools you are interested in?</label>
+        <select id="schools" name="School Requirements" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No, still looking</option>
+          <option>No children</option>
+        </select>
+      </div>
 
-</div>
+      <div class="field">
+        <label for="schoolNames">If you have particular schools in mind, please list them.</label>
+        <input id="schoolNames" name="Schools Interested In" type="text">
+      </div>
 
-</fieldset>
+      <div class="field">
+        <label for="pets">Will you be relocating with pets?</label>
+        <select id="pets" name="Pets" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+    </section>
 
-<fieldset>
+    <section class="form-section">
+      <h2>5. Your Property Back Home</h2>
 
-<legend>3. Family, schools and pets</legend>
+      <div class="field">
+        <label for="homeProperty">
+          What will you do with your property in your home country?
+        </label>
+        <select id="homeProperty" name="Home Country Property" required>
+          <option value="">Please select</option>
+          <option>Vacate, it is a rental</option>
+          <option>Sell it</option>
+          <option>Put it on the market for rent</option>
+          <option>Put it on the market for sale</option>
+          <option>Leave it vacant for visits</option>
+          <option>I do not own or rent a property</option>
+        </select>
+      </div>
+    </section>
 
-<div class="grid">
+    <section class="form-section">
+      <h2>6. Getting to Know Abu Dhabi</h2>
 
- <div class="field"><label for="family">Will your family relocate with you or join you later?</label><select id="family" name="Family relocation"><option value="">Please select</option><option>Relocating together</option><option>Family will join at a later stage</option><option>Relocating alone</option><option>Not yet decided</option></select></div>
+      <div class="field">
+        <label for="tour">
+          Would you like assistance with an Abu Dhabi tour before choosing where to live?
+        </label>
+        <select id="tour" name="Abu Dhabi Orientation Tour" required>
+          <option value="">Please select</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Maybe, I would like more information</option>
+        </select>
+      </div>
 
- <div class="field"><label for="schools">Have you discovered which schools you may be interested in?</label><select id="schools" name="School plans"><option value="">Please select</option><option>Yes</option><option>No, still looking</option><option>No children</option></select></div>
+      <div class="field">
+        <label for="additional">
+          Is there anything else you would like us to know about your relocation?
+        </label>
+        <textarea id="additional" name="Additional Information"
+          placeholder="Tell us about your preferences, requirements or any questions..."></textarea>
+      </div>
+    </section>
 
- <div class="field"><label for="pets">Will your pets relocate with you?</label><select id="pets" name="Pets relocating"><option value="">Please select</option><option>Yes</option><option>No</option><option>Not yet decided</option><option>No pets</option></select></div>
+    <div class="submit-area">
+      <button type="submit">SUBMIT RELOCATION ENQUIRY</button>
 
- <div class="field"><label for="tour">Will you need assistance with a tour of Abu Dhabi before choosing where to live?</label><select id="tour" name="Abu Dhabi familiarisation tour"><option value="">Please select</option><option>Yes, please arrange a tour</option><option>No, I know Abu Dhabi already</option><option>Possibly, please provide details</option></select></div>
+      <p class="privacy">
+        By submitting this enquiry, you agree that Royal Bridges Real Estate
+        may use the information provided to respond to your relocation enquiry.
+        Please do not include passwords, payment details or other sensitive
+        personal information.
+      </p>
+    </div>
 
-</div>
-
-</fieldset>
-
-<fieldset>
-
-<legend>4. Your property back home</legend>
-
-<div class="grid">
-
- <div class="field full"><label for="homeproperty">If you relocate, what will you do with your property at home?</label><select id="homeproperty" name="Plans for property at home"><option value="">Please select</option><option>Vacate - it is a rental property</option><option>Sell it</option><option>Put it on the market for rent</option><option>Put it on the market for sale</option><option>Leave it vacant for when we visit</option><option>I do not own or rent a property</option><option>Not yet decided</option></select></div>
-
-</div>
-
-</fieldset>
-
-<fieldset>
-
-<legend>5. Your contact details</legend>
-
-<div class="grid">
-
- <div class="field"><label for="fullname">Full name</label><input id="fullname" name="Full name" autocomplete="name" required></div>
-
- <div class="field"><label for="email">Email address</label><input id="email" name="Email address" type="email" autocomplete="email" required></div>
-
- <div class="field"><label for="phone">Contact number / WhatsApp</label><input id="phone" name="Contact number" type="tel" autocomplete="tel"></div>
-
- <div class="field"><label for="nationality">Current country of residence</label><input id="nationality" name="Current country of residence" placeholder="Country"></div>
-
- <div class="field full"><label for="comments">Anything else we should know? <span class="hint">(Optional)</span></label><textarea id="comments" name="Additional information" placeholder="Tell us about your preferred location, timing or any other requirements."></textarea></div>
-
-</div>
-
-</fieldset>
-
-<button class="submit" type="submit">SEND MY RELOCATION ENQUIRY →</button>
-
-<p class="note">Submitting this form opens an email addressed to Royal Bridges. Please review and send the email in your email app. Your answers are not stored on this website.</p>
-
-</form>
-
+  </form>
 </main>
 
 <footer>
+  <strong>ROYAL BRIDGES REAL ESTATE</strong>
+  <p>Making your move to Abu Dhabi easier.</p>
 
- <p>ROYAL BRIDGES REAL ESTATE · ABU DHABI</p>
+  <p>
+    English WhatsApp:
+    <a href="https://wa.me/971568611311">+971 56 861 1311</a>
+  </p>
 
- <p><a href="https://wa.me/971568611311">English WhatsApp +971 56 861 1311</a> · <a href="https://wa.me/971506082608">Arabic WhatsApp +971 50 608 2608</a></p>
+  <p>
+    Arabic WhatsApp:
+    <a href="https://wa.me/971506082608">+971 50 608 2608</a>
+  </p>
 
- <p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
+  <p>
+    Email:
+    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+  </p>
 
+  <small>© Royal Bridges Real Estate. All rights reserved.</small>
 </footer>
 
 <script>
+document.getElementById("relocationForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-document.getElementById("relocationForm").addEventListener("submit",function(event){
+  if (!this.reportValidity()) {
+    return;
+  }
 
- event.preventDefault();
+  const formData = new FormData(this);
+  let body = "NEW ROYAL BRIDGES RELOCATION ENQUIRY\n";
+  body += "====================================\n\n";
 
- var form=new FormData(this),lines=[];
+  for (const [question, answer] of formData.entries()) {
+    body += question + ":\n" + (answer.trim() || "Not provided") + "\n\n";
+  }
 
- form.forEach(function(value,key){lines.push(key+": "+(value||"Not provided"))});
+  body += "====================================\n";
+  body += "Submitted through the Royal Bridges relocation website.";
 
- var subject="New Royal Bridges Relocation Enquiry";
+  const subject = "New Relocation Enquiry - " +
+    (formData.get("Full Name") || "Website Enquiry");
 
- var body="A new relocation enquiry has been completed:\n\n"+lines.join("\n");
+  const mailto =
+    "mailto:info@royalbridges.ae" +
+    "?cc=siobhanpbrown%40outlook.com" +
+    "&subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
 
- window.location.href="mailto:info@royalbridges.ae?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-
+  window.location.href = mailto;
 });
-
 </script>
 
 </body>
-
 </html>
