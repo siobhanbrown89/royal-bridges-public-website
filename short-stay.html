@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore short-stay accommodation in Abu Dhabi with Royal Bridges Real Estate. Enquire about temporary stays, furnished homes and holiday accommodation.">
+  <title>Short Stay Accommodation | Royal Bridges Real Estate</title>
+
+  <style>
+    :root {
+      --navy: #142b43;
+      --navy-light: #203e59;
+      --gold: #b99a62;
+      --cream: #f5f0e6;
+      --white: #ffffff;
+      --ink: #293746;
+      --muted: #687581;
+      --line: #e7e0d4;
+      --soft: #faf8f3;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: white;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 9px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+
+    .topbar a { color: white; }
+
+    .logo-bar {
+      background: var(--cream);
+      padding: 8px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 92px;
+    }
+
+    .logo-bar img {
+      width: auto;
+      max-width: 270px;
+      height: 76px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .navbar {
+      background: var(--navy);
+      color: white;
+      padding: 0 4%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-inner > a,
+    .dropdown > a {
+      display: block;
+      padding: 16px 12px;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-inner > a:hover,
+    .dropdown > a:hover { color: var(--gold); }
+
+    .dropdown { position: relative; }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 235px;
+      max-height: 75vh;
+      overflow-y: auto;
+      background: white;
+      box-shadow: 0 8px 22px rgba(0,0,0,.15);
+      border-top: 3px solid var(--gold);
+      z-index: 1001;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 11px 16px;
+      color: var(--navy);
+      font-size: 13px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--cream);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-heading {
+      padding: 10px 16px 5px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      min-height: 510px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 85px 20px;
+      background:
+        linear-gradient(rgba(13,31,49,.58), rgba(13,31,49,.72)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content { max-width: 800px; }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 23px auto;
+    }
+
+    .hero p {
+      color: #f3eee5;
+      font-size: 18px;
+      margin-bottom: 27px;
+    }
+
+    .gold-button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 13px 25px;
+      border-radius: 3px;
+      font-weight: bold;
+      margin: 5px;
+      border: 1px solid var(--gold);
+    }
+
+    .outline-button {
+      display: inline-block;
+      color: white;
+      border: 1px solid white;
+      padding: 13px 25px;
+      border-radius: 3px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 35px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .section-heading p {
+      max-width: 760px;
+      margin: 15px auto 0;
+      color: var(--muted);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .intro-grid h2 {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      font-weight: normal;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    .intro-grid p { color: var(--muted); }
+
+    .intro-image {
+      width: 100%;
+      min-height: 330px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .soft-section { background: var(--soft); }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .benefit {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 27px;
+      border-radius: 5px;
+    }
+
+    .benefit .number {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 30px;
+    }
+
+    .benefit h3 {
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 21px;
+      margin: 8px 0;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .area-card {
+      position: relative;
+      min-height: 250px;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      background: var(--navy);
+    }
+
+    .area-card img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .area-card:hover img { transform: scale(1.05); }
+
+    .area-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(9,25,42,.88));
+    }
+
+    .area-card h3 {
+      position: relative;
+      z-index: 1;
+      color: white;
+      padding: 22px;
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 20px 15px;
+    }
+
+    .process-step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid var(--gold);
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .process-step h3 {
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-weight: normal;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .enquiry-section {
+      background: var(--cream);
+      padding: 70px 0;
+    }
+
+    .enquiry-box {
+      max-width: 760px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 5px;
+      box-shadow: 0 5px 25px rgba(20,43,67,.06);
+    }
+
+    .enquiry-box h2 {
+      font-family: Georgia, serif;
+      color: var(--navy);
+      font-weight: normal;
+      font-size: 31px;
+      text-align: center;
+    }
+
+    .enquiry-box > p {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field { margin-bottom: 15px; }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d8d4cc;
+      border-radius: 3px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      background: var(--navy);
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover { background: var(--navy-light); }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 33px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 20px;
+      color: #e4e9ed;
+    }
+
+    footer {
+      background: #0c1e30;
+      color: white;
+      padding: 35px 5%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a { color: #e5c995; }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 15px 0;
+    }
+
+    @media (max-width: 760px) {
+      .topbar { justify-content: center; text-align: center; }
+      .nav-inner { justify-content: flex-start; }
+      .nav-inner > a, .dropdown > a { padding: 12px 9px; font-size: 12px; }
+      .dropdown-content { position: fixed; left: 0; right: 0; top: auto; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .benefit-grid, .area-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .enquiry-box { padding: 24px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>Royal Bridges Real Estate | Abu Dhabi, UAE</span>
+    <span>
+      English WhatsApp:
+      <a href="https://wa.me/971568611311">+971 56 861 1311</a>
+      &nbsp; | &nbsp;
+      Arabic:
+      <a href="https://wa.me/971506082608">+971 50 608 2608</a>
+      &nbsp; | &nbsp;
+      <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+    </span>
+  </div>
+
+  <div class="logo-bar">
+    <a href="index.html">
+      <img src="logo.png" alt="Royal Bridges Real Estate">
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="properties.html">Properties ▾</a>
+        <div class="dropdown-content">
+          <a href="properties.html">Types of Properties</a>
+          <a href="properties.html#residential-sale">For Sale – Residential</a>
+          <a href="properties.html#residential-rent">For Rent – Residential</a>
+          <a href="properties.html#off-plan-primary">Off Plan – Primary & Upcoming</a>
+          <a href="properties.html#off-plan-resale">Off Plan – Secondary Resale</a>
+          <a href="properties.html#commercial-sale">For Sale – Commercial</a>
+          <a href="properties.html#commercial-rent">For Rent – Commercial</a>
+          <a href="properties.html#residential-land">Residential Lands & Plots</a>
+          <a href="properties.html#commercial-land">Commercial & Mixed-Use Lands</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="communities.html">Communities ▾</a>
+        <div class="dropdown-content">
+          <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
+          <a href="communities.html#dubai">Communities in Dubai</a>
+          <a href="communities.html#rak">Communities in RAK</a>
+        </div>
+      </div>
+
+      <a href="short-stay.html">Short Stay</a>
+      <a href="relocation.html">Relocation</a>
+
+      <div class="dropdown">
+        <a href="about.html">About ▾</a>
+        <div class="dropdown-content">
+          <a href="about.html">About Royal Bridges</a>
+          <a href="careers.html">Careers</a>
+          <a href="external-agencies.html">External Agencies</a>
+          <a href="index.html#partners">Our Partners</a>
+          <a href="blog.html">Blog & Articles</a>
+          <a href="other-services.html">Other Services</a>
+          <div class="dropdown-heading">Other Services</div>
+          <a href="other-services.html#cleaning">Cleaning</a>
+          <a href="other-services.html#snagging">Snagging</a>
+          <a href="other-services.html#moving-packing">Moving & Packing</a>
+          <a href="other-services.html#pro-services">PRO Services</a>
+          <a href="other-services.html#legal-consultancy">Legal Consultancy</a>
+          <a href="other-services.html#business-set-up">Business Set Up</a>
+          <a href="other-services.html#property-management">Property Management</a>
+        </div>
+      </div>
+
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Stay a Little Longer.<br>Feel at Home.</h1>
+      <div class="gold-line"></div>
+      <p>
+        Discover flexible short-stay accommodation in Abu Dhabi.
+        Whether you are visiting, relocating or simply need a temporary home,
+        Royal Bridges can help you explore suitable options.
+      </p>
+      <a href="#enquiry" class="gold-button">Enquire About a Stay</a>
+      <a href="https://wa.me/971568611311" class="outline-button">WhatsApp Us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container intro-grid">
+        <div>
+          <h2>Your Temporary Home in Abu Dhabi</h2>
+          <div class="gold-line" style="margin-left:0"></div>
+          <p>
+            Sometimes you need somewhere to stay before your permanent
+            home is ready. Perhaps you are visiting Abu Dhabi, waiting
+            for your relocation arrangements, travelling for business
+            or looking for a comfortable place for a family visit.
+          </p>
+          <p>
+            Our short-stay service is designed to help you explore
+            accommodation options that suit your dates, location and
+            requirements.
+          </p>
+          <p>
+            Tell us what you are looking for and our team can discuss
+            suitable options and availability with you.
+          </p>
+        </div>
+
+        <img class="intro-image"
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+          alt="Elegant furnished short-stay accommodation">
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Who Is Short Stay For?</h2>
+          <div class="gold-line"></div>
+          <p>
+            Flexible accommodation can make a difference when your
+            circumstances, travel plans or moving dates are changing.
+          </p>
+        </div>
+
+        <div class="benefit-grid">
+          <div class="benefit">
+            <span class="number">01</span>
+            <h3>Visitors & Tourists</h3>
+            <p>
+              Explore Abu Dhabi while enjoying the comfort and flexibility
+              of a furnished place to stay.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <span class="number">02</span>
+            <h3>Relocating Families</h3>
+            <p>
+              Arrange temporary accommodation while you search for
+              a longer-term home, complete paperwork or settle in.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <span class="number">03</span>
+            <h3>Business Travellers</h3>
+            <p>
+              Consider furnished accommodation for work assignments,
+              projects and extended business visits.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <span class="number">04</span>
+            <h3>Between Properties</h3>
+            <p>
+              Find out about temporary options if you are moving out
+              of one property before your next home is ready.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <span class="number">05</span>
+            <h3>Family & Friends</h3>
+            <p>
+              Explore accommodation for visiting relatives and guests
+              who need somewhere comfortable to stay.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <span class="number">06</span>
+            <h3>Extended Stays</h3>
+            <p>
+              Enquire about accommodation for longer temporary stays,
+              subject to property terms and availability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Explore Abu Dhabi</h2>
+          <div class="gold-line"></div>
+          <p>
+            Tell us which area you would prefer. We can discuss
+            accommodation options in locations such as:
+          </p>
+        </div>
+
+        <div class="area-grid">
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Yas Island and Abu Dhabi skyline">
+            <h3>Yas Island</h3>
+          </div>
+
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85" alt="Saadiyat Island style architecture">
+            <h3>Saadiyat Island</h3>
+          </div>
+
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85" alt="Waterfront residential area">
+            <h3>Al Reem Island</h3>
+          </div>
+
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Modern residential interior">
+            <h3>Al Raha Beach</h3>
+          </div>
+
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modern villa interior">
+            <h3>Abu Dhabi City</h3>
+          </div>
+
+          <div class="area-card">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Contemporary furnished home">
+            <h3>Other Locations</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>How It Works</h2>
+          <div class="gold-line"></div>
+          <p>
+            A straightforward enquiry process to help us understand
+            what you need.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span>1</span>
+            <h3>Tell Us Your Dates</h3>
+            <p>Let us know when you would like to arrive and depart.</p>
+          </div>
+
+          <div class="process-step">
+            <span>2</span>
+            <h3>Share Your Requirements</h3>
+            <p>Tell us your preferred area, budget and accommodation needs.</p>
+          </div>
+
+          <div class="process-step">
+            <span>3</span>
+            <h3>Explore Options</h3>
+            <p>We can discuss suitable properties, subject to availability.</p>
+          </div>
+
+          <div class="process-step">
+            <span>4</span>
+            <h3>Confirm Your Stay</h3>
+            <p>Review the terms and arrangements before confirming a booking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enquiry-section" id="enquiry">
+      <div class="container">
+        <div class="enquiry-box">
+          <h2>Short Stay Enquiry</h2>
+          <p>
+            Complete the details below and your email application
+            will open with your enquiry ready to send.
+          </p>
+
+          <form id="shortStayForm">
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Contact Number *</label>
+                <input type="tel" id="phone" required>
+              </div>
+
+              <div class="field">
+                <label for="guests">Number of Guests *</label>
+                <select id="guests" required>
+                  <option value="">Please select</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7 or more</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="arrival">Preferred Arrival Date *</label>
+                <input type="date" id="arrival" required>
+              </div>
+
+              <div class="field">
+                <label for="departure">Preferred Departure Date *</label>
+                <input type="date" id="departure" required>
+              </div>
+
+              <div class="field">
+                <label for="area">Preferred Area</label>
+                <select id="area">
+                  <option value="No preference">No preference</option>
+                  <option>Yas Island</option>
+                  <option>Saadiyat Island</option>
+                  <option>Al Reem Island</option>
+                  <option>Al Raha Beach</option>
+                  <option>Abu Dhabi City</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="bedrooms">Bedrooms Required</label>
+                <select id="bedrooms">
+                  <option value="Not sure">Not sure</option>
+                  <option>Studio</option>
+                  <option>1 Bedroom</option>
+                  <option>2 Bedrooms</option>
+                  <option>3 Bedrooms</option>
+                  <option>4 or more Bedrooms</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="budget">Approximate Budget</label>
+                <select id="budget">
+                  <option value="Please discuss">Please discuss</option>
+                  <option>Under AED 500 per night</option>
+                  <option>AED 500–750 per night</option>
+                  <option>AED 750–1,000 per night</option>
+                  <option>AED 1,000–1,500 per night</option>
+                  <option>AED 1,500+ per night</option>
+                  <option>Monthly accommodation budget</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="purpose">Purpose of Stay</label>
+                <select id="purpose">
+                  <option>Holiday / Tourism</option>
+                  <option>Relocation</option>
+                  <option>Business</option>
+                  <option>Between properties</option>
+                  <option>Family visit</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="message">Additional Requirements</label>
+                <textarea id="message" placeholder="Tell us about any particular requirements, preferences or questions."></textarea>
+              </div>
+
+              <div class="field full">
+                <button class="submit-button" type="submit">
+                  Submit Short Stay Enquiry
+                </button>
+                <p class="form-note">
+                  Submitting opens your email application. Your enquiry
+                  is not stored on this website.
+                </p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Looking for Somewhere to Stay?</h2>
+      <p>
+        Let us know what you need and when you need it.
+        Our team will be happy to discuss your short-stay requirements.
+      </p>
+      <a class="gold-button" href="https://wa.me/971568611311">
+        Enquire on WhatsApp
+      </a>
+      <a class="outline-button" href="mailto:info@royalbridges.ae">
+        Email Royal Bridges
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>ROYAL BRIDGES REAL ESTATE</strong>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="communities.html">Communities</a>
+      <a href="short-stay.html">Short Stay</a>
+      <a href="relocation.html">Relocation</a>
+      <a href="other-services.html">Other Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p>
+      Abu Dhabi, United Arab Emirates<br>
+      <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+    </p>
+    <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("shortStayForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const guests = document.getElementById("guests").value;
+      const arrival = document.getElementById("arrival").value;
+      const departure = document.getElementById("departure").value;
+      const area = document.getElementById("area").value;
+      const bedrooms = document.getElementById("bedrooms").value;
+      const budget = document.getElementById("budget").value;
+      const purpose = document.getElementById("purpose").value;
+      const message = document.getElementById("message").value.trim();
+
+      if (departure <= arrival) {
+        alert("Please select a departure date after your arrival date.");
+        return;
+      }
+
+      const subject = encodeURIComponent("Short Stay Enquiry - " + name);
+
+      const body = encodeURIComponent(
+        "SHORT STAY ENQUIRY\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Contact Number: " + phone + "\n" +
+        "Number of Guests: " + guests + "\n" +
+        "Arrival Date: " + arrival + "\n" +
+        "Departure Date: " + departure + "\n" +
+        "Preferred Area: " + area + "\n" +
+        "Bedrooms Required: " + bedrooms + "\n" +
+        "Approximate Budget: " + budget + "\n" +
+        "Purpose of Stay: " + purpose + "\n\n" +
+        "Additional Requirements:\n" + message
+      );
+
+      window.location.href =
+        "mailto:info@royalbridges.ae?subject=" + subject + "&body=" + body;
+    });
+  </script>
+
+</body>
+</html>
