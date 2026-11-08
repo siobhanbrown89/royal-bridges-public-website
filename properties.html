@@ -192,8 +192,17 @@ footer a{color:#e5c995}
  ];
  const grid=document.getElementById("listingGrid"), community=document.getElementById("inventoryCommunity"), purpose=document.getElementById("inventoryPurpose"), type=document.getElementById("inventoryType"), beds=document.getElementById("inventoryBeds"), count=document.getElementById("inventoryCount");
  const money=n=>"AED "+Number(n).toLocaleString("en-AE");
+ function bedroomRank(layout){
+  if(layout==="Studio") return 0;
+  const match=layout.match(/^(\d+)/);
+  const number=match?Number(match[1]):99;
+  const suffix=layout.includes("+ Maid")?0.2:layout.includes("+ Study")?0.3:0;
+  return number+suffix;
+ }
  function render(){
-  const filtered=inventory.filter(x=>(!community.value||x[0]===community.value)&&(!type.value||x[1]===type.value)&&(!beds.value||x[2]===beds.value));
+  // Display a mixed selection of developments, ordered by bedroom layout.
+  const filtered=inventory.filter(x=>(!community.value||x[0]===community.value)&&(!type.value||x[1]===type.value)&&(!beds.value||x[2]===beds.value))
+   .sort((a,b)=>bedroomRank(a[2])-bedroomRank(b[2])||a[0].localeCompare(b[0]));
   count.textContent=filtered.length+" sample property options";
   if(!filtered.length){grid.innerHTML='<div class="inventory-empty">No sample options match those filters. Try another community or bedroom layout.</div>';return;}
   grid.innerHTML=filtered.map(x=>{
