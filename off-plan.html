@@ -169,6 +169,7 @@ footer a{color:#e5c995}
  buttons.forEach(button=>button.addEventListener('click',()=>show(button.dataset.filter)));
  const params=new URLSearchParams(window.location.search);
  const selectedLocation=(params.get('location')||'').toLowerCase();
+ const selectedEmirate=params.get('emirate')||'';
  let initialFilter='all';
  if(selectedLocation.includes('yas'))initialFilter='yas';
  else if(selectedLocation.includes('hudayriyat'))initialFilter='hudayriyat';
