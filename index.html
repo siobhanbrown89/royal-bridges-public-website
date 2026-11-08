@@ -153,6 +153,20 @@ footer a{color:#e3c18b}
  .card-image{height:185px}
 }
 .listing-source{display:inline-block;margin-top:10px;color:var(--navy);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:3px}.listing-source:hover{color:#987544}
+
+/* Other Services carousel: photographic backgrounds matched to each service */
+.service-slide{position:relative;isolation:isolate;overflow:hidden;min-height:190px;background-color:var(--navy);background-size:cover;background-position:center;box-shadow:inset 0 0 0 2000px rgba(9,24,39,.53);border-bottom:3px solid var(--gold);transition:background-size .3s ease}
+.service-slide h3,.service-slide p,.service-slide a{position:relative;z-index:1}
+.service-slide h3{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.35)}
+.service-slide p{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.service-slide a{color:#f1d39d}
+.service-cleaning{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85')}
+.service-snagging{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1503387762-592deen9b?auto=format&fit=crop&w=900&q=85')}
+.service-moving{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1600518464441-9306b7a2c9c5?auto=format&fit=crop&w=900&q=85')}
+.service-pro{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=85')}
+.service-legal{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=85')}
+.service-business{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85')}
+.service-management{background-image:linear-gradient(135deg,rgba(9,24,39,.48),rgba(9,24,39,.68)),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85')}
 </style>
 
 <link rel="stylesheet" href="spacing.css">
@@ -254,20 +268,20 @@ footer a{color:#e3c18b}
  <div class="container">
   <div class="section-heading"><div class="eyebrow">More Than Property</div><h2>Our Other Services</h2><p>Practical support for your home, move, business and life in the UAE.</p></div>
   <div class="slider-window"><div class="slider-track">
-   <article class="service-slide"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
-   <article class="service-slide"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
+   <article class="service-slide service-cleaning"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
+   <article class="service-slide service-snagging"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
+   <article class="service-slide service-moving"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
+   <article class="service-slide service-pro"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
+   <article class="service-slide service-legal"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
+   <article class="service-slide service-business"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
+   <article class="service-slide service-management"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
+   <article class="service-slide service-cleaning"><h3>Cleaning</h3><p>Residential, holiday home and commercial cleaning support.</p><a href="other-services.html#cleaning">LEARN MORE →</a></article>
+   <article class="service-slide service-snagging"><h3>Snagging</h3><p>Property inspections and detailed snagging support.</p><a href="other-services.html#snagging">LEARN MORE →</a></article>
+   <article class="service-slide service-moving"><h3>Moving &amp; Packing</h3><p>Help with packing, moving and settling into your new home.</p><a href="other-services.html#moving-packing">LEARN MORE →</a></article>
+   <article class="service-slide service-pro"><h3>PRO Services</h3><p>Support with UAE documentation and administrative processes.</p><a href="other-services.html#pro-services">LEARN MORE →</a></article>
+   <article class="service-slide service-legal"><h3>Legal Consultancy</h3><p>Access to legal consultancy support and guidance.</p><a href="other-services.html#legal-consultancy">LEARN MORE →</a></article>
+   <article class="service-slide service-business"><h3>Business Set Up</h3><p>Support for entrepreneurs establishing a business in the UAE.</p><a href="other-services.html#business-set-up">LEARN MORE →</a></article>
+   <article class="service-slide service-management"><h3>Property Management</h3><p>Practical support for owners and their property investments.</p><a href="other-services.html#property-management">LEARN MORE →</a></article>
   </div></div>
  </div>
 </section>
