@@ -38,12 +38,16 @@ section{padding:55px 0}
 .heading h2{font-size:32px;color:var(--navy);margin:6px 0}
 .heading p{font-size:14px;color:var(--muted);max-width:750px;margin:auto}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service-card{background:white;border:1px solid #e8e2d8;padding:25px;scroll-margin-top:85px}
-.service-card h3{font-size:23px;color:var(--navy);margin:0 0 9px}
-.service-card p{font-size:13px;color:var(--muted);margin:0 0 13px}
-.service-card ul{padding-left:18px;font-size:13px;color:var(--muted)}
-.service-card li{margin:5px 0}
-.service-card a{display:inline-block;margin-top:15px;color:#987544;font-size:11px;font-weight:bold}
+.service-card{position:relative;isolation:isolate;overflow:hidden;min-height:390px;display:flex;flex-direction:column;justify-content:flex-end;background-position:center;background-size:cover;border:0;padding:25px;color:#fff;scroll-margin-top:85px;box-shadow:0 8px 24px #142b4320;transition:transform .35s ease,box-shadow .35s ease}
+.service-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,36,.12) 0%,rgba(8,22,36,.55) 42%,rgba(8,22,36,.92) 100%);z-index:-1;transition:background .35s ease}
+.service-card:hover{transform:translateY(-7px);box-shadow:0 16px 32px #142b4340}
+.service-card h3{font-size:25px;color:#fff;margin:0 0 9px;text-shadow:0 2px 8px #0008}
+.service-card p{font-size:13px;color:#f1f3f5;margin:0 0 10px}
+.service-card ul{padding-left:18px;font-size:12px;color:#edf0f2;margin:0}
+.service-card li{margin:4px 0}
+.service-card a{display:inline-block;margin-top:15px;color:#e4c58f;font-size:11px;font-weight:bold;letter-spacing:.6px}
+.service-card a:hover{color:#fff}
+@media(max-width:850px){.service-card{min-height:360px}}
 .service-section{scroll-margin-top:75px}
 .service-section h2{font-size:32px;color:var(--navy);margin:7px 0 12px}
 .service-section>div>p{font-size:14px;color:var(--muted);max-width:850px;margin-bottom:23px}
@@ -151,43 +155,43 @@ footer a{color:#e3c18b}
 </div>
 
 <div class="service-grid">
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85')">
 <h3>Cleaning Services</h3>
 <p>Residential, holiday-home and commercial cleaning support.</p>
 <ul><li>Regular and deep cleaning</li><li>Move-in and move-out cleaning</li><li>Post-construction cleaning</li><li>Holiday-home turnovers</li><li>Office and commercial cleaning</li></ul>
 <a href="#cleaning">EXPLORE CLEANING →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85')">
 <h3>Property Snagging</h3>
 <p>Detailed property inspections and snagging support before handover or occupation.</p>
 <ul><li>Pre-handover inspections</li><li>Defect identification</li><li>Photographic records</li><li>Snag reports</li><li>Re-inspection enquiries</li></ul>
 <a href="#snagging">EXPLORE SNAGGING →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1600518464441-9306b7a2c9c5?auto=format&fit=crop&w=1000&q=85')">
 <h3>Moving & Packing</h3>
 <p>Support with preparing, packing and coordinating your move.</p>
 <ul><li>Home moving coordination</li><li>Packing and unpacking</li><li>Furniture coordination</li><li>Relocation planning</li><li>Moving and storage enquiries</li></ul>
 <a href="#moving-packing">EXPLORE MOVING →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=85')">
 <h3>PRO Services</h3>
 <p>Administrative and government-process support for individuals and businesses.</p>
 <ul><li>Document processing assistance</li><li>Visa application coordination</li><li>Emirates ID process assistance</li><li>Licence and renewal coordination</li></ul>
 <a href="#pro-services">EXPLORE PRO SERVICES →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=85')">
 <h3>Legal Consultancy</h3>
 <p>Enquiries and coordination for legal and document-related support.</p>
 <ul><li>Property-related legal enquiries</li><li>Contract review enquiries</li><li>Tenancy-related matters</li><li>Business documentation</li></ul>
 <a href="#legal-consultancy">EXPLORE LEGAL SUPPORT →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85')">
 <h3>Business Set Up</h3>
 <p>Support for entrepreneurs and businesses looking to establish or expand in the UAE.</p>
 <ul><li>Business activity enquiries</li><li>Company formation coordination</li><li>Licence options</li><li>Free zone and mainland enquiries</li></ul>
 <a href="#business-set-up">EXPLORE BUSINESS SET UP →</a>
 </article>
-<article class="service-card">
+<article class="service-card" style="background-image:linear-gradient(135deg,rgba(8,22,36,.35),rgba(8,22,36,.4)),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85')">
 <h3>Property Management</h3>
 <p>Practical property support for landlords, investors and owners.</p>
 <ul><li>Tenant and tenancy coordination</li><li>Property inspections</li><li>Maintenance coordination</li><li>Rental and occupancy support</li><li>Owner reporting enquiries</li></ul>
