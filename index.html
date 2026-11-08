@@ -30,6 +30,11 @@ a{text-decoration:none;color:inherit}
 .dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{display:block}
 .dropdown-menu a{display:block;padding:9px 15px;font-size:12px;color:var(--navy)}
 .dropdown-menu a:hover{background:var(--cream)}
+.nested-dropdown{position:relative}
+.nested-dropdown>a{display:block;padding:9px 15px;font-size:12px;color:var(--navy)}
+.nested-menu{display:none;position:absolute;left:100%;top:0;min-width:220px;background:white;box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);padding:7px 0}
+.nested-dropdown:hover .nested-menu,.nested-dropdown:focus-within .nested-menu{display:block}
+@media(max-width:850px){.nested-menu{position:static;box-shadow:none;border-top:1px solid var(--gold);padding-left:14px}.nested-dropdown:hover .nested-menu,.nested-dropdown:focus-within .nested-menu{display:block}}
 .mobile-toggle{display:none;background:none;color:white;border:1px solid #718096;padding:7px 10px;cursor:pointer}
 .hero{min-height:320px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(9,26,44,.85),rgba(9,26,44,.22)),url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85') center/cover;color:white}
 .hero-content{padding:42px 0;max-width:680px}
@@ -41,7 +46,7 @@ a{text-decoration:none;color:inherit}
 .btn-gold{background:var(--gold);color:white}
 .btn-outline{background:transparent;color:white}
 .btn-dark-outline{background:white;color:var(--navy)}
-section{padding:64px 0}
+section{padding:44px 0}
 .alt{background:var(--cream)}
 .section-heading{text-align:center;margin-bottom:30px}
 .section-heading .eyebrow{color:#9b7b4b}
@@ -85,7 +90,7 @@ section{padding:64px 0}
 .blog-card p{font-size:12px;color:var(--muted)}
 .blog-card a{display:inline-block;margin-top:12px;color:#987544;font-size:12px;font-weight:bold}
 .partner-window{overflow:hidden}
-.partner-track{display:flex;gap:14px;width:max-content;animation:partners 42s linear infinite}
+.partner-track{display:flex;gap:14px;width:max-content;animation:partners 88s linear infinite}
 .partner-track:hover{animation-play-state:paused}
 .partner-card{width:185px;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #e7e1d7;background:white;padding:16px;text-align:center}
 .partner-card strong{font-family:Georgia,serif;font-size:21px;color:var(--navy)}
@@ -136,7 +141,7 @@ footer a{color:#e3c18b}
  .search-grid{grid-template-columns:1fr 1fr}
  .hero{min-height:270px}
  .hero-content{padding:34px 0}
- section{padding:48px 0}
+ section{padding:36px 0}
  .cards,.blog-grid,.feature-grid,.resources,.contact-grid,.about-layout{grid-template-columns:1fr}
  .section-heading h2,.about-layout h2,.contact-section h2{font-size:29px}
  .card-image{height:185px}
@@ -183,14 +188,16 @@ footer a{color:#e3c18b}
     <button type="button">ABOUT ▾</button>
     <div class="dropdown-menu">
      <a href="about.html">About Royal Bridges</a>
+     <div class="nested-dropdown"><a href="register.html">Register ▸</a><div class="nested-menu">
+      <a href="register.html#seminars">Seminars &amp; Webinars</a>
+      <a href="register.html#newsletter">Monthly Newsletter</a>
+      <a href="register.html#email-updates">Email Updates</a>
+     </div></div>
      <a href="careers.html">Careers</a>
      <a href="external-agencies.html">External Agencies</a>
      <a href="index.html#partners">Our Partners</a>
      <a href="blog.html">Blog &amp; Articles</a>
      <a href="other-services.html">Other Services</a>
-     <a href="register.html#seminars">Seminars &amp; Webinars</a>
-     <a href="register.html#newsletter">Monthly Newsletter</a>
-     <a href="register.html#email-updates">Keep Us Updated – Email Updates</a>
     </div>
    </li>
    <li><a href="index.html#contact">CONTACT</a></li>
@@ -305,7 +312,7 @@ footer a{color:#e3c18b}
   <div class="section-heading"><div class="eyebrow">Knowledge &amp; Guidance</div><h2>From Our Blog</h2><p>Useful information and practical guidance to help you make informed property decisions in Abu Dhabi.</p></div>
   <div class="blog-grid">
    <article class="blog-card"><small>Property Inspections</small><h3>Why Is Property Snagging SO Important?</h3><p>Understand why a thorough inspection matters before accepting your new property.</p><a href="blog.html">READ ARTICLE →</a></article>
-   <article class="blog-card"><small>Relocation</small><h3>Ship My Furniture or Buy New After Relocation?</h3><p>Things to consider when deciding whether to bring your furniture to the UAE.</p><a href="blog.html">READ ARTICLE →</a></article>
+   <article class="blog-card"><small>Mortgages &amp; Finance</small><h3>Am I Eligible for a Mortgage?</h3><p>Understand the key factors UAE lenders may consider, including income, existing debts, deposit and affordability.</p><a href="blog-mortgage-eligibility.html">READ ARTICLE →</a></article>
    <article class="blog-card"><small>Property Guidance</small><h3>What Should I Know Before Renting in Abu Dhabi?</h3><p>A practical introduction to the rental process and preparing for your move.</p><a href="blog.html">READ ARTICLE →</a></article>
   </div>
   <div class="more-link"><a class="btn btn-gold" href="blog.html">VISIT BLOG &amp; ARTICLES</a></div>
@@ -408,20 +415,6 @@ footer a{color:#e3c18b}
  </div>
 </section>
 
-<section id="about">
- <div class="container about-layout">
-  <div>
-   <div class="eyebrow" style="color:#9b7948">Welcome to Royal Bridges</div>
-   <h2>Connecting People, Property and Possibility</h2>
-   <p>Royal Bridges Real Estate supports clients navigating Abu Dhabi's property market, whether they are buying, selling, renting or exploring investment opportunities.</p>
-   <p>We understand that property decisions are about more than bricks and mortar. They are about lifestyle, family, opportunity and making the right move.</p>
-   <p>Our focus is Abu Dhabi, with a commitment to clear communication, professional service and practical guidance throughout the property journey.</p>
-   <a class="btn btn-gold" href="about.html">ABOUT ROYAL BRIDGES</a>
-  </div>
-  <div class="about-panel"><h3>Your Abu Dhabi Property Journey</h3><p>From the first enquiry to finding the right property, arranging viewings and understanding the next steps, Royal Bridges is here to help you navigate the process.</p><p>Buying · Selling · Renting · Investment · Relocation</p></div>
- </div>
-</section>
-
 <section class="contact-section" id="contact">
  <div class="container">
   <h2>Let's Talk Property</h2>
@@ -447,6 +440,28 @@ footer a{color:#e3c18b}
 <script>
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
 document.getElementById('year').textContent=new Date().getFullYear();
+const intentSelect=document.getElementById('intent');
+const budgetSelect=document.getElementById('budget');
+const buyBudgetOptions=[
+  ['Under AED 500,000','Under AED 500,000'],['AED 500,000 – 1 million','AED 500,000 – 1 million'],
+  ['AED 1 – 2 million','AED 1 – 2 million'],['AED 2 – 3 million','AED 2 – 3 million'],
+  ['AED 3 – 5 million','AED 3 – 5 million'],['AED 5 – 10 million','AED 5 – 10 million'],
+  ['AED 10 million+','AED 10 million+'],['Prefer to discuss','Prefer to discuss']
+];
+const rentBudgetOptions=[
+  ['Under AED 40,000 / year','Under AED 40,000 / year'],['AED 40,000 – 60,000 / year','AED 40,000 – 60,000 / year'],
+  ['AED 60,000 – 80,000 / year','AED 60,000 – 80,000 / year'],['AED 80,000 – 100,000 / year','AED 80,000 – 100,000 / year'],
+  ['AED 100,000 – 150,000 / year','AED 100,000 – 150,000 / year'],['AED 150,000 – 200,000 / year','AED 150,000 – 200,000 / year'],
+  ['AED 200,000+ / year','AED 200,000+ / year'],['Prefer to discuss','Prefer to discuss']
+];
+function updateBudgetOptions(){
+  const isRent=intentSelect.value==='rent';
+  const options=isRent?rentBudgetOptions:buyBudgetOptions;
+  budgetSelect.innerHTML='<option value="">Select '+(isRent?'annual rental budget':'purchase budget')+'</option>'+options.map(([label,value])=>'<option value="'+value+'">'+label+'</option>').join('');
+  budgetSelect.previousElementSibling.textContent=isRent?'Your annual rental budget (AED)':'Your purchase budget (AED)';
+}
+intentSelect.addEventListener('change',updateBudgetOptions);
+updateBudgetOptions();
 </script>
 </body>
 </html>
