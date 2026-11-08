@@ -2,144 +2,91 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Search properties for rent, sale, new projects, commercial opportunities and land across Abu Dhabi, Dubai and Ras Al Khaimah with Royal Bridges Real Estate.">
-<title>Find a Property | Royal Bridges Real Estate</title>
-<link rel="stylesheet" href="spacing.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Browse current Royal Bridges Real Estate property listings for sale and rent across Abu Dhabi.">
+<title>Our Property Listings | Royal Bridges Real Estate</title>
+<link rel="stylesheet" href="site-header.css">
 <style>
-:root{--navy:#142b43;--gold:#b99a62;--cream:#f5f0e6;--ink:#293746;--muted:#687581;--line:#e4e8ec}
+:root{--navy:#10243b;--gold:#c5a46d;--cream:#f8f6f1;--ink:#283646;--muted:#697582}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
 a{text-decoration:none;color:inherit}
-.brandbar{background:var(--cream);padding:8px 4%;display:flex;align-items:center;justify-content:center}
-.brandbar img{height:76px;max-width:270px;object-fit:contain}
-.contactbar{background:var(--cream);text-align:center;padding:0 12px 10px;font-size:12px;color:var(--navy)}
-.contactbar a{color:var(--navy)}
-.navbar{background:var(--navy);position:sticky;top:0;z-index:1000;padding:0 3%}
-.nav-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}
-.nav-inner>a{display:block;padding:15px 11px;color:white;font-size:12px;font-weight:600;white-space:nowrap}
-.nav-inner>a:hover,.nav-inner>a[aria-current=page]{color:var(--gold)}
-.hero{min-height:270px;background:linear-gradient(90deg,rgba(10,28,46,.88),rgba(10,28,46,.48)),url("AUH%20Skyline.jpeg") center 48%/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:48px 20px}
-.hero-inner{max-width:850px}
-.hero h1{font-family:Georgia,serif;font-size:clamp(36px,5vw,54px);font-weight:normal;line-height:1.15;margin:0}
-.hero p{font-size:16px;color:#f4f0e9;margin:14px auto 0;max-width:690px}
-.gold-line{width:62px;height:3px;background:var(--gold);margin:19px auto}
-.search-wrap{width:min(1120px,92%);margin:-42px auto 58px;position:relative;z-index:2}
-.search-panel{background:#fff;border:1px solid #e6e0d5;border-radius:8px;box-shadow:0 16px 42px #10294120;padding:30px}
-.panel-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin-bottom:20px}
-.panel-heading h2{font-family:Georgia,serif;font-size:29px;font-weight:normal;color:var(--navy);margin:0}
-.panel-heading p{font-size:13px;color:var(--muted);margin:4px 0 0}
-.reset-button{border:0;background:transparent;color:var(--navy);text-decoration:underline;cursor:pointer;font-size:13px;padding:8px}
-.search-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-.field{display:flex;flex-direction:column;gap:7px;min-width:0}
-.field label{font-size:12px;font-weight:700;letter-spacing:.3px;color:var(--navy)}
-.field input,.field select{width:100%;height:47px;border:1px solid #d9dfe5;border-radius:4px;background:#fff;padding:0 12px;color:var(--ink);font:14px Arial, sans-serif;min-width:0}
-.field input:focus,.field select:focus{outline:2px solid #b99a6270;border-color:var(--gold)}
-.field input::placeholder{color:#9aa3ab}
-.location-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:17px;grid-column:span 3}
-.price-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.search-actions{display:flex;align-items:center;gap:14px;margin-top:23px;flex-wrap:wrap}
-.search-button{border:0;border-radius:4px;background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:15px 28px;cursor:pointer;transition:background .2s}
-.search-button:hover{background:#c9ad7a}
-.search-note{font-size:12px;color:var(--muted);margin:0}
-.popular{width:min(1120px,92%);margin:0 auto 65px}
-.popular h2{font-family:Georgia,serif;font-size:30px;font-weight:normal;color:var(--navy);text-align:center;margin:0}
-.popular>p{text-align:center;color:var(--muted);font-size:14px;margin:8px auto 24px}
-.quick-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-.quick-links a{border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:13px;color:var(--navy);background:#fff}
-.quick-links a:hover{border-color:var(--gold);background:var(--cream)}
-.help-strip{background:var(--navy);color:white;text-align:center;padding:42px 20px}
-.help-strip h2{font-family:Georgia,serif;font-size:30px;font-weight:normal;margin:0 0 8px}
-.help-strip p{max-width:680px;margin:0 auto 18px;color:#e4e9ed;font-size:14px}
-.gold-button{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 22px;border-radius:3px;font-weight:bold;font-size:13px;margin:4px}
-footer{background:#0c1e30;color:white;padding:32px 5%;text-align:center;font-size:13px}
+.container{width:min(1160px,92%);margin:0 auto}
+.page-hero{background:linear-gradient(90deg,rgba(9,26,44,.88),rgba(9,26,44,.48)),url('AUH%20Skyline.jpeg') center/cover;min-height:250px;display:flex;align-items:center;color:#fff;text-align:center;padding:42px 20px}
+.page-hero-inner{max-width:800px;margin:auto}
+.eyebrow{color:#e2c18b;text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:bold}
+.page-hero h1{font:normal clamp(36px,5vw,54px)/1.15 Georgia,serif;margin:12px 0}
+.page-hero p{font-size:15px;color:#f0f1f2;max-width:680px;margin:auto}
+.listings-section{padding:48px 0 58px;background:var(--cream)}
+.section-heading{text-align:center;margin:0 auto 30px;max-width:760px}
+.section-heading h2{font:normal 34px Georgia,serif;color:var(--navy);margin:5px 0 8px}
+.section-heading p{font-size:14px;color:var(--muted);margin:0}
+.listings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.listing-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #e7e1d7;overflow:hidden;box-shadow:0 5px 18px rgba(16,36,59,.06)}
+.listing-image-link{display:block}
+.listing-photo{height:205px;position:relative;overflow:hidden;background:#e8e4dc}
+.listing-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}
+.listing-image-link:hover img{transform:scale(1.035)}
+.listing-photo span{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(16,36,59,.84);color:white;padding:8px 12px;font-size:12px;text-align:center}
+.listing-info{padding:18px;display:flex;flex-direction:column;flex:1}
+.listing-info h2{font:normal 22px Georgia,serif;color:var(--navy);margin:0 0 8px}
+.listing-info p{font-size:12px;color:var(--muted);margin:4px 0}
+.listing-price{color:#987544;font-weight:bold;font-size:14px;margin-top:12px;padding-top:10px;border-top:1px solid #eee8dc}
+.listing-cta{display:inline-block;align-self:flex-start;margin-top:14px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:bold;letter-spacing:.35px;padding:10px 14px}
+.listing-cta:hover{background:#d3b77f}
+.image-note{text-align:center;color:var(--muted);font-size:11px;margin:23px auto 0}
+.enquiry-strip{background:var(--navy);color:#fff;text-align:center;padding:40px 20px}
+.enquiry-strip h2{font:normal 29px Georgia,serif;margin:0 0 8px}
+.enquiry-strip p{max-width:680px;margin:0 auto 18px;color:#e1e6eb;font-size:14px}
+.enquiry-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.enquiry-actions a{background:var(--gold);color:var(--navy);padding:11px 19px;font-size:12px;font-weight:bold}
+footer{background:#0c1e30;color:#fff;padding:25px 0;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:#e5c995}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin:15px 0}
-@media(max-width:760px){.nav-inner{justify-content:flex-start}.nav-inner>a{padding:12px 9px;font-size:11px}.hero{min-height:245px}.search-wrap{margin-top:-28px}.search-panel{padding:21px 17px}.search-grid{grid-template-columns:1fr 1fr;gap:14px}.location-row{grid-column:span 2}.panel-heading{align-items:flex-start}.panel-heading h2{font-size:25px}}
-@media(max-width:520px){.search-grid{grid-template-columns:1fr}.location-row{grid-column:span 1;grid-template-columns:1fr}.price-row{grid-template-columns:1fr 1fr}.panel-heading{display:block}.reset-button{padding-left:0}.search-actions{align-items:stretch}.search-button{width:100%}.search-note{text-align:center;width:100%}}
+@media(max-width:900px){.listings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.listings-grid{grid-template-columns:1fr}.listing-photo{height:220px}.listings-section{padding:35px 0 42px}.section-heading h2{font-size:29px}.footer-inner{display:block;text-align:center}.footer-inner span{display:block;margin:5px 0}}
 </style>
-  <link rel="stylesheet" href="site-header.css">
-  <script src="site-header.js" defer></script>
+<script src="site-header.js" defer></script>
 </head>
 <body>
-<div class="brandbar"><a href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate"></a></div>
-<div class="contactbar">English WhatsApp: <a href="https://wa.me/971568611311">+971 56 861 1311</a> &nbsp; | &nbsp; Arabic WhatsApp: <a href="https://wa.me/971506082608">+971 50 608 2608</a> &nbsp; | &nbsp; <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></div>
-<nav class="navbar"><div class="nav-inner">
-<a href="index.html">Home</a>
-<a href="properties.html" aria-current="page">Properties</a>
-<a href="communities.html">Communities</a>
-<a href="short-stay.html">Short Stay</a>
-<a href="relocation.html">Relocation</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</div></nav>
-<header class="hero"><div class="hero-inner">
-<h1>Find Your Property</h1><div class="gold-line"></div>
-<p>Search homes, investments, commercial opportunities and land across Abu Dhabi, Dubai and Ras Al Khaimah.</p>
-</div></header>
+<header class="page-hero"><div class="page-hero-inner"><div class="eyebrow">Find Your Next Property</div><h1>Our Property Listings</h1><p>Explore the properties currently listed with Royal Bridges Real Estate. Select any listing to view its full details and contact our team.</p></div></header>
 <main>
-<section class="search-wrap" aria-labelledby="search-title">
-<form class="search-panel" id="propertySearch">
-<div class="panel-heading"><div><h2 id="search-title">Property Search</h2><p>Tell us what you are looking for and we’ll help you find the right opportunity.</p></div><button class="reset-button" type="reset">Clear all filters</button></div>
-<div class="search-grid">
-<div class="location-row">
-<div class="field"><label for="emirate">EMIRATE</label><select id="emirate" name="emirate" required><option value="">Select emirate</option><option>Abu Dhabi</option><option>Ras Al Khaimah</option><option>Dubai</option></select></div>
-<div class="field"><label for="location">COMMUNITY OR LOCATION</label><input id="location" name="location" type="search" placeholder="e.g. Yas Island, Saadiyat, Al Reem, Dubai Marina"></div>
+<section class="listings-section">
+<div class="container">
+<div class="section-heading"><h2>Available Properties</h2><p>Current sale and rental opportunities. All prices are shown in AED. Please contact us to confirm current availability and arrange a viewing or consultation.</p></div>
+<div class="listings-grid">
+<article class="listing-card">
+<a class="listing-image-link" href="gardenia-bay-2-bedroom-for-sale.html" aria-label="View 2 Bedroom Apartment at Gardenia Bay · Yas Island">
+<div class="listing-photo"><img src="https://www.cmep.ae/uploads/projects/4/images/d8fe949a-8187-4e93-bf79-c5cde2d69ff8.webp" alt="Representative furnished interior image for Gardenia Bay" loading="lazy"><span>Gardenia Bay · Yas Island</span></div></a>
+<div class="listing-info"><h2>2 Bedroom Apartment</h2><p>Gardenia Bay · Yas Island, Abu Dhabi</p><p>Off-plan · Handover Q4 2028</p><p>Furnished · Partial canal view and community view.</p><p>30/70 payment plan · 20% paid to date; remaining 10% of the 30% construction portion due before handover, with 70% due on handover.</p>
+<div class="listing-price">AED 2,380,000 · For Sale</div><a class="listing-cta" href="gardenia-bay-2-bedroom-for-sale.html">REQUEST A CONSULTATION →</a></div></article>
+<article class="listing-card">
+<a class="listing-image-link" href="reem-hills-3-bedroom-corner-townhouse-for-sale.html" aria-label="View 3 Bedroom Corner Townhouse at Canal Promenade · Reem Hills">
+<div class="listing-photo"><img src="https://www.cmep.ae/uploads/projects/53/images/1baf52b0-dfd4-422e-8b25-3c02929ffa06.webp" alt="Representative exterior image for Reem Hills" loading="lazy"><span>Canal Promenade · Reem Hills</span></div></a>
+<div class="listing-info"><h2>3 Bedroom Corner Townhouse</h2><p>Canal Promenade · Reem Hills, Abu Dhabi</p><p>Off-plan · Phase 1 · Handover Q1 2027</p><p>Unfurnished</p><p>40/60 payment plan · 40% paid to date.</p>
+<div class="listing-price">AED 5,200,000 · For Sale</div><a class="listing-cta" href="reem-hills-3-bedroom-corner-townhouse-for-sale.html">REQUEST A CONSULTATION →</a></div></article>
+<article class="listing-card">
+<a class="listing-image-link" href="one-reem-2-bedroom-for-sale.html" aria-label="View 2 Bedroom Apartment at One Reem · Reem Island">
+<div class="listing-photo"><img src="https://uaeprojects.com/uploads/66964/conversions/One-Reem-Island-Exterior-1-heroSection.jpg" alt="Representative exterior image for One Reem Island" loading="lazy"><span>One Reem · Reem Island</span></div></a>
+<div class="listing-info"><h2>2 Bedroom Apartment</h2><p>One Reem · Reem Island, Abu Dhabi</p><p>Unfurnished · Vacant and Ready to Move</p><p>Full mangrove views</p><p>Double-height ceilings · Approx. 3.5m</p>
+<div class="listing-price">AED 4,500,000 · For Sale</div><a class="listing-cta" href="one-reem-2-bedroom-for-sale.html">REQUEST A VIEWING →</a></div></article>
+<article class="listing-card">
+<a class="listing-image-link" href="reeman-living-studio-44000-for-rent.html" aria-label="View Studio Apartment · Unfurnished at Reeman Living · Abu Dhabi">
+<div class="listing-photo"><img src="https://www.cmep.ae/uploads/projects/9/images/5bfdb40f-cf16-47f3-a830-992d27bcbd57.webp" alt="Representative interior image for Reeman Living" loading="lazy"><span>Reeman Living · Abu Dhabi</span></div></a>
+<div class="listing-info"><h2>Studio Apartment · Unfurnished</h2><p>Reeman Living · Abu Dhabi</p><p>Size: 280 sq. ft.</p><p>Unfurnished</p><p>Vacant and Ready to Move · Annual rent · One payment</p>
+<div class="listing-price">AED 44,000 per year · For Rent</div><a class="listing-cta" href="reeman-living-studio-44000-for-rent.html">REQUEST A VIEWING →</a></div></article>
+<article class="listing-card">
+<a class="listing-image-link" href="reeman-living-studio-48000-for-rent.html" aria-label="View Studio Apartment · Unfurnished at Reeman Living · Abu Dhabi">
+<div class="listing-photo"><img src="https://www.cmep.ae/uploads/projects/9/images/5bfdb40f-cf16-47f3-a830-992d27bcbd57.webp" alt="Representative interior image for Reeman Living" loading="lazy"><span>Reeman Living · Abu Dhabi</span></div></a>
+<div class="listing-info"><h2>Studio Apartment · Unfurnished</h2><p>Reeman Living · Abu Dhabi</p><p>Size: 280 sq. ft.</p><p>Unfurnished</p><p>Vacant and Ready to Move · Annual rent · Four payments</p>
+<div class="listing-price">AED 48,000 per year · For Rent</div><a class="listing-cta" href="reeman-living-studio-48000-for-rent.html">REQUEST A VIEWING →</a></div></article>
 </div>
-<div class="field"><label for="category">I AM LOOKING TO</label><select id="category" name="category" required><option value="">Select a category</option><option>Rent</option><option>Buy</option><option>New Projects</option><option>Commercial Rent</option><option>Commercial Buy</option><option>Plots and Lands</option></select></div>
-<div class="field"><label for="type">PROPERTY TYPE</label><select id="type" name="type"><option value="">Any property type</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Duplex</option><option>Penthouse</option><option>Studio</option><option>Office</option><option>Retail / Shop</option><option>Warehouse</option><option>Commercial Building</option><option>Residential Plot</option><option>Commercial Plot</option><option>Land</option></select></div>
-<div class="field"><label for="bedrooms">NUMBER OF BEDROOMS</label><select id="bedrooms" name="bedrooms"><option value="">Any</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>3 Bedrooms</option><option>4 Bedrooms</option><option>5 Bedrooms</option><option>6+ Bedrooms</option></select></div>
-<div class="field"><label>PRICE RANGE (AED)</label><div class="price-row"><input id="minPrice" name="minPrice" type="number" min="0" placeholder="Minimum" aria-label="Minimum price in AED"><input id="maxPrice" name="maxPrice" type="number" min="0" placeholder="Maximum" aria-label="Maximum price in AED"></div></div>
-<div class="field"><label for="status">PROPERTY STATUS</label><select id="status" name="status"><option value="">Off-plan or ready</option><option>Off-plan</option><option>Ready</option></select></div>
-<div class="field"><label for="furnishing">FURNISHING</label><select id="furnishing" name="furnishing"><option value="">Any</option><option>Furnished</option><option>Unfurnished</option></select></div>
+<p class="image-note">Images are representative images of the development or building and may not depict the exact unit.</p>
 </div>
-<div class="search-actions"><button class="search-button" type="submit">Search Properties&nbsp; →</button><p class="search-note">Your search details will be sent to our property team so we can help source matching options.</p></div>
-</form>
 </section>
-<section class="popular">
-<h2>Start With a Popular Location</h2><p>Explore some of the UAE locations we can assist you with.</p>
-<div class="quick-links">
-<a href="communities.html#abu-dhabi">Abu Dhabi Communities</a>
-<a href="communities.html#dubai">Dubai Communities</a>
-<a href="communities.html#rak">Ras Al Khaimah Communities</a>
-<a href="off-plan.html">New Projects</a>
-<a href="residential-plots.html">Plots and Lands</a>
-</div>
-</section>
-<section class="help-strip"><h2>Need Help Finding the Right Property?</h2><p>Share your requirements with our team. We can assist with residential and commercial searches, new projects and land opportunities.</p><a class="gold-button" href="https://wa.me/971568611311">Speak to Our Team</a><a class="gold-button" href="mailto:info@royalbridges.ae?subject=Property%20Search%20Enquiry">Email Us</a></section>
+<section class="enquiry-strip"><h2>Looking for Something Different?</h2><p>Tell us your preferred location, budget and property requirements. Our team can help you explore suitable opportunities.</p><div class="enquiry-actions"><a href="https://wa.me/971568611311?text=Hello%20Royal%20Bridges%2C%20I%20would%20like%20help%20finding%20a%20property.">SEND A PROPERTY ENQUIRY</a><a href="register.html">REGISTER YOUR PROPERTY</a><a href="mailto:info@royalbridges.ae?subject=Property%20Enquiry">EMAIL US</a></div></section>
 </main>
-<footer><strong>ROYAL BRIDGES REAL ESTATE</strong><div class="footer-links"><a href="index.html">Home</a><a href="properties.html">Properties</a><a href="communities.html">Communities</a><a href="short-stay.html">Short Stay</a><a href="relocation.html">Relocation</a><a href="register.html">Register</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><p>Abu Dhabi, United Arab Emirates<br><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p><p>© 2026 Royal Bridges Real Estate. All rights reserved.</p></footer>
-<script>
-(function(){
- const form=document.getElementById('propertySearch');
- const category=document.getElementById('category');
- const status=document.getElementById('status');
- category.addEventListener('change',function(){
-   if(this.value==='New Projects') status.value='Off-plan';
-   else if(this.value==='Rent'||this.value==='Buy'||this.value==='Commercial Rent'||this.value==='Commercial Buy'||this.value==='Plots and Lands') status.value='';
- });
- form.addEventListener('submit',function(event){
-   event.preventDefault();
-   const values=[
-     ['Emirate',document.getElementById('emirate').value],
-     ['Community / location',document.getElementById('location').value],
-     ['Search category',category.value],
-     ['Property type',document.getElementById('type').value],
-     ['Bedrooms',document.getElementById('bedrooms').value],
-     ['Minimum price (AED)',document.getElementById('minPrice').value],
-     ['Maximum price (AED)',document.getElementById('maxPrice').value],
-     ['Status',status.value],
-     ['Furnishing',document.getElementById('furnishing').value]
-   ].filter(function(item){return item[1]!=='';});
-   if(!document.getElementById('emirate').value||!category.value){
-     alert('Please select an emirate and what you are looking to do.');
-     return;
-   }
-   const message='Hello Royal Bridges, I would like help finding a property.\n\n'+values.map(function(item){return item[0]+': '+item[1];}).join('\n')+'\n\nPlease let me know about matching properties.';
-   window.location.href='https://wa.me/971568611311?text='+encodeURIComponent(message);
- });
-})();
-</script>
+<footer><div class="container footer-inner"><span>© 2026 Royal Bridges Real Estate. All rights reserved.</span><span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a> · Abu Dhabi, UAE</span><span><a href="short-stay.html">Short Stay</a> · <a href="relocation.html">Relocation</a> · <a href="blog.html">Blog</a></span></div></footer>
 </body>
 </html>
