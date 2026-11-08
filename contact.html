@@ -1,186 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Royal Bridges | Abu Dhabi Real Estate</title>
-  <meta name="description" content="Contact Royal Bridges Real Estate in Abu Dhabi for property sales, rentals, relocation, short stays and other services.">
-  <style>
-    :root {
-      --navy:#14283d;
-      --cream:#f7f3e9;
-      --gold:#b99a5b;
-      --ink:#263443;
-      --muted:#687582;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); line-height:1.65; }
-    a { color:inherit; }
-    .topbar { background:var(--navy); color:white; padding:8px 5%; text-align:right; font-size:12px; }
-    .topbar a { color:white; text-decoration:none; margin-left:15px; }
-    header { background:var(--cream); border-bottom:1px solid #e8dfcd; position:sticky; top:0; z-index:20; }
-    .nav-wrap { max-width:1250px; margin:auto; padding:10px 22px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand img { width:185px; max-height:70px; object-fit:contain; display:block; }
-    nav { display:flex; align-items:center; gap:17px; flex-wrap:wrap; }
-    nav a,.drop-label { color:var(--navy); text-decoration:none; font-size:13px; font-weight:700; }
-    nav a:hover,.drop-label:hover { color:var(--gold); }
-    .dropdown { position:relative; }
-    .drop-label { cursor:pointer; }
-    .drop-menu { display:none; position:absolute; top:100%; left:0; min-width:230px; max-height:75vh; overflow-y:auto; background:white; box-shadow:0 8px 24px #14283d20; border-top:3px solid var(--gold); padding:8px 0; }
-    .dropdown:hover .drop-menu,.dropdown:focus-within .drop-menu { display:block; }
-    .drop-menu a { display:block; padding:9px 15px; font-weight:500; }
-    .drop-menu a:hover { background:var(--cream); }
-    .nav-cta { background:var(--gold); color:white !important; padding:9px 13px; border-radius:3px; }
-    .hero { background:linear-gradient(90deg,#14283de8,#14283d8c),url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85") center/cover; color:white; padding:85px 7%; text-align:center; }
-    .hero h1 { font-size:clamp(32px,5vw,52px); margin:0 0 15px; }
-    .hero p { max-width:760px; margin:auto; font-size:17px; }
-    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:bold; }
-    .container { max-width:1120px; margin:auto; padding:60px 22px; }
-    h2 { color:var(--navy); font-size:30px; margin:0 0 15px; }
-    h3 { color:var(--navy); margin-top:0; }
-    .contact-grid { display:grid; grid-template-columns:0.9fr 1.1fr; gap:35px; align-items:start; }
-    .info-card,.form-card { border:1px solid #e9e5dc; border-radius:8px; padding:28px; background:white; box-shadow:0 5px 18px #14283d09; }
-    .info-item { padding:15px 0; border-bottom:1px solid #eee9df; }
-    .info-item:last-child { border-bottom:0; }
-    .info-item strong { display:block; color:var(--navy); }
-    .info-item a { color:#9b7b3d; text-decoration:none; font-weight:bold; }
-    form label { display:block; color:var(--navy); font-weight:bold; font-size:13px; margin:15px 0 6px; }
-    input,select,textarea {
-      width:100%; padding:12px; border:1px solid #d9d5cc; border-radius:4px;
-      font:inherit; color:var(--ink); background:white;
-    }
-    textarea { min-height:130px; resize:vertical; }
-    input:focus,select:focus,textarea:focus { outline:2px solid #b99a5b55; border-color:var(--gold); }
-    button { border:0; cursor:pointer; font:inherit; }
-    .button { display:inline-block; background:var(--gold); color:white; text-decoration:none; padding:12px 21px; border-radius:3px; font-weight:bold; margin-top:18px; }
-    .cream-section { background:var(--cream); }
-    .service-links { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
-    .service-links a { background:white; padding:18px; border-radius:5px; text-decoration:none; color:var(--navy); font-weight:bold; border:1px solid #e9e5dc; }
-    .service-links a:hover { border-color:var(--gold); color:#9b7b3d; }
-    .disclaimer { color:var(--muted); font-size:12px; margin-top:15px; }
-    footer { background:#101f30; color:white; padding:35px 6%; text-align:center; }
-    footer a { color:#e2c88e; text-decoration:none; }
-    footer p { margin:6px 0; font-size:13px; }
-    @media(max-width:900px) {
-      .nav-wrap { flex-direction:column; }
-      nav { justify-content:center; gap:12px; }
-    }
-    @media(max-width:650px) {
-      .topbar { text-align:center; }
-      .topbar a { margin:0 5px; }
-      nav { gap:10px; }
-      nav a,.drop-label { font-size:12px; }
-      .drop-menu { left:auto; right:0; }
-      .contact-grid { grid-template-columns:1fr; }
-      .service-links { grid-template-columns:repeat(2,1fr); }
-      .hero { padding:65px 22px; }
-      .container { padding:45px 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Royal Bridges | Abu Dhabi Real Estate</title>
+<meta name="description" content="Contact Royal Bridges Real Estate in Abu Dhabi for property sales, rentals, relocation, short stays and professional services.">
+
+<style>
+:root {
+  --navy:#142b43;
+  --gold:#b99a62;
+  --cream:#f5f0e6;
+  --ink:#293746;
+  --muted:#687581;
+  --line:#e7e0d4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7}
+a{text-decoration:none;color:inherit}
+
+.topbar{
+  background:var(--navy);
+  color:white;
+  padding:9px 4%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px 22px;
+  flex-wrap:wrap;
+  font-size:12px;
+}
+.topbar a{color:white}
+
+.brandbar{
+  background:var(--cream);
+  padding:7px 4%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.brandbar img{
+  height:76px;
+  max-width:270px;
+  object-fit:contain;
+}
+
+.navbar{
+  background:var(--navy);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  padding:0 3%;
+}
+.nav-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.nav-inner>a,.dropdown>a{
+  display:block;
+  padding:14px 10px;
+  color:white;
+  font-size:12px;
+  font-weight:600;
+  white-space:nowrap;
+}
+.nav-inner>a:hover,.dropdown>a:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:235px;
+  max-height:75vh;
+  overflow-y:auto;
+  background:white;
+  box-shadow:0 8px 22px #0002;
+  border-top:3px solid var(--gold);
+  z-index:1001;
+}
+.dropdown-content a{
+  display:block;
+  padding:11px 15px;
+  color:var(--navy);
+  font-size:13px;
+  border-bottom:1px solid #eee;
+}
+.dropdown-content a:hover{background:var(--cream)}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content{display:block}
+
+.hero{
+  background:
+    linear-gradient(#142b43bb,#142b43cc),
+    url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85") center/cover;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
+}
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(36px,5vw,55px);
+  font-weight:normal;
+  margin:12px 0;
+}
+.hero p{
+  max-width:760px;
+  margin:auto;
+  font-size:17px;
+  color:#f1f1f1;
+}
+
+.container{
+  width:min(1120px,90%);
+  margin:auto;
+  padding:65px 0;
+}
+h2{
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:32px;
+  font-weight:normal;
+  margin:8px 0 15px;
+}
+h3{color:var(--navy);margin-top:0}
+.intro{color:var(--muted);max-width:750px}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:35px;
+  align-items:start;
+}
+.info-card,.form-card{
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:28px;
+  background:white;
+  box-shadow:0 5px 18px #142b4309;
+}
+.info-item{
+  padding:15px 0;
+  border-bottom:1px solid #eee9df;
+}
+.info-item:last-child{border-bottom:0}
+.info-item strong{
+  display:block;
+  color:var(--navy);
+}
+.info-item a{
+  color:#9b7b3d;
+  font-weight:bold;
+}
+.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+.button{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--navy);
+  padding:12px 21px;
+  border-radius:3px;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+.button.dark{background:var(--navy);color:white}
+.button:hover{opacity:.88}
+
+form label{
+  display:block;
+  color:var(--navy);
+  font-weight:bold;
+  font-size:13px;
+  margin:16px 0 6px;
+}
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d9d5cc;
+  border-radius:4px;
+  font:inherit;
+  color:var(--ink);
+  background:white;
+}
+textarea{min-height:135px;resize:vertical}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid #b99a6255;
+  border-color:var(--gold);
+}
+.disclaimer{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:15px;
+}
+
+.cream-section{background:var(--cream)}
+.service-links{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:25px;
+}
+.service-links a{
+  background:white;
+  padding:18px;
+  border-radius:4px;
+  color:var(--navy);
+  font-weight:bold;
+  border:1px solid var(--line);
+}
+.service-links a:hover{
+  border-color:var(--gold);
+  color:#9b7b3d;
+}
+
+.cta{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+.cta h2{color:white}
+.cta p{
+  max-width:700px;
+  margin:0 auto 20px;
+  color:#e4e9ed;
+}
+
+footer{
+  background:#0c1e30;
+  color:white;
+  padding:35px 5%;
+  text-align:center;
+  font-size:13px;
+}
+footer a{color:#e5c995}
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  margin:15px 0;
+}
+
+@media(max-width:850px){
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .topbar{justify-content:center;text-align:center}
+  .nav-inner>a,.dropdown>a{padding:11px 7px;font-size:11px}
+  .dropdown-content{position:fixed;left:0;right:0;top:auto}
+  .service-links{grid-template-columns:repeat(2,1fr)}
+  .container{padding:45px 0}
+  .hero{padding:60px 18px}
+}
+@media(max-width:480px){
+  .service-links{grid-template-columns:1fr}
+  .info-card,.form-card{padding:20px}
+}
+</style>
 </head>
+
 <body>
 
 <div class="topbar">
   <a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a>
+  <span>|</span>
   <a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a>
+  <span>|</span>
   <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
 </div>
 
-<header>
-  <div class="nav-wrap">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="Royal Bridges Real Estate">
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <span class="drop-label">Properties ▾</span>
-        <div class="drop-menu">
-          <a href="properties.html#property-types">Types of Properties</a>
-          <a href="properties.html#residential-sale">For Sale – Residential</a>
-          <a href="properties.html#residential-rent">For Rent – Residential</a>
-          <a href="properties.html#off-plan-primary">Off Plan – Primary & Upcoming</a>
-          <a href="properties.html#off-plan-resale">Off Plan – Secondary Resale</a>
-          <a href="properties.html#commercial-sale">For Sale – Commercial</a>
-          <a href="properties.html#commercial-rent">For Rent – Commercial</a>
-          <a href="properties.html#residential-land">Residential Lands & Plots</a>
-          <a href="properties.html#commercial-land">Commercial & Mixed-Use Lands</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="drop-label">Communities ▾</span>
-        <div class="drop-menu">
-          <a href="communities.html#abudhabi">Communities in Abu Dhabi</a>
-          <a href="communities.html#dubai">Communities in Dubai</a>
-          <a href="communities.html#rak">Communities in RAK</a>
-        </div>
-      </div>
-      <a href="short-stay.html">Short Stay</a>
-      <a href="relocation.html">Relocation</a>
-      <div class="dropdown">
-        <span class="drop-label">About ▾</span>
-        <div class="drop-menu">
-          <a href="about.html">About Royal Bridges</a>
-          <a href="careers.html">Careers</a>
-          <a href="external-agencies.html">External Agencies</a>
-          <a href="partners.html">Our Partners</a>
-          <a href="blog.html">Blog & Articles</a>
-          <a href="other-services.html">Other Services</a>
-          <a href="other-services.html#cleaning">Cleaning</a>
-          <a href="other-services.html#snagging">Snagging</a>
-          <a href="other-services.html#moving-packing">Moving & Packing</a>
-          <a href="other-services.html#pro-services">PRO Services</a>
-          <a href="other-services.html#legal-consultancy">Legal Consultancy</a>
-          <a href="other-services.html#business-set-up">Business Set Up</a>
-          <a href="other-services.html#property-management">Property Management</a>
-        </div>
-      </div>
-      <a class="nav-cta" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="brandbar">
+  <a href="index.html">
+    <img src="logo.png" alt="Royal Bridges Real Estate">
+  </a>
+</div>
 
-<section class="hero">
+<nav class="navbar">
+  <div class="nav-inner">
+
+    <a href="index.html">HOME</a>
+
+    <div class="dropdown">
+      <a href="properties.html">PROPERTIES ▾</a>
+      <div class="dropdown-content">
+        <a href="residential.html">Residential Sale & Rent</a>
+        <a href="commercial.html">Commercial Sale & Rent</a>
+        <a href="residential-plots.html">Residential & Commercial Plots or Land</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="communities.html">COMMUNITIES ▾</a>
+      <div class="dropdown-content">
+        <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
+        <a href="communities.html#dubai">Communities in Dubai</a>
+        <a href="communities.html#rak">Communities in RAK</a>
+      </div>
+    </div>
+
+    <a href="short-stay.html">SHORT STAY</a>
+    <a href="relocation.html">RELOCATION</a>
+
+    <div class="dropdown">
+      <a href="register.html">REGISTER ▾</a>
+      <div class="dropdown-content">
+        <a href="register.html#seminars">Seminars & Online Webinars</a>
+        <a href="register.html#newsletter">Monthly Market Newsletter</a>
+        <a href="register.html#email-updates">Register for Email Updates</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="about.html">ABOUT ▾</a>
+      <div class="dropdown-content">
+        <a href="about.html">About Royal Bridges</a>
+        <a href="careers.html">Careers</a>
+        <a href="external-agencies.html">External Agencies</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="blog.html">Blog & Articles</a>
+        <a href="reviews.html">Client Reviews</a>
+        <a href="other-services.html">Other Services</a>
+      </div>
+    </div>
+
+    <a href="contact.html">CONTACT</a>
+
+  </div>
+</nav>
+
+<header class="hero">
   <div class="eyebrow">We'd Love to Hear From You</div>
   <h1>Contact Royal Bridges</h1>
   <p>
-    Whether you are buying, selling, renting, relocating or looking for
-    professional property services, our team is ready to hear from you.
+    Whether you are buying, selling, renting, relocating or looking
+    for professional property services, our team is ready to hear from you.
   </p>
-</section>
+</header>
+
+<main>
 
 <section class="container">
   <div class="contact-grid">
+
     <div>
       <div class="eyebrow">Get in Touch</div>
       <h2>Let's Start a Conversation</h2>
-      <p>
-        Tell us what you need and we will direct your enquiry to the
-        appropriate team.
+      <p class="intro">
+        Tell us what you need and we will direct your enquiry
+        to the appropriate team.
       </p>
 
       <div class="info-card">
+
         <div class="info-item">
           <strong>Company Email</strong>
           <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
         </div>
+
         <div class="info-item">
           <strong>English WhatsApp</strong>
           <a href="https://wa.me/971568611311">+971 56 861 1311</a>
         </div>
+
         <div class="info-item">
           <strong>Arabic WhatsApp</strong>
           <a href="https://wa.me/971506082608">+971 50 608 2608</a>
         </div>
+
         <div class="info-item">
           <strong>Location</strong>
           Abu Dhabi, United Arab Emirates
         </div>
+
         <div class="info-item">
           <strong>Website</strong>
           <a href="https://royalbridges.ae">royalbridges.ae</a>
         </div>
+
+      </div>
+
+      <div class="contact-actions">
+        <a class="button dark" href="https://wa.me/971568611311">WhatsApp Us</a>
+        <a class="button" href="mailto:info@royalbridges.ae">Email Us</a>
       </div>
     </div>
 
@@ -189,6 +406,7 @@
       <h2>How Can We Help?</h2>
 
       <form id="contactForm">
+
         <label for="fullName">Full Name *</label>
         <input id="fullName" name="fullName" type="text" required>
 
@@ -205,6 +423,7 @@
           <option>Selling a Property</option>
           <option>Residential Rental</option>
           <option>Commercial Property</option>
+          <option>Residential or Commercial Plots</option>
           <option>Off-Plan Property</option>
           <option>Property Management</option>
           <option>Short Stay / Holiday Home</option>
@@ -217,20 +436,29 @@
           <option>Business Set Up</option>
           <option>Careers</option>
           <option>External Agency / Partnership</option>
+          <option>Seminars & Webinars</option>
+          <option>Newsletter and Email Updates</option>
           <option>Other</option>
         </select>
 
         <label for="message">Your Message *</label>
-        <textarea id="message" name="message" required placeholder="Please tell us a little about what you are looking for..."></textarea>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Please tell us a little about what you are looking for..."></textarea>
 
         <button class="button" type="submit">Send Enquiry</button>
+
         <p class="disclaimer">
-          Submitting this form opens your email application with your enquiry
-          prepared for sending. It does not automatically store or submit
-          information to a website database.
+          Submitting this form opens your email application with
+          your enquiry prepared for sending. It does not automatically
+          store or submit information to a website database.
         </p>
+
       </form>
     </div>
+
   </div>
 </section>
 
@@ -238,7 +466,10 @@
   <div class="container">
     <div class="eyebrow">Explore Our Services</div>
     <h2>How Can We Assist You?</h2>
-    <p>Visit the relevant section to find out more about what we offer.</p>
+    <p class="intro">
+      Visit the relevant section to find out more about our services.
+    </p>
+
     <div class="service-links">
       <a href="properties.html">Property Sales & Rentals →</a>
       <a href="communities.html">UAE Communities →</a>
@@ -247,48 +478,69 @@
       <a href="other-services.html#cleaning">Cleaning Services →</a>
       <a href="other-services.html#snagging">Property Snagging →</a>
       <a href="other-services.html#moving-packing">Moving & Packing →</a>
-      <a href="other-services.html#property-management">Property Management →</a>
+      <a href="other-services.html#pro-services">PRO Services →</a>
+      <a href="other-services.html#legal-consultancy">Legal Consultancy →</a>
+      <a href="other-services.html#business-set-up">Business Set Up →</a>
       <a href="blog.html">Blog & Articles →</a>
+      <a href="reviews.html">Client Reviews →</a>
     </div>
   </div>
 </section>
 
-<footer>
-  <p><strong>ROYAL BRIDGES REAL ESTATE</strong></p>
-  <p>Connecting people, property and possibilities.</p>
+<section class="cta">
+  <div class="eyebrow">Royal Bridges Real Estate</div>
+  <h2>Let's Find Your Way Forward</h2>
   <p>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="properties.html">Properties</a> |
-    <a href="relocation.html">Relocation</a> |
-    <a href="contact.html">Contact</a>
+    Whatever your property or relocation requirements,
+    start a conversation with Royal Bridges.
   </p>
+  <a class="button" href="https://wa.me/971568611311">WhatsApp Our Team</a>
+  <a class="button" href="mailto:info@royalbridges.ae">Email Our Team</a>
+</section>
+
+</main>
+
+<footer>
+  <strong>ROYAL BRIDGES REAL ESTATE</strong>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="properties.html">Properties</a>
+    <a href="communities.html">Communities</a>
+    <a href="short-stay.html">Short Stay</a>
+    <a href="relocation.html">Relocation</a>
+    <a href="register.html">REGISTER</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>Abu Dhabi, United Arab Emirates</p>
+  <p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
   <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
 </footer>
 
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    const form = event.target;
-    const name = form.fullName.value.trim();
-    const email = form.email.value.trim();
-    const phone = form.phone.value.trim();
-    const enquiry = form.enquiry.value;
-    const message = form.message.value.trim();
+  const form = event.target;
+  const name = form.elements["fullName"].value.trim();
+  const email = form.elements["email"].value.trim();
+  const phone = form.elements["phone"].value.trim();
+  const enquiry = form.elements["enquiry"].value;
+  const message = form.elements["message"].value.trim();
 
-    const subject = encodeURIComponent("Website Enquiry: " + enquiry);
-    const body = encodeURIComponent(
-      "Name: " + name + "\n" +
-      "Email: " + email + "\n" +
-      "Contact Number: " + phone + "\n" +
-      "Enquiry Type: " + enquiry + "\n\n" +
-      "Message:\n" + message
-    );
+  const subject = encodeURIComponent("Website Enquiry: " + enquiry);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Contact Number: " + phone + "\n" +
+    "Enquiry Type: " + enquiry + "\n\n" +
+    "Message:\n" + message
+  );
 
-    window.location.href =
-      "mailto:info@royalbridges.ae?subject=" + subject + "&body=" + body;
-  });
+  window.location.href =
+    "mailto:info@royalbridges.ae?subject=" + subject + "&body=" + body;
+});
 </script>
 
 </body>
