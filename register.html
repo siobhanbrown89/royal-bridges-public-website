@@ -1,206 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register | Royal Bridges Real Estate</title>
-<style>
-:root {
-  --navy: #142b43;
-  --cream: #f5f0e6;
-  --gold: #b69a65;
-  --text: #333;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  line-height: 1.7;
-}
-header {
-  background: var(--cream);
-  padding: 10px 4%;
-  border-bottom: 1px solid #e5ddcf;
-}
-.header-inner {
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.logo {
-  width: 170px;
-  height: 58px;
-  object-fit: contain;
-}
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-nav a, .dropbtn {
-  color: var(--navy);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 7px 3px;
-}
-nav a:hover, .dropbtn:hover { color: var(--gold); }
-.dropdown { position: relative; display: inline-block; }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: white;
-  min-width: 215px;
-  box-shadow: 0 5px 15px #0002;
-  z-index: 10;
-  border-top: 3px solid var(--gold);
-}
-.dropdown-content a {
-  display: block;
-  padding: 10px 14px;
-  font-weight: normal;
-}
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content { display: block; }
-.register-link {
-  color: white;
-  background: var(--navy);
-  padding: 8px 13px;
-  border-radius: 3px;
-}
-.hero {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 65px 20px;
-}
-.hero h1 {
-  font-size: 36px;
-  font-weight: 500;
-  margin: 0 0 12px;
-}
-.hero p {
-  max-width: 760px;
-  margin: auto;
-  color: #eee8dc;
-}
-main {
-  max-width: 1150px;
-  margin: auto;
-  padding: 45px 22px 70px;
-}
-.intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-h2 {
-  color: var(--navy);
-  font-size: 27px;
-  font-weight: 500;
-}
-.register-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-.register-card {
-  border: 1px solid #e5ddcf;
-  padding: 27px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-}
-.register-card h2 { font-size: 21px; }
-.register-card p { color: #666; font-size: 14px; }
-.register-card a.button {
-  display: inline-block;
-  margin-top: auto;
-  padding: 11px 17px;
-  background: var(--navy);
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 13px;
-}
-.register-card a.button:hover { background: #294b68; }
-.detail-section {
-  margin-top: 55px;
-  padding: 32px;
-  background: var(--cream);
-  scroll-margin-top: 20px;
-}
-.detail-section h2 { margin-top: 0; }
-.detail-section p { max-width: 850px; }
-.detail-section a {
-  color: var(--navy);
-  font-weight: bold;
-}
-.contact-button {
-  display: inline-block;
-  background: var(--navy);
-  color: white !important;
-  text-decoration: none;
-  padding: 11px 22px;
-  margin-top: 10px;
-}
-footer {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 28px 15px;
-  font-size: 13px;
-}
-footer a { color: #e5d5b5; text-decoration: none; }
-@media(max-width: 850px) {
-  .register-grid { grid-template-columns: 1fr 1fr; }
-}
-@media(max-width: 600px) {
-  .header-inner { justify-content: center; }
-  nav { gap: 8px; }
-  nav a, .dropbtn { font-size: 12px; }
-  .register-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 29px; }
-  .dropdown-content { left: 0; }
-  .detail-section { padding: 23px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register with Royal Bridges for property seminars, online webinars, monthly market newsletters and email updates.">
+  <title>Register | Royal Bridges Real Estate</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="index.html">
-      <img src="logo.png" alt="Royal Bridges Real Estate" class="logo">
+<header class="brandbar">
+  <div class="brand-inner">
+    <a class="brand" href="index.html" aria-label="Royal Bridges Home">
+      <img src="logo.png" alt="Royal Bridges Real Estate">
     </a>
-    <nav>
+
+    <div class="brand-contact">
+      <a href="https://wa.me/971568611311">WhatsApp: +971 56 861 1311</a>
+      <a href="https://wa.me/971506082608">WhatsApp: +971 50 608 2608</a>
+      <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-links">
+
       <a href="index.html">Home</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Properties ▾</button>
-        <div class="dropdown-content">
-          <a href="residential.html">Residential – Sale &amp; Rent</a>
-          <a href="commercial.html">Commercial – Sale &amp; Rent</a>
-          <a href="residential-plots.html">Residential Plots &amp; Land</a>
+        <button class="dropbtn" type="button">Properties ▾</button>
+        <div class="dropdown-menu">
+          <a href="properties.html">All Properties</a>
+          <a href="residential.html">Residential Sale &amp; Rent</a>
+          <a href="commercial.html">Commercial Sale &amp; Rent</a>
+          <a href="residential-plots.html">Plots &amp; Land</a>
+          <a href="off-plan.html">Off-Plan Developments</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Communities ▾</button>
-        <div class="dropdown-content">
-          <a href="communties.html">Abu Dhabi</a>
-          <a href="communties.html">Dubai</a>
-          <a href="communties.html">Ras Al Khaimah</a>
+        <button class="dropbtn" type="button">Communities ▾</button>
+        <div class="dropdown-menu">
+          <a href="communities.html#abu-dhabi">Abu Dhabi</a>
+          <a href="communities.html#dubai">Dubai</a>
+          <a href="communities.html#rak">Ras Al Khaimah</a>
         </div>
       </div>
 
@@ -208,20 +54,20 @@ footer a { color: #e5d5b5; text-decoration: none; }
       <a href="relocation.html">Relocation</a>
 
       <div class="dropdown">
-        <button class="dropbtn register-link">REGISTER ▾</button>
-        <div class="dropdown-content">
-          <a href="#seminars">Seminars &amp; Webinars</a>
-          <a href="#newsletter">Monthly Newsletter</a>
-          <a href="#email-updates">Email Updates</a>
+        <button class="dropbtn" type="button">REGISTER ▾</button>
+        <div class="dropdown-menu">
+          <a href="register.html#seminars">Seminars &amp; Online Webinars</a>
+          <a href="register.html#newsletter">Monthly Market Newsletter</a>
+          <a href="register.html#email-updates">Register for Email Updates</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">About ▾</button>
-        <div class="dropdown-content">
+        <button class="dropbtn" type="button">About ▾</button>
+        <div class="dropdown-menu">
           <a href="about.html">About Royal Bridges</a>
           <a href="careers.html">Careers</a>
-          <a href="external.agencies.html">External Agencies</a>
+          <a href="external-agencies.html">External Agencies</a>
           <a href="partners.html">Our Partners</a>
           <a href="blog.html">Blog &amp; Articles</a>
           <a href="reviews.html">Client Reviews</a>
@@ -230,73 +76,206 @@ footer a { color: #e5d5b5; text-decoration: none; }
       </div>
 
       <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <h1>Register With Royal Bridges</h1>
-  <p>Learn, stay informed and connect with our team through our seminars, webinars, newsletters and email updates.</p>
-</section>
+    </div>
+  </div>
+</nav>
 
 <main>
-  <section class="intro">
-    <h2>Choose How You Would Like to Connect</h2>
-    <p>Whether you are a property owner, tenant, investor, buyer, seller or simply interested in life in the UAE, we welcome you to join our community.</p>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Learn, Connect &amp; Stay Informed</div>
+      <h1>Register With Royal Bridges</h1>
+      <p>
+        Learn, stay informed and connect with our team through our
+        seminars, webinars, newsletters and email updates.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#seminars">Explore Registration</a>
+      </div>
+    </div>
   </section>
 
-  <section class="register-grid">
-    <article class="register-card">
-      <h2>Seminars &amp; Online Webinars</h2>
-      <p>Join educational sessions covering property ownership, renting, buying, selling, investing and living in the UAE.</p>
-      <p>Our sessions will include webinars for owners and tenants, with opportunities to ask questions and learn more about relevant property matters.</p>
-      <a class="button" href="#seminars">Explore Seminars</a>
-    </article>
+  <section>
+    <div class="container">
 
-    <article class="register-card">
-      <h2>Monthly Market Newsletter</h2>
-      <p>Keep up with property news, market insights, community updates, investment topics and useful information from across the UAE.</p>
-      <p>Our monthly newsletter will be offered through a paid subscription. Contact us for subscription details.</p>
-      <a class="button" href="#newsletter">Newsletter Details</a>
-    </article>
+      <div class="intro">
+        <h2>Choose How You Would Like to Connect</h2>
+        <p>
+          Whether you are a property owner, tenant, investor, buyer,
+          seller or simply interested in life in the UAE, we welcome
+          you to join our community.
+        </p>
+      </div>
 
-    <article class="register-card">
-      <h2>Keep Us Updated</h2>
-      <p>Register your interest in receiving occasional Royal Bridges announcements, property information, event invitations and company updates by email.</p>
-      <a class="button" href="#email-updates">Email Updates</a>
-    </article>
+      <div class="register-grid">
+
+        <article class="register-card">
+          <h2>Seminars &amp; Online Webinars</h2>
+          <p>
+            Join educational sessions covering property ownership,
+            renting, buying, selling, investing and living in the UAE.
+          </p>
+          <p>
+            Our sessions will include webinars for owners and tenants,
+            with opportunities to ask questions and learn more about
+            relevant property matters.
+          </p>
+          <a class="button" href="#seminars">Explore Seminars</a>
+        </article>
+
+        <article class="register-card">
+          <h2>Monthly Market Newsletter</h2>
+          <p>
+            Keep up with property news, market insights, community
+            updates, investment topics and useful information from
+            across the UAE.
+          </p>
+          <p>
+            Our monthly newsletter will be offered through a paid
+            subscription. Contact us for subscription details.
+          </p>
+          <a class="button" href="#newsletter">Newsletter Details</a>
+        </article>
+
+        <article class="register-card">
+          <h2>Keep Us Updated</h2>
+          <p>
+            Register your interest in receiving occasional Royal
+            Bridges announcements, property information, event
+            invitations and company updates by email.
+          </p>
+          <a class="button" href="#email-updates">Email Updates</a>
+        </article>
+
+      </div>
+
+    </div>
   </section>
 
-  <section class="detail-section" id="seminars">
-    <h2>Seminars &amp; Online Webinars</h2>
-    <p>Our educational sessions are being developed to help property owners, tenants, buyers, sellers and investors better understand the UAE property market and the processes involved.</p>
-    <p>Topics will include property transactions, tenancy matters, ownership responsibilities, inspections, investment considerations and general property questions and answers.</p>
-    <p>To enquire about upcoming sessions or register your interest, contact our team.</p>
-    <a class="contact-button" href="mailto:info@royalbridges.ae?subject=Seminars%20and%20Webinars%20Enquiry">Register Your Interest</a>
+  <section class="cream-section" id="seminars">
+    <div class="container">
+
+      <div class="detail-section">
+        <div class="eyebrow">Education &amp; Information</div>
+        <h2>Seminars &amp; Online Webinars</h2>
+
+        <p>
+          Our educational sessions are being developed to help
+          property owners, tenants, buyers, sellers and investors
+          better understand the UAE property market and the processes
+          involved.
+        </p>
+
+        <p>
+          Topics will include property transactions, tenancy matters,
+          ownership responsibilities, inspections, investment
+          considerations and general property questions and answers.
+        </p>
+
+        <p>
+          To enquire about upcoming sessions or register your interest,
+          contact our team.
+        </p>
+
+        <a class="button"
+           href="mailto:info@royalbridges.ae?subject=Seminars%20and%20Webinars%20Enquiry">
+          Register Your Interest
+        </a>
+      </div>
+
+    </div>
   </section>
 
-  <section class="detail-section" id="newsletter">
-    <h2>Monthly Market Newsletter</h2>
-    <p>Our planned paid subscription newsletter will provide a regular collection of property market insights, UAE real estate updates, community information and practical guidance.</p>
-    <p>Subscription pricing, payment arrangements and publication details will be confirmed directly with Royal Bridges before enrolment.</p>
-    <a class="contact-button" href="mailto:info@royalbridges.ae?subject=Monthly%20Newsletter%20Subscription">Enquire About Subscription</a>
+  <section id="newsletter">
+    <div class="container">
+
+      <div class="detail-section">
+        <div class="eyebrow">Market News &amp; Insights</div>
+        <h2>Monthly Market Newsletter</h2>
+
+        <p>
+          Our planned paid subscription newsletter will provide a
+          regular collection of property market insights, UAE real
+          estate updates, community information and practical guidance.
+        </p>
+
+        <p>
+          Subscription pricing, payment arrangements and publication
+          details will be confirmed directly with Royal Bridges
+          before enrolment.
+        </p>
+
+        <a class="button"
+           href="mailto:info@royalbridges.ae?subject=Monthly%20Newsletter%20Subscription">
+          Enquire About Subscription
+        </a>
+      </div>
+
+    </div>
   </section>
 
-  <section class="detail-section" id="email-updates">
-    <h2>Keep Us Updated</h2>
-    <p>Would you like to receive occasional updates from Royal Bridges? Contact us with your name and email address and let us know that you would like to receive email updates.</p>
-    <p>You can request to stop receiving these communications at any time.</p>
-    <a class="contact-button" href="mailto:info@royalbridges.ae?subject=Register%20for%20Royal%20Bridges%20Email%20Updates">Register for Email Updates</a>
+  <section class="cream-section" id="email-updates">
+    <div class="container">
+
+      <div class="detail-section">
+        <div class="eyebrow">Stay Connected</div>
+        <h2>Keep Us Updated</h2>
+
+        <p>
+          Would you like to receive occasional updates from Royal
+          Bridges? Contact us with your name and email address and
+          let us know that you would like to receive email updates.
+        </p>
+
+        <p>
+          You can request to stop receiving these communications
+          at any time.
+        </p>
+
+        <a class="button"
+           href="mailto:info@royalbridges.ae?subject=Register%20for%20Royal%20Bridges%20Email%20Updates">
+          Register for Email Updates
+        </a>
+      </div>
+
+    </div>
   </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Connect With Royal Bridges</h2>
+      <p>
+        Have a question about our seminars, newsletter or registration?
+        Our team would be pleased to hear from you.
+      </p>
+      <a class="button" href="contact.html">Contact Our Team</a>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+  <p><strong>ROYAL BRIDGES REAL ESTATE</strong></p>
+  <p>Yas Island, Abu Dhabi, United Arab Emirates</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="properties.html">Properties</a>
+    <a href="communities.html">Communities</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
   <p>
     <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
     &nbsp; | &nbsp;
-    <a href="https://wa.me/971568611311">WhatsApp</a>
+    <a href="https://wa.me/971568611311">+971 56 861 1311</a>
   </p>
+
+  <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
 </footer>
 
 </body>
