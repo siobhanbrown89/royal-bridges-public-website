@@ -1,349 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Partners | Royal Bridges Real Estate</title>
-  <style>
-    :root {
-      --navy: #142b43;
-      --cream: #f5f0e6;
-      --gold: #b69a65;
-      --text: #333;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.7;
-    }
-
-    header {
-      background: var(--cream);
-      padding: 10px 4%;
-      border-bottom: 1px solid #e5ddcf;
-    }
-
-    .header-inner {
-      max-width: 1250px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      width: 170px;
-      height: 58px;
-      object-fit: contain;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    nav a, .dropbtn {
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 7px 3px;
-    }
-
-    nav a:hover, .dropbtn:hover {
-      color: var(--gold);
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: white;
-      min-width: 215px;
-      box-shadow: 0 5px 15px #0002;
-      z-index: 10;
-      border-top: 3px solid var(--gold);
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      font-weight: normal;
-    }
-
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: block;
-    }
-
-    .register-link {
-      color: #fff;
-      background: var(--navy);
-      padding: 8px 13px;
-      border-radius: 3px;
-    }
-
-    .hero {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: 36px;
-      font-weight: 500;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #eee8dc;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 22px 70px;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 40px;
-    }
-
-    .intro h2 {
-      color: var(--navy);
-      font-size: 27px;
-      font-weight: 500;
-    }
-
-    .partners {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 30px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .partner-card {
-      border: 1px solid #e7e0d4;
-      background: #fff;
-      text-align: center;
-      padding: 35px 25px;
-      box-shadow: 0 5px 18px #00000008;
-    }
-
-    .partner-image {
-      width: 155px;
-      height: 155px;
-      margin: 0 auto 22px;
-      border-radius: 50%;
-      background: var(--cream);
-      border: 3px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      font-size: 43px;
-      font-weight: bold;
-    }
-
-    .partner-card h3 {
-      color: var(--navy);
-      font-size: 23px;
-      margin: 0 0 7px;
-    }
-
-    .partner-role {
-      color: var(--gold);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 12px;
-    }
-
-    .partner-card p {
-      margin-top: 17px;
-      color: #666;
-    }
-
-    .closing {
-      text-align: center;
-      background: var(--cream);
-      padding: 35px 25px;
-      margin-top: 50px;
-    }
-
-    .closing h2 {
-      color: var(--navy);
-      font-weight: 500;
-    }
-
-    .closing a {
-      display: inline-block;
-      background: var(--navy);
-      color: white;
-      padding: 11px 24px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    footer {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-      padding: 28px 15px;
-      font-size: 13px;
-    }
-
-    footer a {
-      color: #e5d5b5;
-      text-decoration: none;
-    }
-
-    @media (max-width: 700px) {
-      .header-inner { justify-content: center; }
-      nav { gap: 8px; }
-      nav a, .dropbtn { font-size: 12px; }
-      .partners { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 29px; }
-      .dropdown-content { left: 0; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners | Royal Bridges Real Estate</title>
+<meta name="description" content="Meet the company partners behind Royal Bridges Real Estate.">
+<style>
+:root{--navy:#142b43;--cream:#f5f0e6;--gold:#b99a62;--ink:#293746;--muted:#687581}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--navy);color:white;padding:9px 4%;display:flex;justify-content:center;gap:12px 22px;flex-wrap:wrap;font-size:12px}
+.topbar a{color:white}
+.brandbar{background:var(--cream);padding:7px 4%;display:flex;justify-content:center;align-items:center}
+.brandbar img{height:76px;max-width:270px;object-fit:contain}
+.navbar{background:var(--navy);position:sticky;top:0;z-index:1000;padding:0 3%}
+.nav-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}
+.nav-inner>a,.dropdown>a{display:block;padding:14px 10px;color:white;font-size:12px;font-weight:600;white-space:nowrap}
+.nav-inner>a:hover,.dropdown>a:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:235px;max-height:75vh;overflow-y:auto;background:white;box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);z-index:1001}
+.dropdown-content a{display:block;padding:11px 15px;color:var(--navy);font-size:13px;border-bottom:1px solid #eee}
+.dropdown-content a:hover{background:var(--cream)}
+.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
+.hero{background:linear-gradient(#142b43bb,#142b43cc),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85") center/cover;color:white;text-align:center;padding:85px 20px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
+.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,56px);font-weight:normal;margin:12px 0}
+.hero p{max-width:740px;margin:auto;font-size:17px}
+.container{max-width:1100px;width:90%;margin:auto;padding:65px 0}
+.intro{text-align:center;max-width:800px;margin:0 auto 40px}
+h2{color:var(--navy);font-family:Georgia,serif;font-size:32px;font-weight:normal;margin:8px 0 15px}
+.partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:850px;margin:auto}
+.partner-card{border:1px solid #e7e0d4;background:white;text-align:center;padding:35px 25px}
+.partner-image{width:155px;height:155px;margin:0 auto 22px;border-radius:50%;background:var(--cream);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:43px;font-weight:bold}
+.partner-card h3{color:var(--navy);font-family:Georgia,serif;font-size:23px;font-weight:normal;margin:0 0 7px}
+.partner-role{color:var(--gold);font-weight:bold;text-transform:uppercase;letter-spacing:1px;font-size:12px}
+.partner-card p{margin-top:17px;color:var(--muted)}
+.cream-section{background:var(--cream);text-align:center;padding:45px 22px}
+.cream-section h2{margin-top:0}
+.button{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 23px;margin:8px 5px;border-radius:3px;font-weight:bold}
+footer{background:#0e2034;color:white;padding:35px 22px;text-align:center;font-size:13px}
+footer a{color:#e1c995}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:15px 0}
+@media(max-width:760px){.nav-inner>a,.dropdown>a{padding:11px 7px;font-size:11px}.dropdown-content{position:fixed;left:0;right:0;top:auto}.container{padding:45px 0}.hero{padding:65px 18px}}
+@media(max-width:600px){.partners{grid-template-columns:1fr}}
+</style>
 </head>
-
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="index.html">
-      <img src="logo.png" alt="Royal Bridges Real Estate" class="logo">
-    </a>
+<div class="topbar">
+<span>Royal Bridges Real Estate</span>
+<a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a>
+<a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a>
+<a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+</div>
 
-    <nav>
-      <a href="index.html">Home</a>
+<div class="brandbar">
+<a href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate"></a>
+</div>
 
-      <div class="dropdown">
-        <button class="dropbtn">Properties ▾</button>
-        <div class="dropdown-content">
-          <a href="residential.html">Residential – Sale &amp; Rent</a>
-          <a href="commercial.html">Commercial – Sale &amp; Rent</a>
-          <a href="residential-plots.html">Residential Plots &amp; Lands</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Communities ▾</button>
-        <div class="dropdown-content">
-          <a href="communities.html#abudhabi">Abu Dhabi</a>
-          <a href="communities.html#dubai">Dubai</a>
-          <a href="communities.html#rak">Ras Al Khaimah</a>
-        </div>
-      </div>
-
-      <a href="short-stay.html">Short Stay</a>
-      <a href="relocation.html">Relocation</a>
-
-      <div class="dropdown">
-        <button class="dropbtn register-link">REGISTER ▾</button>
-        <div class="dropdown-content">
-          <a href="register.html#seminars">Seminars &amp; Online Webinars</a>
-          <a href="register.html#newsletter">Monthly Market Newsletter</a>
-          <a href="register.html#email-updates">Email Updates</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">About ▾</button>
-        <div class="dropdown-content">
-          <a href="about.html">About Royal Bridges</a>
-          <a href="careers.html">Careers</a>
-          <a href="external-agencies.html">External Agencies</a>
-          <a href="partners.html">Our Partners</a>
-          <a href="blog.html">Blog &amp; Articles</a>
-          <a href="reviews.html">Client Reviews</a>
-          <a href="other-services.html">Other Services</a>
-        </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<nav class="navbar">
+<div class="nav-inner">
+<a href="index.html">HOME</a>
+<div class="dropdown">
+<a href="properties.html">PROPERTIES ▾</a>
+<div class="dropdown-content">
+<a href="residential.html">Residential Sale & Rent</a>
+<a href="commercial.html">Commercial Sale & Rent</a>
+<a href="residential-plots.html">Residential & Commercial Plots or Land</a>
+</div>
+</div>
+<div class="dropdown">
+<a href="communities.html">COMMUNITIES ▾</a>
+<div class="dropdown-content">
+<a href="communities.html#abudhabi">Communities in Abu Dhabi</a>
+<a href="communities.html#dubai">Communities in Dubai</a>
+<a href="communities.html#rak">Communities in RAK</a>
+</div>
+</div>
+<a href="short-stay.html">SHORT STAY</a>
+<a href="relocation.html">RELOCATION</a>
+<div class="dropdown">
+<a href="register.html">REGISTER ▾</a>
+<div class="dropdown-content">
+<a href="register.html#seminars">Seminars & Online Webinars</a>
+<a href="register.html#newsletter">Monthly Market Newsletter</a>
+<a href="register.html#email-updates">Register for Email Updates</a>
+</div>
+</div>
+<div class="dropdown">
+<a href="about.html">ABOUT ▾</a>
+<div class="dropdown-content">
+<a href="about.html">About Royal Bridges</a>
+<a href="careers.html">Careers</a>
+<a href="external-agencies.html">External Agencies</a>
+<a href="partners.html">Our Partners</a>
+<a href="blog.html">Blog & Articles</a>
+<a href="reviews.html">Client Reviews</a>
+<a href="other-services.html">Other Services</a>
+</div>
+</div>
+<a href="contact.html">CONTACT</a>
+</div>
+</nav>
 
 <section class="hero">
-  <h1>Our Partners</h1>
-  <p>Meet the people behind Royal Bridges Real Estate and the vision that brings our services together.</p>
+<span class="eyebrow">The People Behind Royal Bridges</span>
+<h1>Our Partners</h1>
+<p>Partnership, shared commitment and a vision for creating a more personal and connected property experience.</p>
 </section>
 
-<main>
-  <section class="intro">
-    <h2>The People Behind Royal Bridges</h2>
-    <p>
-      Royal Bridges is built on partnership, shared commitment and a belief
-      in creating a more personal and connected property experience.
-      Our company partners work together to support the business and its clients.
-    </p>
-  </section>
+<main class="container">
+<section class="intro">
+<span class="eyebrow">Meet the Partners</span>
+<h2>The People Behind Royal Bridges</h2>
+<p>Royal Bridges is built on partnership, shared commitment and a belief in creating a more personal and connected property experience. Our company partners work together to support the business and its clients.</p>
+</section>
 
-  <section class="partners">
+<section class="partners">
+<article class="partner-card">
+<div class="partner-image" aria-label="Majdi Abuhejleh initials">MA</div>
+<h3>Majdi Abuhejleh</h3>
+<div class="partner-role">Company Partner</div>
+<p>A partner in Royal Bridges, contributing to the company's shared vision and business journey.</p>
+</article>
 
-    <article class="partner-card">
-      <div class="partner-image" aria-label="Majdi Abuhejleh initials">MA</div>
-      <h3>Majdi Abuhejleh</h3>
-      <div class="partner-role">Company Partner</div>
-      <p>
-        A partner in Royal Bridges, contributing to the company's
-        shared vision and business journey.
-      </p>
-    </article>
-
-    <article class="partner-card">
-      <div class="partner-image" aria-label="Siobhan Brown initials">SB</div>
-      <h3>Siobhan Brown</h3>
-      <div class="partner-role">Company Partner</div>
-      <p>
-        A partner in Royal Bridges, helping shape the company's
-        direction, services and client experience.
-      </p>
-    </article>
-
-  </section>
-
-  <section class="closing">
-    <h2>Discover Royal Bridges</h2>
-    <p>Explore our property services, communities and the wider support we offer our clients.</p>
-    <a href="contact.html">Contact Our Team</a>
-  </section>
+<article class="partner-card">
+<div class="partner-image" aria-label="Siobhan Brown initials">SB</div>
+<h3>Siobhan Brown</h3>
+<div class="partner-role">Company Partner</div>
+<p>A partner in Royal Bridges, helping shape the company's direction, services and client experience.</p>
+</article>
+</section>
 </main>
 
+<section class="cream-section">
+<span class="eyebrow">Discover Royal Bridges</span>
+<h2>Connecting People, Property & Possibilities</h2>
+<p>Explore our property services, communities and the wider support we offer our clients.</p>
+<a class="button" href="about.html">About Royal Bridges</a>
+<a class="button" href="contact.html">Contact Our Team</a>
+</section>
+
 <footer>
-  <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
-  <p>
-    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
-    &nbsp; | &nbsp;
-    <a href="https://wa.me/971568611311">WhatsApp</a>
-  </p>
+<strong>ROYAL BRIDGES REAL ESTATE</strong>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="properties.html">Properties</a>
+<a href="communities.html">Communities</a>
+<a href="register.html">REGISTER</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</div>
+<p>Abu Dhabi, United Arab Emirates</p>
+<p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
+<p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
 </footer>
 
 </body>
