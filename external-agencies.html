@@ -1,400 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>External Agencies & Collaboration | Royal Bridges</title>
-  <meta name="description" content="Explore agency collaboration, referral opportunities and professional partnerships with Royal Bridges Real Estate in the UAE.">
-  <style>
-    :root {
-      --navy: #14283d;
-      --cream: #f7f3e9;
-      --gold: #b99a5b;
-      --ink: #263443;
-      --muted: #687582;
-      --white: #fff;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      line-height: 1.65;
-      background: #fff;
-    }
-    a { color: inherit; }
-    .topbar {
-      background: var(--navy);
-      color: white;
-      padding: 8px 5%;
-      text-align: right;
-      font-size: 12px;
-    }
-    .topbar a { color: white; text-decoration: none; margin-left: 15px; }
-    header {
-      background: var(--cream);
-      border-bottom: 1px solid #e8dfcd;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-    .nav-wrap {
-      max-width: 1250px;
-      margin: auto;
-      padding: 10px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .brand img { width: 185px; max-height: 70px; object-fit: contain; display: block; }
-    nav { display: flex; align-items: center; gap: 17px; flex-wrap: wrap; }
-    nav a, .drop-label {
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    nav a:hover, .drop-label:hover { color: var(--gold); }
-    .dropdown { position: relative; }
-    .drop-label { cursor: pointer; }
-    .drop-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 230px;
-      max-height: 75vh;
-      overflow-y: auto;
-      background: white;
-      box-shadow: 0 8px 24px #14283d20;
-      border-top: 3px solid var(--gold);
-      padding: 8px 0;
-    }
-    .dropdown:hover .drop-menu,
-    .dropdown:focus-within .drop-menu { display: block; }
-    .drop-menu a {
-      display: block;
-      padding: 9px 15px;
-      font-weight: 500;
-    }
-    .drop-menu a:hover { background: var(--cream); }
-    .nav-cta {
-      background: var(--gold);
-      color: white !important;
-      padding: 9px 13px;
-      border-radius: 3px;
-    }
-    .hero {
-      background: linear-gradient(90deg, #14283de8, #14283d8c),
-        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85") center/cover;
-      color: white;
-      padding: 95px 7%;
-      text-align: center;
-    }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 0 0 15px; }
-    .hero p { max-width: 760px; margin: auto; font-size: 17px; }
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-    .container { max-width: 1120px; margin: auto; padding: 65px 22px; }
-    h2 { color: var(--navy); font-size: 30px; margin: 0 0 15px; }
-    h3 { color: var(--navy); margin-top: 0; }
-    .intro { max-width: 820px; margin-bottom: 35px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    .card {
-      border: 1px solid #e9e5dc;
-      border-radius: 7px;
-      padding: 27px;
-      background: white;
-      box-shadow: 0 5px 18px #14283d09;
-    }
-    .card .number { color: var(--gold); font-size: 25px; font-weight: bold; }
-    .cream-section { background: var(--cream); }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .step { padding: 22px; background: white; border-radius: 6px; }
-    .step strong { display: block; color: var(--gold); margin-bottom: 8px; }
-    .contact-panel {
-      background: var(--navy);
-      color: white;
-      border-radius: 8px;
-      padding: 38px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: center;
-    }
-    .contact-panel h2 { color: white; }
-    .contact-panel a { color: #e2c88e; }
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: white !important;
-      text-decoration: none;
-      padding: 12px 21px;
-      border-radius: 3px;
-      font-weight: bold;
-      margin-top: 12px;
-    }
-    footer { background: #101f30; color: white; padding: 35px 6%; text-align: center; }
-    footer a { color: #e2c88e; text-decoration: none; }
-    footer p { margin: 6px 0; font-size: 13px; }
-    @media (max-width: 900px) {
-      .nav-wrap { flex-direction: column; }
-      nav { justify-content: center; gap: 12px; }
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .topbar { text-align: center; }
-      .topbar a { margin: 0 5px; }
-      nav { gap: 10px; }
-      nav a, .drop-label { font-size: 12px; }
-      .drop-menu { left: auto; right: 0; }
-      .grid, .steps, .contact-panel { grid-template-columns: 1fr; }
-      .hero { padding: 70px 22px; }
-      .container { padding: 48px 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>External Agencies | Royal Bridges Real Estate</title>
+<meta name="description" content="Explore professional agency collaboration and referral opportunities with Royal Bridges Real Estate in the UAE.">
+<style>
+:root{--navy:#142b43;--gold:#b99a62;--cream:#f5f0e6;--ink:#293746;--muted:#687581}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--navy);color:white;padding:9px 4%;display:flex;justify-content:center;gap:12px 22px;flex-wrap:wrap;font-size:12px}
+.topbar a{color:white}
+.brandbar{background:var(--cream);padding:7px 4%;display:flex;justify-content:center;align-items:center}
+.brandbar img{height:76px;max-width:270px;object-fit:contain}
+.navbar{background:var(--navy);position:sticky;top:0;z-index:1000;padding:0 3%}
+.nav-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}
+.nav-inner>a,.dropdown>a{display:block;padding:14px 10px;color:white;font-size:12px;font-weight:600;white-space:nowrap}
+.nav-inner>a:hover,.dropdown>a:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:235px;max-height:75vh;overflow-y:auto;background:white;box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);z-index:1001}
+.dropdown-content a{display:block;padding:11px 15px;color:var(--navy);font-size:13px;border-bottom:1px solid #eee}
+.dropdown-content a:hover{background:var(--cream)}
+.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
+.hero{background:linear-gradient(90deg,#142b43e8,#142b438c),url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85") center/cover;color:white;padding:85px 7%;text-align:center}
+.hero h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,55px);font-weight:normal;margin:12px 0}
+.hero p{max-width:760px;margin:auto;font-size:17px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
+.container{max-width:1120px;width:90%;margin:auto;padding:65px 0}
+h2{color:var(--navy);font-family:Georgia,serif;font-size:32px;font-weight:normal;margin:8px 0 15px}
+h3{color:var(--navy);font-family:Georgia,serif;font-weight:normal;margin-top:0;font-size:22px}
+.intro{max-width:820px;margin-bottom:35px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid #e9e5dc;padding:27px;background:white}
+.card .number{color:var(--gold);font-size:25px;font-weight:bold}
+.card p{color:var(--muted);font-size:14px}
+.cream-section{background:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:22px;background:white}
+.step strong{display:block;color:var(--gold);margin-bottom:8px}
+.contact-panel{background:var(--navy);color:white;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.contact-panel h2{color:white}
+.contact-panel h3{color:#e2c88e}
+.contact-panel a:not(.button){color:#e2c88e}
+.button{display:inline-block;background:var(--gold);color:var(--navy)!important;padding:12px 21px;border-radius:3px;font-weight:bold;margin-top:12px}
+footer{background:#101f30;color:white;padding:35px 6%;text-align:center}
+footer a{color:#e2c88e}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:15px 0}
+footer p{margin:7px 0;font-size:13px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.nav-inner>a,.dropdown>a{padding:11px 7px;font-size:11px}.dropdown-content{position:fixed;left:0;right:0;top:auto}.container{padding:48px 0}.hero{padding:70px 22px}}
+@media(max-width:600px){.grid,.steps,.contact-panel{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
 <div class="topbar">
-  <a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a>
-  <a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a>
-  <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+<span>Royal Bridges Real Estate</span>
+<a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a>
+<a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a>
+<a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
 </div>
 
-<header>
-  <div class="nav-wrap">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="Royal Bridges Real Estate">
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
+<div class="brandbar">
+<a href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate"></a>
+</div>
 
-      <div class="dropdown">
-        <span class="drop-label">Properties ▾</span>
-        <div class="drop-menu">
-          <a href="properties.html#property-types">Types of Properties</a>
-          <a href="properties.html#residential-sale">For Sale – Residential</a>
-          <a href="properties.html#residential-rent">For Rent – Residential</a>
-          <a href="properties.html#off-plan-primary">Off Plan – Primary & Upcoming</a>
-          <a href="properties.html#off-plan-resale">Off Plan – Secondary Resale</a>
-          <a href="properties.html#commercial-sale">For Sale – Commercial</a>
-          <a href="properties.html#commercial-rent">For Rent – Commercial</a>
-          <a href="properties.html#residential-land">Residential Lands & Plots</a>
-          <a href="properties.html#commercial-land">Commercial & Mixed-Use Lands</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <span class="drop-label">Communities ▾</span>
-        <div class="drop-menu">
-          <a href="communities.html#abudhabi">Communities in Abu Dhabi</a>
-          <a href="communities.html#dubai">Communities in Dubai</a>
-          <a href="communities.html#rak">Communities in RAK</a>
-        </div>
-      </div>
-
-      <a href="short-stay.html">Short Stay</a>
-      <a href="relocation.html">Relocation</a>
-
-      <div class="dropdown">
-        <span class="drop-label">About ▾</span>
-        <div class="drop-menu">
-          <a href="about.html">About Royal Bridges</a>
-          <a href="careers.html">Careers</a>
-          <a href="external-agencies.html">External Agencies</a>
-          <a href="partners.html">Our Partners</a>
-          <a href="blog.html">Blog & Articles</a>
-          <a href="other-services.html">Other Services</a>
-          <a href="other-services.html#cleaning">Cleaning</a>
-          <a href="other-services.html#snagging">Snagging</a>
-          <a href="other-services.html#moving-packing">Moving & Packing</a>
-          <a href="other-services.html#pro-services">PRO Services</a>
-          <a href="other-services.html#legal-consultancy">Legal Consultancy</a>
-          <a href="other-services.html#business-set-up">Business Set Up</a>
-          <a href="other-services.html#property-management">Property Management</a>
-        </div>
-      </div>
-
-      <a class="nav-cta" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<nav class="navbar">
+<div class="nav-inner">
+<a href="index.html">HOME</a>
+<div class="dropdown">
+<a href="properties.html">PROPERTIES ▾</a>
+<div class="dropdown-content">
+<a href="residential.html">Residential Sale & Rent</a>
+<a href="commercial.html">Commercial Sale & Rent</a>
+<a href="residential-plots.html">Residential & Commercial Plots or Land</a>
+</div>
+</div>
+<div class="dropdown">
+<a href="communities.html">COMMUNITIES ▾</a>
+<div class="dropdown-content">
+<a href="communities.html#abudhabi">Communities in Abu Dhabi</a>
+<a href="communities.html#dubai">Communities in Dubai</a>
+<a href="communities.html#rak">Communities in RAK</a>
+</div>
+</div>
+<a href="short-stay.html">SHORT STAY</a>
+<a href="relocation.html">RELOCATION</a>
+<div class="dropdown">
+<a href="register.html">REGISTER ▾</a>
+<div class="dropdown-content">
+<a href="register.html#seminars">Seminars & Online Webinars</a>
+<a href="register.html#newsletter">Monthly Market Newsletter</a>
+<a href="register.html#email-updates">Register for Email Updates</a>
+</div>
+</div>
+<div class="dropdown">
+<a href="about.html">ABOUT ▾</a>
+<div class="dropdown-content">
+<a href="about.html">About Royal Bridges</a>
+<a href="careers.html">Careers</a>
+<a href="external-agencies.html">External Agencies</a>
+<a href="partners.html">Our Partners</a>
+<a href="blog.html">Blog & Articles</a>
+<a href="reviews.html">Client Reviews</a>
+<a href="other-services.html">Other Services</a>
+</div>
+</div>
+<a href="contact.html">CONTACT</a>
+</div>
+</nav>
 
 <section class="hero">
-  <div class="eyebrow">Work With Royal Bridges</div>
-  <h1>External Agencies & Collaboration</h1>
-  <p>
-    Building professional relationships across the UAE property and relocation
-    sectors through communication, shared opportunities and a commitment to
-    excellent client service.
-  </p>
+<div class="eyebrow">Work With Royal Bridges</div>
+<h1>External Agencies & Collaboration</h1>
+<p>Building professional relationships across the UAE property and relocation sectors through communication, shared opportunities and a commitment to excellent client service.</p>
 </section>
 
+<main>
 <section class="container">
-  <div class="intro">
-    <div class="eyebrow">Professional Relationships</div>
-    <h2>Let's Create Opportunities Together</h2>
-    <p>
-      Royal Bridges welcomes enquiries from established real estate agencies,
-      independent brokers, relocation specialists and other professional
-      organisations interested in exploring potential collaboration.
-    </p>
-    <p>
-      Whether you are introducing a client, discussing a property opportunity
-      or exploring a longer-term working relationship, we would be pleased to
-      hear from you.
-    </p>
-  </div>
+<div class="intro">
+<div class="eyebrow">Professional Relationships</div>
+<h2>Let's Create Opportunities Together</h2>
+<p>Royal Bridges welcomes enquiries from established real estate agencies, independent brokers, relocation specialists and other professional organisations interested in exploring potential collaboration.</p>
+<p>Whether you are introducing a client, discussing a property opportunity or exploring a longer-term working relationship, we would be pleased to hear from you.</p>
+</div>
 
-  <div class="grid">
-    <article class="card">
-      <div class="number">01</div>
-      <h3>Real Estate Agencies</h3>
-      <p>
-        Opportunities to discuss property referrals, co-brokerage arrangements
-        and professional cooperation with other licensed agencies.
-      </p>
-    </article>
-
-    <article class="card">
-      <div class="number">02</div>
-      <h3>Independent Brokers</h3>
-      <p>
-        Connect with us to discuss client introductions, property requirements
-        and potential collaboration, subject to applicable licensing rules.
-      </p>
-    </article>
-
-    <article class="card">
-      <div class="number">03</div>
-      <h3>Relocation Specialists</h3>
-      <p>
-        Explore ways to support individuals, families and corporate clients
-        moving to Abu Dhabi or elsewhere in the UAE.
-      </p>
-    </article>
-
-    <article class="card">
-      <div class="number">04</div>
-      <h3>Corporate Introductions</h3>
-      <p>
-        Discuss potential introductions and service coordination with
-        businesses, employers and organisations supporting people relocating
-        to the UAE.
-      </p>
-    </article>
-
-    <article class="card">
-      <div class="number">05</div>
-      <h3>Property & Investment Networks</h3>
-      <p>
-        Share relevant opportunities and discuss client requirements across
-        residential, commercial and investment property markets.
-      </p>
-    </article>
-
-    <article class="card">
-      <div class="number">06</div>
-      <h3>Service Providers</h3>
-      <p>
-        We are open to hearing from reputable moving, packing, maintenance,
-        cleaning and other complementary service providers.
-      </p>
-    </article>
-  </div>
+<div class="grid">
+<article class="card">
+<div class="number">01</div>
+<h3>Real Estate Agencies</h3>
+<p>Opportunities to discuss property referrals, co-brokerage arrangements and professional cooperation with other licensed agencies.</p>
+</article>
+<article class="card">
+<div class="number">02</div>
+<h3>Independent Brokers</h3>
+<p>Connect with us to discuss client introductions, property requirements and potential collaboration, subject to applicable licensing rules.</p>
+</article>
+<article class="card">
+<div class="number">03</div>
+<h3>Relocation Specialists</h3>
+<p>Explore ways to support individuals, families and corporate clients moving to Abu Dhabi or elsewhere in the UAE.</p>
+</article>
+<article class="card">
+<div class="number">04</div>
+<h3>Corporate Introductions</h3>
+<p>Discuss potential introductions and service coordination with businesses, employers and organisations supporting people relocating to the UAE.</p>
+</article>
+<article class="card">
+<div class="number">05</div>
+<h3>Property & Investment Networks</h3>
+<p>Share relevant opportunities and discuss client requirements across residential, commercial and investment property markets.</p>
+</article>
+<article class="card">
+<div class="number">06</div>
+<h3>Service Providers</h3>
+<p>We are open to hearing from reputable moving, packing, maintenance, cleaning and other complementary service providers.</p>
+</article>
+</div>
 </section>
 
 <section class="cream-section">
-  <div class="container">
-    <div class="eyebrow">How It Works</div>
-    <h2>Starting a Collaboration</h2>
-    <p class="intro">
-      Every potential relationship is considered individually. We aim to keep
-      communication clear and expectations transparent from the beginning.
-    </p>
+<div class="container">
+<div class="eyebrow">How It Works</div>
+<h2>Starting a Collaboration</h2>
+<p class="intro">Every potential relationship is considered individually. We aim to keep communication clear and expectations transparent from the beginning.</p>
 
-    <div class="steps">
-      <div class="step">
-        <strong>Step 1</strong>
-        <h3>Introduce Yourself</h3>
-        <p>Tell us about your agency, business or professional services.</p>
-      </div>
-      <div class="step">
-        <strong>Step 2</strong>
-        <h3>Discuss the Opportunity</h3>
-        <p>Explain the type of clients, services or opportunities you have in mind.</p>
-      </div>
-      <div class="step">
-        <strong>Step 3</strong>
-        <h3>Review the Details</h3>
-        <p>We can discuss suitability, responsibilities, compliance and proposed terms.</p>
-      </div>
-      <div class="step">
-        <strong>Step 4</strong>
-        <h3>Agree in Writing</h3>
-        <p>Any approved arrangement should be documented before work begins.</p>
-      </div>
-    </div>
-  </div>
+<div class="steps">
+<div class="step">
+<strong>Step 1</strong>
+<h3>Introduce Yourself</h3>
+<p>Tell us about your agency, business or professional services.</p>
+</div>
+<div class="step">
+<strong>Step 2</strong>
+<h3>Discuss the Opportunity</h3>
+<p>Explain the type of clients, services or opportunities you have in mind.</p>
+</div>
+<div class="step">
+<strong>Step 3</strong>
+<h3>Review the Details</h3>
+<p>We can discuss suitability, responsibilities, compliance and proposed terms.</p>
+</div>
+<div class="step">
+<strong>Step 4</strong>
+<h3>Agree in Writing</h3>
+<p>Any approved arrangement should be documented before work begins.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="container">
-  <div class="contact-panel">
-    <div>
-      <div class="eyebrow">Let's Talk</div>
-      <h2>Interested in Working Together?</h2>
-      <p>
-        Send us an introduction with your company details and a brief outline
-        of the collaboration you would like to explore.
-      </p>
-      <a class="button" href="mailto:info@royalbridges.ae?subject=External%20Agency%20Collaboration">
-        Email Our Team
-      </a>
-    </div>
-    <div>
-      <h3 style="color:#e2c88e;">Royal Bridges Real Estate</h3>
-      <p>Email: <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
-      <p>English: <a href="https://wa.me/971568611311">+971 56 861 1311</a></p>
-      <p>Arabic: <a href="https://wa.me/971506082608">+971 50 608 2608</a></p>
-      <p>Abu Dhabi, United Arab Emirates</p>
-    </div>
-  </div>
+<div class="contact-panel">
+<div>
+<div class="eyebrow">Let's Talk</div>
+<h2>Interested in Working Together?</h2>
+<p>Send us an introduction with your company details and a brief outline of the collaboration you would like to explore.</p>
+<a class="button" href="mailto:info@royalbridges.ae?subject=External%20Agency%20Collaboration">Email Our Team</a>
+</div>
+<div>
+<h3>Royal Bridges Real Estate</h3>
+<p>Email: <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
+<p>English: <a href="https://wa.me/971568611311">+971 56 861 1311</a></p>
+<p>Arabic: <a href="https://wa.me/971506082608">+971 50 608 2608</a></p>
+<p>Abu Dhabi, United Arab Emirates</p>
+</div>
+</div>
 </section>
 
-<section class="container" style="padding-top:0;">
-  <p style="font-size:13px;color:#687582;">
-    All proposed collaborations are subject to review, appropriate licensing,
-    regulatory requirements and written agreement. Referral fees, commissions
-    and other commercial terms are not assumed or guaranteed and must be agreed
-    in writing where legally permitted. Display on this page does not imply an
-    existing partnership or agency relationship.
-  </p>
+<section class="container" style="padding-top:0">
+<p style="font-size:13px;color:#687582">All proposed collaborations are subject to review, appropriate licensing, regulatory requirements and written agreement. Referral fees, commissions and other commercial terms are not assumed or guaranteed and must be agreed in writing where legally permitted. Display on this page does not imply an existing partnership or agency relationship.</p>
 </section>
+</main>
 
 <footer>
-  <p><strong>ROYAL BRIDGES REAL ESTATE</strong></p>
-  <p>Connecting people, property and possibilities.</p>
-  <p>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="external-agencies.html">External Agencies</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="contact.html">Contact</a>
-  </p>
-  <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+<strong>ROYAL BRIDGES REAL ESTATE</strong>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="external-agencies.html">External Agencies</a>
+<a href="partners.html">Our Partners</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</div>
+<p>Abu Dhabi, United Arab Emirates</p>
+<p><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p>
+<p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
 </footer>
 
 </body>
