@@ -17,7 +17,7 @@ a{text-decoration:none;color:inherit}
 .topbar a{color:#e6c995}
 .brandbar{background:#f2eadb;border-bottom:1px solid #e1d4bd;padding:3px 0}
 .brand-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:66px}
-.brand img{width:205px;height:auto;max-height:62px;object-fit:contain;display:block}
+.brand img{width:160px;height:auto;max-height:62px;object-fit:contain;display:block}
 .brand-contact{display:flex;align-items:center;justify-content:flex-end;gap:8px 20px;flex-wrap:wrap;font-size:11px;color:var(--navy)}
 .brand-contact a{color:#8b6a3e;font-weight:bold}
 .navbar{background:var(--navy);color:white;position:sticky;top:0;z-index:50}
@@ -94,7 +94,7 @@ section{padding:44px 0}
 .blog-card p{font-size:12px;color:var(--muted)}
 .blog-card a{display:inline-block;margin-top:12px;color:#987544;font-size:12px;font-weight:bold}
 .partner-window{overflow:hidden}
-.partner-track{display:flex;gap:14px;width:max-content;animation:partners 88s linear infinite}
+.partner-track{display:flex;gap:14px;width:max-content;animation:partners 150s linear infinite}
 .partner-track:hover{animation-play-state:paused}
 .partner-card{width:185px;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #e7e1d7;background:white;padding:16px;text-align:center}
 .partner-card strong{font-family:Georgia,serif;font-size:21px;color:var(--navy)}
@@ -140,7 +140,7 @@ footer a{color:#e3c18b}
 }
 @media(max-width:600px){
  .brand-inner{flex-direction:column;justify-content:center;gap:5px;padding:5px 0}
- .brand img{width:165px;max-height:55px}
+ .brand img{width:160px;max-height:55px}
  .brand-contact{justify-content:center;text-align:center;gap:4px 12px;font-size:10px}
  .search-grid{grid-template-columns:1fr 1fr}
  .hero{min-height:270px}
@@ -453,18 +453,24 @@ const buyBudgetOptions=[
   ['AED 10 million+','AED 10 million+'],['Prefer to discuss','Prefer to discuss']
 ];
 const rentBudgetOptions=[
-  ['Under AED 40,000 / year','Under AED 40,000 / year'],['AED 40,000 – 60,000 / year','AED 40,000 – 60,000 / year'],
-  ['AED 60,000 – 80,000 / year','AED 60,000 – 80,000 / year'],['AED 80,000 – 100,000 / year','AED 80,000 – 100,000 / year'],
-  ['AED 100,000 – 150,000 / year','AED 100,000 – 150,000 / year'],['AED 150,000 – 200,000 / year','AED 150,000 – 200,000 / year'],
-  ['AED 200,000+ / year','AED 200,000+ / year'],['Prefer to discuss','Prefer to discuss']
+  ['Under AED 40,000 / year','Under AED 40,000 / year'],
+  ['AED 40,000 – 60,000 / year','AED 40,000 – 60,000 / year'],
+  ['AED 60,000 – 80,000 / year','AED 60,000 – 80,000 / year'],
+  ['AED 80,000 – 100,000 / year','AED 80,000 – 100,000 / year'],
+  ['AED 100,000 – 150,000 / year','AED 100,000 – 150,000 / year'],
+  ['AED 150,000 – 200,000 / year','AED 150,000 – 200,000 / year'],
+  ['AED 200,000 – 300,000 / year','AED 200,000 – 300,000 / year'],
+  ['AED 300,000+ / year','AED 300,000+ / year'],
+  ['Prefer to discuss','Prefer to discuss']
 ];
-function updateBudgetOptions(){
+function updateBudgetOptions(clearSelection=false){
   const isRent=intentSelect.value==='rent';
   const options=isRent?rentBudgetOptions:buyBudgetOptions;
   budgetSelect.innerHTML='<option value="">Select '+(isRent?'annual rental budget':'purchase budget')+'</option>'+options.map(([label,value])=>'<option value="'+value+'">'+label+'</option>').join('');
   budgetSelect.previousElementSibling.textContent=isRent?'Your annual rental budget (AED)':'Your purchase budget (AED)';
+  if(clearSelection) budgetSelect.value='';
 }
-intentSelect.addEventListener('change',updateBudgetOptions);
+intentSelect.addEventListener('change',()=>updateBudgetOptions(true));
 updateBudgetOptions();
 </script>
 </body>
