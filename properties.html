@@ -197,7 +197,7 @@ footer a{color:#e5c995}
  if(intentValue)category.value=intentValue==="rent"?"Rent":intentValue==="offplan"?"New Projects":intentValue==="buy"?"Buy":intentValue;
  if(params.get("emirate"))document.getElementById("emirate").value=params.get("emirate");
  if(params.get("location"))document.getElementById("location").value=params.get("location");
- if(params.get("type")&&params.get("type")!=="Any")document.getElementById("type").value=params.get("type");
+ if(params.get("type")&&params.get("type")!=="Any"){const requestedType=params.get("type");document.getElementById("type").value=requestedType==="Studio"?"Apartment":requestedType;if(requestedType==="Studio")document.getElementById("bedrooms").value="Studio";}
  if(intentValue==="offplan")status.value="Off-plan";
  const budget=params.get("budget")||"";
  if(budget&&budget!=="discuss"){const range=budget.split("-");if(range[0])document.getElementById("minPrice").value=range[0];if(range[1])document.getElementById("maxPrice").value=range[1];}
