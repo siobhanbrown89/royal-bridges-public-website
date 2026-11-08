@@ -632,7 +632,7 @@ nav button:hover {
 }
 
 .partner-track {
-  animation: partner-scroll 35s linear infinite;
+  animation: partner-scroll 120s linear infinite;
 }
 
 .partner-window:hover .partner-track {
