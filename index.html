@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:52px}
 .nav-links{display:flex;align-items:center;gap:20px;list-style:none}
 .nav-links>li>a,.nav-links>li>button{display:block;padding:15px 0;color:white;background:none;border:0;font-size:11px;cursor:pointer}
-.nav-links a:hover,.nav-links button:hover{color:#e5c58f}
+.nav-links a:hover,.nav-links button:hover{color:#e5c58f}\n.nav-register{background:var(--gold);color:var(--navy)!important;padding:10px 13px!important}
 .dropdown{position:relative}
 .dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:245px;background:white;color:var(--navy);box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);padding:7px 0}
 .dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{display:block}
@@ -178,7 +178,7 @@ footer a{color:#e3c18b}
 </div>
 <nav class="navbar" aria-label="Main navigation">
  <div class="container nav-inner">
-  <button class="mobile-toggle" type="button" aria-expanded="false">☰ MENU</button>
+  <button class="mobile-toggle" type="button" onclick="toggleMenu()" aria-expanded="false">☰ MENU</button>
   <ul class="nav-links" id="navLinks">
    <li><a href="index.html">HOME</a></li>
    <li class="dropdown"><button type="button">PROPERTIES ▾</button><div class="dropdown-menu">
