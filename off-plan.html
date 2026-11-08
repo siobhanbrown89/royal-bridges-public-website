@@ -44,6 +44,33 @@ footer{background:#0c1e30;color:#fff;text-align:center;padding:28px 15px;font-si
 footer a{color:#e5c995}
 @media(max-width:900px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.page-hero{padding:48px 17px}.project-grid{grid-template-columns:1fr;gap:13px}.project-card{min-height:0}.project-tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:4px 2px 12px}.project-tab{white-space:nowrap;flex:0 0 auto}.intro{padding:30px 0 14px}}
+
+.project-card{padding:0;overflow:hidden;min-height:0}
+.project-thumb-wrap{height:175px;position:relative;overflow:hidden;background:#e8edf0}
+.project-thumb{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.project-card:hover .project-thumb{transform:scale(1.035)}
+.thumb-caption{position:absolute;right:9px;bottom:8px;background:#142b43c9;color:#fff;padding:3px 7px;border-radius:2px;font-size:9px;letter-spacing:.3px}
+.project-card>.project-area,.project-card>.project-tag,.project-card>h3,.project-card>.project-developer,.project-card>.project-details,.project-card>.enquire,.project-card>.brochure-btn{margin-left:19px;margin-right:19px}
+.project-card>.project-area{margin-top:16px}
+.project-card>h3{margin-top:9px}
+.project-card>.project-details{margin-bottom:14px}
+.project-card>.enquire{margin-top:auto;margin-bottom:8px}
+.brochure-btn{align-self:flex-start;margin-top:0;margin-bottom:18px;border:1px solid var(--gold);background:#fff;color:var(--navy);padding:9px 14px;border-radius:3px;font-size:10px;font-weight:bold;letter-spacing:.4px;cursor:pointer}
+.brochure-btn:hover{background:var(--cream)}
+.brochure-modal[hidden]{display:none}
+.brochure-modal{position:fixed;inset:0;z-index:10000;background:rgba(8,20,33,.72);display:flex;align-items:center;justify-content:center;padding:18px}
+.brochure-dialog{width:min(460px,100%);background:#fff;border-radius:7px;padding:27px;box-shadow:0 20px 70px #0005;position:relative}
+.brochure-dialog h2{font:normal 27px Georgia,serif;color:var(--navy);margin:0 30px 6px 0}
+.brochure-dialog p{font-size:13px;color:var(--muted);margin:0 0 17px}
+.brochure-dialog label{display:block;font-size:11px;font-weight:bold;letter-spacing:.5px;color:var(--navy);margin:12px 0 5px}
+.brochure-dialog input{width:100%;height:44px;border:1px solid #d9dfe5;border-radius:3px;padding:0 11px;font:14px Arial}
+.brochure-dialog input:focus{outline:2px solid #b99a6266;border-color:var(--gold)}
+.brochure-submit{width:100%;margin-top:18px;border:0;border-radius:3px;background:var(--navy);color:#fff;padding:13px;font-size:12px;font-weight:bold;cursor:pointer}
+.brochure-submit:hover{background:#244664}
+.brochure-close{position:absolute;right:15px;top:13px;border:0;background:transparent;color:var(--navy);font-size:25px;cursor:pointer}
+.brochure-note{font-size:10px!important;color:#78838c!important;margin:10px 0 0!important}
+@media(max-width:580px){.project-thumb-wrap{height:195px}.brochure-dialog{padding:23px}}
+
 </style>
 </head>
 <body>
@@ -106,11 +133,28 @@ footer a{color:#e5c995}
 <article class="project-card" data-area="hudayriyat"><span class="project-area">Hudayriyat Island</span><div class="project-tag">New release</div><h3>Hudayriyat Golf Estates</h3><p class="project-developer">Modon</p><p class="project-details"><span>Villas and townhouses</span><span>Launch price from AED 4.2 million · Handover Q3 2030</span></p><a class="enquire" href="https://wa.me/971568611311?text=Please%20send%20me%20the%20latest%20availability%20for%20Hudayriyat%20Golf%20Estates.">ENQUIRE NOW</a></article>
 <article class="project-card" data-area="other"><span class="project-area">Al Ghadeer</span><div class="project-tag">New phases</div><h3>Al Ghadeer Parks 1 &amp; 2</h3><p class="project-developer">Aldar</p><p class="project-details"><span>Townhouses and villas</span><span>Launch price from AED 1.9 million · Handover Q2 2031</span></p><a class="enquire" href="https://wa.me/971568611311?text=Please%20send%20me%20availability%20for%20Al%20Ghadeer%20Parks%20Phases%201%20and%202.">ENQUIRE NOW</a></article>
 </div>
+
+<div class="brochure-modal" id="brochureModal" hidden>
+ <div class="brochure-dialog" role="dialog" aria-modal="true" aria-labelledby="brochureTitle">
+  <button class="brochure-close" type="button" aria-label="Close brochure request">&times;</button>
+  <h2 id="brochureTitle">Request a Project Brochure</h2>
+  <p id="brochureProjectName">Enter your contact details and our team will assist with the brochure.</p>
+  <form id="brochureForm">
+   <label for="brochureMobile">MOBILE NUMBER</label>
+   <input id="brochureMobile" name="mobile" type="tel" autocomplete="tel" placeholder="+971 5X XXX XXXX" required>
+   <label for="brochureEmail">EMAIL ADDRESS</label>
+   <input id="brochureEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+   <button class="brochure-submit" type="submit">SEND BROCHURE REQUEST</button>
+  </form>
+  <p class="brochure-note">Submitting opens WhatsApp with your request and contact details addressed to Royal Bridges. Your details are not stored on this website.</p>
+ </div>
+</div>
 <p class="disclaimer">Project names and indicative details are compiled from current public market listings and launch information. This is a curated selection, not a live developer inventory. Availability, prices, payment plans and handover estimates must be reconfirmed with the developer at the time of enquiry.</p>
 </section>
 <section class="callout"><h2>Looking for a Particular Development?</h2><p>Tell us your preferred location, budget and property type. Our team can help check current availability, floor plans, payment plans and developer offers.</p><a href="https://wa.me/971568611311?text=I%20would%20like%20to%20discuss%20Abu%20Dhabi%20off-plan%20developments%20with%20Royal%20Bridges.">REGISTER YOUR INTEREST</a></section>
 </main>
 <footer><strong>ROYAL BRIDGES REAL ESTATE</strong><p>Abu Dhabi, United Arab Emirates</p><p><a href="https://wa.me/971568611311">+971 56 861 1311</a> &nbsp; | &nbsp; <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p><p>© 2026 Royal Bridges Real Estate. All rights reserved.</p></footer>
+
 <script>
 (function(){
  const buttons=[...document.querySelectorAll('.project-tab')];
@@ -118,16 +162,34 @@ footer a{color:#e5c995}
  const count=document.getElementById('projectCount');
  function show(filter){
   let visible=0;
-  cards.forEach(card=>{
-   const match=filter==='all'||card.dataset.area===filter;
-   card.hidden=!match;
-   if(match) visible++;
-  });
+  cards.forEach(card=>{const match=filter==='all'||card.dataset.area===filter;card.hidden=!match;if(match)visible++;});
   buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.filter===filter)));
   count.textContent=filter==='all'?'Showing all '+visible+' listed projects':'Showing '+visible+' projects in this location';
  }
  buttons.forEach(button=>button.addEventListener('click',()=>show(button.dataset.filter)));
  show('all');
+ const modal=document.getElementById('brochureModal');
+ const projectName=document.getElementById('brochureProjectName');
+ const form=document.getElementById('brochureForm');
+ const close=()=>{modal.hidden=true;document.body.style.overflow='';};
+ document.querySelectorAll('.brochure-btn').forEach(button=>button.addEventListener('click',()=>{
+  const card=button.closest('.project-card');
+  projectName.textContent='Requesting the brochure for '+card.querySelector('h3').textContent.trim()+'.';
+  form.dataset.project=card.querySelector('h3').textContent.trim();
+  modal.hidden=false;document.body.style.overflow='hidden';
+  document.getElementById('brochureMobile').focus();
+ }));
+ modal.querySelector('.brochure-close').addEventListener('click',close);
+ modal.addEventListener('click',event=>{if(event.target===modal)close();});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!modal.hidden)close();});
+ form.addEventListener('submit',event=>{
+  event.preventDefault();
+  const mobile=document.getElementById('brochureMobile').value.trim();
+  const email=document.getElementById('brochureEmail').value.trim();
+  const project=form.dataset.project||'Abu Dhabi off-plan project';
+  const message='Hello Royal Bridges, I would like to request the brochure for '+project+'.\n\nMobile: '+mobile+'\nEmail: '+email+'\n\nPlease send me the brochure and current project details.';
+  window.location.href='https://wa.me/971568611311?text='+encodeURIComponent(message);
+ });
 })();
 </script>
 </body>
