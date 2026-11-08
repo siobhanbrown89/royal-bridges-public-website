@@ -60,6 +60,37 @@ footer a{color:#e5c995}
 .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin:15px 0}
 @media(max-width:760px){.nav-inner{justify-content:flex-start}.nav-inner>a{padding:12px 9px;font-size:11px}.hero{min-height:245px}.search-wrap{margin-top:-28px}.search-panel{padding:21px 17px}.search-grid{grid-template-columns:1fr 1fr;gap:14px}.location-row{grid-column:span 2}.panel-heading{align-items:flex-start}.panel-heading h2{font-size:25px}}
 @media(max-width:520px){.search-grid{grid-template-columns:1fr}.location-row{grid-column:span 1;grid-template-columns:1fr}.price-row{grid-template-columns:1fr 1fr}.panel-heading{display:block}.reset-button{padding-left:0}.search-actions{align-items:stretch}.search-button{width:100%}.search-note{text-align:center;width:100%}}
+
+.sample-inventory{width:min(1180px,92%);margin:0 auto 68px}
+.inventory-heading{text-align:center;margin:0 auto 25px;max-width:760px}
+.inventory-heading .eyebrow{font-size:11px;letter-spacing:2px;font-weight:bold;color:#a38450}
+.inventory-heading h2{font-family:Georgia,serif;font-size:clamp(28px,4vw,36px);font-weight:normal;color:var(--navy);margin:7px 0}
+.inventory-heading p{font-size:14px;color:var(--muted);margin:0}
+.inventory-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;padding:18px;background:var(--cream);border:1px solid #e6e0d5;border-radius:6px;margin-bottom:17px}
+.inventory-filters .field select{height:43px}
+.inventory-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:0 2px 14px}
+.listing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sample-card{background:#fff;border:1px solid #e3e6e9;border-radius:6px;overflow:hidden;box-shadow:0 6px 20px #142b430b;display:flex;flex-direction:column;min-width:0}
+.sample-photo{height:180px;position:relative;background:#dfe5e8 center/cover no-repeat}
+.sample-photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#0b1e32a8)}
+.sample-community{position:absolute;z-index:1;left:13px;bottom:11px;color:#fff;font-size:13px;font-weight:bold;text-shadow:0 1px 3px #000}
+.sample-tag{position:absolute;z-index:2;top:12px;left:12px;background:#fff;color:var(--navy);padding:5px 9px;border-radius:3px;font-size:10px;font-weight:bold;letter-spacing:.3px}
+.sample-content{padding:16px;display:flex;flex-direction:column;flex:1}
+.sample-content h3{font-family:Georgia,serif;font-size:20px;line-height:1.25;color:var(--navy);font-weight:normal;margin:0 0 5px}
+.sample-subtitle{font-size:12px;color:var(--muted);margin:0 0 12px}
+.sample-facts{display:flex;gap:8px 13px;flex-wrap:wrap;font-size:11px;color:#536170;border-bottom:1px solid #edf0f2;padding-bottom:12px}
+.sample-prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:13px 0}
+.sample-price{background:#f8f7f4;border-radius:4px;padding:8px}
+.sample-price small{display:block;color:#74808a;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+.sample-price strong{display:block;color:var(--navy);font-size:14px;margin-top:2px}
+.sample-price.is-active{outline:1px solid var(--gold);background:#f5f0e6}
+.sample-cta{display:block;text-align:center;background:var(--navy);color:white;padding:10px;border-radius:3px;font-size:12px;font-weight:bold;margin-top:auto}
+.sample-cta:hover{background:#244664}
+.inventory-empty{grid-column:1/-1;text-align:center;padding:35px 15px;border:1px dashed #cbd2d8;color:var(--muted);border-radius:5px}
+.inventory-disclaimer{font-size:11px;line-height:1.6;color:#7a858e;margin:16px 2px 0}
+@media(max-width:900px){.listing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.listing-grid{grid-template-columns:1fr}.inventory-filters{grid-template-columns:1fr}.sample-photo{height:195px}.inventory-meta{display:block}.inventory-meta span{display:block;margin:3px 0}}
+
 </style>
 <script src="site-header.js" defer></script>
 </head>
@@ -86,17 +117,29 @@ footer a{color:#e5c995}
 <div class="search-grid">
 <div class="location-row">
 <div class="field"><label for="emirate">EMIRATE</label><select id="emirate" name="emirate" required><option value="">Select emirate</option><option>Abu Dhabi</option><option>Ras Al Khaimah</option><option>Dubai</option></select></div>
-<div class="field"><label for="location">COMMUNITY OR LOCATION</label><input id="location" name="location" type="search" placeholder="e.g. Yas Island, Saadiyat, Al Reem, Dubai Marina"></div>
+<div class="field"><label for="location">COMMUNITY OR LOCATION</label><select id="location" name="location"><option value="">Any community / location</option><option>Waters Edge, Yas Island</option><option>Yas Golf Collection, Yas Island</option><option>Ansam, Yas Island</option><option>NOYA, Yas Island</option><option>NOYA Viva, Yas Island</option><option>NOYA 1, Yas Island</option><option>NOYA 2, Yas Island</option><option>NOYA Luma, Yas Island</option><option>Yas Acres, Yas Island</option><option>Other Abu Dhabi locations</option></select></div>
 </div>
 <div class="field"><label for="category">I AM LOOKING TO</label><select id="category" name="category" required><option value="">Select a category</option><option>Rent</option><option>Buy</option><option>New Projects</option><option>Commercial Rent</option><option>Commercial Buy</option><option>Plots and Lands</option></select></div>
 <div class="field"><label for="type">PROPERTY TYPE</label><select id="type" name="type"><option value="">Any property type</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Duplex</option><option>Penthouse</option><option>Studio</option><option>Office</option><option>Retail / Shop</option><option>Warehouse</option><option>Commercial Building</option><option>Residential Plot</option><option>Commercial Plot</option><option>Land</option></select></div>
-<div class="field"><label for="bedrooms">NUMBER OF BEDROOMS</label><select id="bedrooms" name="bedrooms"><option value="">Any</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>3 Bedrooms</option><option>4 Bedrooms</option><option>5 Bedrooms</option><option>6+ Bedrooms</option></select></div>
+<div class="field"><label for="bedrooms">NUMBER OF BEDROOMS</label><select id="bedrooms" name="bedrooms"><option value="">Any</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>2 Bedrooms + Maid</option><option>2 Bedrooms + Study</option><option>3 Bedrooms</option><option>3 Bedrooms + Maid</option><option>4 Bedrooms</option><option>5 Bedrooms</option><option>6+ Bedrooms</option></select></div>
 <div class="field"><label>PRICE RANGE (AED)</label><div class="price-row"><input id="minPrice" name="minPrice" type="number" min="0" placeholder="Minimum" aria-label="Minimum price in AED"><input id="maxPrice" name="maxPrice" type="number" min="0" placeholder="Maximum" aria-label="Maximum price in AED"></div></div>
 <div class="field"><label for="status">PROPERTY STATUS</label><select id="status" name="status"><option value="">Off-plan or ready</option><option>Off-plan</option><option>Ready</option></select></div>
 <div class="field"><label for="furnishing">FURNISHING</label><select id="furnishing" name="furnishing"><option value="">Any</option><option>Furnished</option><option>Unfurnished</option></select></div>
 </div>
 <div class="search-actions"><button class="search-button" type="submit">Search Properties&nbsp; →</button><p class="search-note">Your search details will be sent to our property team so we can help source matching options.</p></div>
 </form>
+</section>
+<section class="sample-inventory" id="sampleListings">
+ <div class="inventory-heading"><span class="eyebrow">YAS ISLAND COLLECTION</span><h2>Explore Our Featured Property Options</h2><p>Browse sample apartments, townhouses, duplexes and villas across selected Yas Island communities.</p></div>
+ <div class="inventory-filters" aria-label="Filter sample properties">
+  <div class="field"><label for="inventoryCommunity">COMMUNITY</label><select id="inventoryCommunity"><option value="">All communities</option><option>Waters Edge</option><option>Yas Golf Collection</option><option>Ansam</option><option>NOYA</option><option>NOYA Luma</option><option>Yas Acres</option></select></div>
+  <div class="field"><label for="inventoryPurpose">LOOKING TO</label><select id="inventoryPurpose"><option value="all">Rent or buy</option><option value="rent">Rent</option><option value="sale">Buy</option></select></div>
+  <div class="field"><label for="inventoryType">PROPERTY TYPE</label><select id="inventoryType"><option value="">All types</option><option>Apartment</option><option>Townhouse</option><option>Duplex</option><option>Villa</option></select></div>
+  <div class="field"><label for="inventoryBeds">BEDROOMS</label><select id="inventoryBeds"><option value="">Any bedroom layout</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>2 Bedrooms + Maid</option><option>2 Bedrooms + Study</option><option>3 Bedrooms</option><option>3 Bedrooms + Maid</option><option>4 Bedrooms</option><option>5 Bedrooms</option><option>6 Bedrooms</option></select></div>
+ </div>
+ <div class="inventory-meta"><span id="inventoryCount" aria-live="polite"></span><span>Illustrative sample listings · Not confirmed live availability</span></div>
+ <div class="listing-grid" id="listingGrid"></div>
+ <p class="inventory-disclaimer">Prices and floor areas are indicative estimates based on recent advertised market examples and are provided to demonstrate the range of homes we can source. These are not confirmed Royal Bridges listings or promises of availability. Please enquire for current owner instructions, exact layouts, prices and availability. Community photographs are representative.</p>
 </section>
 <section class="popular">
 <h2>Start With a Popular Location</h2><p>Explore some of the UAE locations we can assist you with.</p>
@@ -113,33 +156,56 @@ footer a{color:#e5c995}
 <footer><strong>ROYAL BRIDGES REAL ESTATE</strong><div class="footer-links"><a href="index.html">Home</a><a href="properties.html">Properties</a><a href="communities.html">Communities</a><a href="short-stay.html">Short Stay</a><a href="relocation.html">Relocation</a><a href="register.html">Register</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><p>Abu Dhabi, United Arab Emirates<br><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></p><p>© 2026 Royal Bridges Real Estate. All rights reserved.</p></footer>
 <script>
 (function(){
- const form=document.getElementById('propertySearch');
- const category=document.getElementById('category');
- const status=document.getElementById('status');
- category.addEventListener('change',function(){
-   if(this.value==='New Projects') status.value='Off-plan';
-   else if(this.value==='Rent'||this.value==='Buy'||this.value==='Commercial Rent'||this.value==='Commercial Buy'||this.value==='Plots and Lands') status.value='';
- });
- form.addEventListener('submit',function(event){
-   event.preventDefault();
-   const values=[
-     ['Emirate',document.getElementById('emirate').value],
-     ['Community / location',document.getElementById('location').value],
-     ['Search category',category.value],
-     ['Property type',document.getElementById('type').value],
-     ['Bedrooms',document.getElementById('bedrooms').value],
-     ['Minimum price (AED)',document.getElementById('minPrice').value],
-     ['Maximum price (AED)',document.getElementById('maxPrice').value],
-     ['Status',status.value],
-     ['Furnishing',document.getElementById('furnishing').value]
-   ].filter(function(item){return item[1]!=='';});
-   if(!document.getElementById('emirate').value||!category.value){
-     alert('Please select an emirate and what you are looking to do.');
-     return;
-   }
-   const message='Hello Royal Bridges, I would like help finding a property.\n\n'+values.map(function(item){return item[0]+': '+item[1];}).join('\n')+'\n\nPlease let me know about matching properties.';
-   window.location.href='https://wa.me/971568611311?text='+encodeURIComponent(message);
- });
+ const form=document.getElementById("propertySearch");
+ const category=document.getElementById("category");
+ const status=document.getElementById("status");
+ const inventory=[
+  ["Waters Edge","Apartment","Studio",480,75000,1250000,"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80","Canal-side studio"],
+  ["Waters Edge","Apartment","1 Bedroom",700,92000,1600000,"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80","One-bedroom apartment"],
+  ["Waters Edge","Apartment","2 Bedrooms",1120,125000,2200000,"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80","Two-bedroom waterfront home"],
+  ["Waters Edge","Apartment","3 Bedrooms",1450,175000,2875000,"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80","Spacious three-bedroom layout"],
+  ["Yas Golf Collection","Apartment","Studio",500,89000,1500000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Modern studio residence"],
+  ["Yas Golf Collection","Apartment","1 Bedroom",900,125000,2050000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","One-bedroom golf community apartment"],
+  ["Yas Golf Collection","Apartment","2 Bedrooms",1236,180000,2800000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Two-bedroom apartment"],
+  ["Yas Golf Collection","Apartment","2 Bedrooms + Maid",1816,210000,4000000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Two-bedroom plus maid’s room"],
+  ["Yas Golf Collection","Apartment","3 Bedrooms",2300,300000,6500000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Three-bedroom apartment"],
+  ["Yas Golf Collection","Apartment","3 Bedrooms + Maid",2500,330000,6800000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Three-bedroom plus maid’s room"],
+  ["Yas Golf Collection","Duplex","3 Bedrooms",2717,350000,7200000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80","Three-bedroom duplex"],
+  ["Ansam","Apartment","Studio",550,88000,1550000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Studio apartment"],
+  ["Ansam","Apartment","1 Bedroom",880,120000,2100000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","One-bedroom apartment"],
+  ["Ansam","Apartment","2 Bedrooms",1300,155000,3200000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Two-bedroom apartment"],
+  ["Ansam","Apartment","3 Bedrooms",2200,260000,5700000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Three-bedroom apartment"],
+  ["NOYA","Townhouse","2 Bedrooms",1450,180000,3400000,"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80","Two-bedroom townhouse"],
+  ["NOYA","Townhouse","3 Bedrooms",1816,200000,3900000,"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80","Three-bedroom townhouse"],
+  ["NOYA Viva","Villa","4 Bedrooms",3390,260000,5400000,"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80","Four-bedroom family villa"],
+  ["NOYA 1","Villa","4 Bedrooms",3390,250000,5700000,"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80","Four-bedroom villa"],
+  ["NOYA 2","Villa","4 Bedrooms",3390,255000,5600000,"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80","Four-bedroom villa"],
+  ["NOYA Luma","Villa","3 Bedrooms",3800,250000,5600000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80","Standalone three-bedroom villa"],
+  ["NOYA Luma","Villa","4 Bedrooms",3750,310000,6200000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80","Standalone four-bedroom villa"],
+  ["NOYA Luma","Villa","5 Bedrooms",4133,400000,7200000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80","Standalone five-bedroom villa"],
+  ["Yas Acres","Townhouse","2 Bedrooms + Study",2421,230000,4650000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Two-bedroom plus study townhouse"],
+  ["Yas Acres","Duplex","3 Bedrooms",3229,280000,6300000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Three-bedroom duplex layout"],
+  ["Yas Acres","Duplex","4 Bedrooms",4844,320000,8860000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Four-bedroom duplex layout"],
+  ["Yas Acres","Villa","4 Bedrooms",7500,500000,8300000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Four-bedroom standalone villa"],
+  ["Yas Acres","Villa","5 Bedrooms",8500,600000,13000000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Premium five-bedroom golf-facing villa"],
+  ["Yas Acres","Villa","6 Bedrooms",11000,800000,15800000,"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80","Premium six-bedroom golf-facing villa"]
+ ];
+ const grid=document.getElementById("listingGrid"), community=document.getElementById("inventoryCommunity"), purpose=document.getElementById("inventoryPurpose"), type=document.getElementById("inventoryType"), beds=document.getElementById("inventoryBeds"), count=document.getElementById("inventoryCount");
+ const money=n=>"AED "+Number(n).toLocaleString("en-AE");
+ function render(){
+  const filtered=inventory.filter(x=>(!community.value||x[0]===community.value)&&(!type.value||x[1]===type.value)&&(!beds.value||x[2]===beds.value));
+  count.textContent=filtered.length+" sample property options";
+  if(!filtered.length){grid.innerHTML='<div class="inventory-empty">No sample options match those filters. Try another community or bedroom layout.</div>';return;}
+  grid.innerHTML=filtered.map(x=>{
+   const rent=purpose.value==="sale"?"":'<div class="sample-price '+(purpose.value==="rent"?"is-active":"")+'"><small>Rent / year</small><strong>'+money(x[4])+"</strong></div>";
+   const sale=purpose.value==="rent"?"":'<div class="sample-price '+(purpose.value==="sale"?"is-active":"")+'"><small>For sale</small><strong>'+money(x[5])+"</strong></div>";
+   const msg=encodeURIComponent("Hello Royal Bridges, I am interested in the illustrative "+x[2]+" "+x[1]+" option in "+x[0]+", Yas Island. Please share current availability and confirmed pricing.");
+   return '<article class="sample-card"><div class="sample-photo" style="background-image:url(\''+x[6]+\' )"><span class="sample-tag">'+x[1]+'</span><span class="sample-community">'+x[0]+' · Yas Island</span></div><div class="sample-content"><h3>'+x[2]+' '+x[1]+'</h3><p class="sample-subtitle">'+x[7]+'</p><div class="sample-facts"><span>Approx. '+x[3].toLocaleString("en-AE")+' sq ft</span><span>Yas Island, Abu Dhabi</span></div><div class="sample-prices">'+rent+sale+'</div><a class="sample-cta" href="https://wa.me/971568611311?text='+msg+'">Enquire about this option →</a></div></article>';
+  }).join("");
+ }
+ [community,purpose,type,beds].forEach(el=>el.addEventListener("change",render));render();
+ category.addEventListener("change",function(){if(this.value==="New Projects")status.value="Off-plan";else if(this.value==="Rent"||this.value==="Buy"||this.value==="Commercial Rent"||this.value==="Commercial Buy"||this.value==="Plots and Lands")status.value="";});
+ form.addEventListener("submit",function(event){event.preventDefault();const values=[["Emirate",document.getElementById("emirate").value],["Community / location",document.getElementById("location").value],["Search category",category.value],["Property type",document.getElementById("type").value],["Bedrooms",document.getElementById("bedrooms").value],["Minimum price (AED)",document.getElementById("minPrice").value],["Maximum price (AED)",document.getElementById("maxPrice").value],["Status",status.value],["Furnishing",document.getElementById("furnishing").value]].filter(item=>item[1]!=="");if(!document.getElementById("emirate").value||!category.value){alert("Please select an emirate and what you are looking to do.");return;}const message="Hello Royal Bridges, I would like help finding a property.\n\n"+values.map(item=>item[0]+": "+item[1]).join("\n")+"\n\nPlease let me know about matching properties.";window.location.href="https://wa.me/971568611311?text="+encodeURIComponent(message);});
 })();
 </script>
 </body>
