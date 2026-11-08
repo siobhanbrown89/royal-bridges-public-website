@@ -233,35 +233,45 @@
     .enquiry-section {
       background: white;
       border: 1px solid #e9e3d9;
-      padding: 35px;
-      max-width: 800px;
-      margin: 30px auto 0;
+      padding: 28px;
+      max-width: 1120px;
+      margin: 24px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 22px;
+      row-gap: 12px;
+      align-items: end;
     }
     .enquiry-section label {
       display: block;
       color: var(--navy);
       font-weight: bold;
       font-size: 13px;
-      margin: 15px 0 6px;
+      margin: 0 0 6px;
     }
     .enquiry-section input,
     .enquiry-section select,
     .enquiry-section textarea {
       width: 100%;
-      padding: 12px;
+      min-width: 0;
+      padding: 11px 12px;
       border: 1px solid #d8d2c8;
       background: #fff;
       font: inherit;
       border-radius: 2px;
     }
-    .enquiry-section textarea { min-height: 110px; resize: vertical; }
+    .enquiry-section textarea { min-height: 90px; resize: vertical; }
     .enquiry-section button {
       border: 0;
       cursor: pointer;
       font: inherit;
-      margin-top: 18px;
+      margin: 0;
+      justify-self: start;
     }
-    .form-note { color: var(--muted); font-size: 12px; }
+    .enquiry-section label[for="requirements"],
+    .enquiry-section #requirements,
+    .enquiry-section .form-note { grid-column: 1 / -1; }
+    .form-note { color: var(--muted); font-size: 12px; margin: 0; }
 
     .cta {
       background: var(--navy);
@@ -289,12 +299,18 @@
       .two-column { grid-template-columns: 1fr; }
       .steps { grid-template-columns: repeat(2, 1fr); }
     }
+    @media (max-width: 850px) {
+      .enquiry-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
     @media (max-width: 520px) {
       nav { font-size: 12px; gap: 10px; }
       .logo img { width: 165px; }
       .feature-grid, .steps { grid-template-columns: 1fr; }
       .container { padding: 45px 17px; }
-      .enquiry-section { padding: 22px; }
+      .enquiry-section { padding: 18px; grid-template-columns: 1fr; row-gap: 10px; }
+      .enquiry-section label[for="requirements"],
+      .enquiry-section #requirements,
+      .enquiry-section .form-note { grid-column: 1; }
       .hero { min-height: 270px; padding: 34px 17px; }
     }
   
