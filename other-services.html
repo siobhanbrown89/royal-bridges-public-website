@@ -62,6 +62,13 @@ footer a{color:#e3c18b}
 @media(max-width:850px){.service-grid,.details-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.nav-inner>a,.dropdown>a{padding:11px 7px;font-size:11px}.dropdown-content{position:fixed;left:0;right:0;top:auto}.container{width:92%}section{padding:42px 0}}
 @media(max-width:550px){.topbar{text-align:center}.service-grid,.details-grid{grid-template-columns:1fr}.service-section h2{font-size:28px}footer .container{justify-content:center;text-align:center}}
+
+.nested-dropdown{position:relative}
+.nested-menu{display:none;position:absolute;left:100%;top:0;min-width:225px;max-height:75vh;overflow-y:auto;background:#fff;box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold,#b99a62);z-index:1002}
+.nested-menu a{display:block;padding:10px 14px;color:var(--navy,#142b43);font-size:13px}
+.nested-dropdown:hover>.nested-menu,.nested-dropdown:focus-within>.nested-menu{display:block}
+@media(max-width:760px){.nested-menu{position:static;left:auto;top:auto;box-shadow:none;border-top:1px solid var(--gold,#b99a62);padding-left:14px}.nested-dropdown:hover>.nested-menu,.nested-dropdown:focus-within>.nested-menu{display:block}}
+
 </style>
 </head>
 <body>
@@ -99,17 +106,17 @@ footer a{color:#e3c18b}
 <a href="short-stay.html">SHORT STAY</a>
 <a href="relocation.html">RELOCATION</a>
 <div class="dropdown">
-<a href="register.html">REGISTER ▾</a>
-<div class="dropdown-content">
-<a href="register.html#seminars">Seminars & Online Webinars</a>
-<a href="register.html#newsletter">Monthly Market Newsletter</a>
-<a href="register.html#email-updates">Register for Email Updates</a>
-</div>
-</div>
-<div class="dropdown">
 <a href="about.html">ABOUT ▾</a>
 <div class="dropdown-content">
 <a href="about.html">About Royal Bridges</a>
+<div class="dropdown nested-dropdown">
+<a href="register.html">Register ▸</a>
+<div class="nested-menu">
+<a href="register.html#seminars">Seminars &amp; Online Webinars</a>
+<a href="register.html#newsletter">Monthly Market Newsletter</a>
+<a href="register.html#email-updates">Email Updates</a>
+</div>
+</div>
 <a href="careers.html">Careers</a>
 <a href="external-agencies.html">External Agencies</a>
 <a href="partners.html">Our Partners</a>
