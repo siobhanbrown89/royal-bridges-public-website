@@ -129,7 +129,7 @@ footer a{color:#e5c995}
 <div class="search-actions"><button class="search-button" type="submit">Search Properties&nbsp; →</button><p class="search-note">Your search details will be sent to our property team so we can help source matching options.</p></div>
 </form>
 </section>
-<section class="sample-inventory" id="sampleListings">
+<section class="sample-inventory" id="featured-inventory">
  <div class="inventory-heading"><span class="eyebrow">YAS ISLAND COLLECTION</span><h2>Explore Our Featured Property Options</h2><p>Browse sample apartments, townhouses, duplexes and villas across selected Yas Island communities.</p></div>
  <div class="inventory-filters" aria-label="Filter sample properties">
   <div class="field"><label for="inventoryCommunity">COMMUNITY</label><select id="inventoryCommunity"><option value="">All communities</option><option>Waters Edge</option><option>Yas Golf Collection</option><option>Ansam</option><option>NOYA</option><option>NOYA Viva</option><option>NOYA 1</option><option>NOYA 2</option><option>NOYA Luma</option><option>Yas Acres</option></select></div>
@@ -227,7 +227,10 @@ footer a{color:#e5c995}
  if(params.get("location")){
   const loc=params.get("location");
   const match=loc==="Yas Island"?"":loc.replace(/, Yas Island$/,"");
-  if([...community.options].some(option=>option.value===match))community.value=match;
+  if(match&&![...community.options].some(option=>option.value===match)){
+   const option=document.createElement("option");option.value=match;option.textContent=match;community.appendChild(option);
+  }
+  community.value=match;
  }
  if(intentValue==="rent")purpose.value="rent";else if(intentValue==="buy")purpose.value="sale";
  if(params.get("type")&&[...type.options].some(option=>option.value===params.get("type")))type.value=params.get("type");
