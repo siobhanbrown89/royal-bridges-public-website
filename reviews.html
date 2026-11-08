@@ -1,1 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews | Royal Bridges Real Estate</title>
+<style>
+:root {
+  --navy: #142b43;
+  --cream: #f5f0e6;
+  --gold: #b69a65;
+  --text: #333;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+}
+header {
+  background: var(--cream);
+  padding: 10px 4%;
+  border-bottom: 1px solid #e5ddcf;
+}
+.header-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 170px;
+  height: 58px;
+  object-fit: contain;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+nav a, .dropbtn {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 7px 3px;
+}
+nav a:hover, .dropbtn:hover { color: var(--gold); }
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 215px;
+  box-shadow: 0 5px 15px #0002;
+  z-index: 10;
+  border-top: 3px solid var(--gold);
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  font-weight: normal;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content { display: block; }
+.register-link {
+  color: white;
+  background: var(--navy);
+  padding: 8px 13px;
+  border-radius: 3px;
+}
+.hero {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 65px 20px;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+.hero p {
+  max-width: 760px;
+  margin: auto;
+  color: #eee8dc;
+}
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 22px 70px;
+}
+.intro {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+h2 {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 27px;
+}
+.review-note {
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  padding: 22px;
+  margin: 30px auto;
+  max-width: 850px;
+}
+.review-placeholder {
+  border: 1px solid #e5ddcf;
+  padding: 30px;
+  text-align: center;
+  margin-top: 25px;
+  background: #fff;
+}
+.review-placeholder h3 {
+  color: var(--navy);
+  font-weight: 500;
+}
+.contact-section {
+  background: var(--cream);
+  text-align: center;
+  padding: 35px 22px;
+  margin-top: 45px;
+}
+.contact-button {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 11px 24px;
+  margin-top: 10px;
+}
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 13px;
+}
+footer a { color: #e5d5b5; text-decoration: none; }
+@media(max-width: 600px) {
+  .header-inner { justify-content: center; }
+  nav { gap: 8px; }
+  nav a, .dropbtn { font-size: 12px; }
+  .hero h1 { font-size: 29px; }
+  .dropdown-content { left: 0; }
+}
+</style>
+</head>
+<body>
 
+<header>
+  <div class="header-inner">
+    <a href="index.html">
+      <img src="logo.png" alt="Royal Bridges Real Estate" class="logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Properties ▾</button>
+        <div class="dropdown-content">
+          <a href="residential.html">Residential – Sale &amp; Rent</a>
+          <a href="commercial.html">Commercial – Sale &amp; Rent</a>
+          <a href="residential-plots.html">Residential Plots &amp; Land</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Communities ▾</button>
+        <div class="dropdown-content">
+          <a href="communties.html">Communities in Abu Dhabi</a>
+          <a href="communties.html">Communities in Dubai</a>
+          <a href="communties.html">Communities in Ras Al Khaimah</a>
+        </div>
+      </div>
+
+      <a href="short-stay.html">Short Stay</a>
+      <a href="relocation.html">Relocation</a>
+
+      <div class="dropdown">
+        <button class="dropbtn register-link">REGISTER ▾</button>
+        <div class="dropdown-content">
+          <a href="register.html#seminars">Seminars &amp; Webinars</a>
+          <a href="register.html#newsletter">Monthly Newsletter</a>
+          <a href="register.html#email-updates">Email Updates</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">About ▾</button>
+        <div class="dropdown-content">
+          <a href="about.html">About Royal Bridges</a>
+          <a href="careers.html">Careers</a>
+          <a href="external.agencies.html">External Agencies</a>
+          <a href="partners.html">Our Partners</a>
+          <a href="blog.html">Blog &amp; Articles</a>
+          <a href="reviews.html">Client Reviews</a>
+          <a href="other-services.html">Other Services</a>
+        </div>
+      </div>
+
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Client Reviews</h1>
+  <p>Trust is at the heart of everything we do. We value the people who choose Royal Bridges and the relationships we build along the way.</p>
+</section>
+
+<main>
+  <section class="intro">
+    <h2>Your Experience Matters</h2>
+    <p>Whether you have bought, sold, rented, invested, relocated or used one of our additional services, your feedback helps us continue improving the experience we provide.</p>
+  </section>
+
+  <section class="review-note">
+    <h2>Honest Feedback. Real Experiences.</h2>
+    <p>We believe client feedback should be genuine and transparent. This page will feature verified testimonials from clients who have chosen to share their experiences with Royal Bridges.</p>
+  </section>
+
+  <section class="review-placeholder">
+    <h3>Client Testimonials</h3>
+    <p>Our client testimonials will appear here as they are received and approved for publication.</p>
+    <p>We look forward to sharing the experiences of our clients with you.</p>
+  </section>
+
+  <section class="contact-section">
+    <h2>Have You Worked With Royal Bridges?</h2>
+    <p>We would love to hear about your experience. Please contact our team to share your feedback.</p>
+    <a class="contact-button" href="contact.html">Share Your Feedback</a>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Royal Bridges Real Estate. All rights reserved.</p>
+  <p>
+    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+    &nbsp; | &nbsp;
+    <a href="https://wa.me/971568611311">WhatsApp</a>
+  </p>
+</footer>
+
+</body>
+</html>
