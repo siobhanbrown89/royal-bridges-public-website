@@ -239,9 +239,13 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       column-gap: 22px;
-      row-gap: 12px;
-      align-items: end;
+      row-gap: 18px;
+      align-items: start;
     }
+    .form-field { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+    .form-field-wide { grid-column: 1 / -1; }
+    .form-submit { grid-column: 1 / -1; }
+    .form-submit button { margin: 0; }
     .enquiry-section label {
       display: block;
       color: var(--navy);
@@ -268,9 +272,7 @@
       margin: 0;
       justify-self: start;
     }
-    .enquiry-section label[for="requirements"],
-    .enquiry-section #requirements,
-    .enquiry-section .form-note { grid-column: 1 / -1; }
+    .enquiry-section .form-field-wide { grid-column: 1 / -1; }
     .form-note { color: var(--muted); font-size: 12px; margin: 0; }
 
     .cta {
@@ -307,10 +309,8 @@
       .logo img { width: 165px; }
       .feature-grid, .steps { grid-template-columns: 1fr; }
       .container { padding: 45px 17px; }
-      .enquiry-section { padding: 18px; grid-template-columns: 1fr; row-gap: 10px; }
-      .enquiry-section label[for="requirements"],
-      .enquiry-section #requirements,
-      .enquiry-section .form-note { grid-column: 1; }
+       .enquiry-section { padding: 18px; grid-template-columns: 1fr; row-gap: 13px; }
+      .enquiry-section .form-field-wide, .form-submit { grid-column: 1; }
       .hero { min-height: 270px; padding: 34px 17px; }
     }
   
@@ -540,66 +540,18 @@
         </div>
 
         <form class="enquiry-section" action="mailto:info@royalbridges.ae" method="post" enctype="text/plain">
-          <label for="name">Full Name</label>
-          <input id="name" name="Full Name" type="text" placeholder="Your full name" required>
-
-          <label for="email">Email Address</label>
-          <input id="email" name="Email Address" type="email" placeholder="Your email address" required>
-
-          <label for="phone">Contact Number / WhatsApp</label>
-          <input id="phone" name="Contact Number" type="tel" placeholder="+971..." required>
-
-          <label for="arrival">Preferred Arrival Date</label>
-          <input id="arrival" name="Arrival Date" type="date" required>
-
-          <label for="departure">Preferred Departure Date</label>
-          <input id="departure" name="Departure Date" type="date" required>
-
-          <label for="guests">Number of Guests</label>
-          <select id="guests" name="Number of Guests" required>
-            <option value="">Please select</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7 or more</option>
-          </select>
-
-          <label for="bedrooms">Accommodation Required</label>
-          <select id="bedrooms" name="Accommodation Required" required>
-            <option value="">Please select</option>
-            <option>Studio</option>
-            <option>1 Bedroom</option>
-            <option>2 Bedrooms</option>
-            <option>3 Bedrooms</option>
-            <option>4+ Bedrooms</option>
-            <option>Not sure yet</option>
-          </select>
-
-          <label for="area">Preferred Area</label>
-          <select id="area" name="Preferred Area">
-            <option value="">Please select</option>
-            <option>Yas Island</option>
-            <option>Saadiyat Island</option>
-            <option>Al Reem Island</option>
-            <option>Al Raha Beach</option>
-            <option>Other / Flexible</option>
-          </select>
-
-          <label for="budget">Approximate Budget</label>
-          <input id="budget" name="Approximate Budget" type="text" placeholder="Please state your preferred budget and currency">
-
-          <label for="requirements">Additional Requirements</label>
-          <textarea id="requirements" name="Additional Requirements" placeholder="Tell us about any other requirements, including parking, pets, accessibility or family needs."></textarea>
-
-          <button class="button dark" type="submit">Send Short Stay Enquiry</button>
-          <p class="form-note">
-            Submitting opens your device's email application. Your enquiry
-            is not stored on this website. Dates and accommodation are
-            subject to confirmation.
-          </p>
+          <div class="form-field"><label for="name">Full Name</label><input id="name" name="Full Name" type="text" placeholder="Your full name" required></div>
+          <div class="form-field"><label for="email">Email Address</label><input id="email" name="Email Address" type="email" placeholder="Your email address" required></div>
+          <div class="form-field"><label for="phone">Contact Number / WhatsApp</label><input id="phone" name="Contact Number" type="tel" placeholder="+971..." required></div>
+          <div class="form-field"><label for="arrival">Preferred Arrival Date</label><input id="arrival" name="Arrival Date" type="date" required></div>
+          <div class="form-field"><label for="departure">Preferred Departure Date</label><input id="departure" name="Departure Date" type="date" required></div>
+          <div class="form-field"><label for="guests">Number of Guests</label><select id="guests" name="Number of Guests" required><option value="">Please select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 or more</option></select></div>
+          <div class="form-field"><label for="bedrooms">Accommodation Required</label><select id="bedrooms" name="Accommodation Required" required><option value="">Please select</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>3 Bedrooms</option><option>4+ Bedrooms</option><option>Not sure yet</option></select></div>
+          <div class="form-field"><label for="area">Preferred Area</label><select id="area" name="Preferred Area"><option value="">Please select</option><option>Yas Island</option><option>Saadiyat Island</option><option>Al Reem Island</option><option>Al Raha Beach</option><option>Other / Flexible</option></select></div>
+          <div class="form-field"><label for="budget">Approximate Budget</label><input id="budget" name="Approximate Budget" type="text" placeholder="State your preferred budget and currency"></div>
+          <div class="form-field form-field-wide"><label for="requirements">Additional Requirements</label><textarea id="requirements" name="Additional Requirements" placeholder="Parking, pets, accessibility, family needs or anything else we should know."></textarea></div>
+          <div class="form-submit"><button class="button dark" type="submit">Send Short Stay Enquiry</button></div>
+          <p class="form-note form-field-wide">Submitting opens your device's email application. Your enquiry is not stored on this website. Dates and accommodation are subject to confirmation.</p>
         </form>
       </div>
     </section>
