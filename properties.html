@@ -117,7 +117,7 @@ footer a{color:#e5c995}
 <div class="search-grid">
 <div class="location-row">
 <div class="field"><label for="emirate">EMIRATE</label><select id="emirate" name="emirate" required><option value="">Select emirate</option><option>Abu Dhabi</option><option>Ras Al Khaimah</option><option>Dubai</option></select></div>
-<div class="field"><label for="location">COMMUNITY OR LOCATION</label><select id="location" name="location"><option value="">Any community / location</option><option>Waters Edge, Yas Island</option><option>Yas Golf Collection, Yas Island</option><option>Ansam, Yas Island</option><option>NOYA, Yas Island</option><option>NOYA Viva, Yas Island</option><option>NOYA 1, Yas Island</option><option>NOYA 2, Yas Island</option><option>NOYA Luma, Yas Island</option><option>Yas Acres, Yas Island</option><option>Other Abu Dhabi locations</option></select></div>
+<div class="field"><label for="location">COMMUNITY OR LOCATION</label><select id="location" name="location"><option value="">Any community / location</option><optgroup label="Abu Dhabi"><option>Yas Island</option><option>Waters Edge, Yas Island</option><option>Yas Golf Collection, Yas Island</option><option>Ansam, Yas Island</option><option>NOYA, Yas Island</option><option>NOYA Viva, Yas Island</option><option>NOYA 1, Yas Island</option><option>NOYA 2, Yas Island</option><option>NOYA Luma, Yas Island</option><option>Yas Acres, Yas Island</option><option>Saadiyat Island</option><option>Al Reem Island</option><option>Al Raha Beach</option><option>Hudayriyat Island</option><option>Masdar City</option><option>Other Abu Dhabi locations</option></optgroup><optgroup label="Dubai"><option>Downtown Dubai</option><option>Dubai Marina</option><option>Palm Jumeirah</option><option>Business Bay</option><option>Dubai Hills Estate</option><option>Jumeirah Village Circle (JVC)</option><option>Arabian Ranches</option><option>Dubai Creek Harbour</option><option>Other Dubai locations</option></optgroup><optgroup label="Ras Al Khaimah"><option>Al Marjan Island</option><option>Mina Al Arab</option><option>Al Hamra Village</option><option>Al Hamra Marina</option><option>RAK City</option><option>Other Ras Al Khaimah locations</option></optgroup></select></div>
 </div>
 <div class="field"><label for="category">I AM LOOKING TO</label><select id="category" name="category" required><option value="">Select a category</option><option>Rent</option><option>Buy</option><option>New Projects</option><option>Commercial Rent</option><option>Commercial Buy</option><option>Plots and Lands</option></select></div>
 <div class="field"><label for="type">PROPERTY TYPE</label><select id="type" name="type"><option value="">Any property type</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Duplex</option><option>Penthouse</option><option>Studio</option><option>Office</option><option>Retail / Shop</option><option>Warehouse</option><option>Commercial Building</option><option>Residential Plot</option><option>Commercial Plot</option><option>Land</option></select></div>
@@ -192,6 +192,17 @@ footer a{color:#e5c995}
  ];
  const grid=document.getElementById("listingGrid"), community=document.getElementById("inventoryCommunity"), purpose=document.getElementById("inventoryPurpose"), type=document.getElementById("inventoryType"), beds=document.getElementById("inventoryBeds"), count=document.getElementById("inventoryCount");
  const money=n=>"AED "+Number(n).toLocaleString("en-AE");
+ const params=new URLSearchParams(window.location.search);
+ const intentValue=params.get("intent");
+ if(intentValue)category.value=intentValue==="rent"?"Rent":intentValue==="offplan"?"New Projects":intentValue==="buy"?"Buy":intentValue;
+ if(params.get("emirate"))document.getElementById("emirate").value=params.get("emirate");
+ if(params.get("location"))document.getElementById("location").value=params.get("location");
+ if(params.get("type")&&params.get("type")!=="Any")document.getElementById("type").value=params.get("type");
+ if(intentValue==="offplan")status.value="Off-plan";
+ const budget=params.get("budget")||"";
+ if(budget&&budget!=="discuss"){const range=budget.split("-");if(range[0])document.getElementById("minPrice").value=range[0];if(range[1])document.getElementById("maxPrice").value=range[1];}
+ 
+ const minField=document.getElementById("minPrice"), maxField=document.getElementById("maxPrice");
  function bedroomRank(layout){
   if(layout==="Studio") return 0;
   const match=layout.match(/^(\d+)/);
@@ -201,7 +212,7 @@ footer a{color:#e5c995}
  }
  function render(){
   // Display a mixed selection of developments, ordered by bedroom layout.
-  const filtered=inventory.filter(x=>(!community.value||x[0]===community.value)&&(!type.value||x[1]===type.value)&&(!beds.value||x[2]===beds.value))
+  const filtered=inventory.filter(x=>(!community.value||x[0]===community.value)&&(!type.value||x[1]===type.value)&&(!beds.value||x[2]===beds.value)&&(!minField.value||((purpose.value==="rent"?x[4]:x[5])>=Number(minField.value)))&&(!maxField.value||((purpose.value==="rent"?x[4]:x[5])<=Number(maxField.value))))
    .sort((a,b)=>bedroomRank(a[2])-bedroomRank(b[2])||a[0].localeCompare(b[0]));
   count.textContent=filtered.length+" sample property options";
   if(!filtered.length){grid.innerHTML='<div class="inventory-empty">No sample options match those filters. Try another community or bedroom layout.</div>';return;}
@@ -212,7 +223,16 @@ footer a{color:#e5c995}
    return '<article class="sample-card"><div class="sample-photo" style="background-image:url('+x[6]+')"><span class="sample-tag">'+x[1]+'</span><span class="sample-community">'+x[0]+' · Yas Island</span></div><div class="sample-content"><h3>'+x[2]+' '+x[1]+'</h3><p class="sample-subtitle">'+x[7]+'</p><div class="sample-facts"><span>Approx. '+x[3].toLocaleString("en-AE")+' sq ft</span><span>Yas Island, Abu Dhabi</span></div><div class="sample-prices">'+rent+sale+'</div><a class="sample-cta" href="https://wa.me/971568611311?text='+msg+'">Enquire about this option →</a></div></article>';
   }).join("");
  }
- [community,purpose,type,beds].forEach(el=>el.addEventListener("change",render));render();
+ [community,purpose,type,beds,minField,maxField].forEach(el=>el.addEventListener("change",render));
+ if(params.get("location")){
+  const loc=params.get("location");
+  const match=loc==="Yas Island"?"":loc.replace(/, Yas Island$/,"");
+  if([...community.options].some(option=>option.value===match))community.value=match;
+ }
+ if(intentValue==="rent")purpose.value="rent";else if(intentValue==="buy")purpose.value="sale";
+ if(params.get("type")&&[...type.options].some(option=>option.value===params.get("type")))type.value=params.get("type");
+ render();
+ if(params.has("intent"))document.getElementById("featured-inventory").scrollIntoView({behavior:"smooth",block:"start"});
  category.addEventListener("change",function(){if(this.value==="New Projects")status.value="Off-plan";else if(this.value==="Rent"||this.value==="Buy"||this.value==="Commercial Rent"||this.value==="Commercial Buy"||this.value==="Plots and Lands")status.value="";});
  form.addEventListener("submit",function(event){event.preventDefault();const values=[["Emirate",document.getElementById("emirate").value],["Community / location",document.getElementById("location").value],["Search category",category.value],["Property type",document.getElementById("type").value],["Bedrooms",document.getElementById("bedrooms").value],["Minimum price (AED)",document.getElementById("minPrice").value],["Maximum price (AED)",document.getElementById("maxPrice").value],["Status",status.value],["Furnishing",document.getElementById("furnishing").value]].filter(item=>item[1]!=="");if(!document.getElementById("emirate").value||!category.value){alert("Please select an emirate and what you are looking to do.");return;}const message="Hello Royal Bridges, I would like help finding a property.\n\n"+values.map(item=>item[0]+": "+item[1]).join("\n")+"\n\nPlease let me know about matching properties.";window.location.href="https://wa.me/971568611311?text="+encodeURIComponent(message);});
 })();
