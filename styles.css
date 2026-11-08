@@ -641,10 +641,10 @@ nav button:hover {
 
 @keyframes partner-scroll {
   from {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
