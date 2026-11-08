@@ -6,6 +6,30 @@
   <meta name="description" content="Read genuine client feedback and share your experience with Royal Bridges Real Estate.">
   <title>Client Reviews | Royal Bridges Real Estate</title>
   <link rel="stylesheet" href="styles.css">
+<style>
+/* Reviews page: keep the brand mark proportionate without changing the banner. */
+.brand-inner > a .logo{width:160px;max-width:160px;max-height:58px;object-fit:contain}
+.review-intro{max-width:850px;margin:0 auto 28px;text-align:center}
+.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:28px 0}
+.review-card{background:#fff;border:1px solid #e6e0d5;border-radius:5px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.045)}
+.review-card .sample-label{display:inline-block;color:#987744;background:#f6f1e8;padding:4px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.review-stars{color:#b99a61;letter-spacing:3px;font-size:20px;margin-bottom:10px}
+.review-card h3{margin-bottom:8px}
+.review-card p{color:#707070;font-size:14px}
+.review-form-wrap{max-width:780px;margin:35px auto 0;background:#f6f1e8;padding:28px;border-radius:5px}
+.review-form-wrap h2{text-align:center;margin-bottom:8px}
+.review-form-wrap>p{text-align:center;color:#707070}
+.review-form label{display:block;color:#172b49;font-weight:600;font-size:13px;margin:12px 0 6px}
+.review-form input,.review-form select,.review-form textarea{width:100%;padding:12px;border:1px solid #d8d4cc;border-radius:3px;background:#fff;margin:0 0 8px}
+.rating-options{display:flex;gap:7px;align-items:center;margin:4px 0 8px}
+.rating-options label{margin:0;cursor:pointer}
+.rating-options input{position:absolute;opacity:0;width:1px;height:1px}
+.rating-options span{font-size:34px;line-height:1;color:#c8c8c8;cursor:pointer;transition:color .15s}
+.rating-options label:focus-within span{outline:2px solid #987744;outline-offset:3px}
+.rating-help{font-size:12px;color:#707070;margin:4px 0 14px}
+.review-note{font-size:12px;color:#707070;margin-top:12px}
+@media(max-width:750px){.review-grid{grid-template-columns:1fr}.review-form-wrap{padding:20px}}
+</style>
 </head>
 
 <body>
@@ -86,56 +110,84 @@
     <section class="hero">
       <div class="section-inner">
         <h1>Client Reviews</h1>
-        <p>
-          Trust is at the heart of everything we do. We value the people
-          who choose Royal Bridges and the relationships we build along the way.
-        </p>
+        <p>Trust is at the heart of everything we do. We value the people who choose Royal Bridges and the relationships we build along the way.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="section-inner">
-
-        <div class="section-heading">
+        <div class="review-intro">
           <h2>Your Experience Matters</h2>
-          <p>
-            Whether you have bought, sold, rented, invested, relocated or used
-            one of our additional services, your feedback helps us continue
-            improving the experience we provide.
-          </p>
+          <p>Whether you have bought, sold, rented, invested, relocated or used one of our additional services, your feedback helps us continue improving the experience we provide.</p>
+          <p><strong>Transparent feedback matters to us.</strong> We only intend to publish genuine client reviews with the client's permission.</p>
         </div>
 
-        <div class="cream-section">
-          <h2>Honest Feedback. Real Experiences.</h2>
-          <p>
-            We believe client feedback should be genuine and transparent.
-            This page will feature verified testimonials from clients who
-            have chosen to share their experiences with Royal Bridges.
-          </p>
+        <h2 style="text-align:center">Client Review Examples</h2>
+        <p style="text-align:center;color:#707070;font-size:13px">These are sample templates to demonstrate how reviews may appear. They are not genuine client testimonials and should be replaced with approved feedback before being presented as client experiences.</p>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <span class="sample-label">Sample template</span>
+            <div class="review-stars" aria-label="Example five-star rating">★★★★★</div>
+            <h3>Buying a Property</h3>
+            <p>“The team kept me informed throughout the property search and explained each step clearly. The support made the process feel much easier to manage.”</p>
+            <strong>— Example buyer review</strong>
+          </article>
+          <article class="review-card">
+            <span class="sample-label">Sample template</span>
+            <div class="review-stars" aria-label="Example five-star rating">★★★★★</div>
+            <h3>Relocation Support</h3>
+            <p>“Having help with the practical arrangements made settling into Abu Dhabi less stressful. Communication was helpful and the guidance was easy to follow.”</p>
+            <strong>— Example relocation review</strong>
+          </article>
+          <article class="review-card">
+            <span class="sample-label">Sample template</span>
+            <div class="review-stars" aria-label="Example five-star rating">★★★★★</div>
+            <h3>Rental Assistance</h3>
+            <p>“The team listened to what I needed, helped me understand the available options and guided me through the rental process.”</p>
+            <strong>— Example tenant review</strong>
+          </article>
         </div>
 
-        <div class="card">
-          <h3>Client Testimonials</h3>
-          <p>
-            Our client testimonials will appear here as they are received
-            and approved for publication.
-          </p>
-          <p>
-            We look forward to sharing the experiences of our clients with you.
-          </p>
+        <div class="review-form-wrap" id="share-review">
+          <h2>Share Your Experience</h2>
+          <p>Choose a star rating from 1 to 5 and tell us about your experience with Royal Bridges.</p>
+          <form class="review-form" id="clientReviewForm">
+            <label for="reviewName">Your name (optional)</label>
+            <input type="text" id="reviewName" name="name" placeholder="Your name">
+
+            <label for="reviewService">Which service did you use?</label>
+            <select id="reviewService" name="service" required>
+              <option value="">Please select</option>
+              <option>Buying a property</option>
+              <option>Selling a property</option>
+              <option>Renting a property</option>
+              <option>Off-plan property</option>
+              <option>Relocation support</option>
+              <option>Property management</option>
+              <option>Cleaning or other services</option>
+              <option>Other</option>
+            </select>
+
+            <fieldset style="border:0;padding:0;margin:12px 0">
+              <legend style="font-weight:600;color:#172b49;font-size:13px;margin-bottom:8px">Your rating *</legend>
+              <div class="rating-options" role="radiogroup" aria-label="Select a rating from one to five stars">
+                <label title="1 star"><input type="radio" name="rating" value="1" required><span aria-hidden="true">★</span></label>
+                <label title="2 stars"><input type="radio" name="rating" value="2"><span aria-hidden="true">★</span></label>
+                <label title="3 stars"><input type="radio" name="rating" value="3"><span aria-hidden="true">★</span></label>
+                <label title="4 stars"><input type="radio" name="rating" value="4"><span aria-hidden="true">★</span></label>
+                <label title="5 stars"><input type="radio" name="rating" value="5"><span aria-hidden="true">★</span></label>
+              </div>
+              <p class="rating-help" id="ratingHelp" aria-live="polite">Select between 1 and 5 stars.</p>
+            </fieldset>
+
+            <label for="reviewText">Your review *</label>
+            <textarea id="reviewText" name="review" required placeholder="Tell us about your experience..." rows="5"></textarea>
+
+            <button class="button" type="submit">Send Your Review</button>
+            <p class="review-note">Selecting Send Your Review will open an email draft addressed to Royal Bridges. Your review will not be published automatically; it will be checked and permission will be requested before publication.</p>
+          </form>
         </div>
-
-      </div>
-    </section>
-
-    <section class="cream-section">
-      <div class="section-inner">
-        <h2>Have You Worked With Royal Bridges?</h2>
-        <p>
-          We would love to hear about your experience. Please contact our team
-          to share your feedback.
-        </p>
-        <a class="button" href="contact.html">Share Your Feedback</a>
       </div>
     </section>
 
@@ -152,5 +204,35 @@
     </div>
   </footer>
 
+<script>
+(function(){
+  const form=document.getElementById('clientReviewForm');
+  const ratingInputs=form.querySelectorAll('input[name="rating"]');
+  const ratingHelp=document.getElementById('ratingHelp');
+  function refreshStars(){
+    const selected=form.querySelector('input[name="rating"]:checked');
+    const rating=selected?Number(selected.value):0;
+    form.querySelectorAll('.rating-options label').forEach((label,index)=>{
+      const starNumber=index+1;
+      label.querySelector('span').style.color=starNumber<=rating?'#b99a61':'#c8c8c8';
+      label.setAttribute('aria-label',starNumber+' '+(starNumber===1?'star':'stars'));
+    });
+    ratingHelp.textContent=rating?rating+' out of 5 stars selected.':'Select between 1 and 5 stars.';
+  }
+  ratingInputs.forEach(input=>input.addEventListener('change',refreshStars));
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    const data=new FormData(form);
+    const subject=encodeURIComponent('Royal Bridges Client Review - '+data.get('service'));
+    const body=encodeURIComponent(
+      'Name: '+(data.get('name')||'Not provided')+'\n'+
+      'Service: '+data.get('service')+'\n'+
+      'Rating: '+data.get('rating')+'/5 stars\n\n'+
+      'Review:\n'+data.get('review')
+    );
+    window.location.href='mailto:info@royalbridges.ae?subject='+subject+'&body='+body;
+  });
+})();
+</script>
 </body>
 </html>
