@@ -120,7 +120,7 @@ footer a{color:#e5c995}
 <div class="field"><label for="location">COMMUNITY OR LOCATION</label><select id="location" name="location"><option value="">Any community / location</option><optgroup label="Abu Dhabi"><option>Yas Island</option><option>Waters Edge, Yas Island</option><option>Yas Golf Collection, Yas Island</option><option>Ansam, Yas Island</option><option>NOYA, Yas Island</option><option>NOYA Viva, Yas Island</option><option>NOYA 1, Yas Island</option><option>NOYA 2, Yas Island</option><option>NOYA Luma, Yas Island</option><option>Yas Acres, Yas Island</option><option>Saadiyat Island</option><option>Al Reem Island</option><option>Al Raha Beach</option><option>Hudayriyat Island</option><option>Masdar City</option><option>Other Abu Dhabi locations</option></optgroup><optgroup label="Dubai"><option>Downtown Dubai</option><option>Dubai Marina</option><option>Palm Jumeirah</option><option>Business Bay</option><option>Dubai Hills Estate</option><option>Jumeirah Village Circle (JVC)</option><option>Arabian Ranches</option><option>Dubai Creek Harbour</option><option>Other Dubai locations</option></optgroup><optgroup label="Ras Al Khaimah"><option>Al Marjan Island</option><option>Mina Al Arab</option><option>Al Hamra Village</option><option>Al Hamra Marina</option><option>RAK City</option><option>Other Ras Al Khaimah locations</option></optgroup></select></div>
 </div>
 <div class="field"><label for="category">I AM LOOKING TO</label><select id="category" name="category" required><option value="">Select a category</option><option>Rent</option><option>Buy</option><option>New Projects</option><option>Commercial Rent</option><option>Commercial Buy</option><option>Plots and Lands</option></select></div>
-<div class="field"><label for="type">PROPERTY TYPE</label><select id="type" name="type"><option value="">Any property type</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Duplex</option><option>Penthouse</option><option>Studio</option><option>Office</option><option>Retail / Shop</option><option>Warehouse</option><option>Commercial Building</option><option>Residential Plot</option><option>Commercial Plot</option><option>Land</option></select></div>
+<div class="field"><label for="type">PROPERTY TYPE</label><select id="type" name="type"><option value="">Any property type</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Duplex</option><option>Penthouse</option><option>Studio</option><option>Office</option><option>Retail / Shop</option><option>Warehouse</option><option>Commercial Building</option><option>Commercial</option><option>Residential Plot</option><option>Commercial Plot</option><option>Land</option></select></div>
 <div class="field"><label for="bedrooms">NUMBER OF BEDROOMS</label><select id="bedrooms" name="bedrooms"><option value="">Any</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedrooms</option><option>2 Bedrooms + Maid</option><option>2 Bedrooms + Study</option><option>3 Bedrooms</option><option>3 Bedrooms + Maid</option><option>4 Bedrooms</option><option>5 Bedrooms</option><option>6+ Bedrooms</option></select></div>
 <div class="field"><label>PRICE RANGE (AED)</label><div class="price-row"><input id="minPrice" name="minPrice" type="number" min="0" placeholder="Minimum" aria-label="Minimum price in AED"><input id="maxPrice" name="maxPrice" type="number" min="0" placeholder="Maximum" aria-label="Maximum price in AED"></div></div>
 <div class="field"><label for="status">PROPERTY STATUS</label><select id="status" name="status"><option value="">Off-plan or ready</option><option>Off-plan</option><option>Ready</option></select></div>
@@ -224,9 +224,10 @@ footer a{color:#e5c995}
   }).join("");
  }
  [community,purpose,type,beds,minField,maxField].forEach(el=>el.addEventListener("change",render));
- if(params.get("location")){
-  const loc=params.get("location");
-  const match=loc==="Yas Island"?"":loc.replace(/, Yas Island$/,"");
+ if(params.get("location")||params.get("emirate")){
+  const loc=params.get("location")||"";
+  let match=loc==="Yas Island"?"":loc.replace(/, Yas Island$/,"");
+  if(!match&&params.get("emirate")&&params.get("emirate")!=="Abu Dhabi")match=params.get("emirate");
   if(match&&![...community.options].some(option=>option.value===match)){
    const option=document.createElement("option");option.value=match;option.textContent=match;community.appendChild(option);
   }
