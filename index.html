@@ -17,7 +17,7 @@ a{text-decoration:none;color:inherit}
 .topbar a{color:#e6c995}
 .brandbar{background:#f2eadb;border-bottom:1px solid #e1d4bd;padding:3px 0}
 .brand-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:66px}
-.brand img{width:220px;height:auto;max-height:62px;object-fit:contain;display:block}
+.brand img{height:150px;width:auto;max-width:min(390px,90vw);max-height:none;object-fit:contain;display:block}
 .brand-contact{display:flex;align-items:center;justify-content:flex-end;gap:8px 20px;flex-wrap:wrap;font-size:11px;color:var(--navy)}
 .brand-contact a{color:#8b6a3e;font-weight:bold}
 .navbar{background:var(--navy);color:white;position:sticky;top:0;z-index:50}
@@ -141,7 +141,7 @@ footer a{color:#e3c18b}
 }
 @media(max-width:600px){
  .brand-inner{flex-direction:column;justify-content:center;gap:5px;padding:5px 0}
- .brand img{width:200px;max-height:55px}
+ .brand img{height:150px;max-width:92vw;max-height:none}
  .brand-contact{justify-content:center;text-align:center;gap:4px 12px;font-size:10px}
  .search-grid{grid-template-columns:1fr 1fr}
  .hero{min-height:270px}
@@ -154,6 +154,7 @@ footer a{color:#e3c18b}
 </style>
 
 <link rel="stylesheet" href="spacing.css">
+<link rel="stylesheet" href="site-header.css">
 </head>
 <body>
 
