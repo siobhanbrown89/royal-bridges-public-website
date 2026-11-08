@@ -1,0 +1,20 @@
+/* Royal Bridges shared site header — used across all public pages */
+.rb-site-topbar{background:#142b45;color:#fff;text-align:center;padding:8px 15px;font:13px/1.45 Arial,Helvetica,sans-serif;display:flex;justify-content:center;align-items:center;gap:6px 16px;flex-wrap:wrap}
+.rb-site-topbar a{color:#e7d6b2;text-decoration:none;white-space:nowrap}
+.rb-site-header{background:#f6f1e7;border-bottom:1px solid #e5ddcf;position:sticky;top:0;z-index:1000;width:100%;font-family:Arial,Helvetica,sans-serif}
+.rb-header-inner{max-width:1250px;margin:auto;min-height:86px;padding:9px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.rb-brand{display:flex;align-items:center;flex:0 0 auto}
+.rb-brand img{display:block;width:190px;max-width:100%;max-height:68px;object-fit:contain}
+.rb-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 17px;font-size:13px;font-weight:600;color:#142b45}
+.rb-nav a,.rb-nav button{font:inherit;color:inherit;text-decoration:none;padding:9px 0;border:0;background:none;cursor:pointer;white-space:nowrap}
+.rb-nav a:hover,.rb-nav button:hover,.rb-nav a:focus-visible,.rb-nav button:focus-visible{color:#b69a62}
+.rb-nav .rb-dropdown{position:relative;display:inline-flex;align-items:center}
+.rb-nav .rb-dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:235px;max-height:75vh;overflow-y:auto;background:#fff;box-shadow:0 8px 22px #142b4520;border-top:3px solid #b69a62;padding:8px 0;z-index:1002}
+.rb-nav .rb-dropdown:hover>.rb-dropdown-menu,.rb-nav .rb-dropdown:focus-within>.rb-dropdown-menu{display:block}
+.rb-nav .rb-dropdown-menu a{display:block;padding:9px 16px;white-space:normal;font-weight:500}
+.rb-nav .rb-dropdown-menu a:hover{background:#f6f1e7;color:#142b45}
+.rb-nav .rb-register{background:#142b45;color:#fff!important;padding:10px 15px;border-radius:3px}
+.rb-nav .rb-register:hover{background:#b69a62;color:#fff!important}
+.rb-nav .rb-sub-label{padding:9px 16px 4px;color:#b69a62;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+@media(max-width:1050px){.rb-header-inner{flex-direction:column;gap:7px;padding:10px 16px}.rb-nav{justify-content:center;gap:7px 14px}}
+@media(max-width:600px){.rb-site-topbar{font-size:11px;gap:4px 9px;padding:7px 8px}.rb-header-inner{padding:9px 12px}.rb-brand img{width:165px;max-height:58px}.rb-nav{font-size:12px;gap:4px 11px}.rb-nav a,.rb-nav button{padding:7px 0}.rb-nav .rb-register{padding:8px 10px}.rb-nav .rb-dropdown-menu{min-width:210px;left:50%;transform:translateX(-50%)}}
