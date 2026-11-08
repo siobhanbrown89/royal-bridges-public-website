@@ -17,6 +17,13 @@ nav a:hover,.dropbtn:hover{color:var(--gold)}
 .dropdown{position:relative;display:inline-block}
 .dropdown-content{display:none;position:absolute;background:white;min-width:215px;box-shadow:0 5px 15px #0002;z-index:10;border-top:3px solid var(--gold)}
 .dropdown-content a{display:block;padding:10px 14px;font-weight:normal}
+.nested-dropdown{position:relative}
+.nested-dropdown>a{display:block;padding:10px 14px;color:var(--navy);font-size:13px}
+.nested-menu{display:none;position:absolute;left:100%;top:0;min-width:225px;background:white;box-shadow:0 8px 22px #0002;border-top:3px solid var(--gold);z-index:1002}
+.nested-menu a{display:block;padding:10px 14px;color:var(--navy);font-size:13px}
+.nested-dropdown:hover .nested-menu,.nested-dropdown:focus-within .nested-menu{display:block}
+@media(max-width:760px){.nested-menu{position:static;box-shadow:none;border-top:1px solid var(--gold);padding-left:14px}.nested-dropdown:hover .nested-menu,.nested-dropdown:focus-within .nested-menu{display:block}}
+
 .dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}
 .register-link{color:white;background:var(--navy);padding:8px 13px;border-radius:3px}
 .hero{background:var(--navy);color:white;text-align:center;padding:65px 20px}
@@ -31,7 +38,7 @@ main{max-width:1200px;margin:auto;padding:45px 22px 70px}
 .blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .blog-card{border:1px solid #e7e0d4;background:white;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
 .blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px #00000012}
-.blog-image{height:175px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:white;background:linear-gradient(135deg,#142b43,#526a7c);font-size:18px;font-weight:bold}
+.blog-image{height:175px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:white;background:linear-gradient(135deg,#142b43,#526a7c);background-size:cover;background-position:center;font-size:18px;font-weight:bold;text-shadow:0 2px 5px #000}
 .blog-image.gold{background:linear-gradient(135deg,#8d754e,#c7ae7b)}
 .blog-image.sand{background:linear-gradient(135deg,#9b8a70,#d4c5a7)}
 .blog-image.blue{background:linear-gradient(135deg,#294b68,#7894a8)}
@@ -76,18 +83,19 @@ footer a{color:#e5d5b5;text-decoration:none}
 </div>
 <a href="short-stay.html">Short Stay</a>
 <a href="relocation.html">Relocation</a>
+
 <div class="dropdown">
-<button class="dropbtn register-link">REGISTER ▾</button>
+<button class="dropbtn">About ▾</button>
 <div class="dropdown-content">
+<a href="about.html">About Royal Bridges</a>
+<div class="dropdown nested-dropdown">
+<a class="dropbtn" href="register.html">Register ▸</a>
+<div class="nested-menu">
 <a href="register.html#seminars">Seminars &amp; Online Webinars</a>
 <a href="register.html#newsletter">Monthly Market Newsletter</a>
 <a href="register.html#email-updates">Email Updates</a>
 </div>
 </div>
-<div class="dropdown">
-<button class="dropbtn">About ▾</button>
-<div class="dropdown-content">
-<a href="about.html">About Royal Bridges</a>
 <a href="careers.html">Careers</a>
 <a href="external-agencies.html">External Agencies</a>
 <a href="partners.html">Our Partners</a>
@@ -202,12 +210,12 @@ footer a{color:#e5d5b5;text-decoration:none}
 </article>
 
 <article class="blog-card">
-<div class="blog-image gold">RELOCATION TO THE UAE</div>
+<div class="blog-image blue" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80');background-size:cover;background-position:center">MORTGAGE ELIGIBILITY</div>
 <div class="blog-content">
-<span class="category">Relocation</span>
-<h3>Ship My Furniture or Buy New After Relocating to the UAE?</h3>
-<p>Compare shipping, storage and buying new furniture when planning your move to the Emirates.</p>
-<a class="read-more" href="blog-ship-furniture-or-buy-new.html">Read Article →</a>
+<span class="category">Mortgages &amp; Finance</span>
+<h3>Am I Eligible for a Mortgage?</h3>
+<p>Understand some of the factors lenders may consider when assessing a UAE mortgage application.</p>
+<a class="read-more" href="blog-mortgage-eligibility.html">Read Article →</a>
 </div>
 </article>
 
@@ -250,6 +258,14 @@ footer a{color:#e5d5b5;text-decoration:none}
 <a class="read-more" href="blog-uae-culture-customs.html">Read Article →</a>
 </div>
 </article>
+
+
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80')">ESCROW ACCOUNTS</div><div class="blog-content"><span class="category">Off-Plan Property</span><h3>What Is an Escrow Account?</h3><p>How project escrow accounts work, why they matter and what buyers should verify before paying.</p><a class="read-more" href="blog-what-is-escrow-account.html">Read Article →</a></div></article>
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80')">OFF-PLAN PROJECT DELAYS</div><div class="blog-content"><span class="category">Off-Plan Property</span><h3>What If My Off-Plan Property Is Delayed?</h3><p>Understand the documents to check, the questions to ask and the possible routes available to buyers.</p><a class="read-more" href="blog-off-plan-delay.html">Read Article →</a></div></article>
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1000&q=80')">REAL INVESTMENT RETURNS</div><div class="blog-content"><span class="category">Property Investment</span><h3>How Do I Calculate My Real ROI?</h3><p>Include owner payments, mortgage interest, service charges, vacancy, maintenance and transaction costs.</p><a class="read-more" href="blog-real-property-roi.html">Read Article →</a></div></article>
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80')">OFF-PLAN AFFORDABILITY</div><div class="blog-content"><span class="category">Off-Plan &amp; Finance</span><h3>Can I Afford an Off-Plan Investment?</h3><p>Compare payment-plan timing, cash flow, location and total financial commitment before choosing.</p><a class="read-more" href="blog-afford-off-plan-investment.html">Read Article →</a></div></article>
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80')">OFF-PLAN RESALE</div><div class="blog-content"><span class="category">Off-Plan Investment</span><h3>How Quickly Can I Flip an Off-Plan Property?</h3><p>Understand assignment restrictions, developer NOCs, payment thresholds, fees and resale demand.</p><a class="read-more" href="blog-flip-off-plan-property.html">Read Article →</a></div></article>
+<article class="blog-card"><div class="blog-image" style="background-image:linear-gradient(#142b4355,#142b4380),url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=80')">UAE MARKET OUTLOOK</div><div class="blog-content"><span class="category">Market Trends</span><h3>UAE Property: The Last Three Years and the Next Three</h3><p>A look back at 2023–2025 and the factors likely to shape the market through 2029.</p><a class="read-more" href="blog-uae-property-trends-2023-2029.html">Read Article →</a></div></article>
 
 </section>
 
