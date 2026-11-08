@@ -1,78 +1,982 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Contact Royal Bridges Real Estate in Abu Dhabi for property enquiries and listings."><title>Contact Us | Royal Bridges Real Estate</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="brandbar">
-  <a class="brand" href="index.html" aria-label="Royal Bridges Real Estate home"><img src="logo.png" alt="Royal Bridges Real Estate logo"></a>
-  <p class="brand-tagline">Bridging The Journey to Your New Home</p>
-  <a class="register-top" href="contact.html">⌂ &nbsp; REGISTER YOUR PROPERTY</a>
-</header>
-<nav class="mainnav" aria-label="Main navigation">
-  <a href="index.html">Home</a>
-  <div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true">Properties</button><div class="dropdown-menu"><a href="properties-for-sale.html">Properties for Sale</a><a href="properties-for-rent.html">Properties for Rent</a><a href="off-plan-resales.html">Off-Plan Resales</a></div></div>
-<a href="off-plan.html">Off Plan</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a>
-</nav>
-<main>
-<section class="page-hero"><div class="eyebrow">Let's Talk Property</div><h1>Contact Royal Bridges</h1><p>We are here to help with your property enquiry in Abu Dhabi.</p></section><section class="contact"><div class="content-narrow"><h2>How Can We Help?</h2><p>Speak with our team about buying, selling, renting, listing your property or exploring off-plan opportunities.</p><div class="contact-details"><span><strong>WhatsApp:</strong> <a href="https://wa.me/971568611311">+971 56 861 1311</a></span><span><strong>Location:</strong> Abu Dhabi, United Arab Emirates</span></div><p><strong>For careers enquiries:</strong> <a href="mailto:careers@royalbridges.ae?subject=Careers%20Enquiry">careers@royalbridges.ae</a></p><a class="button" href="https://wa.me/971568611311?text=Hello%20Royal%20Bridges%2C%20I%20would%20like%20to%20make%20a%20property%20enquiry." target="_blank" rel="noopener">CONTACT US ON WHATSAPP</a><div class="callout"><h2>Register Your Property</h2><p>Looking to sell, rent or list an off-plan resale? Message us with a few details and our team will get back to you.</p><a class="button" href="https://wa.me/971568611311?text=I%20would%20like%20to%20register%20my%20property%20with%20Royal%20Bridges." target="_blank" rel="noopener">REGISTER YOUR PROPERTY</a></div></div></section>
-</main>
-<footer><p><strong>ROYAL BRIDGES REAL ESTATE</strong></p><p>Yas Island, Abu Dhabi, United Arab Emirates</p><p>WhatsApp: <a href="https://wa.me/971568611311">+971 56 861 1311</a></p><p>© 2026 Royal Bridges Real Estate. All rights reserved.</p><p class="image-credit">Hero photograph: Vandan Patel, “Sunset at Dubai Creek Harbor”, Unsplash Licence. <a href="https://unsplash.com/photos/a-view-of-a-city-skyline-from-across-a-body-of-water-cjijfGQqQlQ" target="_blank" rel="noopener">View photograph</a>.</p></footer>
-</body></html>
-/* Navigation Dropdown Fix */
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #1a2b4c;
-  padding: 15px 30px;
+/* =========================================================
+   ROYAL BRIDGES REAL ESTATE
+   Main Website Stylesheet
+   ========================================================= */
+
+/* 1. GLOBAL SETTINGS */
+
+:root {
+  --navy: #172b49;
+  --navy-light: #243d60;
+  --cream: #f6f1e8;
+  --gold: #b99a61;
+  --gold-dark: #987744;
+  --text: #333333;
+  --muted: #707070;
+  --white: #ffffff;
+  --border: #e6e0d5;
+  --light: #faf9f6;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-nav a, .dropbtn {
-  color: #ffffff;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--gold-dark);
   text-decoration: none;
-  font-weight: 500;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--navy);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: 0 auto;
+}
+
+.content-narrow {
+  width: min(850px, 92%);
+  margin: 0 auto;
+}
+
+section {
+  padding: 65px 0;
+}
+
+.eyebrow {
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* 2. BRAND BANNER AND LOGO */
+
+.brandbar {
+  background: var(--cream);
+  padding: 12px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 100px;
+}
+
+.brand-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand,
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand img,
+.logo img {
+  width: auto;
+  max-width: 230px;
+  max-height: 82px;
+  object-fit: contain;
+}
+
+.brand-tagline {
+  color: var(--navy);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+.brand-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 18px;
+  font-size: 13px;
+}
+
+.brand-contact a {
+  color: var(--navy);
+}
+
+.register-top {
+  background: var(--gold);
+  color: var(--white);
+  padding: 10px 17px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+}
+
+.register-top:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* 3. NAVIGATION */
+
+.navbar,
+.mainnav,
+nav {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-inner {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 55px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+}
+
+.navbar a,
+.mainnav a,
+.mainnav button,
+nav a,
+nav button {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar a,
+.mainnav a,
+nav a {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.navbar a:hover,
+.mainnav a:hover,
+.mainnav button:hover,
+nav a:hover,
+nav button:hover {
+  color: #e3c58f;
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
+.dropbtn {
+  background: transparent;
+  color: var(--white);
+  border: 0;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dropdown-menu,
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-  z-index: 1000;
+  top: 100%;
+  left: 0;
+  min-width: 225px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+  z-index: 2000;
+  padding: 7px 0;
 }
 
+.dropdown-menu a,
 .dropdown-content a {
-  color: #333333;
-  padding: 12px 16px;
   display: block;
+  width: 100%;
+  padding: 10px 16px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: normal;
 }
 
+.dropdown-menu a:hover,
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background: var(--cream);
+  color: var(--gold-dark);
 }
 
-.dropdown:hover .dropdown-content {
+/* Supports both old and new dropdown class names. */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
   display: block;
 }
 
-/* Card & Area Layout Grids */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
+.mobile-toggle {
+  display: none;
 }
 
-.card {
-  border: 1px solid #e2e8f0;
+/* 4. HERO BANNERS */
+
+.hero,
+.page-hero {
+  position: relative;
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  width: min(850px, 95%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1,
+.page-hero h1 {
+  color: var(--white);
+  font-size: clamp(30px, 5vw, 48px);
+  margin-bottom: 15px;
+}
+
+.hero p,
+.page-hero p {
+  color: var(--white);
+  font-size: 16px;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.hero .eyebrow,
+.page-hero .eyebrow {
+  color: #e3c58f;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* 5. BUTTONS AND LINKS */
+
+.button,
+.btn,
+.btn-gold,
+.gold-button,
+.button-primary,
+.contact-button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  padding: 12px 23px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.button:hover,
+.btn:hover,
+.btn-gold:hover,
+.gold-button:hover,
+.button-primary:hover,
+.contact-button:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.btn-outline,
+.btn-dark-outline,
+.outline-button {
+  display: inline-block;
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  border-radius: 3px;
+  padding: 11px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-outline:hover,
+.btn-dark-outline:hover,
+.outline-button:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+/* 6. GENERAL CONTENT SECTIONS */
+
+.cream-section {
+  background: var(--cream);
+}
+
+.dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.dark h2,
+.dark h3,
+.dark p {
+  color: var(--white);
+}
+
+.intro {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.intro p {
+  color: var(--muted);
+}
+
+.gold-line {
+  width: 65px;
+  height: 3px;
+  background: var(--gold);
+  margin: 18px auto;
+}
+
+.cta {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta h2,
+.cta h3,
+.cta p {
+  color: var(--white);
+}
+
+.callout {
+  background: var(--cream);
+  padding: 25px;
+  margin-top: 30px;
+  border-left: 4px solid var(--gold);
+}
+
+/* 7. CARD GRIDS */
+
+.cards,
+.card-grid,
+.category-grid,
+.service-grid,
+.values-grid,
+.blog-grid,
+.register-grid,
+.feature-grid,
+.resources,
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.card,
+.category-card,
+.service-card,
+.value-card,
+.blog-card,
+.register-card,
+.feature,
+.resource,
+.partner-card,
+.listing-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.045);
+}
+
+.card,
+.service-card,
+.value-card,
+.register-card,
+.feature,
+.resource,
+.partner-card {
   padding: 24px;
-  border-radius: 8px;
-  background-color: #ffffff;
+}
+
+.card h3,
+.category-card h3,
+.service-card h3,
+.value-card h3,
+.blog-card h3,
+.register-card h3,
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+.card p,
+.category-card p,
+.service-card p,
+.value-card p,
+.register-card p {
+  color: var(--muted);
+}
+
+.category-image,
+.card-image,
+.listing-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.category-content,
+.card-body {
+  padding: 22px;
+}
+
+.category-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.two-column,
+.about-layout,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  align-items: start;
+}
+
+/* 8. PROPERTY LISTINGS */
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-photo {
+  height: 230px;
+}
+
+.listing-info {
+  padding: 20px;
+}
+
+.listing-info h3 {
+  margin-bottom: 8px;
+}
+
+.listing-price {
+  color: var(--gold-dark);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.property-search {
+  background: var(--cream);
+  padding: 25px;
+  border-radius: 5px;
+  margin: 25px auto;
+}
+
+.property-search form,
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.search-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* 9. SLIDERS AND CAROUSELS */
+
+.slider-window,
+.partner-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track,
+.partner-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+}
+
+.service-slide {
+  flex: 0 0 280px;
+}
+
+.partner-card {
+  flex: 0 0 230px;
+  text-align: center;
+}
+
+.partner-track {
+  animation: partner-scroll 35s linear infinite;
+}
+
+.partner-window:hover .partner-track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 10. FORMS */
+
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d8d4cc;
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(185, 154, 97, 0.3);
+  border-color: var(--gold);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+form button,
+form input[type="submit"] {
+  width: auto;
+}
+
+.detail-section {
+  padding: 35px 0;
+}
+
+.register-link {
+  display: inline-block;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* 11. CONTACT DETAILS */
+
+.contact,
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-details,
+.contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  margin: 20px 0;
+}
+
+.contact-details span {
+  display: inline-block;
+}
+
+.contact-item {
+  align-items: flex-start;
+}
+
+.contactbar {
+  background: var(--cream);
+  padding: 10px 4%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 25px;
+  font-size: 13px;
+}
+
+.contactbar a {
+  color: var(--navy);
+}
+
+/* 12. FOOTER */
+
+footer {
+  background: var(--navy);
+  color: #eeeeee;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 7px 0;
+  color: #eeeeee;
+}
+
+footer strong {
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: #e3c58f;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin: 18px 0;
+}
+
+.image-credit {
+  font-size: 10px;
+  opacity: 0.75;
+  margin-top: 20px;
+}
+
+/* 13. LOCATION IMAGE CLASSES */
+
+.yas-image,
+.saadiyat-image,
+.hudayriyat-image,
+.residential-image,
+.commercial-image,
+.land-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 14. RESPONSIVE TABLET DISPLAY */
+
+@media (max-width: 900px) {
+  .brandbar,
+  .brand-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand-contact {
+    justify-content: center;
+  }
+
+  .nav-inner {
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 4px 14px;
+  }
+
+  .two-column,
+  .about-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 330px;
+  }
+}
+
+/* 15. RESPONSIVE MOBILE DISPLAY */
+
+@media (max-width: 650px) {
+  section {
+    padding: 45px 0;
+  }
+
+  .brandbar {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .brand img,
+  .logo img {
+    max-width: 185px;
+    max-height: 70px;
+  }
+
+  .brand-tagline {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .brand-contact {
+    width: 100%;
+    font-size: 12px;
+    gap: 6px 12px;
+  }
+
+  .register-top {
+    font-size: 11px;
+  }
+
+  .nav-inner {
+    width: 100%;
+    padding: 0 15px;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 0 14px;
+  }
+
+  .navbar a,
+  .mainnav a,
+  .mainnav button,
+  nav a,
+  nav button,
+  .dropbtn {
+    font-size: 12px;
+  }
+
+  .dropdown-menu,
+  .dropdown-content {
+    min-width: 195px;
+  }
+
+  .hero,
+  .page-hero {
+    padding: 60px 18px;
+  }
+
+  .hero {
+    min-height: 280px;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p,
+  .page-hero p {
+    font-size: 14px;
+  }
+
+  .cards,
+  .card-grid,
+  .category-grid,
+  .service-grid,
+  .values-grid,
+  .blog-grid,
+  .register-grid,
+  .feature-grid,
+  .resources {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-image,
+  .card-image,
+  .listing-photo {
+    height: 200px;
+  }
+
+  .contact-details,
+  .contact-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .property-search {
+    padding: 18px;
+  }
+
+  .property-search form,
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .btn,
+  .btn-gold,
+  .gold-button,
+  .contact-button {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    gap: 8px 14px;
+  }
+}
+
+/* 16. ACCESSIBILITY AND MOTION */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
