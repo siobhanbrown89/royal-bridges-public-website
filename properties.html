@@ -141,7 +141,7 @@ footer a{color:#e5c995}
  </div>
  <div class="inventory-meta"><span id="inventoryCount" aria-live="polite"></span><span>Advertised examples reviewed 8 Nov 2026 · Confirm price and availability</span></div>
  <div class="listing-grid" id="listingGrid"></div>
- <p class="inventory-disclaimer">Property Finder is used as a market reference, not copied as a bulk listing feed. The cards show selected advertised examples and developer launch prices reviewed on 8 November 2026; they are not confirmed Royal Bridges instructions or guarantees of availability. “Lowest price” means the lowest suitable example surfaced in the results reviewed, not a guarantee of the lowest listing across the entire portal. Descriptions are rewritten, and images are representative development/community imagery rather than Property Finder agency-branded listing photos. Please verify live price, status, area, handover and availability before marketing or accepting an enquiry. Dubai and Ras Al Khaimah entries are primary developer off-plan only.</p>
+ <p class="inventory-disclaimer">These are selected indicative property examples for enquiry purposes, not confirmed Royal Bridges instructions or guarantees of availability. Prices, sizes, handover dates and availability must be reconfirmed before marketing or accepting an enquiry. Dubai and Ras Al Khaimah entries are primary developer off-plan examples only.</p>
 </section>
 <section class="popular">
 <h2>Start With a Popular Location</h2><p>Explore some of the UAE locations we can assist you with.</p>
@@ -194,8 +194,7 @@ footer a{color:#e5c995}
  ];
 
  const inventory=legacyInventory.map(x=>({
-  community:x[0],area:"Yas Island",emirate:"Abu Dhabi",type:x[1],beds:x[2],size:x[3],rent:x[4],price:x[5],image:x[6],description:x[7],
-  market:"Community sample",stage:"Indicative sample",source:"https://www.propertyfinder.ae/en/buy/abu-dhabi/properties-for-sale-yas-island.html"
+  community:x[0],area:"Yas Island",emirate:"Abu Dhabi",type:x[1],beds:x[2],size:x[3],rent:x[4],price:x[5],image:x[6],description:x[7],market:"Community sample",stage:"Indicative sample"
  }));
  const reemImg="https://uaeprojects.com/uploads/7142/conversions/Sky-Tower-Bannar-Image-heroSection.jpg";
  const yasImg="https://www.cmep.ae/uploads/projects/4/images/d8fe949a-8187-4e93-bf79-c5cde2d69ff8.webp";
@@ -206,50 +205,50 @@ footer a{color:#e5c995}
  const dubaiImg="https://www.emaar.com/_next/image?q=100&url=https%3A%2F%2Fuae-cms.emaar.com%2Fuploads%2F419578_exterior_0_669b7d887d.jpg&w=1200";
  const rakImg="https://ggfx-providentestate.s3.eu-west-2.amazonaws.com/i/SKAI_by_RAK_Properties_Luxury_Waterfront_Living_in_Mina_Al_Arab_0443ef5750.jpg";
  const add=(community,area,emirate,type,beds,size,price,image,description,stage,source)=>inventory.push({community,area,emirate,type,beds,size,rent:0,price,image,description,market:"sale",stage,source});
- // Abu Dhabi: lowest advertised examples identified in the Property Finder results reviewed on 8 November 2026.
- add("Radiant Garden Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",491,710000,reemImg,"Studio apartment · 491 sq ft · Tamouh","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/studio-apartments-for-sale-al-reem-island.html");
- add("Hydra Avenue Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",423,800000,reemImg,"Vacant studio · 423 sq ft · ready to move","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/studio-apartments-for-sale-al-reem-island.html");
- add("Reflection","Al Reem Island","Abu Dhabi","Apartment","1 Bedroom",708,1300000,reemImg,"One-bedroom apartment · 708 sq ft","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/properties-for-sale-al-reem-island.html");
- add("Reem Hills","Al Reem Island","Abu Dhabi","Townhouse","3 Bedrooms",2152,4200000,reemImg,"Three-bedroom townhouse · 2,152 sq ft","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/townhouses-for-sale.html");
- add("Rixos Al Reem Residences","Al Reem Island","Abu Dhabi","Apartment","1 Bedroom",null,2115388,reemImg,"Developer launch · one to four-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Addax Port Office Tower","Al Reem Island","Abu Dhabi","Office","",1730,2850000,reemImg,"Fitted office · 1,730 sq ft · City of Lights","Commercial","https://www.propertyfinder.ae/en/commercial-buy/abu-dhabi/properties-for-sale.html");
- add("Marafid Tower","Al Reem Island","Abu Dhabi","Retail","",968,2178965,reemImg,"Retail unit · 968 sq ft · ready to move","Commercial","https://www.propertyfinder.ae/en/commercial-buy/abu-dhabi/properties-for-sale.html");
- add("Yas Riva Residences","Yas Island","Abu Dhabi","Apartment","Studio",504,1400000,yasImg,"Studio apartment · 504 sq ft · advertised resale","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/properties-for-sale-yas-island.html");
- add("Diva","Yas Island","Abu Dhabi","Apartment","2 Bedrooms",824,1750000,yasImg,"Two-bedroom apartment · 824 sq ft · furnished","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/properties-for-sale-yas-island.html");
- add("The Canopies at Yas Point","Yas Island","Abu Dhabi","Apartment","Studio",null,1650000,yasImg,"Aldar developer launch · studios to three-bedroom apartments","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Yas Park Views","Yas Island","Abu Dhabi","Villa","4 Bedrooms",3746,4575000,yasImg,"Four-bedroom villa · approx. 3,746 sq ft","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/villas-for-sale-yas-island.html");
- add("Yas Park Gate","Yas Island","Abu Dhabi","Villa","4 Bedrooms",3745,4599999,yasImg,"Four-bedroom villa · corner layout · near handover","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/villas-for-sale-yas-island.html");
- add("Yas Park Gate","Yas Island","Abu Dhabi","Townhouse","2 Bedrooms",1335,2999999,yasImg,"Two-bedroom townhouse · 1,335 sq ft · advertised resale","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/townhouses-for-sale-yas-island.html");
- add("West Yas","Yas Island","Abu Dhabi","Land","",null,12500000,yasImg,"Residential plot · single-row golf community location","Land","https://www.propertyfinder.ae/en/buy/abu-dhabi/land-for-sale.html");
- add("Nouran Living","Saadiyat Island","Abu Dhabi","Apartment","Studio",320,845000,saadiyatImg,"Studio apartment · approx. 320 sq ft","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/studio-apartments-for-sale-saadiyat-island.html");
- add("Saadiyat Beach Residences","Saadiyat Island","Abu Dhabi","Apartment","1 Bedroom",664,1600000,saadiyatImg,"One-bedroom apartment · 664 sq ft · vacant now","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/1-bedroom-apartments-for-sale-saadiyat-island.html");
- add("Bloom Arjaan","Saadiyat Island","Abu Dhabi","Apartment","Studio",null,951000,saadiyatImg,"Ready developer stock · studio residences","Ready to move","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Saadiyat Lagoons","Saadiyat Island","Abu Dhabi","Villa","4 Bedrooms",5005,7740000,saadiyatImg,"Four-bedroom villa · approx. 5,005 sq ft · first-sale off-plan advertised example","Primary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/4-bedroom-villas-for-sale-saadiyat-island.html");
- add("Saadiyat Reserve","Saadiyat Island","Abu Dhabi","Land","",6587,6300000,saadiyatImg,"Residential plot · 6,587 sq ft","Land","https://www.propertyfinder.ae/en/buy/abu-dhabi/land-for-sale.html");
- add("Talay Beach","Saadiyat Island","Abu Dhabi","Villa","4 Bedrooms",null,13500000,saadiyatImg,"Aldar developer launch · four to six-bedroom villas","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Oasis Residences 2","Masdar City","Abu Dhabi","Apartment","1 Bedroom",911,1270000,masdarImg,"Furnished one-bedroom loft · 911 sq ft","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/properties-for-sale-masdar-city.html");
- add("The Gate","Masdar City","Abu Dhabi","Townhouse","3 Bedrooms",2023,2800000,masdarImg,"Three-bedroom townhouse · 2,023 sq ft","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/townhouses-for-sale-masdar-city.html");
- add("Reportage Plaza 2","Masdar City","Abu Dhabi","Townhouse","4 Bedrooms",2027,2000000,masdarImg,"Four-bedroom townhouse · 2,027 sq ft","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/townhouses-for-sale-masdar-city.html");
- add("Luluat Al Raha","Al Raha Beach","Abu Dhabi","Apartment","Studio",626,1580625,rahaImg,"Studio apartment · 626 sq ft · high floor","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/apartments-for-sale-al-raha-beach.html");
- add("Al Raha Lofts","Al Raha Beach","Abu Dhabi","Apartment","3 Bedrooms",1632,2500000,rahaImg,"Three-bedroom apartment · 1,632 sq ft","Ready to move","https://www.propertyfinder.ae/en/buy/abu-dhabi/apartments-for-sale-al-raha-beach.html");
- add("Baia","Al Raha Beach","Abu Dhabi","Townhouse","4 Bedrooms",2070,2343000,rahaImg,"Four-bedroom townhouse plus maid · approx. 2,070 sq ft","Primary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/townhouses-for-sale-al-raha-beach.html");
- add("Bab Al Qasr Sea View 51","Al Raha Beach","Abu Dhabi","Townhouse","2 Bedrooms",null,4500000,rahaImg,"Developer launch · two to five-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Wadeem","Hudayriyat Island","Abu Dhabi","Land","",6544,2950000,hudayriyatImg,"Residential plot resale · 6,544 sq ft · payment plan advertised","Land","https://www.propertyfinder.ae/en/buy/abu-dhabi/land-for-sale-al-hudayriat-island-wadeem.html");
- add("Fay Al Reeman II","Al Shamkha","Abu Dhabi","Villa","4 Bedrooms",4185,3900000,masdarImg,"Four-bedroom villa · approx. 4,185 sq ft","Secondary off-plan","https://www.propertyfinder.ae/en/buy/abu-dhabi/villas-for-sale.html");
- add("Jumeirah Residences","Al Maryah Island","Abu Dhabi","Apartment","1 Bedroom",null,4700000,saadiyatImg,"Developer launch · one to six-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/abu-dhabi");
- add("Al Reeman","Al Shamkha","Abu Dhabi","Commercial Land","",23800,12000000,masdarImg,"Commercial plot · approx. 23,800 sq ft","Commercial","https://www.propertyfinder.ae/en/commercial-buy/abu-dhabi/properties-for-sale.html");
+ // Abu Dhabi: selected indicative examples across residential, commercial and land categories.
+ add("Radiant Garden Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",491,710000,reemImg,"Studio apartment · 491 sq ft · Tamouh","Secondary off-plan");
+ add("Hydra Avenue Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",423,800000,reemImg,"Vacant studio · 423 sq ft · ready to move","Ready to move");
+ add("Reflection","Al Reem Island","Abu Dhabi","Apartment","1 Bedroom",708,1300000,reemImg,"One-bedroom apartment · 708 sq ft","Ready to move");
+ add("Reem Hills","Al Reem Island","Abu Dhabi","Townhouse","3 Bedrooms",2152,4200000,reemImg,"Three-bedroom townhouse · 2,152 sq ft","Secondary off-plan");
+ add("Rixos Al Reem Residences","Al Reem Island","Abu Dhabi","Apartment","1 Bedroom",null,2115388,reemImg,"Developer launch · one to four-bedroom residences","Primary off-plan");
+ add("Addax Port Office Tower","Al Reem Island","Abu Dhabi","Office","",1730,2850000,reemImg,"Fitted office · 1,730 sq ft · City of Lights","Commercial");
+ add("Marafid Tower","Al Reem Island","Abu Dhabi","Retail","",968,2178965,reemImg,"Retail unit · 968 sq ft · ready to move","Commercial");
+ add("Yas Riva Residences","Yas Island","Abu Dhabi","Apartment","Studio",504,1400000,yasImg,"Studio apartment · 504 sq ft · advertised resale","Secondary off-plan");
+ add("Diva","Yas Island","Abu Dhabi","Apartment","2 Bedrooms",824,1750000,yasImg,"Two-bedroom apartment · 824 sq ft · furnished","Ready to move");
+ add("The Canopies at Yas Point","Yas Island","Abu Dhabi","Apartment","Studio",null,1650000,yasImg,"Aldar developer launch · studios to three-bedroom apartments","Primary off-plan");
+ add("Yas Park Views","Yas Island","Abu Dhabi","Villa","4 Bedrooms",3746,4575000,yasImg,"Four-bedroom villa · approx. 3,746 sq ft","Ready to move");
+ add("Yas Park Gate","Yas Island","Abu Dhabi","Villa","4 Bedrooms",3745,4599999,yasImg,"Four-bedroom villa · corner layout · near handover","Secondary off-plan");
+ add("Yas Park Gate","Yas Island","Abu Dhabi","Townhouse","2 Bedrooms",1335,2999999,yasImg,"Two-bedroom townhouse · 1,335 sq ft · advertised resale","Secondary off-plan");
+ add("West Yas","Yas Island","Abu Dhabi","Land","",null,12500000,yasImg,"Residential plot · single-row golf community location","Land");
+ add("Nouran Living","Saadiyat Island","Abu Dhabi","Apartment","Studio",320,845000,saadiyatImg,"Studio apartment · approx. 320 sq ft","Secondary off-plan");
+ add("Saadiyat Beach Residences","Saadiyat Island","Abu Dhabi","Apartment","1 Bedroom",664,1600000,saadiyatImg,"One-bedroom apartment · 664 sq ft · vacant now","Ready to move");
+ add("Bloom Arjaan","Saadiyat Island","Abu Dhabi","Apartment","Studio",null,951000,saadiyatImg,"Ready developer stock · studio residences","Ready to move");
+ add("Saadiyat Lagoons","Saadiyat Island","Abu Dhabi","Villa","4 Bedrooms",5005,7740000,saadiyatImg,"Four-bedroom villa · approx. 5,005 sq ft · first-sale off-plan advertised example","Primary off-plan");
+ add("Saadiyat Reserve","Saadiyat Island","Abu Dhabi","Land","",6587,6300000,saadiyatImg,"Residential plot · 6,587 sq ft","Land");
+ add("Talay Beach","Saadiyat Island","Abu Dhabi","Villa","4 Bedrooms",null,13500000,saadiyatImg,"Aldar developer launch · four to six-bedroom villas","Primary off-plan");
+ add("Oasis Residences 2","Masdar City","Abu Dhabi","Apartment","1 Bedroom",911,1270000,masdarImg,"Furnished one-bedroom loft · 911 sq ft","Secondary off-plan");
+ add("The Gate","Masdar City","Abu Dhabi","Townhouse","3 Bedrooms",2023,2800000,masdarImg,"Three-bedroom townhouse · 2,023 sq ft","Ready to move");
+ add("Reportage Plaza 2","Masdar City","Abu Dhabi","Townhouse","4 Bedrooms",2027,2000000,masdarImg,"Four-bedroom townhouse · 2,027 sq ft","Secondary off-plan");
+ add("Luluat Al Raha","Al Raha Beach","Abu Dhabi","Apartment","Studio",626,1580625,rahaImg,"Studio apartment · 626 sq ft · high floor","Secondary off-plan");
+ add("Al Raha Lofts","Al Raha Beach","Abu Dhabi","Apartment","3 Bedrooms",1632,2500000,rahaImg,"Three-bedroom apartment · 1,632 sq ft","Ready to move");
+ add("Baia","Al Raha Beach","Abu Dhabi","Townhouse","4 Bedrooms",2070,2343000,rahaImg,"Four-bedroom townhouse plus maid · approx. 2,070 sq ft","Primary off-plan");
+ add("Bab Al Qasr Sea View 51","Al Raha Beach","Abu Dhabi","Townhouse","2 Bedrooms",null,4500000,rahaImg,"Developer launch · two to five-bedroom residences","Primary off-plan");
+ add("Wadeem","Hudayriyat Island","Abu Dhabi","Land","",6544,2950000,hudayriyatImg,"Residential plot resale · 6,544 sq ft · payment plan advertised","Land");
+ add("Fay Al Reeman II","Al Shamkha","Abu Dhabi","Villa","4 Bedrooms",4185,3900000,masdarImg,"Four-bedroom villa · approx. 4,185 sq ft","Secondary off-plan");
+ add("Jumeirah Residences","Al Maryah Island","Abu Dhabi","Apartment","1 Bedroom",null,4700000,saadiyatImg,"Developer launch · one to six-bedroom residences","Primary off-plan");
+ add("Al Reeman","Al Shamkha","Abu Dhabi","Commercial Land","",23800,12000000,masdarImg,"Commercial plot · approx. 23,800 sq ft","Commercial");
  // Dubai and Ras Al Khaimah: developer-direct primary off-plan only.
- add("Raw District","Dubai","Dubai","Apartment","",null,649000,dubaiImg,"Imtiaz developer launch · off-plan residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("Kore by Imtiaz","Dubai Land Residence Complex","Dubai","Apartment","",null,679000,dubaiImg,"Imtiaz developer launch · off-plan residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("Velencia","Damac Lagoons","Dubai","Apartment","Studio",null,725000,dubaiImg,"DAMAC developer launch · studio to two-bedroom apartments","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("Valia Tower","Dubai Creek Harbour","Dubai","Apartment","1 Bedroom",null,2060000,dubaiImg,"Emaar developer launch · one to four-bedroom apartments","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("Damac Islands","Dubai","Dubai","Townhouse","4 Bedrooms",null,2490000,dubaiImg,"DAMAC developer launch · four to seven-bedroom homes","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("The Brooks at Sobha Sanctuary","Dubai","Dubai","Villa","4 Bedrooms",null,3995908,dubaiImg,"Sobha developer launch · four to five-bedroom villas","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/lp/dubai");
- add("John Richmond Residences","Ras Al Khaimah","Ras Al Khaimah","Apartment","Studio",null,550000,rakImg,"Mira Developments launch · studio to three-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/for-sale/off-plan/apartments/ras-al-khaimah");
- add("Solera Downtown Mina","Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1227000,rakImg,"RAK Properties launch · studio to four-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/dev/rak-properties/ras-al-khaimah");
- add("Mirasol Phase 2","Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1300000,rakImg,"RAK Properties launch · studio to three-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/dev/rak-properties/ras-al-khaimah");
- add("Skai","Raha Island, Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1600000,rakImg,"RAK Properties launch · studio to three-bedroom residences","Primary off-plan","https://www.propertyfinder.ae/en/new-projects/dev/rak-properties/ras-al-khaimah");
- add("NH Collection","Al Marjan Island","Ras Al Khaimah","Apartment","Studio",null,1799500,rakImg,"Developer launch · 80/20 payment plan · handover Q4 2027","Primary off-plan","https://www.propertyfinder.ae/en/for-sale/off-plan/apartments/ras-al-khaimah");
+ add("Raw District","Dubai","Dubai","Apartment","",null,649000,dubaiImg,"Imtiaz developer launch · off-plan residences","Primary off-plan");
+ add("Kore by Imtiaz","Dubai Land Residence Complex","Dubai","Apartment","",null,679000,dubaiImg,"Imtiaz developer launch · off-plan residences","Primary off-plan");
+ add("Velencia","Damac Lagoons","Dubai","Apartment","Studio",null,725000,dubaiImg,"DAMAC developer launch · studio to two-bedroom apartments","Primary off-plan");
+ add("Valia Tower","Dubai Creek Harbour","Dubai","Apartment","1 Bedroom",null,2060000,dubaiImg,"Emaar developer launch · one to four-bedroom apartments","Primary off-plan");
+ add("Damac Islands","Dubai","Dubai","Townhouse","4 Bedrooms",null,2490000,dubaiImg,"DAMAC developer launch · four to seven-bedroom homes","Primary off-plan");
+ add("The Brooks at Sobha Sanctuary","Dubai","Dubai","Villa","4 Bedrooms",null,3995908,dubaiImg,"Sobha developer launch · four to five-bedroom villas","Primary off-plan");
+ add("John Richmond Residences","Ras Al Khaimah","Ras Al Khaimah","Apartment","Studio",null,550000,rakImg,"Mira Developments launch · studio to three-bedroom residences","Primary off-plan");
+ add("Solera Downtown Mina","Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1227000,rakImg,"RAK Properties launch · studio to four-bedroom residences","Primary off-plan");
+ add("Mirasol Phase 2","Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1300000,rakImg,"RAK Properties launch · studio to three-bedroom residences","Primary off-plan");
+ add("Skai","Raha Island, Mina Al Arab","Ras Al Khaimah","Apartment","Studio",null,1600000,rakImg,"RAK Properties launch · studio to three-bedroom residences","Primary off-plan");
+ add("NH Collection","Al Marjan Island","Ras Al Khaimah","Apartment","Studio",null,1799500,rakImg,"Developer launch · 80/20 payment plan · handover Q4 2027","Primary off-plan");
 
  const grid=document.getElementById("listingGrid"), emirate=document.getElementById("inventoryEmirate"), community=document.getElementById("inventoryCommunity"), purpose=document.getElementById("inventoryPurpose"), type=document.getElementById("inventoryType"), stage=document.getElementById("inventoryStage"), beds=document.getElementById("inventoryBeds"), count=document.getElementById("inventoryCount");
  [...new Set([...inventory.map(x=>x.area),...inventory.map(x=>x.community)])].sort().forEach(name=>{const option=document.createElement("option");option.value=name;option.textContent=name;community.appendChild(option);});
@@ -288,10 +287,9 @@ footer a{color:#e5c995}
   grid.innerHTML=filtered.map(x=>{
    const amount=purpose.value==="rent"?x.rent:x.price;
    const label=purpose.value==="rent"?"per year · For Rent":"· For Sale";
-   const source=x.source?'<a class="sample-source" href="'+x.source+'" target="_blank" rel="noopener">View current Property Finder listings ↗</a>':"";
    const msg=encodeURIComponent("Hello Royal Bridges, I am interested in the "+x.beds+" "+x.type+" in "+x.community+", "+x.area+", "+x.emirate+". Please confirm current availability, price and property details.");
    const facts=[x.size?("Approx. "+Number(x.size).toLocaleString("en-AE")+" sq ft"):"Size on request",x.area,x.emirate].join(" · ");
-   return '<article class="sample-card"><div class="sample-photo" style="background-image:url(&quot;'+x.image+'&quot;)"><span class="sample-tag">'+x.type+'</span><span class="sample-community">'+x.community+' · '+x.area+'</span></div><div class="sample-content"><span class="sample-stage">'+x.stage+'</span><h3>'+(x.beds?x.beds+" ":"")+x.type+'</h3><p class="sample-subtitle">'+x.description+'</p><div class="sample-facts"><span>'+facts+'</span></div><div class="sample-prices"><div class="sample-price is-active"><small>'+(purpose.value==="rent"?"Rent / year":"Advertised price / launch price")+'</small><strong>'+money(amount)+'</strong></div></div><a class="sample-cta" href="https://wa.me/971568611311?text='+msg+'">Enquire about this option →</a>'+source+'</div></article>';
+   return '<article class="sample-card"><div class="sample-photo" style="background-image:url(&quot;'+x.image+'&quot;)"><span class="sample-tag">'+x.type+'</span><span class="sample-community">'+x.community+' · '+x.area+'</span></div><div class="sample-content"><span class="sample-stage">'+x.stage+'</span><h3>'+(x.beds?x.beds+" ":"")+x.type+'</h3><p class="sample-subtitle">'+x.description+'</p><div class="sample-facts"><span>'+facts+'</span></div><div class="sample-prices"><div class="sample-price is-active"><small>'+(purpose.value==="rent"?"Rent / year":"Advertised price / launch price")+'</small><strong>'+money(amount)+'</strong></div></div><a class="sample-cta" href="https://wa.me/971568611311?text='+msg+'">Enquire about this option →</a>''</div></article>';
   }).join("");
  } 
  [emirate,community,purpose,type,stage,beds,minField,maxField].forEach(el=>el.addEventListener("change",render));
