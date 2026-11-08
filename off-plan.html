@@ -167,7 +167,16 @@ footer a{color:#e5c995}
   count.textContent=filter==='all'?'Showing all '+visible+' listed projects':'Showing '+visible+' projects in this location';
  }
  buttons.forEach(button=>button.addEventListener('click',()=>show(button.dataset.filter)));
- show('all');
+ const params=new URLSearchParams(window.location.search);
+ const selectedLocation=(params.get('location')||'').toLowerCase();
+ let initialFilter='all';
+ if(selectedLocation.includes('yas'))initialFilter='yas';
+ else if(selectedLocation.includes('hudayriyat'))initialFilter='hudayriyat';
+ else if(selectedLocation.includes('saadiyat'))initialFilter='saadiyat';
+ else if(selectedLocation.includes('reem'))initialFilter='reem';
+ else if(selectedLocation.includes('raha'))initialFilter='raha';
+ show(initialFilter);
+ if(params.has('intent')){const firstProject=document.querySelector('.project-grid');if(firstProject)firstProject.scrollIntoView({behavior:'smooth',block:'start'});}
  const modal=document.getElementById('brochureModal');
  const projectName=document.getElementById('brochureProjectName');
  const form=document.getElementById('brochureForm');
