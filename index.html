@@ -157,62 +157,48 @@ footer a{color:#e3c18b}
 </head>
 <body>
 
-<header class="brandbar">
+<div class="rb-site-topbar">
+  <span>Royal Bridges Real Estate | Abu Dhabi, UAE</span>
+  <a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a>
+  <span aria-hidden="true">|</span>
+  <a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a>
+  <span aria-hidden="true">|</span>
+  <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
+</div>
+<div class="brandbar">
  <div class="container brand-inner">
-  <a class="brand" href="index.html"><img src="logo.png" alt="Royal Bridges Real Estate logo"></a>
+  <a class="brand" href="index.html" aria-label="Royal Bridges Real Estate home"><img src="logo.png" alt="Royal Bridges Real Estate logo"></a>
   <div class="brand-contact">
    <span>English WhatsApp: <a href="https://wa.me/971568611311">+971 56 861 1311</a></span>
    <span>العربية WhatsApp: <a href="https://wa.me/971506082608">+971 50 608 2608</a></span>
    <a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a>
   </div>
  </div>
-</header>
-
-<nav class="navbar">
+</div>
+<nav class="navbar" aria-label="Main navigation">
  <div class="container nav-inner">
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰ MENU</button>
+  <button class="mobile-toggle" type="button" aria-expanded="false">☰ MENU</button>
   <ul class="nav-links" id="navLinks">
    <li><a href="index.html">HOME</a></li>
-   <li class="dropdown">
-    <button type="button">PROPERTIES ▾</button>
-    <div class="dropdown-menu">
-     <a href="residential.html">Residential Sale &amp; Rent</a>
-     <a href="commercial.html">Commercial Sale &amp; Rent</a>
-     <a href="residential-plots.html">Residential &amp; Commercial Plots or Land</a>
-    </div>
-   </li>
-   <li class="dropdown">
-    <button type="button">COMMUNITIES ▾</button>
-    <div class="dropdown-menu">
-     <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a>
-     <a href="communities.html#dubai">Communities in Dubai</a>
-     <a href="communities.html#rak">Communities in RAK</a>
-    </div>
-   </li>
+   <li class="dropdown"><button type="button">PROPERTIES ▾</button><div class="dropdown-menu">
+    <a href="properties.html">Search All Properties</a><a href="properties-for-sale.html">Properties for Sale</a><a href="properties-for-rent.html">Properties for Rent</a><a href="off-plan.html">Off-Plan Developments</a><a href="commercial.html">Commercial Properties</a><a href="residential-plots.html">Plots &amp; Lands</a>
+   </div></li>
+   <li class="dropdown"><button type="button">COMMUNITIES ▾</button><div class="dropdown-menu">
+    <a href="communities.html#abu-dhabi">Communities in Abu Dhabi</a><a href="communities.html#dubai">Communities in Dubai</a><a href="communities.html#rak">Communities in Ras Al Khaimah</a>
+   </div></li>
    <li><a href="short-stay.html">SHORT STAY</a></li>
    <li><a href="relocation.html">RELOCATION</a></li>
-   <li class="dropdown">
-    <button type="button">ABOUT ▾</button>
-    <div class="dropdown-menu">
-     <a href="about.html">About Royal Bridges</a>
-     <div class="nested-dropdown"><a href="register.html">Register ▸</a><div class="nested-menu">
-      <a href="register.html#seminars">Seminars &amp; Webinars</a>
-      <a href="register.html#newsletter">Monthly Newsletter</a>
-      <a href="register.html#email-updates">Email Updates</a>
-     </div></div>
-     <a href="careers.html">Careers</a>
-     <a href="external-agencies.html">External Agencies</a>
-     <a href="index.html#partners">Our Partners</a>
-     <a href="blog.html">Blog &amp; Articles</a>
-     <a href="other-services.html">Other Services</a>
-    </div>
-   </li>
-   <li><a href="index.html#contact">CONTACT</a></li>
+   <li><a href="off-plan.html">OFF PLAN</a></li>
+   <li class="dropdown"><button type="button">ABOUT ▾</button><div class="dropdown-menu">
+    <a href="about.html">About Royal Bridges</a><a href="register.html">Register</a>
+    <div class="nested-dropdown"><a href="register.html#seminars">Seminars &amp; Online Webinars ▸</a><div class="nested-menu"><a href="register.html#seminars">Seminars &amp; Online Webinars</a></div></div>
+    <a href="register.html#newsletter">Monthly Market Newsletter</a><a href="register.html#email-updates">Email Updates</a><a href="careers.html">Careers</a><a href="external-agencies.html">External Agencies</a><a href="partners.html">Our Partners</a><a href="blog.html">Blog &amp; Articles</a><a href="reviews.html">Client Reviews</a><a href="other-services.html">Other Services</a>
+   </div></li>
+   <li><a href="contact.html">CONTACT</a></li>
+   <li><a class="nav-register" href="register.html">REGISTER YOUR PROPERTY</a></li>
   </ul>
  </div>
-</nav>
-
-<main>
+</nav><main>
 <section class="hero">
  <div class="container hero-content">
   <div class="eyebrow">Royal Bridges Real Estate</div>
