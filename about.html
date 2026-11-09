@@ -194,6 +194,27 @@ h3{color:var(--navy)}
   font-weight:bold;
 }
 .button.dark{background:var(--navy)}
+.contractor-section{background:#fff}
+.contractor-panel{
+  display:grid;
+  grid-template-columns:1.35fr .8fr;
+  gap:35px;
+  align-items:center;
+  padding:38px;
+  border:1px solid var(--line);
+  border-top:4px solid var(--gold);
+  background:var(--light);
+  box-shadow:0 12px 30px #142b430b;
+}
+.contractor-copy p{color:var(--muted)}
+.contractor-note{
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:25px 28px;
+}
+.contractor-note h3{font-family:Georgia,serif;font-size:23px;font-weight:400}
+.contractor-note ul{padding-left:20px;color:var(--muted);margin-bottom:0}
+.contractor-note li{padding:5px 0}
 .cta{
   background:var(--navy);
   color:white;
@@ -229,6 +250,7 @@ footer p{margin:8px 0}
 @media(max-width:850px){
   .nav-inner{justify-content:center}
   .two-column{grid-template-columns:1fr}
+  .contractor-panel{grid-template-columns:1fr;padding:28px}
   .values-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
@@ -243,6 +265,7 @@ footer p{margin:8px 0}
     top:auto;
   }
   .values-grid,.service-grid{grid-template-columns:1fr}
+  .contractor-panel{padding:22px}
   .container{padding:45px 17px}
   .hero{padding:65px 18px}
 }
@@ -624,6 +647,45 @@ footer p{margin:8px 0}
         <a class="button" href="contact.html">Get in Touch</a>
       </div>
 
+    </div>
+  </section>
+
+
+  <section class="contractor-section">
+    <div class="container">
+      <div class="contractor-panel">
+        <div class="contractor-copy">
+          <span class="eyebrow">Join Our Network</span>
+          <h2>Register as a Contractor</h2>
+          <p>
+            Are you a contractor or service provider working in the UAE?
+            Royal Bridges welcomes enquiries from reliable professionals
+            interested in being considered for future client projects and
+            service opportunities.
+          </p>
+          <p>
+            We are interested in hearing from contractors and specialist
+            providers across property maintenance, cleaning, snagging,
+            fit-out, moving and other property-related services.
+          </p>
+          <p>
+            Tell us about your company, the services you provide, your
+            coverage areas and your relevant licences or qualifications.
+            We will review your details and contact you if a suitable
+            opportunity arises.
+          </p>
+          <a class="button" href="contact.html?enquiry=Contractor%20Registration#contactForm">Register Your Interest</a>
+        </div>
+        <div class="contractor-note">
+          <h3>Work with Royal Bridges</h3>
+          <ul>
+            <li>Introduce your company and specialist services</li>
+            <li>Tell us which areas of the UAE you cover</li>
+            <li>Share relevant licences, insurance and experience</li>
+            <li>Be considered for suitable future opportunities</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
