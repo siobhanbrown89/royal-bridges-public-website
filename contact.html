@@ -446,6 +446,7 @@ footer a{color:#e5c995}
           <option>Business Set Up</option>
           <option>Careers</option>
           <option>External Agency / Partnership</option>
+          <option>Contractor Registration</option>
           <option>Seminars & Webinars</option>
           <option>Newsletter and Email Updates</option>
           <option>Other</option>
@@ -529,6 +530,14 @@ footer a{color:#e5c995}
 </footer>
 
 <script>
+const enquiryFromLink = new URLSearchParams(window.location.search).get("enquiry");
+if (enquiryFromLink) {
+  const enquirySelect = document.getElementById("enquiry");
+  if (Array.from(enquirySelect.options).some(option => option.value === enquiryFromLink || option.text === enquiryFromLink)) {
+    enquirySelect.value = enquiryFromLink;
+  }
+}
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
