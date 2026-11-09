@@ -4,7 +4,7 @@
  body.querySelectorAll('.rb-site-topbar,.rb-site-brandbar,.rb-navbar,.topbar,.brandbar,.contactbar,.logo-bar,.navbar,.rb-old-header').forEach(el=>el.remove());
  body.querySelectorAll('nav').forEach(el=>el.remove());
  body.querySelectorAll('header').forEach(el=>{if(!el.classList.contains('hero')&&!el.classList.contains('page-hero')&&el.querySelector('img[src*="logo"],img[alt*="Royal Bridges"]')) el.remove();});
- const header = '<div class="rb-site-topbar"><span>Royal Bridges Real Estate | Abu Dhabi, UAE</span><a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a><span aria-hidden="true">|</span><a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a><span aria-hidden="true">|</span><a href="mailto:info@royalbridges.ae">info@royalbridges.ae</a></div>' +
+ const header = '<div class="rb-site-topbar"><span>Royal Bridges Real Estate | Abu Dhabi, UAE</span><a href="https://wa.me/971568611311">English WhatsApp: +971 56 861 1311</a><span aria-hidden="true">|</span><a href="https://wa.me/971506082608">Arabic WhatsApp: +971 50 608 2608</a><span aria-hidden="true">|</span><a href="mailto:siobhan@royalbridges.ae">siobhan@royalbridges.ae</a></div>' +
  '<div class="rb-site-brandbar"><div class="rb-brand-inner"><a class="rb-brand" href="index.html" aria-label="Royal Bridges Real Estate home"><img src="logo.png" alt="Royal Bridges Real Estate logo"></a>' +
  '<nav class="rb-navbar" aria-label="Main navigation"><button class="rb-mobile-toggle" type="button" aria-expanded="false">☰ MENU</button><ul class="rb-nav-links">' +
  '<li><a href="index.html">Home</a></li>' +
