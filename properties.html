@@ -205,6 +205,10 @@ footer a{color:#e5c995}
  const dubaiImg="https://www.emaar.com/_next/image?q=100&url=https%3A%2F%2Fuae-cms.emaar.com%2Fuploads%2F419578_exterior_0_669b7d887d.jpg&w=1200";
  const rakImg="https://ggfx-providentestate.s3.eu-west-2.amazonaws.com/i/SKAI_by_RAK_Properties_Luxury_Waterfront_Living_in_Mina_Al_Arab_0443ef5750.jpg";
  const add=(community,area,emirate,type,beds,size,price,image,description,stage,source)=>inventory.push({community,area,emirate,type,beds,size,rent:0,price,image,description,market:"sale",stage,source});
+ // Jubail Island: clearly labelled illustrative villa examples, with asking levels checked against current Property Finder listings.
+ const jubailVillaImage="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85";
+ inventory.push({community:"Jubail Island",area:"Al Jubail Island",emirate:"Abu Dhabi",type:"Villa",beds:"5 Bedrooms",size:15959,rent:0,price:23000000,image:jubailVillaImage,description:"Five-bedroom plus maid canal-front villa · direct canal frontage · approx. 15,959 sq ft plot · illustrative sample only",market:"sale",stage:"Indicative sample",source:"Property Finder market reference"});
+ inventory.push({community:"Jubail Island",area:"Al Jubail Island",emirate:"Abu Dhabi",type:"Villa",beds:"5 Bedrooms",size:6178,rent:1000000,price:0,image:jubailVillaImage,description:"Five-bedroom villa · first row from the canal · approx. 6,178 sq ft · illustrative rental sample only",market:"rent",stage:"Indicative sample",source:"Property Finder market reference"});
  // Abu Dhabi: selected indicative examples across residential, commercial and land categories.
  add("Radiant Garden Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",491,710000,reemImg,"Studio apartment · 491 sq ft · Tamouh","Secondary off-plan");
  add("Hydra Avenue Towers","Al Reem Island","Abu Dhabi","Apartment","Studio",423,800000,reemImg,"Vacant studio · 423 sq ft · ready to move","Ready to move");
