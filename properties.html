@@ -162,21 +162,21 @@ footer a{color:#e5c995}
  const category=document.getElementById("category");
  const status=document.getElementById("status");
  const legacyInventory=[
-  ["Waters Edge","Apartment","Studio",480,75000,1250000,"https://jiwak.com/images/galleries/gallery_img_4886.jpeg","Canal-side studio"],
-  ["Waters Edge","Apartment","1 Bedroom",700,92000,1600000,"https://jiwak.com/images/galleries/gallery_img_4886.jpeg","One-bedroom apartment"],
-  ["Waters Edge","Apartment","2 Bedrooms",1120,125000,2200000,"https://jiwak.com/images/galleries/gallery_img_4886.jpeg","Two-bedroom waterfront home"],
-  ["Waters Edge","Apartment","3 Bedrooms",1450,175000,2875000,"https://jiwak.com/images/galleries/gallery_img_4886.jpeg","Spacious three-bedroom layout"],
-  ["Yas Golf Collection","Apartment","Studio",500,89000,1500000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Modern studio residence"],
-  ["Yas Golf Collection","Apartment","1 Bedroom",900,125000,2050000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","One-bedroom golf community apartment"],
-  ["Yas Golf Collection","Apartment","2 Bedrooms",1236,180000,2800000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Two-bedroom apartment"],
-  ["Yas Golf Collection","Apartment","2 Bedrooms + Maid",1816,210000,4000000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Two-bedroom plus maid’s room"],
-  ["Yas Golf Collection","Apartment","3 Bedrooms",2300,300000,6500000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Three-bedroom apartment"],
-  ["Yas Golf Collection","Apartment","3 Bedrooms + Maid",2500,330000,6800000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Three-bedroom plus maid’s room"],
-  ["Yas Golf Collection","Duplex","3 Bedrooms",2717,350000,7200000,"https://www.newlaunchproperties.ae/products/248/648082956e9d4_sw_YAS-Golf_0010_Layer%203-min.jpg","Three-bedroom duplex"],
-  ["Ansam","Apartment","Studio",550,88000,1550000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Studio apartment"],
-  ["Ansam","Apartment","1 Bedroom",880,120000,2100000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","One-bedroom apartment"],
-  ["Ansam","Apartment","2 Bedrooms",1300,155000,3200000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Two-bedroom apartment"],
-  ["Ansam","Apartment","3 Bedrooms",2200,260000,5700000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Three-bedroom apartment"],
+  ["Waters Edge","Apartment","Studio",480,75000,1250000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Canal-side studio"],
+  ["Waters Edge","Apartment","1 Bedroom",700,92000,1600000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","One-bedroom apartment"],
+  ["Waters Edge","Apartment","2 Bedrooms",1120,125000,2200000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Two-bedroom waterfront home"],
+  ["Waters Edge","Apartment","3 Bedrooms",1450,175000,2875000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Spacious three-bedroom layout"],
+  ["Yas Golf Collection","Apartment","Studio",500,89000,1500000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Modern studio residence"],
+  ["Yas Golf Collection","Apartment","1 Bedroom",900,125000,2050000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","One-bedroom golf community apartment"],
+  ["Yas Golf Collection","Apartment","2 Bedrooms",1236,180000,2800000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Two-bedroom apartment"],
+  ["Yas Golf Collection","Apartment","2 Bedrooms + Maid",1816,210000,4000000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Two-bedroom plus maid’s room"],
+  ["Yas Golf Collection","Apartment","3 Bedrooms",2300,300000,6500000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Three-bedroom apartment"],
+  ["Yas Golf Collection","Apartment","3 Bedrooms + Maid",2500,330000,6800000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Three-bedroom plus maid’s room"],
+  ["Yas Golf Collection","Duplex","3 Bedrooms",2717,350000,7200000,"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85","Three-bedroom duplex"],
+  ["Ansam","Apartment","Studio",550,88000,1550000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Studio apartment"],
+  ["Ansam","Apartment","1 Bedroom",880,120000,2100000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","One-bedroom apartment"],
+  ["Ansam","Apartment","2 Bedrooms",1300,155000,3200000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Two-bedroom apartment"],
+  ["Ansam","Apartment","3 Bedrooms",2200,260000,5700000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Three-bedroom apartment"],
   ["NOYA","Townhouse","2 Bedrooms",1450,180000,3400000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Two-bedroom townhouse"],
   ["NOYA","Townhouse","3 Bedrooms",1816,200000,3900000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Three-bedroom townhouse"],
   ["NOYA Viva","Villa","4 Bedrooms",3390,260000,5400000,"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85","Four-bedroom family villa"],
@@ -185,25 +185,25 @@ footer a{color:#e5c995}
   ["NOYA Luma","Villa","3 Bedrooms",3800,250000,5600000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Standalone three-bedroom villa"],
   ["NOYA Luma","Villa","4 Bedrooms",3750,310000,6200000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Standalone four-bedroom villa"],
   ["NOYA Luma","Villa","5 Bedrooms",4133,400000,7200000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Standalone five-bedroom villa"],
-  ["Yas Acres","Townhouse","2 Bedrooms + Study",2421,230000,4650000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Two-bedroom plus study townhouse"],
-  ["Yas Acres","Duplex","3 Bedrooms",3229,280000,6300000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Three-bedroom duplex layout"],
-  ["Yas Acres","Duplex","4 Bedrooms",4844,320000,8860000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Four-bedroom duplex layout"],
-  ["Yas Acres","Villa","4 Bedrooms",7500,500000,8300000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Four-bedroom standalone villa"],
-  ["Yas Acres","Villa","5 Bedrooms",8500,600000,13000000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Premium five-bedroom golf-facing villa"],
-  ["Yas Acres","Villa","6 Bedrooms",11000,800000,15800000,"https://stageproperties.com/_next/image?q=100&url=https%3A%2F%2Fd37zlj91i7b9eq.cloudfront.net%2Fstage-properties%2F275_625979c416.webp&w=3840","Premium six-bedroom golf-facing villa"]
+  ["Yas Acres","Townhouse","2 Bedrooms + Study",2421,230000,4650000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Two-bedroom plus study townhouse"],
+  ["Yas Acres","Duplex","3 Bedrooms",3229,280000,6300000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Three-bedroom duplex layout"],
+  ["Yas Acres","Duplex","4 Bedrooms",4844,320000,8860000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Four-bedroom duplex layout"],
+  ["Yas Acres","Villa","4 Bedrooms",7500,500000,8300000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Four-bedroom standalone villa"],
+  ["Yas Acres","Villa","5 Bedrooms",8500,600000,13000000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Premium five-bedroom golf-facing villa"],
+  ["Yas Acres","Villa","6 Bedrooms",11000,800000,15800000,"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85","Premium six-bedroom golf-facing villa"]
  ];
 
  const inventory=legacyInventory.map(x=>({
   community:x[0],area:"Yas Island",emirate:"Abu Dhabi",type:x[1],beds:x[2],size:x[3],rent:x[4],price:x[5],image:x[6],description:x[7],market:"Community sample",stage:"Indicative sample"
  }));
- const reemImg="https://uaeprojects.com/uploads/7142/conversions/Sky-Tower-Bannar-Image-heroSection.jpg";
- const yasImg="https://www.cmep.ae/uploads/projects/4/images/d8fe949a-8187-4e93-bf79-c5cde2d69ff8.webp";
- const saadiyatImg="https://app-dms-cms-prod-un-001.azurewebsites.net/dmscore/_next/image?q=75&url=https%3A%2F%2Fimages4.cmp.optimizely.com%2Fassets%2Fsaadiyat-lagoons---al-ghaf_front_image.webp%2FZz1lNGU3OTg1NmMwNjkxMWYwOTA3NmM2OGVjZmY1OTU5Nw%3D%3D&w=3840";
- const rahaImg="https://reportageeurope.com/storage/post/large/U6nuvHIauStZFmKboj2Sv0T7R00SthN3AoEJJC71.jpg";
+ const reemImg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85";
+ const yasImg="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85";
+ const saadiyatImg="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85";
+ const rahaImg="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85";
  const masdarImg="https://masdarcity.ae/images/default-source/default-album/central-residence.jpg?sfvrsn=40dd250e_4";
  const hudayriyatImg="https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2021/09/09/ERsBD6BT-Al-Hudayriat-Island-in-Abu-Dhabi.jpg";
  const dubaiImg="https://www.emaar.com/_next/image?q=100&url=https%3A%2F%2Fuae-cms.emaar.com%2Fuploads%2F419578_exterior_0_669b7d887d.jpg&w=1200";
- const rakImg="https://ggfx-providentestate.s3.eu-west-2.amazonaws.com/i/SKAI_by_RAK_Properties_Luxury_Waterfront_Living_in_Mina_Al_Arab_0443ef5750.jpg";
+ const rakImg="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85";
  const add=(community,area,emirate,type,beds,size,price,image,description,stage,source)=>inventory.push({community,area,emirate,type,beds,size,rent:0,price,image,description,market:"sale",stage,source});
  // Jubail Island: clearly labelled illustrative villa examples.
  const jubailVillaImage="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85";
