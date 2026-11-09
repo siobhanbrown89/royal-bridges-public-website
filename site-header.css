@@ -26,6 +26,71 @@
 @media(max-width:600px){.rb-site-topbar{font-size:10px;padding:7px 8px;gap:4px 9px}.rb-brand img{height:76px!important;max-width:190px!important;max-height:76px!important}.rb-brand-inner{width:94%}}
 
 
-/* Fine alignment adjustment for the first navigation tab */
-.rb-nav-links>li:first-child>a{position:relative;top:-2px}
-@media(max-width:1100px){.rb-nav-links>li:first-child>a{top:0}}
+
+/* Individually framed, evenly aligned navigation tabs — shared site-wide */
+.rb-nav-links{
+  align-items:stretch;
+  gap:6px;
+}
+.rb-nav-links>li{
+  display:flex;
+  align-items:stretch;
+}
+.rb-nav-links>li>a,
+.rb-nav-links>li>button{
+  min-height:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 9px;
+  border:1px solid rgba(16,36,59,.24);
+  border-radius:3px;
+  line-height:1.2;
+  position:static;
+  transition:background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.rb-nav-links>li>a:hover,
+.rb-nav-links>li>button:hover,
+.rb-nav-links>li.rb-dropdown-open>button{
+  background:rgba(197,164,109,.13);
+  border-color:var(--rb-gold);
+  color:#987544;
+}
+.rb-nav-links>li>a:focus-visible,
+.rb-nav-links>li>button:focus-visible{
+  outline:2px solid var(--rb-gold);
+  outline-offset:2px;
+}
+.rb-nav-links>li>.rb-register-link{
+  border-color:var(--rb-gold);
+  background:var(--rb-gold)!important;
+  color:#10243b!important;
+}
+.rb-nav-links>li>.rb-register-link:hover{
+  background:#d4b982!important;
+  border-color:#d4b982;
+  color:#10243b!important;
+}
+@media(max-width:1180px) and (min-width:1101px){
+  .rb-nav-links{gap:4px}
+  .rb-nav-links>li>a,.rb-nav-links>li>button{padding:0 6px}
+}
+@media(max-width:1100px){
+  .rb-nav-links{gap:0}
+  .rb-nav-links>li{display:block}
+  .rb-nav-links>li>a,
+  .rb-nav-links>li>button{
+    height:auto;
+    min-height:42px;
+    justify-content:flex-start;
+    padding:10px 11px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:2px;
+    margin:3px 0;
+  }
+  .rb-nav-links>li>.rb-register-link{
+    justify-content:center;
+    border-color:var(--rb-gold);
+  }
+}
